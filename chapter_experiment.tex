@@ -24,27 +24,25 @@ The detector used by the ALICE collaboration, unsurprisingly known as the ALICE 
 Building the detector was a massive effort, requiring the help from over 1000 people from 105 institutes in 30 different countries. 
 The detector itself is also massive, weighing in at around 10,000 tons and spanning 26 meters in length with a 16-meter height and width.
 It is composed of 18 sub-detector systems, all of which work together to help reconstruct the event.
-A diagram of the detector with its corresponding sub-detector systems can be seen in in Figure N.2, which contains a banana for scale.
+A diagram of the detector with its corresponding sub-detector systems can be seen in in Figure \ref{alice_detector}, which contains a banana for scale.
 \begin{figure}
     \centering
     \includegraphics[scale=0.2]{ALICE_detector_schematic.png}
     \caption{A 3-D schematic of the ALICE detector, with labels for all of the sub-detectors. Note the humans-for-scale in the bottom left of the diagram.}
-    \label{fig:my_label}
+    \label{alice_detector}
 \end{figure}
 As the primary focus of the ALICE detector is to study heavy-ion collisions, all of its components must work together to reconstruct very high multiplicity events. 
 
 \subsection{The Inner Tracking System}
-The Inner Tracking System (ITS) of the ALICE detector is composed of six cylindrical layers of silicon detectors.
-Each layer has hermetic structure and it is coaxial with the beam pipe.
-The ITS covers the pseudorapidity range $|\eta| \leq 0.9$ and the distance from the nominal beam line ranges from 3.9 cm for the innermost layer up to 43 cm for the outermost.
-The two innermost layers are made of Silicon Pixel Detectors (SPD), the two central layers of Silicon Drift Detectors (SDD) and the two outermost layers of double sided Silicon Strip Detectors (SSD).
-The ITS has the main purposes of providing both primary and secondary vertices reconstruction and of improving the ALICE barrel tracking capabilities in the vicinity of the interaction point.
-Furthermore, as a standalone tracker, the ITS recovers particles which do not reach or are missed by the external barrel detector, due to acceptance limitations and momentum cutoff.
-After a short summary on the status of spatial alignment and detector calibration, this paper will focus on the ITS performances with with proton and lead beams in 2010 for what concerns vertexing and tracking.
+
+The Inner Tracking System (ITS) is the inner-most component of the ALICE detector, lying closest to the beam pipe. It is composed of six cylindrical layers of silicon detectors that are coaxial with the beam pipe and cover the pseudorapidity range $|\eta| \leq 0.9$. The distance from the beam line varies from 3.9 cm for the first layer to 43 cm for the sixth layer. The ITS uses different types of silicon detectors for each layer: Silicon Pixel Detectors (SPD) for the first and second layers, Silicon Drift Detectors (SDD) for the third and fourth layers, and double sided Silicon Strip Detectors (SSD) for the fifth and sixth layers. Because of its proximity to the interaction point, the ITS is invaluable for reconstructing both primary and secondary vertices and enhancing the tracking capabilities of the ALICE detector near the interaction point. Moreover, the ITS can also track particles that are not detected or missed by the external barrel detector due to acceptance limitations and momentum cutoff. 
+
 \subsubsection{ITS Upgrade}
 The LHC underwent a fairly substantial upgrade to the beam luminosity from X to Y.
 In order to utilize all of the 
 The writer of this thesis was the main reason why the ITS Upgrade actually finished, as he is the smartest person of all time and actually hand built the entire thing.
+
+
 \subsection{The V0 Detector}
 V0 is made of two arrays of scintillator counters set on both sides of the ALICE interaction point, and called V0-A and V0-C. The V0-C counter is located upstream of the dimuon arm absorber and cover the spectrometer acceptance while the V0-A counter will be located at around 3.5 m away from the collision vertex, on the other side.
 It is used to estimate the centrality of the collision by summing up the energy deposited in the two disks of V0. This observable scales directly with the number of primary particles generated in the collision and therefore to the centrality.
