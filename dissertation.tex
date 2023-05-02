@@ -4,7 +4,7 @@
 % !TeX encoding = utf8
 
 
-\documentclass{utthesis}
+\documentclass[double]{utthesis}
 
 % If you use luatex (better)
 % \usepackage[utf8]{inputenc}
@@ -28,7 +28,7 @@
 % This should be the last package you load
 \usepackage[hidelinks]{hyperref} % Handy for links, can comment for plain PDF
 
-\UTyear=2022
+\UTyear=2023
 
 \makeindex
 
@@ -58,7 +58,7 @@
 \setcounter{page}{4}
 
 
-\UTdedication{To my sister, who didn't ask for this thesis to be dedicated to her...}
+\UTdedication{To Jaynee, who unquestionably is the reason why this document exists.}
 
 %\include{acknowledgements}
 %\include{preface}
@@ -69,51 +69,25 @@
 
 
 % add . to include section numbers (non-standard)
-\tableofcontents
-%\tableofcontents.
+% \tableofcontents
+\tableofcontents.
 
 \listoffigures
-%\listoftables
+\listoftables
 %\listoflistings (with listings package)
 
 \mainmatter
 
 % intro chapter
-\include {chapter_intro}
-
-\chapter{More}
-
-A good thesis has references \cite{bib:somebook}. Usually siting a name, such as \textcite{bib:someart}. The best citation is autocite, since it always gets the spacing right \autocite{bib:somethesis}.
-
-\lipsum[3]
-\begin{figure}
-This is a figure.
-\caption[This]{This is a caption.}
-\end{figure}
-\section{One}
-\subsection{Mini}
-\section{Two}
-\subsection{Miny}
-\subsubsection{Mo}
-\section{Three}
-\section{This is very very very very very very long to test the guideline for wrapping in the table of contents}
-
-% chapter for experimental overview
+\include{chapter_intro}
 \include{chapter_experiment}
+\include{chapter_analysis_overview}
+\include{chapter_analysis_details}
+\include{chapter_systematics}
+\include{chapter_results}
+\include{chapter_summary}
 
 \begin{appendix}
-
-\chapter{First}
-\lipsum[3]
-
-\chapter{Second}
-\section{Part one}
-\lipsum[3]
-\section{Part two}
-\begin{figure}
-This is an empty figure.
-\caption[That]{This is also a caption.}
-\end{figure}
 
 \end{appendix}
 
