@@ -1,0 +1,65 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{DPMJET}{incollection}{}
+      \name{author}{3}{}{%
+        {{hash=fe9e4a77e5b5f3ed6c171eab9be3d0ce}{%
+           family={Roesler},
+           familyi={R\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=4f0f1715be8da9b1d5a14aee1ca103fa}{%
+           family={Engel},
+           familyi={E\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=c1b0c14717aac1db9a7086cab4853aa7}{%
+           family={Ranft},
+           familyi={R\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{ff9ef77a33f213213ca559a80b9e945d}
+      \strng{fullhash}{ff9ef77a33f213213ca559a80b9e945d}
+      \strng{bibnamehash}{ff9ef77a33f213213ca559a80b9e945d}
+      \strng{authorbibnamehash}{ff9ef77a33f213213ca559a80b9e945d}
+      \strng{authornamehash}{ff9ef77a33f213213ca559a80b9e945d}
+      \strng{authorfullhash}{ff9ef77a33f213213ca559a80b9e945d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advanced Monte Carlo for Radiation Physics, Particle Transport Simulation and Applications}
+      \field{eprintclass}{hep-ph}
+      \field{eprinttype}{arXiv}
+      \field{title}{The Monte Carlo Event Generator {DPMJET-III}}
+      \field{year}{2001}
+      \verb{eprint}
+      \verb 0012252
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

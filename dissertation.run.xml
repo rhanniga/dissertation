@@ -82,7 +82,7 @@
       <file>dissertation.bcf</file>
     </requires>
     <requires type="editable">
-      <file>refs.bib</file>
+      <file>references.bib</file>
     </requires>
   </external>
 </requests>

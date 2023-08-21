@@ -4,7 +4,7 @@
 % !TeX encoding = utf8
 
 
-\documentclass[double]{utthesis}
+\documentclass{utthesis}
 
 % If you use luatex (better)
 % \usepackage[utf8]{inputenc}
@@ -19,11 +19,15 @@
 	backref=true
 	]{biblatex}
 
-\addbibresource{refs.bib}
+\addbibresource{references.bib}
 
 \usepackage{lipsum} % Dummy text for examples
 \usepackage{graphicx}
 \usepackage{slashed}
+\usepackage{xspace}
+
+
+\input{commands.tex}
 
 % This should be the last package you load
 \usepackage[hidelinks]{hyperref} % Handy for links, can comment for plain PDF
@@ -79,13 +83,14 @@
 \mainmatter
 
 % intro chapter
-\include{chapter_intro}
-\include{chapter_experiment}
-\include{chapter_analysis_overview}
+% \include{chapter_intro}
+
+% \include{chapter_experiment}
+% \include{chapter_analysis_overview}
 \include{chapter_analysis_details}
-\include{chapter_systematics}
-\include{chapter_results}
-\include{chapter_summary}
+% \include{chapter_systematics}
+% \include{chapter_results}
+% \include{chapter_summary}
 
 \begin{appendix}
 
