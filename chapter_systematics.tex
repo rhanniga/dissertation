@@ -2,82 +2,124 @@
 \label{chapter_systematics}
 Systematic uncertainties are inevitable in any analysis, and the present one is no exception. This chapter describes the various sources of systematic uncertainties that affect the final results, and how their magnitudes are estimated and propagated to the final uncertainties. This chapter also presents the cross-checks that were performed to verify the robustness and consistency of the analysis, and to ensure that no biases were introduced along the way.
 
-\section{Sources of systematic uncertainties}
+\section{Systematic uncertainties}
 \label{sec:systematics}
+\begin{quote}
+    \textit{``The treatment of systematic errors is often mishandled. This is due to lack of understanding and education, based on a fundamental ambiguity as to what is meant by the term''}\\
+    \hspace*{1cm}---Roger Barlow, \textit{Systematic Errors: Facts and Fictions}~\cite{BarlowCheck}
+\end{quote}
 
-This analysis has three major components:
+In every experimental analysis, choices must be made. These choices can be as simple as the selection of a particular data set, or as complex as choosing a fit function of fifteen parameters instead of three. In either case, these choices can have an effect on the final results, which is quantified by the \textit{systematic uncertainty}. Broadly speaking, the systematic uncertainty is a measure of the sensitivity of the final results to the choices made during the analysis procedure. 
+
+In this analysis, the procedure for estimating the systematic uncertainty from a certain choice is as follows:
+%
 \begin{enumerate}
-\item The generation of the h-$\Lambda$ and h-h $\Delta\varphi$ distributions
-\item The extraction of the pairwise yields from the $\Delta\varphi$ distributions
-\item The extraction of the near- and away-side widths from the fits of the $\Delta\varphi$ distributions
+    \item Vary the choice in a way that is reasonable and justifiable 
+    \item Measure the observable of interest after the variation
+    \item Quantify the effect of the variation on the observable by calculating the percent change from the original value of the observable
+    \item Vary the choice in a slightly different way, and repeat steps 2 and 3
+    \item Repeat steps 2 through 4 until all reasonable variations have been considered
+    \item Calculate the systematic uncertainty as the root mean square (RMS) of the percentages from step 3.
 \end{enumerate}
+%
+Note the usage of the words ``reasonable'' and ``justifiable'', which seem to indicate that the systematic uncertainty is a subjective quantity. Indeed the process of obtaining the systematic uncertainty involves even more choices, like the choice of which choices to consider, the choices of how to vary the choices, and even the choice on how to quantify the uncertainty itself. In this sense, the systematic uncertainty is a moderately subjective quantity, where the analyzer must use their best judgement to determine which choices are indeed reasonable. To that end, the list of sources of systematic uncertainties considered for this analysis is not exhaustive, but it is the best attempt at a comprehensive list of reasonable choices that affect the final results. 
 
-As such, this section is separated into three subsections, one for each of these components. In each section, the sources of systematic uncertainties are described, and the methods used to estimate their magnitudes are presented.
+To provide more structure to this section, the analysis procedure is broken into the following components:
+%
+\begin{enumerate}
+\item The generation of the h-$\Lambda$ and h-h $\Delta\varphi$ distributions,
+\item The extraction of the pairwise yields from the $\Delta\varphi$ distributions, and 
+\item The extraction of the near- and away-side widths from the fits of the $\Delta\varphi$ distributions,
+\end{enumerate}
+%
+which are used to separate this section into three subsections, one for each of these components. In each section, the sources of systematic uncertainties are described, followed by a Barlow analysis~\cite{BarlowCheck} to ensure the variations result in a statistically significant deviation from the nominal values. Finally, a summary of the final systematic uncertainties is provided.
 
+\subsection{$\Delta\varphi$ distribution generation}
+\label{sec:systematics_dphi}
+The sources of systematic uncertainties that affect the $\Delta\varphi$ distribution considered for this analysis are the following, in order of decreasing magnitude:
+%
+\begin{itemize}
+\item \lmb topological selection (h-\lmb distribution only)
+\item Material budget
+\item Tracking efficiency
+\item \lmb daughter PID cuts (h-\lmb distribution only)
+\item \lmb invariant mass signal region selection (h-\lmb distribution only)
+\item \lmb invariant mass sideband region selection (h-\lmb distribution only)
+\end{itemize}
+%
+Each of these sources of systematic uncertainty is described in detail in the following sections.
 
-% \subsection{$\Delta\varphi$ Distribution Generation}
-% \label{systematics_dphi}
-% As our final yields depend on the $\Delta\varphi$ distributions, we must consider all of the sources of systematic errors that can appear during the generation of these distributions. These sources of systematic errors are as follows.
+\subsubsection{Signal region selection}
+The nominal signal region for the \lmb invariant mass is fairly wide, accounting for nearly 97\% of the total \lmb signal.  However, the final result should not be heavily influenced by the choice of signal region so long as it is centered about the true \lmb mass. To investigate this, the signal region is varied in the following ways:
+%
+\begin{itemize}
+\item $1.108 < M_{p\pi} < 1.124$ GeV/$c^2$ (centered, narrow)
+\item $1.112 < M_{p\pi} < 1.120$ GeV/$c^2$ (centered, narrower)
+\item $1.100 < M_{p\pi} < 1.132$ GeV/$c^2$ (centered, wide)
+\item $1.096 < M_{p\pi} < 1.136$ GeV/$c^2$ (centered, wider)
+\end{itemize}
+%
+The resulting $\Delta\varphi$ distributions and ratios to the nominal distribution for each signal region variation in each multiplicity and associated \pt bin are shown in Figures \ref{fig:signal_region_variations_lowpt} (lower \pt) and \ref{fig:signal_region_variations_highpt} (higher \pt). As no significant dependence on $\Delta\varphi$ is observed, the systematic uncertainty is calculated as the RMS of the percent change from each variation across the entire $\Delta\varphi$ range.
 
-% \subsubsection{Signal Region Selection}
-% While our central points of this analysis involve almost the entirety of our $\Lambda$ signal region, the final result should not depend on which section of the signal region we choose. To investigate this, we vary the signal region in the following ways:
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.49\textwidth]{figures/analysis/signal_variations_dphi_0_20_lowpt.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/signal_variations_dphi_0_20_lowpt_ratio.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/signal_variations_dphi_20_50_lowpt.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/signal_variations_dphi_20_50_lowpt_ratio.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/signal_variations_dphi_50_80_lowpt.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/signal_variations_dphi_50_80_lowpt_ratio.pdf}
+    \caption{The h-\lmb $\Delta\varphi$ distributions within the 0-20\% (top), 20-50\% (middle) and 50-80\% (bottom) multiplicity bins in the lower associated \pt bin for each of the signal region variations (left) with the ratios to the nominal distribution (right).}
+    \label{fig:signal_region_variations_lowpt}
+\end{figure}
 
-% \begin{itemize}
-% \item $1.108 < M_{p\pi} < 1.124$ GeV/$c^2$ (centered, narrow)
-% \item $1.112 < M_{p\pi} < 1.120$ GeV/$c^2$ (centered, narrower)
-% \item $1.100 < M_{p\pi} < 1.132$ GeV/$c^2$ (centered, wide)
-% \item $1.096 < M_{p\pi} < 1.136$ GeV/$c^2$ (centered, wider)
-% \end{itemize}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.49\textwidth]{figures/analysis/signal_variations_dphi_0_20_highpt.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/signal_variations_dphi_0_20_highpt_ratio.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/signal_variations_dphi_20_50_highpt.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/signal_variations_dphi_20_50_highpt_ratio.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/signal_variations_dphi_50_80_highpt.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/signal_variations_dphi_50_80_highpt_ratio.pdf}
+    \caption{The h-\lmb $\Delta\varphi$ distributions within the 0-20\% (top), 20-50\% (middle) and 50-80\% (bottom) multiplicity bins in the higher associated \pt bin for each of the signal region variations (left) with the ratios to the nominal distribution (right).}
+    \label{fig:signal_region_variations_highpt}
+\end{figure}
 
-% The resulting $\Delta\varphi$ distributions and ratios to central values for each signal region variation in each multiplicity bin within our central $p_{T, assoc}$ bin are shown in Figures \ref{signal_region_variation_0_20} through \ref{signal_region_variation_50_80}. As we observe no dependence on $\Delta\varphi$, the systematic is calculated as the RMS of the ratios of within the entire $\Delta\varphi$ range for each variation.
+\subsubsection{Sideband Region Selection}
+The choice of sideband region also leaves a lot of room for reasonable variation: all that is required is that the region is 1) large enough to produce a smooth h-p$\pi$ distribution with minimal statisical fluctuations and 2) close enough to the signal region that the p$\pi$ pairs are kinematically similar to those in the background of the signal region. As long as these requirements are met, the final result should not be very dependent on the choice of sideband region. To investigate the effects of changing the sideband region, the following variations are considered:
 
-% \begin{figure}[ht]
-% \centering
-% \begin{subfigure}{
-% \includegraphics[width=3in]{figures/signal_variations_dphi_0_20.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=3in]{figures/signal_variations_dphi_0_20_ratio.pdf}}
-% \end{subfigure}
-% \caption{The $\Delta\varphi$ distributions (left) and corresponding ratios to our central distribution (right) within the 0-20\% multiplicity bin for each of the signal region variations. We observe no dependence on the choice of signal region}
-% \label{signal_region_variation_0_20}
-% \end{figure}
+\begin{itemize}
+\item $1.135 M_{p\pi} < 1.16$ GeV/$c^2$ (wider)
+\item $1.135 < M_{p\pi} < 1.145$ GeV/$c^2$ (more narrow)
+\item $1.14 < M_{p\pi} < 1.155$ GeV/$c^2$ (shifted right)
+\item $1.086 < M_{p\pi} < 1.098$ GeV/$c^2$ (shifted left (on other side of signal region))
+\end{itemize}
 
-% \begin{figure}[ht]
-% \centering
-% \begin{subfigure}{
-% \includegraphics[width=3in]{figures/signal_variations_dphi_20_50.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=3in]{figures/signal_variations_dphi_20_50_ratio.pdf}}
-% \end{subfigure}
-% \caption{The $\Delta\varphi$ distributions (left) and corresponding ratios to our central distribution (right) within the 20-50\% multiplicity bin for each of the signal region variations. We observe no dependence on the choice of signal region}
-% \label{signal_region_variation_20_50}
-% \end{figure}
+The resulting $\Delta\varphi$ distributions and ratios to the nominal distribution for each sideband region variation in each multiplicity and associated \pt bin are shown in Figures \ref{fig:sideband_region_variations_lowpt} (lower \pt) and \ref{fig:sideband_region_variations_highpt} (higher \pt). Again, no significant dependence is observed on $\Delta\varphi$, so the systematic uncertainty is calculated as the RMS of the percent change from each variation across the entire $\Delta\varphi$ range.
 
-% \begin{figure}[ht]
-% \centering
-% \begin{subfigure}{
-% \includegraphics[width=3in]{figures/signal_variations_dphi_50_80.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=3in]{figures/signal_variations_dphi_50_80_ratio.pdf}}
-% \end{subfigure}
-% \caption{The $\Delta\varphi$ distributions (left) and corresponding ratios to our central distribution (right) within the 50-80\% multiplicity bin for each of the signal region variations. We observe no dependence on the choice of signal region}
-% \label{signal_region_variation_50_80}
-% \end{figure}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.49\textwidth]{figures/analysis/sideband_variations_dphi_0_20_lowpt.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/sideband_variations_dphi_0_20_lowpt_ratio.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/sideband_variations_dphi_20_50_lowpt.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/sideband_variations_dphi_20_50_lowpt_ratio.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/sideband_variations_dphi_50_80_lowpt.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/sideband_variations_dphi_50_80_lowpt_ratio.pdf}
+    \caption{The h-\lmb $\Delta\varphi$ distributions within the 0-20\% (top), 20-50\% (middle) and 50-80\% (bottom) multiplicity bins in the lower associated \pt bin for each of the sideband region variations (left) with the ratios to the nominal distribution (right).}
+    \label{fig:sideband_region_variations_lowpt}
+\end{figure}
 
-% \subsubsection{Sideband Region Selection}
-% As this analysis relies on the sideband subtraction technique, which in turn relies on our choice of sideband region, we should thoroughly investigate the effects of choosing different sideband regions on our final results. To do this, we vary the sideband region in the following ways:
-
-% \begin{itemize}
-% \item $1.135 M_{p\pi} < 1.16$ GeV/$c^2$ (wider)
-% \item $1.135 < M_{p\pi} < 1.145$ GeV/$c^2$ (more narrow)
-% \item $1.14 < M_{p\pi} < 1.155$ GeV/$c^2$ (shifted right)
-% \item $1.086 < M_{p\pi} < 1.098$ GeV/$c^2$ (shifted left (on other side of signal region))
-% \end{itemize}
-
-% The resulting $\Delta\varphi$ distributions and ratios to central values for each sideband region variation in each multiplicity bin within our central $p_{T, assoc}$ bin are shown in Figures \ref{sideband_region_variation_0_20} through \ref{sideband_region_variation_50_80}. As we observe no dependence on $\Delta\varphi$, the systematic is calculated as the RMS of the ratios of within the entire $\Delta\varphi$ range for each variation.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.49\textwidth]{figures/analysis/sideband_variations_dphi_0_20_highpt.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/sideband_variations_dphi_0_20_highpt_ratio.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/sideband_variations_dphi_20_50_highpt.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/sideband_variations_dphi_20_50_highpt_ratio.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/sideband_variations_dphi_50_80_highpt.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/sideband_variations_dphi_50_80_highpt_ratio.pdf}
+    \caption{The h-\lmb $\Delta\varphi$ distributions within the 0-20\% (top), 20-50\% (middle) and 50-80\% (bottom) multiplicity bins in the higher associated \pt bin for each of the sideband region variations (left) with the ratios to the nominal distribution (right).}
+    \label{fig:sideband_region_variations_highpt}
+\end{figure}
 
 % \begin{figure}[ht]
 % \centering
