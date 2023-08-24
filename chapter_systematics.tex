@@ -9,7 +9,7 @@ Systematic uncertainties are inevitable in any analysis, and the present one is 
     \hspace*{1cm}---Roger Barlow, \textit{Systematic Errors: Facts and Fictions}~\cite{BarlowCheck}
 \end{quote}
 
-In every experimental analysis, choices must be made. These choices can be as simple as the selection of a particular data set, or as complex as choosing a fit function of fifteen parameters instead of three. In either case, these choices can have an effect on the final results, which is quantified by the \textit{systematic uncertainty}. Broadly speaking, the systematic uncertainty is a measure of the sensitivity of the final results to the choices made during the analysis procedure. 
+In every experimental analysis, choices must be made. These choices can be as simple as the selection of a particular data set, or as complex as choosing a fit function of fifteen parameters instead of three. In either case, these choices can have an effect on the final results, which is quantified by the \textbf{systematic uncertainty}. Broadly speaking, the systematic uncertainty is a measure of the sensitivity of the final results to the choices made during the analysis procedure. 
 
 In this analysis, the procedure for estimating the systematic uncertainty from a certain choice is as follows:
 %
@@ -47,19 +47,45 @@ The sources of systematic uncertainties that affect the $\Delta\varphi$ distribu
 \item \lmb invariant mass sideband region selection (h-\lmb distribution only)
 \end{itemize}
 %
-Each of these sources of systematic uncertainty is described in detail in the following sections.
+As the \lmb topological selection, material budget, and tracking efficiencies have been studied in detail in previous analyses using the same particle species and collision system
+~\cite{V0Reco1,V0Reco1,Lambda1,ALICEMatBud}, the systematic uncertainty associated with these sources is taken directly from these analyses and presented in Table~\ref{tab:flat_systematics}. The uncertainties from these sources exhibit no multiplicity dependence, and a very small dependence on \pt. These uncertainties are also assumed to be independent of $\Delta\varphi$, although this is studied more thoroughly in Section~\ref{sec:systematics_width}.
+
+Each of the other sources of systematic uncertainty is described in detail in the following sections. 
+
+\begin{table}
+    \centering
+    \caption{The systematic uncertainties for the $\Delta\varphi$ distributions which are not directly calculated in this thesis, instead taken from previous analyses using the same particle species and collision system~\cite{V0Reco1,V0Reco2,Lambda1,ALICEMatBud}. Each source of uncertainty is verified to be independent of multiplicity, but the \lmb material budget and topological selection uncertainties exhibit a small dependence on \pt. }
+    \label{tab:flat_systematics}
+    \begin{tabular}{l c c}
+        \hline
+        Source name & Lower \pt \% & Higher \pt \% \\
+        \hline
+        \lmb topological selection & 3.2\% & 3.0\% \\
+        \lmb material budget & 1.1\% & 0.6\% \\
+        Charged h tracking efficiency & 3.5\% & 3.5\% \\
+        Charged h material budget & negl. & negl. \\
+        \hline
+    \end{tabular}
+\end{table}
 
 \subsubsection{Signal region selection}
-The nominal signal region for the \lmb invariant mass is fairly wide, accounting for nearly 97\% of the total \lmb signal.  However, the final result should not be heavily influenced by the choice of signal region so long as it is centered about the true \lmb mass. To investigate this, the signal region is varied in the following ways:
-%
-\begin{itemize}
-\item $1.108 < M_{p\pi} < 1.124$ GeV/$c^2$ (centered, narrow)
-\item $1.112 < M_{p\pi} < 1.120$ GeV/$c^2$ (centered, narrower)
-\item $1.100 < M_{p\pi} < 1.132$ GeV/$c^2$ (centered, wide)
-\item $1.096 < M_{p\pi} < 1.136$ GeV/$c^2$ (centered, wider)
-\end{itemize}
-%
-The resulting $\Delta\varphi$ distributions and ratios to the nominal distribution for each signal region variation in each multiplicity and associated \pt bin are shown in Figures \ref{fig:signal_region_variations_lowpt} (lower \pt) and \ref{fig:signal_region_variations_highpt} (higher \pt). As no significant dependence on $\Delta\varphi$ is observed, the systematic uncertainty is calculated as the RMS of the percent change from each variation across the entire $\Delta\varphi$ range.
+The nominal signal region for the \lmb invariant mass is fairly wide, accounting for nearly 97\% of the total \lmb signal.  However, the final result should not be heavily influenced by the choice of signal region so long as it is centered about the true \lmb mass. Furthermore, altering the signal region tests the validity of the signal scaling procedure outlined in Section~\ref{sec:corrections}. To investigate this, the signal region is varied in the ways presented in Table~\ref{tab:signal_region_variations}. The resulting $\Delta\varphi$ distributions and ratios to the nominal distribution for each signal region variation in each multiplicity and associated \pt bin are shown in Figures \ref{fig:signal_region_variations_lowpt} (lower \pt) and \ref{fig:signal_region_variations_highpt} (higher \pt). The average deviation from the nominal distribution is around 2\%, with no invividual variation exceeding 5\%. As no significant dependence on $\Delta\varphi$ is observed, the systematic uncertainty is calculated as the RMS of the percent change from each variation across the entire $\Delta\varphi$ range as opposed to calculating the RMS in each bin.
+
+\begin{table}[ht]
+    \centering
+    \caption{The variations of the \lmb invariant mass signal region considered for this analysis.}
+    \label{tab:signal_region_variations}
+    \begin{tabular}{l c}
+        \hline
+        Variation name & Signal range (GeV/$c^2$) \\
+        \hline
+        Narrow & $1.108 < M_{p\pi} < 1.124$ \\
+        Narrower & $1.112 < M_{p\pi} < 1.120$ \\
+        Wide & $1.100 < M_{p\pi} < 1.132$ \\
+        Wider & $1.096 < M_{p\pi} < 1.136$ \\
+        \hline
+    \end{tabular}
+\end{table}
 
 \begin{figure}[ht]
     \centering
@@ -86,16 +112,23 @@ The resulting $\Delta\varphi$ distributions and ratios to the nominal distributi
 \end{figure}
 
 \subsubsection{Sideband region selection}
-The choice of sideband region also leaves a lot of room for reasonable variation: all that is required is that the region is 1) large enough to produce a smooth h-p$\pi$ distribution with minimal statisical fluctuations and 2) close enough to the signal region that the p$\pi$ pairs are kinematically similar to those in the background of the signal region. As long as these requirements are met, the final result should not be very dependent on the choice of sideband region. To investigate the effects of changing the sideband region, the following variations are considered:
-%
-\begin{itemize}
-\item $1.135 M_{p\pi} < 1.16$ GeV/$c^2$ (wider)
-\item $1.135 < M_{p\pi} < 1.145$ GeV/$c^2$ (more narrow)
-\item $1.14 < M_{p\pi} < 1.155$ GeV/$c^2$ (shifted right)
-\item $1.086 < M_{p\pi} < 1.098$ GeV/$c^2$ (shifted left (on other side of signal region))
-\end{itemize}
-%
-The resulting $\Delta\varphi$ distributions and ratios to the nominal distribution for each sideband region variation in each multiplicity and associated \pt bin are shown in Figures \ref{fig:sideband_region_variations_lowpt} (lower \pt) and \ref{fig:sideband_region_variations_highpt} (higher \pt). Again, no significant dependence is observed on $\Delta\varphi$, so the systematic uncertainty is calculated as the RMS of the percent change from each variation across the entire $\Delta\varphi$ range.
+The choice of sideband region also leaves a lot of room for reasonable variation: all that is required is that the region is 1) large enough to produce a smooth h-p$\pi$ distribution with minimal statisical fluctuations and 2) close enough to the signal region that the p$\pi$ pairs are kinematically similar to those in the background of the signal region. As long as these requirements are met, the final result should not be very dependent on the choice of sideband region. To investigate the effects of changing the sideband region, the variations presented in Table~\ref{tab:sideband_region_variations} are considered. The measured $\Delta\varphi$ distributions and variation/nominal ratios for each sideband region variation in each multiplicity and associated \pt bin are shown in Figures \ref{fig:sideband_region_variations_lowpt} (lower \pt) and \ref{fig:sideband_region_variations_highpt} (higher \pt). The result is even less deviation from the nominal distribution than the signal region variations, with the average deviation being closer to ~1\%. Again, no significant dependence is observed on $\Delta\varphi$, so the systematic uncertainty is calculated as the RMS of the percent change from each variation across every $\Delta\varphi$ bin.
+
+\begin{table}[ht]
+    \centering
+    \caption{The variations of the \lmb invariant mass sideband region considered for this analysis. Note that the ``shifted left'' sideband falls on the opposite (left) side of the signal region.}
+    \label{tab:sideband_region_variations}
+    \begin{tabular}{l c}
+        \hline
+        Variation name & Sideband range (GeV/$c^2$) \\
+        \hline
+        Narrow & $1.135 < M_{p\pi} < 1.145$ \\
+        Wide & $1.135 < M_{p\pi} < 1.16$ \\
+        Shifted left & $1.086 < M_{p\pi} < 1.098$ \\
+        Shifted right & $1.14 < M_{p\pi} < 1.155$ \\
+        \hline
+    \end{tabular}
+\end{table}
 
 \begin{figure}[ht]
     \centering
@@ -122,455 +155,195 @@ The resulting $\Delta\varphi$ distributions and ratios to the nominal distributi
 \end{figure}
 
 \subsubsection{\lmb daughter particle identification}
-% While there appears to be no contamination present in either our daughter proton or pion PID distributions from Section \ref{v0_daughter_pid}, we still investigate the effects of varying our PID cuts for both the proton and pion. The PID cuts are varied in the following ways:
+The \lmb daughter particle identification (PID) cuts are chosen to be wide enough to ensure a high efficiency, but narrow enough to ensure a high purity. As the requirement for a higher purity should be offset by the subtraction of the combinatorial background, altering the PID cuts should only minimally effect the final $\Delta\varphi$ distributions. To study this, the PID cuts are varied in the ways presented in Table~\ref{tab:pid_cut_variations}. The final $\Delta\varphi$ distributions and ratios to the nominal distribution for each PID cut variation in each multiplicity and associated \pt bin are shown in Figures \ref{fig:pid_cut_variations_lowpt} (lower \pt) and \ref{fig:pid_cut_variations_highpt} (higher \pt). Requiring a signal in the TOF detector drastically reduces the $\Lambda$ signal as the daugher pions are often heavily deflected by the magnetic field due to their lower \pt (again, $m_{\text{p}}/m_{\pi} \approx 7$, so most of the mother momentum belongs to the proton). This causes a large amount of statistical fluctuations in the corresponding $\Delta\varphi$ distribution, which is why the ``require TOF'' variation is inevitably excluded after the Barlow check presented in Section~\ref{sec:barlow_check_dphi}. The other variations result in only around a 2\% deviation from the nominal $\Delta\varphi$ distribution, on average.
 
-% \begin{itemize}
-% \item $|n\sigma_{TPC, TOF}^{p}| < 2.8$, $|n\sigma_{TPC, TOF}^{\pi}| < 4.2$ (40\% more wide, veto cut on TOF)
-% \item $|n\sigma_{TPC, TOF}^{p}| < 1.2$, $|n\sigma_{TPC,TOF}^{\pi}| < 1.8$ (40\% more narrow, veto cut on TOF)
-% \item $|n\sigma_{TPC, TOF}^{p}| < 2.0$, $|n\sigma_{TPC,TOF}^{\pi}| < 3.0$ (same width, require TOF hit)
-% \end{itemize}
+\begin{table}[ht]
+    \centering
+    \caption{The variations of the \lmb daughter PID cuts considered for this analysis. The ``require TOF'' variation requires a TOF hit for both the proton and pion, but maintains the nominal values for $|n\sigma_{\text{TPC, TOF}}|$.}
+    \label{tab:pid_cut_variations}
+    \begin{tabular}{l c c}
+        \hline
+        Variation name & $|n\sigma_{\text{TPC}, \text{TOF}}^{\pi}|$ & $|n\sigma_{\text{TPC}, \text{TOF}}^{\text{p}}|$ \\
+        \hline
+        Narrow & $< 1.8$ & $< 1.2$ \\
+        Wide & $< 4.2$ & $< 2.8$ \\
+        Require TOF & $< 3.0$ & $< 2.0$ \\
+        \hline
+    \end{tabular}
+\end{table}
 
-% The resulting $\Delta\varphi$ distributions and ratios to central values for each PID cut variation in each multiplicity bin within our central $p_{T, assoc}$ bin are shown in Figures \ref{pid_cut_variation_0_20} through \ref{pid_cut_variation_50_80}. We observe that requiring a TOF hit has a slight systematic effect on the $\Delta\varphi$ distribution, but we still include this variation in our systematic calculation. As we observe no dependence on $\Delta\varphi$, the systematic is calculated as the RMS of the ratios of within the entire $\Delta\varphi$ range for each variation.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.49\textwidth]{figures/analysis/pid_variations_dphi_0_20_lowpt.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/pid_variations_dphi_0_20_lowpt_ratio.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/pid_variations_dphi_20_50_lowpt.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/pid_variations_dphi_20_50_lowpt_ratio.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/pid_variations_dphi_50_80_lowpt.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/pid_variations_dphi_50_80_lowpt_ratio.pdf}
+    \caption{The h-\lmb $\Delta\varphi$ distributions within the 0-20\% (top), 20-50\% (middle) and 50-80\% (bottom) multiplicity bins in the lower associated \pt bin for each of the PID cut variations (left) with the ratios to the nominal distribution (right).}
+    \label{fig:pid_cut_variations_lowpt}
+\end{figure}
 
-% \begin{figure}[ht]
-% \centering
-% \begin{subfigure}{
-% \includegraphics[width=3in]{figures/pid_variations_dphi_0_20.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=3in]{figures/pid_variations_dphi_0_20_ratio.pdf}}
-% \end{subfigure}
-% \caption{The $\Delta\varphi$ distributions (left) and corresponding ratios to our central distribution (right) within the 0-20\% multiplicity bin for each of the PID cut variations. We observe no dependence on the choice of PID cuts.}
-% \label{pid_cut_variation_0_20}
-% \end{figure}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.49\textwidth]{figures/analysis/pid_variations_dphi_0_20_highpt.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/pid_variations_dphi_0_20_highpt_ratio.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/pid_variations_dphi_20_50_highpt.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/pid_variations_dphi_20_50_highpt_ratio.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/pid_variations_dphi_50_80_highpt.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/pid_variations_dphi_50_80_highpt_ratio.pdf}
+    \caption{The h-\lmb $\Delta\varphi$ distributions within the 0-20\% (top), 20-50\% (middle) and 50-80\% (bottom) multiplicity bins in the higher associated \pt bin for each of the PID cut variations (left) with the ratios to the nominal distribution (right).}
+    \label{fig:pid_cut_variations_highpt}
+\end{figure}
 
-% \begin{figure}[ht]
-% \centering
-% \begin{subfigure}{
-% \includegraphics[width=3in]{figures/pid_variations_dphi_20_50.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=3in]{figures/pid_variations_dphi_20_50_ratio.pdf}}
-% \end{subfigure}
-% \caption{The $\Delta\varphi$ distributions (left) and corresponding ratios to our central distribution (right) within the 20-50\% multiplicity bin for each of the PID cut variations. We observe no dependence on the choice of PID cuts.}
-% \label{pid_cut_variation_20_50}
-% \end{figure}
+\clearpage
 
-% \clearpage
+\subsubsection{Barlow check for $\Delta\varphi$ distribution uncertainties}
+\label{sec:barlow_check_dphi}
 
-% \begin{figure}[ht]
-% \centering
-% \begin{subfigure}{
-% \includegraphics[width=3in]{figures/pid_variations_dphi_50_80.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=3in]{figures/pid_variations_dphi_50_80_ratio.pdf}}
-% \end{subfigure}
-% \caption{The $\Delta\varphi$ distributions (left) and corresponding ratios to our central distribution (right) within the 50-80\% multiplicity bin for each of the PID cut variations. We observe no dependence on the choice of PID cuts.}
-% \label{pid_cut_variation_50_80}
-% \end{figure}
+Due to statistical fluctuations, it may be the case that some variations result in a statistically insignificant deviation from the nominal $\Delta\varphi$ distribution. In such cases, the variation should not be considered in the final systematic uncertainty calculation. To determine which variations give statistically significant deviations, a Barlow check~\cite{BarlowCheck} is performed. For each $\Delta\varphi$ bin, the following quantity is calculated:
+%
+\begin{equation}
+    \label{eq:barlow_check}
+	N\sigma_{RB} := \frac{y_{\text{var.}} - y_{\text{nom.}}}{\sqrt{|\sigma_{\text{var.}}^2 - \sigma_{\text{nom.}}^2|}},
+\end{equation}
+%
+where $y_{\text{var.}}$ and $\sigma_{\text{var.}}$ are the measured yield and statistical uncertainty for the variation, and $y_{\text{nom.}}$ and $\sigma_{\text{nom.}}$ are the yield and statistical uncertainty for the nominal value. 
 
-% \subsubsection{Barlow Check ($\Delta\varphi$ distribution generation)}
-% \label{barlow_check_dphi}
+To determine whether a given variation should be excluded, the number $\Delta\varphi$ bins that have $|N\sigma_{RB}| < 1$ is counted. If this is the majority of the bins (across all multiplicity and associated \pt ranges),the variation is excluded from the systematic calculation. Example plots of $N\sigma_{RB}$ for each variation of the signal, sideband and PID cuts are shown in Figure \ref{fig:barlow_check_0_20}. The red lines represent $N\sigma_{RB} = \pm 1$.
 
-% In order to ensure the variations listed above are sensible and not just variations for the sake of variations, we perform a ``standard'' Barlow check procedure (described here: \url{https://arxiv.org/abs/hep-ex/0207026}). For each $\Delta\varphi$ bin, we calculate the following quantity:
-% \begin{equation}
-% 	N\sigma_{RB} := \frac{y_{var} - y_{central}}{\sqrt{|\sigma_{var}^2 - \sigma_{central}^2|}},
-% \end{equation}
-% where $y_{var}$ and $\sigma_{var}$ are the yield and statistical uncertainty for the variation, and $y_{central}$ and $\sigma_{central}$ are the yield and statistical uncertainty for the central value. We just count the number of $\Delta\varphi$ bins that have $|N\sigma_{RB}| < 1$, and if this is the majority of the bins (across ALL multiplicity and $p_{T, assoc}$ bins), we exclude the variation from our systematic calculation. The plots of $N\sigma_{RB}$ for each variation in our 0-20\% multiplicity bin and central $p_{T, assoc}$ are shown in Figure \ref{barlow_check_0_20}. The red lines represent $N\sigma_{RB} = \pm 1$.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.32\textwidth]{figures/analysis/signal_barlow_0_20.pdf}
+    \includegraphics[width=0.32\textwidth]{figures/analysis/sideband_barlow_0_20.pdf}
+    \includegraphics[width=0.32\textwidth]{figures/analysis/pid_barlow_0_20.pdf}
+    \caption{Barlow check for the signal (left), sideband (middle), and PID (right) variations in the 0-20\% multiplicity bin. The red lines represent $N\sigma_{RB} = \pm 1$, and if the majority of the points fall within the red lines (across all $\Delta\varphi$, multiplicty and \pt bins), they are excluded from the systematic uncertainty calculation.}
+    \label{fig:barlow_check_0_20}
+\end{figure}
 
-% As a result of the check, the following variations were excluded from our systematic calculation:
-% \begin{itemize}
-% \item Signal: Wide, Wider
-% \item Sideband: Wide, Narrow
-% \item PID: require TOF
-% \end{itemize}
+As a result of the check, the following variations are excluded from the final systematic uncertainty calculation:
+%
+\begin{itemize}
+    \item Signal: wide, wider
+    \item Sideband: wide, narrow
+    \item PID: require TOF
+\end{itemize}
+%
+These exclusions are not so surprising. As the nominal signal region is already fairly wide, making it wider does not significantly change the $\Delta\varphi$ distribution. Similarly, the initial sideband region falls fairly close to the signal region. So long as there are enough statistics in the corresponding sideband h-$\Lambda$ distribution, changing its width should not affect the $\Delta\varphi$ distribution in a meaningful way. It also appears that requiring a TOF hit introduces large statistical errors, which dominate the denominator in Equation~\ref{eq:barlow_check}.
 
-% \clearpage
+\subsubsection{Final systematic uncertainties for $\Delta\varphi$ distributions}
+\label{sec:final_dphi_systematics}
+The final systematic errors (after the Barlow check) from the h-\lmb $\Delta\varphi$ distribution generation for each multiplicity bin and \pt bin are shown in Table \ref{tab:h_lambda_dphi_systematics_table}. The total systematic uncertainty is calculated by adding each systematic error in quadrature. This table is consolidated into plots showing the systematic errors for each multiplicity bin and \pt bin, which are presented in Figure \ref{fig:dphi_systematics_plots}. As the systematic uncertainties associated with the generation of the dihadron $\Delta\varphi$ distributions are only from the tracking efficiency presented in Table~\ref{tab:flat_systematics}, they are not plotted in this section.
 
-% \begin{figure}[ht]
-% \centering
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/signal_barlow_0_20.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/sideband_barlow_0_20.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/pid_barlow_0_20.pdf}}
-% \end{subfigure}
-% \caption{Barlow check for the signal (top), sideband (middle), and PID (bottom) variations in the 0-20\% multiplicity bin. The red lines represent $N\sigma_{RB} = \pm 1$, and if the majority of the points fall within the red lines (across all $p_{T}$ and multiplicity bins), they are excluded from the systematic uncertainty calculation.}
-% \label{barlow_check_0_20}
-% \end{figure}
-
-% \clearpage
-
-% \subsubsection{Other Sources of Systematic Uncertainty}
-% \label{other_systematic_sources}
-% As this analysis uses track quality cuts that have been used in previous analysis, we have assigned the following systematic errors:
-% \begin{itemize}
-% \item $\Lambda$ Topological Selection: 3.2\% (lower $p_{T}$), 3.0\% (central and higher $p_{T}$) (see here: \url{https://alice-notes.web.cern.ch/node/1191})
-% \item $\Lambda$ Material Budget: 1.1\% (lower $p_{T}$), 0.6\% (central and higher $p_{T}$) (see here: \url{https://alice-notes.web.cern.ch/node/1191})
-% \item Trigger efficiency: 3.5\% (see here: \url{https://alice-notes.web.cern.ch/node/919})
-% \item Associated hadron efficiency: 3.5\% (see here: \url{https://alice-notes.web.cern.ch/node/919})
-% \end{itemize}
-
-% As it has been observed from previous analyses that the trigger tracking efficiency approximately cancels out in the final per-trigger distributions, we only consider the associated hadron and $\Lambda$ reconstruction efficiency systematic errors in our final systematic calculation for both the per-trigger $\Delta\varphi$ distributions and the final per-trigger yields.
-
-% \subsubsection{Final Systematic Errors from $\Delta\varphi$ Distribution Generation}
-% \label{final_dphi_systematics}
-% A table of the final systematic errors (in percentages) from the $\Delta\varphi$ distribution generation for each multiplicity bin and $p_{T}$ bin is shown in Tables \ref{dphi_systematics_table} through \ref{dphi_systematics_table_highpt}. The total systematic is calculated by adding each systematic error in quadrature. Plots showing the systematic errors for each multiplicity bin and $p_{T}$ bin are shown in Figure \ref{dphi_systematics_plots}. We observe that the total systematic error is mostly $p_{T}$-independent. The $h-\Lambda$ and $h-h$ $\Delta\varphi$ distributions with their systematic errors are shown for our central $p_{T, assoc}$ bin in Figures \ref{h_lambda_dphi_systematics} and \ref{h_h_dphi_systematics}, respectively. The statistical errors are not shown to emphasize the systematic errors, but they are included in the final results (Section \ref{results})
+\begin{table}[ht]
+    \centering
+    \caption{The final systematic uncertainties (in percentages) from the h-$\Lambda$ $\Delta\varphi$ distribution generation for each multiplicity and associated \pt bin.}
+    \label{tab:h_lambda_dphi_systematics_table}
+    \begin{tabular}{l c c c c c c}
+        \hline
+        Mult. and \pt bin & Sig. & Sideband & PID & Topo. sel.  & Mat. bud. & Total \\
+        \hline
+        \hline
+        0-20\%, low \pt & 0.36 & 0.53 & 0.64 & 3.2 & 1.1 & 3.3 \\
+        20-50\%, low \pt & 0.35 & 0.67 & 0.65 & 3.2  & 1.1 & 3.4 \\
+        50-80\%, low \pt & 0.76 & 1.1 & 1.4 & 3.2  & 1.1 & 3.8 \\
+        0-20\%, high \pt & 0.42 & 0.42 & 0.76 & 3.0 & 0.6 & 3.2 \\
+        20-50\%, high \pt & 0.4 & 0.71 & 1.2 & 3.0  & 0.6 & 3.3 \\
+        50-80\%, high \pt & 1.1 & 1.6 & 2.0 & 3.0  & 0.6 & 4.1 \\
+        \hline
+    \end{tabular}
+\end{table}
 
 
-% \begin{table}[ht]
-% \centering
-% \begin{tabular}{|c||c|c|c|c|c||c|}
-% \hline
-% Multiplicity Bin & Signal Region & Sideband Region & PID Cuts & Topo. Selection & Material Budget & Total \\
-% \hline
-% 0-20\% & 0.39 & 0.46 & 0.57 & 3.0 & 0.6 & 3.1 \\
-% 20-50\% & 0.46 & 0.51 & 0.86 & 3.0  & 0.6 & 3.2 \\
-% 50-80\% & 0.87 & 1.1 & 1.4 & 3.0  & 0.6 & 3.6 \\
-% \hline
-% \end{tabular}
-% \caption{The final systematic errors from the $h-\Lambda$ $\Delta\varphi$ distribution generation for each multiplicity bin in our central $p_{T, assoc}$ bin. The $h-h$ distribution just the 3.5\% systematic from above and is thus not shown. The total systematic error is calculated by adding each systematic error in quadrature.}
-% \label{dphi_systematics_table}
-% \end{table}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.48\textwidth]{figures/analysis/systematics_dphi_postbarlow_lowpt.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/systematics_dphi_postbarlow_highpt.pdf}
+    \caption{A visual depiction of the final systematic errors for the h-$\Lambda$ $\Delta\varphi$ distributions for each multiplicity bin in the low (left) and high (right) associated \pt bins. The total systematic error is shown in black.}
+    \label{fig:dphi_systematics_plots}
+\end{figure}
 
-% \begin{table}[ht]
-% \centering
-% \begin{tabular}{|c||c|c|c|c|c||c|}
-% \hline
-% Multiplicity Bin & Signal Region & Sideband Region & PID Cuts & Topo. Selection & Material Budget & Total \\
-% \hline
-% 0-20\% & 0.36 & 0.53 & 0.64 & 3.2 & 1.1 & 3.3 \\
-% 20-50\% & 0.35 & 0.67 & 0.65 & 3.2  & 1.1 & 3.4 \\
-% 50-80\% & 0.76 & 1.1 & 1.4 & 3.2  & 1.1 & 3.8 \\
-% \hline
-% \end{tabular}
-% \caption{The final systematic errors from the $h-\Lambda$ $\Delta\varphi$ distribution generation for each multiplicity bin in our lower $p_{T, assoc}$ bin.}
-% \label{dphi_systematics_table_lowpt}
-% \end{table}
+The total systematic error is observed to be mostly $p_{T}$-independent. However, there appears to be a slight correlation between the systematic uncertainty and multiplicity, with the 0-20\% bin exhibiting lower uncertainties than the 50-80\% bin across both \pt ranges. This can become problematic when investigating the multiplicity dependence of observables extracted from the $\Delta\varphi$ distributions, as the fraction of the systematic uncertainty which is directly correlated with multiplicity should not be considered when measuring multiplicity-dependent trends like slopes and percent changes. Because of this, the fraction of the systematic uncertainty which is uncorrelated with multiplicity is approximated using
+%
+\begin{equation}
+    \label{eq:uncorrelated_fraction_1}
+    \sigma_{\text{uncor}, i}^2 = \sum_{\text{vars}}(R_{\text{var}, i} - 1)^2,
+\end{equation}
+where 
+\begin{equation}
+    \label{eq:uncorrelated_fraction_2}
+    R_{\text{var}, i} = (\frac{y_{\text{var}, i}}{y_{\text{nom}, i}})/ (\frac{y_{\text{var}}^{MB}}{y_{\text{nom}}^{MB}}),
+\end{equation}
+%
+where ``i'' refers to the ith multiplicity bin, and ``MB'' refers to the min-bias (multiplicity-integrated) results. The deviations of $R_{\text{var}, i}$ from unity quantify how the deviations in multiplicity bin $i$ differ from those in the MB sample. $\sigma_{\text{uncor}, i}$ is computed for each $\Delta\varphi$ bin, then the RMS is taken across all $\Delta\varphi$ bins to obtain the final multiplicity-uncorrelated portion of the systematic errors. The results for each \pt bin are shown in Figure~\ref{fig:dphi_nch_dep_systematics_plots}. These systematic errors are only used when quantifying the multiplicity dependence of an observable extracted from the $\Delta\varphi$ distributions.
 
-% \begin{table}[ht]
-% \centering
-% \begin{tabular}{|c||c|c|c|c|c||c|}
-% \hline
-% Multiplicity Bin & Signal Region & Sideband Region & PID Cuts & Topo. Selection & Material Budget & Total \\
-% \hline
-% 0-20\% & 0.42 & 0.42 & 0.76 & 3.0 & 0.6 & 3.2 \\
-% 20-50\% & 0.4 & 0.71 & 1.2 & 3.0  & 0.6 & 3.3 \\
-% 50-80\% & 1.1 & 1.6 & 2.0 & 3.0  & 0.6 & 4.1 \\
-% \hline
-% \end{tabular}
-% \caption{The final systematic errors from the $h-\Lambda$ $\Delta\varphi$ distribution generation for each multiplicity bin in our higher $p_{T, assoc}$ bin.}
-% \label{dphi_systematics_table_highpt}
-% \end{table}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.48\textwidth]{figures/analysis/nch_dep_systematics_dphi_postbarlow_lowpt.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/nch_dep_systematics_dphi_postbarlow_highpt.pdf}
+    \caption{Visual depiction of the multiplicity-uncorrelated systematic errors for the h-$\Lambda$ $\Delta\varphi$ distributions for each multiplicity bin in the low (left) and hig (right) associated \pt bins, along with the total systematic error shown in black.}
+    \label{fig:dphi_nch_dep_systematics_plots}
+\end{figure}
 
 % \clearpage
 
-% \begin{figure}[ht]
-% \centering
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/systematics_dphi_postbarlow.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/systematics_dphi_postbarlow_lowpt.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/systematics_dphi_postbarlow_highpt.pdf}}
-% \end{subfigure}
-% \caption{Final systematic errors for the $h-\Lambda$ $\Delta\varphi$ distributions for each multiplicity bin in the central (top), lower (center) and higher (bottom) $p_{T, assoc}$ bins. We observe little-to-no dependence on $p_{T, assoc}$ for the total systematic error in each multiplicity bin.}
-% \label{dphi_systematics_plots}
-% \end{figure}
-
-% \clearpage
-
-% \begin{figure}[ht]
-% \centering
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_lambda_dphi_0_20_onlysyst.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_lambda_dphi_20_50_onlysyst.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_lambda_dphi_50_80_onlysyst.pdf}}
-% \end{subfigure}
-% \caption{Per-trigger normalized $\Delta\varphi$ correlations for h-$\Lambda$ pairs in the 0-20\% (top), 20-50\% (center) and 50-80\% (bottom) multiplicity bins in our central $p_{T, assoc}$ bin with the systematic errors shown for each bin (statistical errors are not shown).}
-% \label{h_lambda_dphi_systematics}
-% \end{figure}
-
-% \begin{figure}[ht]
-% \centering
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_h_dphi_0_20_onlysyst.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_h_dphi_20_50_onlysyst.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_h_dphi_50_80_onlysyst.pdf}}
-% \end{subfigure}
-% \caption{Per-trigger normalized $\Delta\varphi$ correlations for h-h pairs in the 0-20\% (top), 20-50\% (center) and 50-80\% (bottom) multiplicity bins in our central $p_{T, assoc}$ bin with the systematic errors shown for each bin (statistical errors are not shown).}
-% \label{h_h_dphi_systematics}
-% \end{figure}
-
-% \clearpage
-
-% \subsubsection{$N_{ch}$-Dependent Systematics (for $\Delta\varphi$ distributions)}
-
-% \label{nch_dep_systematics_dphi}
-% In some of the results for this analysis, we take straight-line (pol1) fits of points vs. $<\frac{dN_{ch}}{d\eta}>$. Such fits should only be taken considering the fraction of systematic uncertainty that is uncorrelated with multiplicity ($N_{ch}$-dependent). Because of this, we approximate this multiplicity-uncorrelated fraction using the following formula:
-% \begin{equation}
-% \sigma_{uncor, i}^2 = \sum_{var}(R_{var, i} - 1)^2,
-% \end{equation}
-% where 
-% \begin{equation}
-% R_{var, i} = \frac{y_{var, i}}{y_{central, i}}/ \frac{y_{var}^{MB}}{y_{central}^{MB}},
-% \end{equation}
-% where ``i'' refers to the ith multiplicity bin, and ``MB'' refers to the min-bias (multiplicity-integrated) results. We compute $\sigma_{uncor, i}$ in each $\Delta\varphi$ bin, then take the RMS across all $\Delta\varphi$ bins (as there is no $\Delta\varphi$ dependence) to obtain the final multiplicity-uncorrelated portion of our systematic errors. The results for each $p_{T, assoc}$ bin are shown in Figure \ref{dphi_nch_dep_systematics_plots}.
-
-% \clearpage
-
-% \begin{figure}[ht]
-% \centering
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/nch_dep_systematics_dphi_postbarlow.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/nch_dep_systematics_dphi_postbarlow_lowpt.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/nch_dep_systematics_dphi_postbarlow_highpt.pdf}}
-% \end{subfigure}
-% \caption{Final multiplicity-uncorrelated systematic errors for the $h-\Lambda$ $\Delta\varphi$ distributions for each multiplicity bin in the central (top), lower (center) and higher (bottom) $p_{T, assoc}$ bins, along with the total systematic error shown in black.}
-% \label{dphi_nch_dep_systematics_plots}
-% \end{figure}
-
-% \clearpage
+\subsection{Yield extraction}
+The largest source of systematic uncertainty of this analysis corresponds to the different techniques that can be used to extract the yields in the near-side jet, away-side jet and underlying event from the $\Delta\varphi$ distributions. As mentioned in Section~\ref{sec:yield_extraction}, the equations for extracting these yields are
+%
+\begin{eqnarray}
+    Y_{near} = \int_{-\pi/2}^{\pi/2} (\frac{dN}{d\Delta\varphi}- U(\Delta\varphi))d\Delta\varphi,  \  \ Y_{away} = & \int_{\pi/2}^{3\pi/2} (\frac{dN}{d\Delta\varphi}- U(\Delta\varphi))d\Delta\varphi 
+    \label{eq:jet_yields}
+    \\ 
+    Y_{UE} = \int_{-\pi/2}^{3\pi/2} U(\Delta\varphi)d\Delta\varphi,
+    \label{eq:ue_yield}
+\end{eqnarray}
+%
+where $\frac{dN}{d\Delta\varphi}$ is the $\Delta\varphi$ distribution and $U(\Delta\varphi)$ is the underlying event fit. These equations naturally introduce two categories of systematic uncertainty: those associated with the underlying event fit, and those associated with the integration of the $\Delta\varphi$ distribution. 
 
 
+\subsubsection{Underlying event fit techniques}
+\label{sec:ue_fit_systematics}
 
-% \subsection{Yield Extraction}
-% The largest source of systematic uncertainty of this analysis corresponds to the different techniques that can be used to extract the yields in each kinematic region from the $\Delta\varphi$ distributions. We have already discussed the \textbf{6-bin underlying event technique} in Section \ref{yield_extraction}, but we will also consider the following methods. We present only the tables and plots for each technique in our central $p_{T, assoc}$ bin, but the extraction procedures are indentical for each $p_{T, assoc}$ bin.
+As the underlying event term $U(\Delta\varphi)$ is present in every yield extraction equation above, any changes in the underlying event fitting procedure will affect the final yield measurements. To maintain compatibility with previous analyses (specifically for the dihadron correlations), the nominal underlying event fit is a straight line to the average of the $\Delta\varphi$ distribution in the ranges $[-\frac{\pi}{2}, -\frac{\pi}{4}) \cup [\frac{\pi}{4}, \frac{5\pi}{8}) \cup [\frac{11\pi}{8}, \frac{3\pi}{2})$. These ranges were initially chosen as there is expected to be little-to-no contamination from the jet components in each range. However, to investigate the effect the UE fitting procedure may have on the final yields, the following alternative methods were considered:
+%
+\begin{enumerate}
+    \item Straight line fit in a more restricted range, specifically $[-\frac{\pi}{2}, -\frac{3\pi}{8}) \cup [\frac{3\pi}{8}, \frac{5\pi}{8}) \cup [\frac{11\pi}{8}, \frac{3\pi}{2})$
+    \item Straight line fit using the Zero Yield At Minimum (ZYAM) technique, where the underlying event line is set to the minimum of the $\Delta\varphi$ distribution
+    \item Sinusoidal fit which includes a non-zero $v_{2}$ contribution
+\end{enumerate}
+%
+The first two techniques are similar enough to the nominal technique that they will not be explicitly shown in this section. However, the third technique requires new machinery to be developed, so it will be described in detail in the next section.
 
-% \subsubsection{4-bin Underlying Event Technique}
-% \label{4bin}
-% The 4-bin UE technique is very similar to the 6-bin UE technique, but we only select 4 bins to get an average for our UE baseline. The technique is as follows:
+\subsubsection{Including a non-zero $v_{2}$ contribution}
+\label{sec:ue_fit_v2}
 
-% \begin{itemize}
-% \item The underlying event region is defined using a straight-line fit of the average of bins (1, 8, 9, 16) in the $\Delta\varphi$ distribution
-% \item The near-side yield is calculated via $\sum_{i=1}^{8} (\Delta\varphi_\text{bin i} - \text{UE}_i)$, where $\text{UE}_i$ is the value of the straight-line fit at the center of the ith bin
-% \item The away-side yield is calculated via $\sum_{i=9}^{16} (\Delta\varphi_\text{bin i} - \text{UE}_i)$, where $\text{UE}_i$ is the value of the straight-line fit at the center of the ith bin
-% \item The underlying-event yield is calculated via $\sum_{i=1}^{16} \text{UE}_i = 16 \times UE$
-% \item The total-yield is calculated via $\sum_{i=1}^{16} \Delta\varphi_\text{bin i} = \text{near-side} + \text{away-side} + \text{underlying-event}$
-% \end{itemize}
+For the final two techniques, we investigate the inclusion of a non-zero $v_{2}$ (which is definitely the case, especially in our 0-20\% multiplicity bin). First, the $v_{2}$ values are determined as a function of $p_{T}$ from Figure 31 in this AN: \url{https://alice-notes.web.cern.ch/system/files/notes/analysis/1228/2022-09-15-AN_PIDflowInSmallSystems_v4.pdf}. As our $p_{T}$ binning is much wider, we then take the weighted average across each of our $p_{T}$ bins using the published $p_{T}$ spectra for charged hadrons and $\Lambda$s from HEPData (found here: \url{https://www.hepdata.net/record/ins1244523?version=2}). The final values in the 0-20\% multiplicity bin for each $p_{T, assoc}$ bin are shown in Table \ref{v2_table}. 
 
-% The final per-trigger $\Delta\varphi$ plots with the UE fit using the 4-bin UE technique are shown in Figures \ref{h_lambda_dphi_uefit_4bin} ($h-\Lambda$) and \ref{h_h_dphi_uefit_4bin} ($h-h$), and the extracted yields are shown in Table \ref{h_lambda_yield_table_4bin} ($h-\Lambda$) and Table \ref{h_h_yield_table_4bin} ($h-h$).
+\begin{table}[h!]
+\centering
+\begin{tabular}{| c || c | c | c | c | }
+\hline
+$p_{T, assoc}$ & $v_{2}^{trigger}$ & $v_{2}^{assoc h}$ & $v_{2}^{assoc \Lambda}$ \\
+\hline
+2.0 - 4.0 & 0.092 & 0.112 & 0.111 \\
+1.5 - 2.5 & 0.092 & 0.100 & 0.075 \\
+2.5 - 4.0 & 0.092 & 0.119 & 0.137 \\
+\hline
+\end{tabular}
+\caption{$v_{2}$ values used in this analysis for each $p_{T, assoc}$ bin.}
+\label{v2_table}
+\end{table}
 
-% \begin{table}[h!]
-% \centering
-% \begin{tabular}{| c || c | c | c | c | }
-% \hline
-% Multiplicity Bin & Near-side Jet & Away-side Jet & Underlying Event & Total  \\
-% \hline
+As there is no data available for the 20-50\% and 50-80\% multiplicity bins, we take 0.85 and 0.5 times the 0-20\% value, respectively. 
 
-% 0-20\% & 4.25e-02  & 3.41e-02  & 7.31e-01 & 8.07e-01 \\
-% 20-50\% & 3.30e-02 & 2.72e-02  & 3.89e-01 & 4.49e-01 \\
-% 50-80\% & 2.62e-02 & 2.01e-02  & 1.92e-01 & 2.39e-01 \\
+Using these $v_{2}$ values, we then fit the following function to the $\Delta\varphi$ distribution in the regions $-\pi/2 < \Delta\varphi < -1$ and $1 < \Delta\varphi < +\pi/2$ (i.e., regions with little-to-no jet components). The fit function is given by:
 
-% \hline
-% \end{tabular}
-% \caption{Per-trigger pairwise $h-\Lambda$ extracted yields and corresponding statistical errors in the different kinematic regions for each multiplicity bin. The yields were extracted using the 4-bin technique described in this section.}
-% \label{h_lambda_yield_table_4bin}
-% \end{table}
-	
-% \begin{table}[h!]
-% \centering
-% \begin{tabular}{| c || c | c | c | c | }
-% \hline
-% Multiplicity Bin & Near-side Jet & Away-side Jet & Underlying Event & Total  \\
-% \hline
+\begin{equation}
+Fit_{v_{2}}(\Delta\varphi) = A\times(1 + 2v_{2, trig}v_{2, assoc}cos(2\Delta\varphi))
+\end{equation}
 
-% 0-20\% & 3.50e-01  & 2.27e-01  & 3.55e+00 & 4.12e+00 \\
-% 20-50\% & 3.34e-01 & 2.05e-01  & 2.13e+00 & 2.67e+00 \\
-% 50-80\% & 3.31e-01 & 1.90e-01  & 1.21e+00 & 1.73e+00 \\
+where A is the underlying event pedestal, which is allowed to vary during the fit. The $v_{2}$ values are fixed to the values in Table \ref{v2_table}. The final two techniques both use the same fit function for the UE.
 
-% \hline
-% \end{tabular}
-% \caption{Per-trigger pairwise $h-h$ extracted yields and corresponding statistical errors in the different kinematic regions for each multiplicity bin. The yields were extracted using the 4-bin technique described in this section.}
-% \label{h_h_yield_table_4bin}
-% \end{table}
-
-% \begin{figure}[ht]
-% \centering
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_lambda_dphi_avg4_0_20.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_lambda_dphi_avg4_20_50.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_lambda_dphi_avg4_50_80.pdf}}
-% \end{subfigure}
-% \caption{The final per-trigger $h-\Lambda$ $\Delta\varphi$ correlations with underlying event fit for the 0-20\% (top), 20-50\%(center) and 50-80\% (bottom) multiplicity bins. The dashed line is the central value for the fit. The underlying event fit was taken using the 4-bin technique described in this section.} 
-% \label{h_lambda_dphi_uefit_4bin}
-% \end{figure}
-
-%  \clearpage
- 
-% \begin{figure}[ht]
-% \centering
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_h_dphi_avg4_0_20.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_h_dphi_avg4_20_50.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_h_dphi_avg4_50_80.pdf}}
-% \end{subfigure}
-% \caption{The final per-trigger $h-h$ $\Delta\varphi$ correlations with underlying event fit for the 0-20\% (top), 20-50\%(center) and 50-80\% (bottom) multiplicity bins. The dashed line is the central value for the fit. The underlying event fit was taken using the 4-bin technique described in this section.} 
-% \label{h_h_dphi_uefit_4bin}
-% \end{figure}
-
-% \clearpage
-
-
-
-% \subsubsection{ZYAM Underlying Event Technique}
-% \label{zyam}
-% The ZYAM (Zero Yield At Minimum) underlying event technique is a modification of the 4 and 6 bin techniques, whereby we only take the minimum bin value in the $\Delta\varphi$ distribution as the underlying event value. The full technique is as follows:
-
-% \begin{itemize}
-% \item The underlying event region is defined using a straight-line fit with value and error set to the value and error of the minimum bin in the $\Delta\varphi$ distribution
-% \item The near-side yield is calculated via $\sum_{i=1}^{8} (\Delta\varphi_\text{bin i} - \text{UE}_i)$, where $\text{UE}_i$ is the value of the straight-line fit at the center of the ith bin
-% \item The away-side yield is calculated via $\sum_{i=9}^{16} (\Delta\varphi_\text{bin i} - \text{UE}_i)$, where $\text{UE}_i$ is the value of the straight-line fit at the center of the ith bin
-% \item The underlying-event yield is calculated via $\sum_{i=1}^{16} \text{UE}_i = 16 \times UE$
-% \item The total-yield is calculated via $\sum_{i=1}^{16} \Delta\varphi_\text{bin i} = \text{near-side} + \text{away-side} + \text{underlying-event}$
-% \end{itemize}
-
-% The final per-trigger $\Delta\varphi$ plots with the UE fit using the ZYAM UE technique are shown in Figures \ref{h_lambda_dphi_uefit_zyam} ($h-\Lambda$) and \ref{h_h_dphi_uefit_zyam} ($h-h$), and the extracted yields are shown in Table \ref{h_lambda_yield_table_zyam} ($h-\Lambda$) and Table \ref{h_h_yield_table_zyam} ($h-h$).
-
-% \begin{table}[h!]
-% \centering
-% \begin{tabular}{| c || c | c | c | c | }
-% \hline
-% Multiplicity Bin & Near-side Jet & Away-side Jet & Underlying Event & Total  \\
-% \hline
-	
-% 0-20\% & 4.69e-02  & 3.86e-02  & 7.22e-01 & 8.07e-01 \\
-% 20-50\% & 3.63e-02 & 3.04e-02  & 3.82e-01 & 4.49e-01 \\
-% 50-80\% & 2.84e-02 & 2.22e-02  & 1.88e-01 & 2.39e-01 \\
-	
-% \hline
-% \end{tabular}
-% \caption{Per-trigger pairwise $h-\Lambda$ extracted yields and corresponding statistical errors in the different kinematic regions for each multiplicity bin. The yields were extracted using the ZYAM technique described in this section. As these yields deviate the most from our central values, this will likely be the largest contribution to our systematic errors in the yield extraction.}
-% \label{h_lambda_yield_table_zyam}
-% \end{table}
-	
-% \begin{table}[h!]
-% \centering
-% \begin{tabular}{| c || c | c | c | c | }
-% \hline
-% Multiplicity Bin & Near-side Jet & Away-side Jet & Underlying Event & Total  \\
-% \hline
-
-% 0-20\% & 3.77e-01  & 2.53e-01  & 3.49e+00 & 4.12e+00 \\
-% 20-50\% & 3.54e-01 & 2.25e-01  & 2.09e+00 & 2.67e+00 \\
-% 50-80\% & 3.52e-01 & 2.11e-01  & 1.16e+00 & 1.73e+00 \\
-
-% \hline
-% \end{tabular}
-% \caption{Per-trigger pairwise $h-h$ extracted yields and corresponding statistical errors in the different kinematic regions for each multiplicity bin. The yields were extracted using the ZYAM technique described in this section.}
-% \label{h_h_yield_table_zyam}
-% \end{table}
-
-% \clearpage
-
-% \begin{figure}[ht]
-% \centering
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_lambda_dphi_zyam_0_20.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_lambda_dphi_zyam_20_50.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_lambda_dphi_zyam_50_80.pdf}}
-% \end{subfigure}
-% \caption{The final per-trigger $h-\Lambda$ $\Delta\varphi$ correlations with underlying event fit for the 0-20\% (top), 20-50\%(center) and 50-80\% (bottom) multiplicity bins. The dashed line is the central value for the fit. The underlying event fit was taken using the ZYAM technique described in this section.} 
-% \label{h_lambda_dphi_uefit_zyam}
-% \end{figure}
-	
-% \begin{figure}[ht]
-% \centering
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_h_dphi_zyam_0_20.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_h_dphi_zyam_20_50.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_h_dphi_zyam_50_80.pdf}}
-% \end{subfigure}
-% \caption{The final per-trigger $h-h$ $\Delta\varphi$ correlations with underlying event fit for the 0-20\% (top), 20-50\%(center) and 50-80\% (bottom) multiplicity bins. The dashed line is the central value for the fit. The underlying event fit was taken using the ZYAM technique described in this section.} 
-% \label{h_h_dphi_uefit_zyam}
-% \end{figure}
-
-% \clearpage
-
-% \subsubsection{6-bin Underlying Event Technique With Non-Negative Constraint}
-% \label{6binnonneg}
-% We again consider the 6-bin underlying event technique, but we restrict that each term in $\sum_{i=1}^{8} (\Delta\varphi_\text{bin i} - \text{UE}_i)$ (near-side yield) and $\sum_{i=9}^{16} (\Delta\varphi_\text{bin i} - \text{UE}_i)$ (away side yield) is non-negative, as ``negative'' contributions to the yield are unphysical. The full technique is as follows:
-
-% \begin{itemize}
-% \item The underlying event region is defined using a straight-line fit of the average of bins (1, 2, 7, 8, 9, 16) in the $\Delta\varphi$ distribution
-% \item The near-side yield is calculated via $\sum_{i=1}^{8} (\Delta\varphi_\text{bin i} - \text{UE}_i)$, where $\text{UE}_i$ is the value of the straight-line fit at the center of the ith bin and all negative terms in the sum are manually set to zero
-% \item The away-side yield is calculated via $\sum_{i=9}^{16} (\Delta\varphi_\text{bin i} - \text{UE}_i)$, where $\text{UE}_i$ is the value of the straight-line fit at the center of the ith bin and all negative terms in the sum are manually set to zero
-% \item The underlying-event yield is calculated via $\sum_{i=1}^{16} \text{UE}_i = 16 \times UE$
-% \item The total-yield is calculated via $\sum_{i=1}^{16} \Delta\varphi_\text{bin i} = \text{near-side} + \text{away-side} + \text{underlying-event}$
-% \end{itemize}
-
-% As this method doesn't change the UE fit line in any way, we report only the extracted yields in Table \ref{h_lambda_yield_table_6bin_nonzero} ($h-\Lambda$) and Table \ref{h_h_yield_table_6bin_nonzero} ($h-h$). (If you would like a reminder of the $\Delta\varphi$ plots with 6-bin UE fits, see Figures \ref{v0_1d_correlations_with_fit} ($h-\Lambda$) and \ref{hh_1d_correlations_with_fit} ($h-h$))
-
-	
-% \begin{table}[h!]
-% \centering
-% \begin{tabular}{| c || c | c | c | c | }
-% \hline
-% Multiplicity Bin & Near-side Jet & Away-side Jet & Underlying Event & Total  \\
-% \hline
-	
-% 0-20\% & 4.21e-02  & 3.27e-02  & 7.34e-01 & 8.07e-01 \\
-% 20-50\% & 3.23e-02 & 2.55e-02  & 3.92e-01 & 4.49e-01 \\
-% 50-80\% & 2.53e-02 & 1.89e-02  & 1.95e-01 & 2.39e-01 \\
-	
-% \hline
-% \end{tabular}
-% \caption{Per-trigger pairwise $h-\Lambda$ extracted yields and corresponding statistical errors in the different kinematic regions for each multiplicity bin. The yields were extracted using the 6-bin UE technique with non-negative constraint described in this section.}
-% \label{h_lambda_yield_table_6bin_nonzero}
-% \end{table}
-	
-% \begin{table}[h!]
-% \centering
-% \begin{tabular}{| c || c | c | c | c | }
-% \hline
-% Multiplicity Bin & Near-side Jet & Away-side Jet & Underlying Event & Total  \\
-% \hline
-
-% 0-20\% & 3.54e-01  & 2.24e-01  & 3.55e+00 & 4.12e+00 \\
-% 20-50\% & 3.40e-01 & 2.06e-01  & 2.13e+00 & 2.67e+00 \\
-% 50-80\% & 3.38e-01 & 1.92e-01  & 1.20e+00 & 1.73e+00 \\
-
-% \hline
-% \end{tabular}
-% \caption{Per-trigger pairwise $h-h$ extracted yields and corresponding statistical errors in the different kinematic regions for each multiplicity bin. The yields were extracted using the 6-bin UE technique with non-negative constraint described in this section.}
-% \label{h_h_yield_table_6bin_nonzero}
-% \end{table}
-
-% \clearpage
 
 % \subsubsection{Full 1D Correlation Fit (2 Gaussians)}
 % \label{full_correlation_fit}
