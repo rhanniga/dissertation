@@ -9,7 +9,7 @@ Systematic uncertainties are inevitable in any analysis, and the present one is 
     \hspace*{1cm}---Roger Barlow, \textit{Systematic Errors: Facts and Fictions}~\cite{BarlowCheck}
 \end{quote}
 
-In every experimental analysis, choices must be made. These choices can be as simple as the selection of a particular data set, or as complex as choosing a fit function of fifteen parameters instead of three. In either case, these choices can have an effect on the final results, which is quantified by the \textbf{systematic uncertainty}. Broadly speaking, the systematic uncertainty is a measure of the sensitivity of the final results to the choices made during the analysis procedure. 
+In every experimental analysis, choices must be made. These choices can be as simple as the selection of a particular data set, or as complex as choosing a fit function of fifteen parameters instead of three. In either case, these choices can have an effect on the final results, which is usually quantified by the \textbf{systematic uncertainty}. Broadly speaking, the systematic uncertainty is a measure of the sensitivity of the final results to the choices made during the analysis procedure. 
 
 In this analysis, the procedure for estimating the systematic uncertainty from a certain choice is as follows:
 %
@@ -568,9 +568,82 @@ These exclusions were foreshadowed in the previous sections, as the fits describ
 
 \subsubsection{Yield extraction systematics, summarized}
 \label{sec:yield_systematics_summary}
-As most of the main results of this thesis involve the h-\lmb and h-h per-trigger yields in the various kinematic regions, the systematic uncertainties associated with the extraction of these yields deserve to be consolidated to concise tables and plots from the overly detailed descriptions of the previous sections. To that end, tables containing the final systematic uncertainties for both the h-\lmb and h-h per-trigger yields in each kinematic region for every multiplicity and associated \pt bin can be seen in Tables~\ref{tab:h_lambda_yield_systematics} (h-\lmb) and \ref{tab:h_h_yield_systematics} (h-h). Note that  
+As most of the main results of this thesis involve the h-\lmb and h-h per-trigger yields in the various kinematic regions, the systematic uncertainties associated with the extraction of these yields deserve to be consolidated to concise tables and plots from the overly detailed descriptions of the previous sections. To that end, plots demonstrating the resulting yield deviations from the nominal technique for each of the aforementioned yield extraction procedure variations (post Barlow check) can be seen in Figures~\ref{fig:h_lambda_yield_deviations} (h-\lmb) and~\ref{fig:h_h_yield_deviations} (h-h). Furthermore, tables containing the final systematic uncertainties for both the h-\lmb and h-h per-trigger yields in each kinematic region for every multiplicity and associated \pt bin can be seen in Tables~\ref{tab:h_lambda_yield_systematics} (h-\lmb) and \ref{tab:h_h_yield_systematics} (h-h). Note that included in these systematic uncertainties are both the technique variations associated with the yield extraction procedure, as well as the variations in the yields due to the variations in the $\Delta\varphi$ distributions themselves, as discussed in Section~\ref{sec:systematics_dphi}. 
 
-The systematic uncertainties are reported in percentages, and are calculated by taking the RMS of the ratios of the yields extracted using the nominal procedure to the yields extracted using the varied procedure in each kinematic region. The final systematic uncertainty is then the sum in quadrature of the systematic uncertainties from each kinematic region. The systematic uncertainties for the h-\lmb yields are generally larger than those for the h-h yields, as the h-\lmb yields are extracted from a smaller number of events, resulting in larger statistical uncertainties. The systematic uncertainties for the h-\lmb yields are also larger than those for the h-h yields due to the additional uncertainty associated with the \lmb reconstruction efficiency, which is discussed in Section~\ref{sec:lambda_reco_eff}.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_lambda_0_20_lowpt_yield_variation.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_lambda_0_20_highpt_yield_variation.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_lambda_20_50_lowpt_yield_variation.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_lambda_20_50_highpt_yield_variation.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_lambda_50_80_lowpt_yield_variation.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_lambda_50_80_highpt_yield_variation.pdf}
+    \caption{The deviation from the nominal h-\lmb per-trigger yields for each yield extraction procedure variation (post Barlow check) in each kinematic region for the 0-20\% (top), 20-50\% (middle) and 50-80\% (bottom) multiplicity bins in the lower (left) and higher (right) associated \pt bins. The systematic uncertainty for the yield extraction procedure is calculated by taking the RMS of these deviations for each kinematic region.}
+    \label{fig:h_lambda_yield_deviations}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_h_0_20_lowpt_yield_variation.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_h_0_20_highpt_yield_variation.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_h_20_50_lowpt_yield_variation.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_h_20_50_highpt_yield_variation.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_h_50_80_lowpt_yield_variation.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_h_50_80_highpt_yield_variation.pdf}
+    \caption{The deviation from the nominal h-h per-trigger yields for each yield extraction procedure variation (post Barlow check) in each kinematic region for the 0-20\% (top), 20-50\% (middle) and 50-80\% (bottom) multiplicity bins in the lower (left) and higher (right) associated \pt bins. The systematic uncertainty for the yield extraction procedure is calculated by taking the RMS of these deviations for each kinematic region.}
+    \label{fig:h_h_yield_deviations}
+\end{figure}
+
+\begin{table}[h!]
+    \centering
+    \caption{Final systematic errors (in \%) from the h-$\Lambda$ yield extraction in each kinematic region, multiplicity and momentum bin.}
+    \label{tab:h_lambda_yield_systematics}
+    \begin{tabular}{ l  c  c  c }
+        \hline
+        Mult. and \pt bin & Near-side (jet) & Away-side (jet) & UE  \\
+        \hline
+        0-20\%, low & 5.50e+00 & 5.57e+00 & 3.12e+00 \\
+        20-50\%, low & 4.94e+00 & 5.24e+00 & 3.22e+00 \\
+        50-80\%, low & 6.34e+00 & 7.19e+00 & 3.68e+00 \\
+        0-20\%, high & 5.47e+00 & 6.10e+00  & 3.15e+00 \\
+        20-50\%, high & 5.88e+00 & 6.54e+00  & 3.33e+00 \\
+        50-80\%, high & 4.75e+00 & 5.25e+00  & 3.72e+00 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \caption{Final systematic errors (in \%) from the h-h yield extraction in each kinematic region, multiplicity and momentum bin.}
+    \label{tab:h_h_yield_systematics}
+    \begin{tabular}{ l  c  c  c }
+        \hline
+        Mult. and \pt bin & Near-side (jet) & Away-side (jet) & UE  \\
+        \hline
+        0-20\%, low & 4.46e+00   & 4.75e+00  & 3.51e+00 \\
+        20-50\%, low & 3.75e+00 & 3.63e+00  & 3.50e+00 \\
+        50-80\%, low & 4.94e+00 & 6.35e+00  & 3.67e+00 \\
+        0-20\%, high & 3.80e+00   & 4.00e+00  & 3.51e+00 \\
+        20-50\%, high & 3.61e+00 & 3.63e+00  & 3.51e+00 \\
+        50-80\%, high & 4.17e+00 & 5.16e+00  & 3.81e+00 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+
+% 0-20\% & 4.46e+00   & 4.75e+00  & 3.51e+00 \\
+% 20-50\% & 3.75e+00 & 3.63e+00  & 3.50e+00 \\
+% 50-80\% & 4.94e+00 & 6.35e+00  & 3.67e+00 \\
+
+% 0-20\% & 5.47e+00 & 6.10e+00  & 3.15e+00 & 3.10e+00 \\
+% 20-50\% & 5.88e+00 & 6.54e+00  & 3.33e+00 & 3.20e+00 \\
+% 50-80\% & 4.75e+00 & 5.25e+00  & 3.72e+00 & 3.60e+00 \\
+
+
+% 0-20\% & 3.80e+00   & 4.00e+00  & 3.51e+00 & 3.50e+00 \\
+% 20-50\% & 3.61e+00 & 3.63e+00  & 3.51e+00 & 3.50e+00 \\
+% 50-80\% & 4.17e+00 & 5.16e+00  & 3.81e+00 & 3.50e+00 \\
 
 % \begin{itemize}
 % \item For every yield extraction technique, the yield in a given kinematic region is divided by the yield in the same region using our default technique (6-bin UE)
@@ -622,34 +695,28 @@ The systematic uncertainties are reported in percentages, and are calculated by 
 % \hline
 % Multiplicity Bin & Near-side Jet & Away-side Jet & Underlying Event & Total  \\
 % \hline
-
 % 0-20\% & 5.50e+00 & 5.57e+00  & 3.12e+00 & 3.10e+00 \\
 % 20-50\% & 4.94e+00 & 5.24e+00  & 3.22e+00 & 3.20e+00 \\
 % 50-80\% & 6.34e+00 & 7.19e+00  & 3.68e+00 & 3.60e+00 \\
-
 % \hline
 % \end{tabular}
 % \caption{Final systematic errors from the $h-\Lambda$ yield extraction in each kinematic region and multiplicity bin, taken in the momentum range $1.5 < p_{T}^{\Lambda} < 2.5$ GeV/c. The systematic errors are calculated using the method described in this section.}
 % \label{h_lambda_yield_extraction_systematics_lowpt}
 % \end{table}
-
 % \begin{table}[h!]
 % \centering
 % \begin{tabular}{| c | c | c | c | c | }
 % \hline
 % Multiplicity Bin & Near-side Jet & Away-side Jet & Underlying Event & Total  \\
 % \hline
-
 % 0-20\% & 4.46e+00   & 4.75e+00  & 3.51e+00 & 3.50e+00 \\
 % 20-50\% & 3.75e+00 & 3.63e+00  & 3.50e+00 & 3.50e+00 \\
 % 50-80\% & 4.94e+00 & 6.35e+00  & 3.67e+00 & 3.50e+00 \\
-
 % \hline
 % \end{tabular}
 % \caption{Final systematic errors from the $h-h$ yield extraction in each kinematic region and multiplicity bin, taken in the momentum range $1.5 < p_{T}^{h} < 2.5$ GeV/c. The systematic errors are calculated using the method described in this section.}
 % \label{h_h_yield_extraction_systematics_lowpt}
 % \end{table}
-
 % \begin{table}[h!]
 % \centering
 % \begin{tabular}{| c | c | c | c | c | }
