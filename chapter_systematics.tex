@@ -198,7 +198,7 @@ The \lmb daughter particle identification (PID) cuts are chosen to be wide enoug
 
 \clearpage
 
-\subsubsection{Barlow check for $\Delta\varphi$ distribution uncertainties}
+\subsubsection{Barlow check for $\Delta\varphi$ distribution generation}
 \label{sec:barlow_check_dphi}
 
 Due to statistical fluctuations, it may be the case that some variations result in a statistically insignificant deviation from the nominal $\Delta\varphi$ distribution. In such cases, the variation should not be considered in the final systematic uncertainty calculation. To determine which variations give statistically significant deviations, a Barlow check~\cite{BarlowCheck} is performed. For each $\Delta\varphi$ bin, the following quantity is calculated:
@@ -231,8 +231,9 @@ As a result of the check, the following variations are excluded from the final s
 %
 These exclusions are not so surprising. As the nominal signal region is already fairly wide, making it wider does not significantly change the $\Delta\varphi$ distribution. Similarly, the initial sideband region falls fairly close to the signal region. So long as there are enough statistics in the corresponding sideband h-$\Lambda$ distribution, changing its width should not affect the $\Delta\varphi$ distribution in a meaningful way. It also appears that requiring a TOF hit introduces large statistical errors, which dominate the denominator in Equation~\ref{eq:barlow_check}.
 
-\subsubsection{Final systematic uncertainties for $\Delta\varphi$ distributions}
-\label{sec:final_dphi_systematics}
+\subsubsection{$\Delta\varphi$ distribution systematics, summarized}
+\label{sec:dphi_systematics_summarized}
+
 The final systematic errors (after the Barlow check) from the h-\lmb $\Delta\varphi$ distribution generation for each multiplicity bin and \pt bin are shown in Table \ref{tab:h_lambda_dphi_systematics_table}. The total systematic uncertainty is calculated by adding each systematic error in quadrature. This table is consolidated into plots showing the systematic errors for each multiplicity bin and \pt bin, which are presented in Figure \ref{fig:dphi_systematics_plots}. As the systematic uncertainties associated with the generation of the dihadron $\Delta\varphi$ distributions are only from the tracking efficiency presented in Table~\ref{tab:flat_systematics}, they are not plotted in this section.
 
 \begin{table}[ht]
@@ -288,7 +289,9 @@ where ``i'' refers to the ith multiplicity bin, and ``MB'' refers to the min-bia
 % \clearpage
 
 \subsection{Yield extraction}
-The largest source of systematic uncertainty of this analysis corresponds to the different techniques that can be used to extract the yields in the near-side jet, away-side jet and underlying event from the $\Delta\varphi$ distributions. As mentioned in Section~\ref{sec:yield_extraction}, the equations for extracting these yields are
+\label{sec:systematics_yield_extraction}
+
+One of the largest sources of systematic uncertainty of this analysis corresponds to the different techniques that can be used to extract the yields in the near-side jet, away-side jet and underlying event from the $\Delta\varphi$ distributions. As mentioned in Section~\ref{sec:yield_extraction}, the equations for extracting these yields are
 %
 \begin{eqnarray}
     Y_{near} = \int_{-\pi/2}^{\pi/2} (\frac{dN}{d\Delta\varphi}- U(\Delta\varphi))d\Delta\varphi,  \  \ Y_{away} = & \int_{\pi/2}^{3\pi/2} (\frac{dN}{d\Delta\varphi}- U(\Delta\varphi))d\Delta\varphi 
@@ -298,7 +301,7 @@ The largest source of systematic uncertainty of this analysis corresponds to the
     \label{eq:ue_yield}
 \end{eqnarray}
 %
-where $\frac{dN}{d\Delta\varphi}$ is the $\Delta\varphi$ distribution and $U(\Delta\varphi)$ is the underlying event fit. These equations naturally introduce two categories of systematic uncertainty: those associated with the underlying event fit, and those associated with the integration of the $\Delta\varphi$ distribution. 
+where $\frac{dN}{d\Delta\varphi}$ is the $\Delta\varphi$ distribution and $U(\Delta\varphi)$ is the underlying event fit. As the $\Delta\varphi$ distribution is present in these equations, all of the previous variations concerning the generation of this distribution must be considered. However, these equations also naturally introduce two new categories of systematic uncertainty: those associated with the underlying event fit, and those associated with the integration of the $\Delta\varphi$ distribution. Both of these categories will be discussed in detail in the following sections.
 
 
 \subsubsection{Underlying event fit techniques}
@@ -312,414 +315,262 @@ As the underlying event term $U(\Delta\varphi)$ is present in every yield extrac
     \item Sinusoidal fit which includes a non-zero $v_{2}$ contribution
 \end{enumerate}
 %
-The first two techniques are similar enough to the nominal technique that they will not be explicitly shown in this section. However, the third technique requires new machinery to be developed, so it will be described in detail in the next section.
+The first two techniques are similar enough to the nominal technique that they will not be explicitly shown in this section. Restricting the range of the flat fit region results in deviations from the nominal procedure of around 2\%, whereas the ZYAM technique gives much larger deviations at about 15\%. Ultimately the ZYAM procedure is not included in the final systematics calculation due to a physical incompatibility, whereby the presence of $v_{2}$ in the higher multiplicity $\Delta\varphi$ distributions causes the ZYAM procedure to massively underestimate the underlying event contribution.
+
+Including a non-zero $v_{2}$ contribution is a much more involved procedure and requires new machinery to be developed, so it will be described in detail in the next section.
 
 \subsubsection{Including a non-zero $v_{2}$ contribution}
 \label{sec:ue_fit_v2}
 
-For the final two techniques, we investigate the inclusion of a non-zero $v_{2}$ (which is definitely the case, especially in our 0-20\% multiplicity bin). First, the $v_{2}$ values are determined as a function of $p_{T}$ from Figure 31 in this AN: \url{https://alice-notes.web.cern.ch/system/files/notes/analysis/1228/2022-09-15-AN_PIDflowInSmallSystems_v4.pdf}. As our $p_{T}$ binning is much wider, we then take the weighted average across each of our $p_{T}$ bins using the published $p_{T}$ spectra for charged hadrons and $\Lambda$s from HEPData (found here: \url{https://www.hepdata.net/record/ins1244523?version=2}). The final values in the 0-20\% multiplicity bin for each $p_{T, assoc}$ bin are shown in Table \ref{v2_table}. 
-
-\begin{table}[h!]
-\centering
-\begin{tabular}{| c || c | c | c | c | }
-\hline
-$p_{T, assoc}$ & $v_{2}^{trigger}$ & $v_{2}^{assoc h}$ & $v_{2}^{assoc \Lambda}$ \\
-\hline
-2.0 - 4.0 & 0.092 & 0.112 & 0.111 \\
-1.5 - 2.5 & 0.092 & 0.100 & 0.075 \\
-2.5 - 4.0 & 0.092 & 0.119 & 0.137 \\
-\hline
-\end{tabular}
-\caption{$v_{2}$ values used in this analysis for each $p_{T, assoc}$ bin.}
-\label{v2_table}
-\end{table}
-
-As there is no data available for the 20-50\% and 50-80\% multiplicity bins, we take 0.85 and 0.5 times the 0-20\% value, respectively. 
-
-Using these $v_{2}$ values, we then fit the following function to the $\Delta\varphi$ distribution in the regions $-\pi/2 < \Delta\varphi < -1$ and $1 < \Delta\varphi < +\pi/2$ (i.e., regions with little-to-no jet components). The fit function is given by:
-
+All of the ``straight line'' UE fitting techniques are based on the flatness assumption of the non-jet part of the correlation in \dphi. This means that the dijet axis direction does not affect the non-jet particle distribution's overall shape within an event. However, as mentioned in Section~\ref{sec:collective_effects}, previous \PbPb, \pPb and even \pp collision studies have shown that the QGP's collective flow components ($v_{1}$, $v_{2}$, etc.) influence the phase-space distribution of particles within an event. Using Fourier decomposition, the $\Delta\varphi$ distributions on an event-by-event basis can be written as
+%
 \begin{equation}
-Fit_{v_{2}}(\Delta\varphi) = A\times(1 + 2v_{2, trig}v_{2, assoc}cos(2\Delta\varphi))
+    \label{eq:dphi_fourier_decomposition}
+    \frac{dN}{d\Delta\varphi} = a_{0} + \sum_{n=1}^{\infty}2a_{n}cos(n\Delta\varphi),
 \end{equation}
+%
+where $a_{n}$ are the Fourier coefficients. Surprisingly, these coefficients have been shown~\cite{Justin108, Justin109, Justin110} to be related to the collective flow coefficients $v_{n}$ via
+%
+\begin{equation}
+    \label{eq:fourier_vn_relation}
+    v_{n} = \frac{a_{n}}{a_{0}}.
+\end{equation}
+%
+This means that even without reconstructing the reaction plane within a specified event, the effects of collective flow are present in the $\Delta\varphi$ distributions. This manifests in the correlation distributions as an underlying event which is not flat with respect to $\Delta\varphi$, but rather sinusoidal. While this is in direct conflict to the initial assumption of a flat underlying event, this nominal choice was made to maintain compatibility with previous measurements of dihadron yields using correlation techniques, which also assume a flat UE in \dphi.
 
-where A is the underlying event pedestal, which is allowed to vary during the fit. The $v_{2}$ values are fixed to the values in Table \ref{v2_table}. The final two techniques both use the same fit function for the UE.
+As the $v_{2}$ or ``elliptic flow'' coefficient is the most dominant of the collective flow coefficients measured in \pPb collisions~\cite{Justin111} in the \pt ranges for this analysis, it is the only one considered. Furthermore, the $v_{2}$ coefficients are exceedingly difficult to determine, with fully published papers solely dedicated to measuring the $v_{2}$ for different particle species and collision systems. Luckily, these coefficients have been measured by ALICE in \pPb collisions for both charged hadrons and \lmb baryons across a wide range of \pt~\cite{ALICEv2_1, ALICEv2_2}. As the \pt binning in this analysis is much wider, the weighted average 
+%
+\begin{equation}
+    \label{eq:v2_weighted_average}
+    v_{2}^{avg} = \frac{\int_{p_{T, min}}^{p_{T, max}}v_{2}(p_{T})\frac{dN}{dp_{T}}dp_{T}}{\int_{p_{T, min}}^{p_{T, max}}\frac{dN}{dp_{T}}dp_{T}},
+\end{equation}
+%
+is used, where $p_{T, min}$ and $p_{T, max}$ are the minimum and maximum values of \pt in the bins from this analysis (namely $1.5 - 2.5$ and $2.5 - 4.0$ \GeVc). The $v_{2}(\pt)$ values for charged hadrons and \lmb baryons are taken from ~\cite{ALICEv2_1}, and $dN/dp_{T}$ is taken from the published \pt spectra for charged hadrons and \lmb baryons from ~\cite{PtSpectra}, plots of which can be seen in Figures~\ref{fig:v2_plot} ($v_{2}$) and \ref{fig:pt_spectra_plot} (\pt spectra). The values of $v_{2}^{avg}$ for each \pt bin are shown in Table~\ref{tab:v2_values}. Note that the trigger $v_{2}$ remains the same, as the trigger \pt range is fixed for this analysis. The $\Lambda$ $v_{2}$ is markedly higher than the charged hadron $v_{2}$, which ultimately manifests itself as a larger deviation from the nominal UE fit when compared to the dihadron case.
+%
+\begin{table}[t]
+    \centering
+    \caption{$v_{2}$ values used in this analysis for each associated \pt bin. The values were calculated as the weighted average of published \pt-differential $v_{2}$ measurements with the published \pt spectra, taken across the entire associated \pt range.}
+    \label{tab:v2_values}
+    \begin{tabular}{ l c c c c }
+    \hline
+    $p_{T}^{\text{assoc.}}$ & $v_{2}^{\text{trig.}}$ & $v_{2}^{\text{assoc. h}}$ & $v_{2}^{\text{assoc.} \Lambda}$ \\
+    \hline
+    1.5 - 2.5 & 0.092 & 0.100 & 0.075 \\
+    2.5 - 4.0 & 0.092 & 0.119 & 0.137 \\
+    \hline
+    \end{tabular}
+\end{table}
+%
+Unfortunately there are few multiplicity-dependent measurements of the $v_{2}$ coefficients for identified particle species. Because of this, the $v_{2}$ values from Table~\ref{tab:v2_values} are used only in the 0-20\% multiplicity bin, with the $v_{2}$ values for the 20-50\% and 50-80\% multiplicity bins taken as 0.85 and 0.50 times the 0-20\% value, respectively.
 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/analysis/v2_diagram.png}
+    \caption{The $v_{2}$ values for identified hadrons as a function of \pt, taken from~\cite{ALICEv2_1}.}
+    \label{fig:v2_plot}
+\end{figure}
 
-% \subsubsection{Full 1D Correlation Fit (2 Gaussians)}
-% \label{full_correlation_fit}
-% The full 1D correlation fit with two gaussians involves fitting the entire $\Delta\varphi$ distribution with a function that includes near-side, away-side and underlying-event components. The fit function is given by:
+\begin{figure}[ht]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \includegraphics[width=\textwidth]{figures/analysis/lambda_pt_spectra.png}
+        \includegraphics[width=\textwidth]{figures/analysis/pion_pt_spectra.png}
+    \end{minipage}
+    \hspace{1.2cm}
+    \begin{minipage}{0.40\textwidth}
+        \includegraphics[width=0.8\textwidth]{figures/analysis/pt_spectra_legend.png}
+    \end{minipage}
+    \caption{The published~\cite{ALICEMatBud} \pt spectra for \lmb baryons (top) and charged hadrons ($\approx$ pions) (bottom), used to compute the weighted average of the $v_{2}$ coefficients across the wide momentum bins used in this analysis.}
+    \label{fig:pt_spectra_plot}
+\end{figure}
 
-% \begin{gather*}
-% 	\text{Fit}(\Delta\varphi) = C + A_{near}*\exp{\frac{(\Delta\varphi - M_{near})^2}{2*\sigma_{near}}} + A_{away}*\exp{\frac{(\Delta\varphi - M_{away})^2}{2*\sigma_{away}}} \\
-% 	+ (A_{near,mirror}*\exp{\frac{((\Delta\varphi+2\pi) - M_{near,mirror})^2}{2*\sigma_{near,mirror}}} + A_{away,mirror}*\exp{\frac{((\Delta\varphi-2\pi) - M_{away,mirror})^2}{2*\sigma_{away,mirror}}})
-% \end{gather*}
+Using these $v_{2}$ values, the underlying event is estimated by fitting the function 
+%
+\begin{equation}
+    \label{eq:ue_v2}
+    U_{v_{2}}(\Delta\varphi) = A\times(1 + 2v_{2}^{\text{trig.}}v_{2}^{\text{assoc.}}cos(2\Delta\varphi))
+\end{equation}
+%
+in the ranges $-\pi/2 < \Delta\varphi < -1$ and $1 < \Delta\varphi < +\pi/2$, where little jet contribution is expected. The underlying event \textbf{pedestal} $A$ is allowed to vary during the fit, but the $v_{2}$ values are fixed. Examples of h-\lmb and h-h $\Delta\varphi$ distributions with the UE fit using this procedure are shown in Figure~\ref{fig:v2_fit_examples}.
 
-% where the ``mirror'' terms are added to account for the $2\pi$ periodicity of the $\Delta\varphi$ distribution. The mean in the near-side gaussian (and corresponding mirror term) is fixed to 0 ($2\pi$) and the mean in the away-side guassian (and corresponding mirror term) is fixed to $\pi$ ($-\pi$), but all other parameters are allowed to vary. The yield extraction procedure is as follows:
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.49\textwidth]{figures/analysis/v2fit_h_lambda_cent_0_20_trigger_4_8_assoc_25_4.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/v2fit_h_h_cent_0_20_trigger_4_8_assoc_25_4.pdf}
+    \caption{Examples of the underlying event fit using the $v_{2}$-based procedure for the h-\lmb (left) and h-h (right) $\Delta\varphi$ distributions in the 0-20\% multiplicity bin in the higher associated \pt bin.}
+    \label{fig:v2_fit_examples}
+\end{figure}
 
-% \begin{itemize}
-% \item The $\Delta\varphi$ distribution is fit with the correlation function described above in the range $\frac{-\pi}{2} < \Delta\varphi < \frac{3\pi}{2}$
-% \item The near-side yield is calculated via $\frac{16}{2\pi}(\int_{\frac{-\pi}{2}}^{\frac{\pi}{2}}Fit(\Delta\varphi)d\Delta\varphi - \int_{\frac{-\pi}{2}}^{\frac{\pi}{2}}UE d\Delta\varphi)$, where UE is a constant calculated from the average of bins (1, 2, 7, 8, 9, 16)
-% \item The away-side yield is calculated via $\frac{16}{2\pi}(\int_{\frac{\pi}{2}}^{\frac{3\pi}{2}}Fit(\Delta\varphi)d\Delta\varphi - \int_{\frac{\pi}{2}}^{\frac{3\pi}{2}}UE d\Delta\varphi)$
-% \item The underlying-event yield is calculated via $\frac{16}{2\pi}\int_{\frac{-\pi}{2}}^{\frac{3\pi}{2}}UE d\Delta\varphi$
-% \item The total yield is calculated via $\frac{16}{2\pi}\int_{\frac{-\pi}{2}}^{\frac{3\pi}{2}}Fit(\Delta\varphi) d\Delta\varphi$
-% \end{itemize}
+The validty of this procedure can be tested by examining the $\Delta\varphi$ distributions at large $\Delta\eta$, where the near-side jet component is minimal, leaving just the UE at small $\Delta\varphi$\footnote{At large $\Delta\varphi$, the away-side ridge is still present.}. In fact, this procedure is often used to determine the $v_{2}$ coefficients in the first place. In this case, however, it will just be used to serve as a sanity check for both the fitting procedure and the fixed $v_{2}$ coefficients from~\ref{tab:v2_values}. If the UE fit matches the near-side of the $\Delta\varphi$ distribution at large $\Delta\eta$, then the $v_{2}$ coefficients and fitting procedure are likely valid. Examples of the $\Delta\varphi$ distributions with $|\Delta\eta| > 1.4$ and $|\Delta\eta| < 1.2$ showing the $v_{2}$-based UE fit can be seen in Figure~\ref{fig:v2_fit_large_deta}. These are generated in the highest multiplicity and momentum bins, where the effects of the $v_{2}$ contribution are maximal. Both the h-\lmb and h-h $\Delta\varphi$ distributions show good agreement between the UE fit and the data at small $\Delta\varphi$ and large $\Delta\eta$, where the near-side jet peak and away-side ridge are no longer present, pointing to the validity of the $v_{2}$-based UE fitting procedure.
 
-% The constant $\frac{16}{2\pi}$ being multiplied by each term is just the inverse of the bin width ($2\pi$ radians for 16 $\Delta\varphi$ bins).
-% The final per-trigger $\Delta\varphi$ plots with the full correlation fits are shown in Figures \ref{h_lambda_dphi_fullfit} ($h-\Lambda$) and \ref{h_h_dphi_fullfit} ($h-h$), and the extracted yields are shown in Table \ref{h_lambda_yield_table_fullfit} ($h-\Lambda$) and Table \ref{h_h_yield_table_fullfit} ($h-h$). It's worth nothing that the yields are extremely similar to those from our central technique, as the UE is the same and the fits are very good.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.49\textwidth]{figures/analysis/v2fit_largedeta_h_lambda_cent_0_20_trigger_4_8_assoc_25_4.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/v2fit_largedeta_h_h_cent_0_20_trigger_4_8_assoc_25_4.pdf}
+    \caption{The h-\lmb (left) and h-h (right) $\Delta\varphi$ distributions in the 0-20\% multiplicity bin and higher \pt bin at small and large values of $\Delta\eta$, with the UE fit using the $v_{2}$-based procedure shown in blue. The fits are in good agreement with data in both cases.}
+    \label{fig:v2_fit_large_deta}
+\end{figure}
 
-% \begin{table}[h!]
-% \centering
-% \begin{tabular}{| c | c | c | c | c | }
-% \hline
-% Multiplicity Bin & Near-side Jet & Away-side Jet & Underlying Event & Total  \\
-% \hline
-	
-% 0-20\% & 4.07e-02  & 3.26e-02  & 7.34e-01 & 8.07e-01 \\
-% 20-50\% & 3.11e-02 & 2.55e-02  & 3.92e-01 & 4.49e-01 \\
-% 50-80\% & 2.44e-02 & 1.88e-02  & 1.95e-01 & 2.38e-01 \\
-	
-% \hline
-% \end{tabular}
-% \caption{Per-trigger pairwise $h-\Lambda$ extracted yields in the different kinematic regions for each multiplicity bin. The yields were extracted using the full correlation fit procedure described in this section.}
-% \label{h_lambda_yield_table_fullfit}
-% \end{table}
-	
-% \begin{table}[h!]
-% \centering
-% \begin{tabular}{| c | c | c | c | c | }
-% \hline
-% Multiplicity Bin & Near-side Jet & Away-side Jet & Underlying Event & Total  \\
-% \hline
+The effects of including $v_{2}$ has on the extracted h-\lmb and h-h yields in each region is not at all obvious at first glance. For the most central collisions, the inclusion of $v_{2}$ results in nearly a 5\% decrease for the jet-like yields when compared to the nominal technique. This can mostly be seen in Figure~\ref{fig:v2_fit_examples}, where the peaks of the sinusoidal fit achieve their maxima within the near- and away-side components of the jet, causing the overall yields to be lower than those obtained by the flat UE assumption. However, at lower multiplicities (20-50\%, 50-80\%), the extracted h-\lmb and h-h jet-like yields actually exhibit a slight increase of around 5\% in their extracted yields when compared to those measured using the nominal UE fit. This is due to the variation of the pedestal $A$ in Equation~\ref{eq:ue_v2} during the fit, which results in a smaller pedestal value than the nominal fit in these multiplicity ranges. The extracted underlying event yield never deviates by more than 3\% from the yield obtained using the nominal procedure for all multiplicity and momentum bins for both the h-\lmb and h-h cases.
 
-% 0-20\% & 3.48e-01  & 2.24e-01  & 3.55e+00 & 4.12e+00 \\
-% 20-50\% & 3.36e-01 & 2.05e-01  & 2.13e+00 & 2.67e+00 \\
-% 50-80\% & 3.35e-01 & 1.90e-01  & 1.20e+00 & 1.73e+00 \\
+\subsubsection{Integration procedures}
+\label{sec:integration_procedures}
 
-% \hline
-% \end{tabular}
-% \caption{Per-trigger pairwise $h-h$ extracted yields in the different kinematic regions for each multiplicity bin. The yields were extracted using the full correlation fit procedure described in this section.}
-% \label{h_h_yield_table_fullfit}
-% \end{table}
+The general yield-extraction equation
+%
+\begin{equation}
+    \label{eq:general_yield}
+    Y_{\Delta\varphi} = \int_{\Delta\varphi_1}^{\Delta\varphi_2} (\frac{dN}{d\Delta\varphi}- U(\Delta\varphi))d\Delta\varphi
+\end{equation}
+%
+leaves some room for interpretation. Obviously the $\Delta\varphi$ distributions shown thus far are in some way related to $dN/d\Delta\varphi$, but integrals prefer continuous integrands, which the $\Delta\varphi$ distributions are clearly not as they have finitely many (16) bins. Furthermore, there is nothing explicity preventing 
+%
+\begin{equation}
+    \frac{dN}{d\Delta\varphi} < U(\Delta\varphi),
+\end{equation}
+%
+possibly resulting in a \textit{negative} yield, which is clearly unphysical. There are a few ways to alleviate these issues, which are discussed in this section.
 
-% \clearpage
+For all of the yield extraction procedures discussed thus far, the usage of the integration symbol in Equation~\ref{eq:general_yield} is \textit{slightly} misleading: the yields are actually calculated by summing the bin contents of the $\Delta\varphi$ distribution in the specified range, and subtracting off the value of $U(\Delta\varphi)$ at the center of each bin. To be more explicit, the yields are calculated as
+%
+\begin{equation}
+    \label{eq:yield_sum}
+    Y_{\Delta\varphi} = \sum_{i=L}^{U} (\frac{dN}{d\Delta\varphi_{i}}- U(\Delta\varphi_{i})),
+\end{equation}
+%
+where $L$ and $U$ are the bin numbers of the Lower and Upper $\Delta\varphi$ bins in the specified range, $dN/d\Delta\varphi_{i}$ is the value of the correlation distribution in the ith \dphi bin, and $U(\Delta\varphi)$ is the value of $U$ in the center of the ith \dphi bin. 
 
-% \begin{figure}[ht]
-% \centering
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_lambda_dphi_gaus_0_20.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_lambda_dphi_gaus_20_50.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_lambda_dphi_gaus_50_80.pdf}}
-% \end{subfigure}
-% \caption{The final per-trigger $h-\Lambda$ $\Delta\varphi$ correlations with the full 2xGaussian fit for the 0-20\% (top), 20-50\%(center) and 50-80\% (bottom) multiplicity bins. The fit was generated using the technique described in this section.}
-% \label{h_lambda_dphi_fullfit}
-% \end{figure}
-	
-% \begin{figure}[ht]
-% \centering
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_h_dphi_gaus_0_20.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_h_dphi_gaus_20_50.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_h_dphi_gaus_50_80.pdf}}
-% \end{subfigure}
-% \caption{The final per-trigger $h-h$ $\Delta\varphi$ correlations with the full 2xGaussian fit for the 0-20\% (top), 20-50\%(center) and 50-80\% (bottom) multiplicity bins. The fit was generated using the technique described in this section.}
-% \label{h_h_dphi_fullfit}
-% \end{figure}
+Equation~\ref{eq:yield_sum} provides an easy way to deal with the negative yield issue: if the value of $U(\Delta\varphi_{i})$ is greater than the value of $dN/d\Delta\varphi_{i}$ in a given bin, the yield in that bin is set to zero. While this is not done for the nominal yield extraction procedure in this analysis, it is a completely reasonable technique and is therefore explored in the systematic uncertainty analysis. Using the flat UE assumption with the UE average taken in the nominal range, the results are relatively unsurprising: the yields extracted using this procedure are strictly higher than those extracted using the main procedure where negative contributions are allowed. However, the deviations never exceed more than 3.5\%, with the average deviation being around 2\% for both the h-\lmb and h-h cases.
 
-% \clearpage
+Another way to address the lack of continuity in the $\Delta\varphi$ distributions is to fit these distributions with continuous functions, then use the corresponding fit for the integration in Equation~\ref{eq:general_yield}. This thesis considers two such functions, which are presented in the following two sections.
 
-% \subsubsection{Including $v_{2}$ (Von Mises and just $v_{2}$)}
-% \label{including_v2}
-% For the final two techniques, we investigate the inclusion of a non-zero $v_{2}$ (which is definitely the case, especially in our 0-20\% multiplicity bin). First, the $v_{2}$ values are determined as a function of $p_{T}$ from Figure 31 in this AN: \url{https://alice-notes.web.cern.ch/system/files/notes/analysis/1228/2022-09-15-AN_PIDflowInSmallSystems_v4.pdf}. As our $p_{T}$ binning is much wider, we then take the weighted average across each of our $p_{T}$ bins using the published $p_{T}$ spectra for charged hadrons and $\Lambda$s from HEPData (found here: \url{https://www.hepdata.net/record/ins1244523?version=2}). The final values in the 0-20\% multiplicity bin for each $p_{T, assoc}$ bin are shown in Table \ref{v2_table}. 
+\subsubsection{The double Gaussian fit}
+\label{sec:double_gaus_fit}
 
-% \begin{table}[h!]
-% \centering
-% \begin{tabular}{| c || c | c | c | c | }
-% \hline
-% $p_{T, assoc}$ & $v_{2}^{trigger}$ & $v_{2}^{assoc h}$ & $v_{2}^{assoc \Lambda}$ \\
-% \hline
-% 2.0 - 4.0 & 0.092 & 0.112 & 0.111 \\
-% 1.5 - 2.5 & 0.092 & 0.100 & 0.075 \\
-% 2.5 - 4.0 & 0.092 & 0.119 & 0.137 \\
-% \hline
-% \end{tabular}
-% \caption{$v_{2}$ values used in this analysis for each $p_{T, assoc}$ bin.}
-% \label{v2_table}
-% \end{table}
+There are a number of functions that may appear suitable to fit the $\Delta\varphi$ distributions, but given the Gaussian-like appearance of the near- and away-side jet components, a double Gaussian fit is a natural choice. The double Gaussian fit function is given by
+%
+\begin{equation}
+    \label{eq:double_gaus}
+    \begin{split}
+	&f(\Delta\varphi)  = U + A_{\text{NS}} e^{\frac{(\Delta\varphi - \mu_{\text{NS}})^2}{2\sigma_{\text{NS}}}} + A_{\text{AS}} e^{\frac{(\Delta\varphi - \mu_{\text{AS}})^2}{2\sigma_{\text{AS}}}} \\
+    & + A_{\text{NS}}^{\text{mirror}} e^{\frac{(\Delta\varphi - \mu_{\text{NS}} + 2\pi)^2}{2\sigma_{\text{NS}}}} + A_{\text{AS}}^{\text{mirror}} e^{\frac{(\Delta\varphi - \mu_{\text{AS}} - 2\pi)^2}{2\sigma_{\text{AS}}}},
+    \end{split}
+\end{equation}
+%
+where $A$ and $\mu$ are the amplitude and means of the Gaussian components, and the subscript ``NS'' (``AS'') refers to the near-side (away-side) jet component. The ``mirror'' terms are added to account for the $2\pi$ periodicity of the $\Delta\varphi$ distribution, and are required to obtain a convergent fit. The $U$ term describes a flat underlying event, and is fixed to the average of the $\Delta\varphi$ distribution in the regions $[-\frac{\pi}{2}, -\frac{\pi}{4}) \cup [\frac{\pi}{4}, \frac{5\pi}{8}) \cup [\frac{11\pi}{8}, \frac{3\pi}{2})$, as is done for the nominal UE determination procedure. Furthermore, the mean in the near-side gaussian (and corresponding mirror term) is fixed to 0 ($2\pi$) and the mean in the away-side guassian (and corresponding mirror term) is fixed to $\pi$ ($-\pi$), leaving only the amplitudes and widths to vary freely. The double Gaussian fits to both the h-\lmb and h-h correlation distributions for every multiplicity and momentum bin are shown in Figures~\ref{fig:double_gaus_fits_lambda} (h-\lmb) and~\ref{fig:double_gaus_fits_h}. The fits generally describe the data quite well, though an extreme amount of effort went in to ensuring the convergence of each fit due to an inordinate amount of instability. 
 
-% As there is no data available for the 20-50\% and 50-80\% multiplicity bins, we take 0.85 and 0.5 times the 0-20\% value, respectively. 
-
-% Using these $v_{2}$ values, we then fit the following function to the $\Delta\varphi$ distribution in the regions $-\pi/2 < \Delta\varphi < -1$ and $1 < \Delta\varphi < +\pi/2$ (i.e., regions with little-to-no jet components). The fit function is given by:
-
-% \begin{equation}
-% Fit_{v_{2}}(\Delta\varphi) = A\times(1 + 2v_{2, trig}v_{2, assoc}cos(2\Delta\varphi))
-% \end{equation}
-
-% where A is the underlying event pedestal, which is allowed to vary during the fit. The $v_{2}$ values are fixed to the values in Table \ref{v2_table}. The final two techniques both use the same fit function for the UE.
-
-% \subsubsection{Full 1D Correlation Fit (Von Mises with $v_{2}$)}
-% \label{full_correlation_fit_von}
-% The full 1D correlation fit with  Von Mises involves fitting the entire $\Delta\varphi$ distribution with a function that includes near-side, away-side and underlying-event components. The fit function is given by:
-
-% \begin{gather*}
-% 	\text{Fit}(\Delta\varphi) = Fit_{v_{2}} +
-% 	(\frac{1}{2\pi I_{0}(\kappa_{near})})e^{\kappa_{near} \cos(\Delta\varphi)} +  \\
-% 	(\frac{1}{2\pi I_{0}(\kappa_{away})})e^{\kappa_{away} \cos(\Delta\varphi)} 
-% \end{gather*}
-
-% where $Fit_{v_{2}}$ is fixed using the procedure described in the previous section (\ref{including_v2}) and I$_0$ is the modified Bessel function of zero order. All other parameters are allowed to vary. The full technique is as follows:
-
-% \begin{itemize}
-% \item The $\Delta\varphi$ distribution is fit with the correlation function described above in the range $\frac{-\pi}{2} < \Delta\varphi < \frac{3\pi}{2}$
-% \item The near-side yield is calculated via $\frac{16}{2\pi}(\int_{\frac{-\pi}{2}}^{\frac{\pi}{2}}Fit(\Delta\varphi)d\Delta\varphi - \int_{\frac{-\pi}{2}}^{\frac{\pi}{2}}Fit_{v_{2}}(\Delta\varphi) d\Delta\varphi)$
-% \item The away-side yield is calculated via $\frac{16}{2\pi}(\int_{\frac{\pi}{2}}^{\frac{3\pi}{2}}Fit(\Delta\varphi)d\Delta\varphi - \int_{\frac{\pi}{2}}^{\frac{3\pi}{2}}Fit_{v_{2}}(\Delta\varphi)\Delta\varphi)$
-% \item The underlying-event yield is calculated via $\frac{16}{2\pi}\int_{\frac{-\pi}{2}}^{\frac{3\pi}{2}}Fit_{v_{2}}(\Delta\varphi) d\Delta\varphi$
-% \item The total yield is calculated via $\frac{16}{2\pi}\int_{\frac{-\pi}{2}}^{\frac{3\pi}{2}}Fit(\Delta\varphi) d\Delta\varphi$
-% \end{itemize}
-
-% The constant $\frac{16}{2\pi}$ being multiplied by each term is just the inverse of the bin width ($2\pi$ radians for 16 $\Delta\varphi$ bins).
-% The final per-trigger $\Delta\varphi$ plots with the full Von Mises fits and $v_{2}$ assumptions shown in Figures \ref{h_lambda_dphi_vonfit} ($h-\Lambda$) and \ref{h_h_dphi_vonfit} ($h-h$), and the extracted yields are shown in Table \ref{h_lambda_yield_table_vonfit} ($h-\Lambda$) and Table \ref{h_h_yield_table_vonfit} ($h-h$). 
-
-% \begin{table}[h!]
-% \centering
-% \begin{tabular}{| c || c | c | c | c | }
-% \hline
-% Multiplicity Bin & Near-side Jet & Away-side Jet & Underlying Event & Total  \\
-% \hline
-	
-% 0-20\% & 3.87e-02  & 3.03e-02  & 7.38e-01 & 8.07e-01 \\
-% 20-50\% & 3.27e-02 & 2.69e-02  & 3.89e-01 & 4.49e-01 \\
-% 50-80\% & 2.60e-02 & 2.04e-02  & 1.92e-01 & 2.38e-01 \\
-	
-% \hline
-% \end{tabular}
-% \caption{Per-trigger pairwise $h-\Lambda$ extracted yields in the different kinematic regions for each multiplicity bin. The yields were extracted using the full Von Mises fit procedure described in this section.}
-% \label{h_lambda_yield_table_vonfit}
-% \end{table}
-	
-% \begin{table}[h!]
-% \centering
-% \begin{tabular}{| c || c | c | c | c | }
-% \hline
-% Multiplicity Bin & Near-side Jet & Away-side Jet & Underlying Event & Total  \\
-% \hline
-
-% 0-20\% & 3.41e-01  & 2.15e-01  & 3.57e+00 & 4.12e+00 \\
-% 20-50\% & 3.40e-01 & 2.08e-01  & 2.12e+00 & 2.67e+00 \\
-% 50-80\% & 3.49e-01 & 2.04e-01  & 1.17e+00 & 1.73e+00 \\
-
-% \hline
-% \end{tabular}
-% \caption{Per-trigger pairwise $h-h$ extracted yields in the different kinematic regions for each multiplicity bin. The yields were extracted using the full Von Mises fit procedure described in this section.}
-% \label{h_h_yield_table_vonfit}
-% \end{table}
-
-% \clearpage
-
-% \begin{figure}[ht]
-% \centering
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_lambda_dphi_von_0_20.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_lambda_dphi_von_20_50.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_lambda_dphi_von_50_80.pdf}}
-% \end{subfigure}
-% \caption{The final per-trigger $h-\Lambda$ $\Delta\varphi$ correlations with the full Von Mises fit for the 0-20\% (top), 20-50\%(center) and 50-80\% (bottom) multiplicity bins. The fit was generated using the technique described in this section.}
-% \label{h_lambda_dphi_vonfit}
-% \end{figure}
-	
-% \begin{figure}[ht]
-% \centering
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_h_dphi_von_0_20.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_h_dphi_von_20_50.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_h_dphi_von_50_80.pdf}}
-% \end{subfigure}
-% \caption{The final per-trigger $h-h$ $\Delta\varphi$ correlations with the full Von Mises fit for the 0-20\% (top), 20-50\%(center) and 50-80\% (bottom) multiplicity bins. The fit was generated using the technique described in this section.}
-% \label{h_h_dphi_vonfit}
-% \end{figure}
-
-% \clearpage
+The yields extracted using the double Gaussian fit are nearly identical to those extracted using the nominal bin-wise integration procedure, with deviations from the nominal procedure never exceeding 1\% for either the h-\lmb or h-h cases. This indicates two things:
+%
+\begin{enumerate}
+    \item The fits describe the data quite well, and
+    \item The differences between Equations~\ref{eq:general_yield} and~\ref{eq:yield_sum} are mostly aesthetic, so long as (1) holds and the choice of $U(\Delta\varphi)$ is consistent.
+\end{enumerate}
+%
+As the deviations are so small, this procedure ends up excluded from the final systematic uncertainty calculation after the Barlow check in Section~\ref{sec:barlow_check_yield}, but the fits are still used for the systematic studies involving the near- and away-side jet widths discussed in Section~\ref{sec:systematics_width}.
 
 
-% \subsubsection{Just $v_{2}$}
-% \label{v2_background_technique}
-% For this technique, we repeat the same procedure as the Von Mises technique, but we use bin-wise integration to extract the yields (i.e. we do not use the full Von Mises fit). The yields are extracted using the following method:
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_lambda_dphi_gaus_0_20_lowpt.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_lambda_dphi_gaus_0_20_highpt.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_lambda_dphi_gaus_20_50_lowpt.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_lambda_dphi_gaus_20_50_highpt.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_lambda_dphi_gaus_50_80_lowpt.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_lambda_dphi_gaus_50_80_highpt.pdf}
+    \caption{The final per-trigger h-\lmb $\Delta\varphi$ correlation distributions with the full double Gaussian fit for the 0-20\% (top), 20-50\%(middle) and 50-80\% (bottom) multiplicity bins in the lower (left) and higher (right) associated \pt bins. The UE fit is also shown as a dashed line.}
+    \label{fig:double_gaus_fits_lambda}
+\end{figure}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_h_dphi_gaus_0_20_lowpt.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_h_dphi_gaus_0_20_highpt.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_h_dphi_gaus_20_50_lowpt.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_h_dphi_gaus_20_50_highpt.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_h_dphi_gaus_50_80_lowpt.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_h_dphi_gaus_50_80_highpt.pdf}
+    \caption{The final per-trigger h-h $\Delta\varphi$ correlation distributions with the full double Gaussian fit for the 0-20\% (top), 20-50\%(middle) and 50-80\% (bottom) multiplicity bins in the lower (left) and higher (right) associated \pt bins. The UE fit is also shown as a dashed line.}
+    \label{fig:double_gaus_fits_h}
+\end{figure}
 
-% \begin{itemize}
-% \item Let $Fit_{v_{2}}(\Delta\varphi) = A\times(1 + 2v_{2, trig}v_{2, assoc}cos(2\Delta\varphi))$, where this is fit using the technique described in Section \ref{including_v2}
-% \item The near-side yield is calculated via $\sum_{i=1}^{8} (\Delta\varphi_\text{bin i} - Fit_{v_{2}, \text{bin i}})$, where $Fit_{v_{2}, \text{bin i}}$ is the value of $Fit_{v_{2}}$ at the center of the ith $\Delta\varphi$ bin
-% \item The away-side yield is calculated via $\sum_{i=8}^{16} (\Delta\varphi_\text{bin i} - Fit_{v_{2}, \text{bin i}})$
-% \item The underlying-event yield is calculated via $\frac{16}{2\pi}\int_{\frac{-\pi}{2}}^{\frac{3\pi}{2}} Fit_{v_{2}} d\Delta\varphi$
-% \item The total-yield is calculated via $\sum_{i=1}^{16} \Delta\varphi_\text{bin i} = \text{near-side} + \text{away-side} + \text{underlying-event}$
-% \end{itemize}
+\clearpage
 
-% The constant $\frac{16}{2\pi}$ being multiplied by the underlying event integral term is just the inverse of the bin width ($2\pi$ radians for 16 $\Delta\varphi$ bins). The final per-trigger $\Delta\varphi$ plots with the $v_{2}$ fits are shown in Figures \ref{h_lambda_dphi_v2fit} ($h-\Lambda$) and \ref{h_h_dphi_v2fit} ($h-h$), and the extracted yields are shown in Table \ref{h_lambda_yield_table_v2fit} ($h-\Lambda$) and Table \ref{h_h_yield_table_v2fit} ($h-h$). 
+\subsubsection{The von Mises fit}
+\label{sec:von_mises_fit}
 
-% \begin{table}[h!]
-% \centering
-% \begin{tabular}{| c || c | c | c | c | }
-% \hline
-% Multiplicity Bin & Near-side Jet & Away-side Jet & Underlying Event & Total  \\
-% \hline
-% 0-20\% & 3.87e-02  & 3.04e-02  & 7.38e-01 & 8.07e-01 \\
-% 20-50\% & 3.28e-02 & 2.69e-02  & 3.89e-01 & 4.49e-01 \\
-% 50-80\% & 2.63e-02 & 2.02e-02  & 1.92e-01 & 2.39e-01 \\
-% \hline
-% \end{tabular}
-% \caption{Per-trigger pairwise $h-\Lambda$ extracted yields in the different kinematic regions for each multiplicity bin. The yields were extracted using the $v_{2}$ fit procedure described in this section. Despite the optically large contribution from $v_{2}$ in the most central multiplicity bin, the extracted yields are still very similar to the other techniques.}
-% \label{h_lambda_yield_table_v2fit}
-% \end{table}
+While only briefly mentioned in Section~\ref{sec:width_extraction} in the context of extracting the near- and away-side jet widths, the von Mises distribution is another natural choice for fitting the $\Delta\varphi$ distributions due to its combined Gaussian-like behaviour while naturally exhibiting $2\pi$-periodicity (which was ``forced'' onto the double Gaussian fit via the mirror terms). As a reminder, the von Mises fit function is given by
+%
+\begin{equation}
+    \label{eq:von_mises}
+    f(\Delta\varphi) = U(\Delta\varphi) + \frac{A_{\text{NS}}}{2\pi I_0(k_{\text{NS}})} e^{k_{\text{NS}}cos(\Delta\varphi - \mu_{\text{NS}})} + \frac{A_{\text{AS}}}{2\pi I_0(k_{\text{AS}})} e^{k_{\text{AS}}cos(\Delta\varphi - \mu_{\text{AS}})},
+\end{equation}
+%
+where $A$ and $\mu$ are as they were in Equation~\ref{eq:double_gaus}, and $k$ is a measure of the collimation of the distribution, which is inversely related to the width through
+%
+\begin{equation}
+    \label{eq:kappa_to_sigma}
+    \sigma = \sqrt{-2\ln\frac{I_{1}(\kappa)}{I_{0}(\kappa)}}.
+\end{equation}
+%
+In these equations, $I_n$ refers to the modified Bessel function of the nth kind. Note that the $U(\Delta\varphi)$ has been given explicit $\Delta\varphi$ dependence, as this fit function does not require the UE component to be flat with respect to $\Delta\varphi$ in order to converge nicely.
 
-% \clearpage
+During the fitting procedure, the means $\mu_{\text{NS}}$ and $\mu_{\text{AS}}$ are again fixed to 0 and $\pi$, respectively, and the $U(\Delta\varphi)$ term is fixed to the function obtained by fitting the UE which includes a non-zero $v_{2}$ contribution, as described in Section~\ref{sec:ue_fit_v2}. While the fitting of this function is much more stable than the aforementioned double Gaussian function--possibly allowing for the variation of $U$ during the fit--the term is ultimately fixed due to an interesting feature of the von Mises distribution, which is discussed in~\ref{sec:systematics_width}. The von Mises fits to both the h-\lmb and h-h correlation distributions for every multiplicity and momentum bin are shown in Figures~\ref{fig:von_fits_lambda} (h-\lmb) and~\ref{fig:von_fits_h}. Again, the fits describe the data very well. Furthermore, the fits are extremely stable, which is a welcome change from the double Gaussian fits and was the initial motivation for the width analysis presented in this thesis.
 
-% \begin{figure}[ht]
-% \centering
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_lambda_dphi_v2_0_20.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_lambda_dphi_v2_20_50.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_lambda_dphi_v2_50_80.pdf}}
-% \end{subfigure}
-% \caption{The final per-trigger $h-\Lambda$ $\Delta\varphi$ correlations with the $v_2$ fit for the 0-20\% (top), 20-50\%(center) and 50-80\% (bottom) multiplicity bins. The $v_2$ fit was generated using the technique described in this section. The most central multiplicity bin sees a substantial contribution from $v_{2}$, whereas the other bins only see a small contribution.}
-% \label{h_lambda_dphi_v2fit}
-% \end{figure}
+Given these fits are taken with a different choice of $U(\Delta\varphi, \Delta\eta)$, the extracted yields from the von Mises function deviate from the nominal extraction procedure by a relatively large amount, with both the h-\lmb and h-h jet-like yields seeing a decrease of around 5\%. This percentage is familiarly the same as the percent deviation seen in Section~\ref{sec:ue_fit_v2} from the h-\lmb and h-h yields when using the $v_{2}$-based UE fit while still using bin-wise summation to extract the yields.  In fact, all of the yields extracted using the von Mises fitting procedure are nearly identical to the yields extracted using the $v_{2}$-based UE fit with bin-wise summation, again indicating that the data are well described by the fits. As these two procedures are nearly identical in their results, the von Mises fitting procedure is also excluded from the final systematic uncertainty calculation for the yield extraction after the Barlow check in Section~\ref{sec:barlow_check_yield}. However, the fits are so incredibly well-behaved that they spawned the initial investigation into the near- and away-side jet widths, which eventually became a major topic of interest in this thesis\footnote{Systematic uncertainty calculations involving misbehaving fits are a nightmare.}.
 
-% \begin{figure}[ht]
-% \centering
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_h_dphi_v2_0_20.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_h_dphi_v2_20_50.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_h_dphi_v2_50_80.pdf}}
-% \end{subfigure}
-% \caption{The final per-trigger $h-h$ $\Delta\varphi$ correlations with the $v_{2}$ fit for the 0-20\% (top), 20-50\%(center) and 50-80\% (bottom) multiplicity bins. The fit was generated using the technique described in this section. All multiplicity bins see a mostly negligible contribution from $v_{2}$.}
-% \label{h_h_dphi_v2fit}
-% \end{figure}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_lambda_dphi_von_0_20_lowpt.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_lambda_dphi_von_0_20_highpt.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_lambda_dphi_von_20_50_lowpt.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_lambda_dphi_von_20_50_highpt.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_lambda_dphi_von_50_80_lowpt.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_lambda_dphi_von_50_80_highpt.pdf}
+    \caption{The final per-trigger h-\lmb $\Delta\varphi$ correlation distributions with the von Mises fit for the 0-20\% (top), 20-50\%(middle) and 50-80\% (bottom) multiplicity bins in the lower (left) and higher (right) associated \pt bins. The UE fit with $v_{2}$ contribution is also shown as a dashed line.}
+    \label{fig:von_fits_lambda}
+\end{figure}
 
-% \clearpage
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_h_dphi_von_0_20_lowpt.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_h_dphi_von_0_20_highpt.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_h_dphi_von_20_50_lowpt.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_h_dphi_von_20_50_highpt.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_h_dphi_von_50_80_lowpt.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_h_dphi_von_50_80_highpt.pdf}
+    \caption{The final per-trigger h-h $\Delta\varphi$ correlation distributions with the von Mises fit for the 0-20\% (top), 20-50\%(middle) and 50-80\% (bottom) multiplicity bins in the lower (left) and higher (right) associated \pt bins. The UE fit with $v_{2}$ contribution is also shown as a dashed line.}
+    \label{fig:von_fits_h}
+\end{figure}
 
-% \begin{table}[h!]
-% \centering
-% \begin{tabular}{| c || c | c | c | c | }
-% \hline
-% Multiplicity Bin & Near-side Jet & Away-side Jet & Underlying Event & Total  \\
-% \hline
-% 0-20\% & 3.39e-01  & 2.16e-01  & 3.57e+00 & 4.12e+00 \\
-% 20-50\% & 3.38e-01 & 2.09e-01  & 2.12e+00 & 2.67e+00 \\
-% 50-80\% & 3.47e-01 & 2.06e-01  & 1.17e+00 & 1.73e+00 \\
-% \hline
-% \end{tabular}
-% \caption{Per-trigger pairwise $h-h$ extracted yields in the different kinematic regions for each multiplicity bin. The yields were extracted using the $v_{2}$ fit procedure described in this section.}
-% \label{h_h_yield_table_v2fit}
-% \end{table}
+\subsubsection{Barlow check for yield extraction}
+\label{sec:barlow_check_yield}
 
-% \subsubsection{Barlow Check (yield extraction)}
-% \label{barlow_check_yield}
-% For the yield extraction technique variations, we repeat the same Barlow check procedure as described in Section \ref{barlow_check_dphi}, where for each kinematic region we calculate:
-% \begin{equation}
-% 	N\sigma_{RB} := \frac{y_{var} - y_{central}}{\sqrt{|\sigma_{var}^2 - \sigma_{central}^2|}},
-% \end{equation}
+Following the same procedure as outline in Section~\ref{sec:barlow_check_dphi}, a Barlow check is performed for the different techniques for extracting the per-trigger yields from Equations~\ref{eq:jet_yields} and~\ref{eq:ue_yield}. If the majority of the measured h-$\Lambda$ yields for a given variation have $|N\sigma_{RB}| < 1$, that variation is excluded from the systematic uncertainty calculation. This majority is calculated across all kinematic regions (near-side jet, away-side jet, underlying event), multiplicity bins and associated momentum bins. While the h-h yields were initially considered for this check, their statistical errors are so small that the denominator in Equation~\ref{eq:barlow_check} is close to zero, resulting in erratic $N\sigma_{RB}$ values. Thus any technique which gets excluded for the h-$\Lambda$ yields will also be excluded for the h-h yields. Examples of the Barlow check for the yield extraction are shown in Figure~\ref{fig:barlow_check_yield_0_20}. 
 
-%  Again, we just count the number of kinematic regions that have $|N\sigma_{RB}| < 1$, and if this is the majority of the regions (across ALL multiplicity and $p_{T, assoc}$ bins), we exclude the variation from our systematic calculation. The plots of $N\sigma_{RB}$ for each variation in our 0-20\% multiplicity bin for each $p_{T, assoc}$ bin are shown in Figure \ref{barlow_check_0_20}. The red lines represent $N\sigma_{RB} = \pm 1$.
+As a result of the Barlow check, the following variations are excluded from the systematic uncertainty calculation:
+%
+\begin{itemize}
+    \item The double Gaussian fit procedure
+    \item The von Mises fit procedure
+\end{itemize}
+%
+These exclusions were foreshadowed in the previous sections, as the fits describe the data well enough that there are no statistically significant differences between the yields extracted using these fit functions and the yields extracted using bin-wise summation.
 
-% As a result of the check, the following variations were excluded from our systematic calculation:
-% \begin{itemize}
-% \item Double Gaussian
-% \item Von Mises
-% \end{itemize}
+\clearpage
 
-% The exclusion of the Double Gaussian fit technique comes directly from the test: as we use the same UE (6 bin average) with this technique as we do for our central point, and the fits are very nice, the resulting yields end up being extremely similar. The exclusion of Von Mises comes from the fact that the results are nearly identical to the ones obtained by just including the $v_{2}$ fit and doing bin-wise integration. Again, this is because the Von Mises fit describes the data very well, so including it along with just the $v_{2}$ fit is redundant. All 36 fits for the Von Mises and Double Gaussian techniques behave very well, with nice error matrices, and will therefore be saved for a rainy day (or for future studies).
-
-% Every technique excluded from the $h-\Lambda$ yield extraction systematic uncertainty calculation is also excluded from the $h-h$ yield extraction systematic uncertainty calculation.
-
-% \clearpage 
-
-% \begin{figure}[ht]
-% \centering
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_lambda_yield_barlow_0_20.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_lambda_yield_barlow_0_20_lowpt.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_lambda_yield_barlow_0_20_highpt.pdf}}
-% \end{subfigure}
-% \caption{Barlow check for the yield extraction techniques in the 0-20\% multiplicity bin. The top plot shows the $N\sigma_{RB}$ for the  $2 < p_{T, assoc} < 4$ GeV/c region, the middle plot shows the $N\sigma_{RB}$ for the  $1.5 < p_{T, assoc} < 2.5$ GeV/c region, and the bottom plot shows the $N\sigma_{RB}$ for the  $2.5 < p_{T, assoc} < 4$ GeV/c region. The red lines represent $N\sigma_{RB} = \pm 1$, and if the majority of the points for a given variation fall within those lines (across all multiplicity and $p_{T}$ bins), that variation is excluded from the systematic uncertainty calculation.}
-% \label{barlow_check_yield_0_20}
-% \end{figure}
-
-% \clearpage 
-
-% \subsubsection{ZYAM aside}
-% \label{zyam_aside}
-% While the ZYAM technique was initially considered as it is a fairly common yield extraction technique in pp correlation studies, it is \textit{physically} incompatible with the presence of $v_{2}$, which is certainly the case in high multiplicity p--Pb. We can see this very clearly in the 0-20\% bins of Figures \ref{h_lambda_dphi_v2fit} ($v_{2}$ inclusion) and \ref{h_lambda_dphi_uefit_zyam} (ZYAM), where the ``pedestal'' obtained by ZYAM is clearly not compatible with the pedestal obtained by the $v_{2}$ fit (draw a line through the center of the oscillations). Furthermore, from looking at the near-side and away-side yields obtained in the yield tables, we see that ZYAM deviates more than 15\% from our central values. Because of this, we do not consider ZYAM as a viable yield extraction technique and thus exclude it from our systematic uncertainty calculation.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_lambda_yield_barlow_0_20_lowpt.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/analysis/h_lambda_yield_barlow_0_20_highpt.pdf}
+    \caption{The Barlow check for the yield extraction procedure in the 0-20\% multiplicity bin for the lower (left) and higher (right) associated \pt bins. The red lines represent $N_{\sigma_{RB}} = \pm 1$, and if the majority of the points from a given procedure fall within these lines (across all multiplicity and momentum bins), the procedure is excluded from the systematic uncertainty calculation.}
+    \label{fig:barlow_check_yield_0_20}
+\end{figure}
 
 
-% \subsubsection{Deviations from Central Values}
-% In this section, we present the deviations from the central values for the yield extraction techniques in our 0-20\% multiplicity bin for each $p_{T, assoc}$ bin. The deviations are trivially calculated by $\frac{y_{var}}{y_{central}} - 1$, and are shown in Figures \ref{h_lambda_yield_deviations_0_20} ($h-\Lambda$) and \ref{h_h_yield_deviations_0_20} ($h-h$). 
+\subsubsection{Yield extraction systematics, summarized}
+\label{sec:yield_systematics_summary}
+As most of the main results of this thesis involve the h-\lmb and h-h per-trigger yields in the various kinematic regions, the systematic uncertainties associated with the extraction of these yields deserve to be consolidated to concise tables and plots from the overly detailed descriptions of the previous sections. To that end, tables containing the final systematic uncertainties for both the h-\lmb and h-h per-trigger yields in each kinematic region for every multiplicity and associated \pt bin can be seen in Tables~\ref{tab:h_lambda_yield_systematics} (h-\lmb) and \ref{tab:h_h_yield_systematics} (h-h). Note that  
 
-% \clearpage
-
-% \begin{figure}[ht]
-% \centering
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_lambda_0_20_yield_variation.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_lambda_0_20_lowpt_yield_variation.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_lambda_0_20_highpt_yield_variation.pdf}}
-% \end{subfigure}
-% \caption{Deviations from central values for the $h-\Lambda$ yield extraction techniques in the 0-20\% multiplicity bin for the central (top), lower (middle), and higher (bottom) $p_{T, assoc}$ bins.}
-% \label{h_lambda_yield_deviations_0_20}
-% \end{figure}
-
-% \clearpage
-
-% \begin{figure}[ht]
-% \centering
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_h_0_20_yield_variation.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_h_0_20_lowpt_yield_variation.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_h_0_20_highpt_yield_variation.pdf}}
-% \end{subfigure}
-% \caption{Deviations from central values for the $h-h$ yield extraction techniques in the 0-20\% multiplicity bin for the central (top), lower (middle), and higher (bottom) $p_{T, assoc}$ bins.}
-% \label{h_h_yield_deviations_0_20}
-% \end{figure}
-
-% \clearpage
-
-
-% \subsubsection{Final Systematic Errors from Yield Extraction}
-% \label{final_systematic_errors_yield_extraction}
-% The final systematic errors for the yield extraction are calculated in the following way:
+The systematic uncertainties are reported in percentages, and are calculated by taking the RMS of the ratios of the yields extracted using the nominal procedure to the yields extracted using the varied procedure in each kinematic region. The final systematic uncertainty is then the sum in quadrature of the systematic uncertainties from each kinematic region. The systematic uncertainties for the h-\lmb yields are generally larger than those for the h-h yields, as the h-\lmb yields are extracted from a smaller number of events, resulting in larger statistical uncertainties. The systematic uncertainties for the h-\lmb yields are also larger than those for the h-h yields due to the additional uncertainty associated with the \lmb reconstruction efficiency, which is discussed in Section~\ref{sec:lambda_reco_eff}.
 
 % \begin{itemize}
 % \item For every yield extraction technique, the yield in a given kinematic region is divided by the yield in the same region using our default technique (6-bin UE)
