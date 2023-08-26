@@ -1,0 +1,39 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {3.1}{\ignorespaces Number of events passing our criteria for each multiplicity bin considered. Here $Z_{vtx}$ refers to the position of the PV along the beam (z) axis.}}{11}{table.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {3.2}{\ignorespaces The track quality cuts applied to the trigger hadrons in this analysis.}}{12}{table.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {3.3}{\ignorespaces The ALICE standard track quality cuts for primary charged hadrons, used for the selection of the associated hadrons in this analysis.}}{13}{table.3.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {3.4}{\ignorespaces The track quality cuts applied to both the daughter proton and pion tracks used to reconstruct $\Lambda $ candidates. These cuts are intentionally less strict than those applied to the trigger and associated hadrons as the daughter tracks are reconstructed from secondary particles.}}{15}{table.3.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {3.5}{\ignorespaces Topological selection criteria applied to $\Lambda $ candidates.}}{18}{table.3.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.1}{\ignorespaces The systematic uncertainties for the $\Delta \varphi $ distributions which are not directly calculated in this thesis, instead taken from previous analyses using the same particle species and collision system\nobreakspace {}\cite {V0Reco1,V0Reco2,Lambda1,ALICEMatBud}. Each source of uncertainty is verified to be independent of multiplicity, but the \ensuremath {\Lambda }\xspace material budget and topological selection uncertainties exhibit a small dependence on \ensuremath {p_{\text {T}}}\xspace . }}{40}{table.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.2}{\ignorespaces The variations of the \ensuremath {\Lambda }\xspace invariant mass signal region considered for this analysis.}}{41}{table.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.3}{\ignorespaces The variations of the \ensuremath {\Lambda }\xspace invariant mass sideband region considered for this analysis. Note that the ``shifted left'' sideband falls on the opposite (left) side of the signal region.}}{42}{table.4.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.4}{\ignorespaces The variations of the \ensuremath {\Lambda }\xspace daughter PID cuts considered for this analysis. The ``require TOF'' variation requires a TOF hit for both the proton and pion, but maintains the nominal values for $|n\sigma _{\text {TPC, TOF}}|$.}}{42}{table.4.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.5}{\ignorespaces The final systematic uncertainties (in percentages) from the h-$\Lambda $ $\Delta \varphi $ distribution generation for each multiplicity and associated \ensuremath {p_{\text {T}}}\xspace bin.}}{50}{table.4.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.6}{\ignorespaces $v_{2}$ values used in this analysis for each associated \ensuremath {p_{\text {T}}}\xspace bin. The values were calculated as the weighted average of published \ensuremath {p_{\text {T}}}\xspace -differential $v_{2}$ measurements with the published \ensuremath {p_{\text {T}}}\xspace spectra, taken across the entire associated \ensuremath {p_{\text {T}}}\xspace range.}}{54}{table.4.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.7}{\ignorespaces Final systematic errors (in \%) for the per-trigger h-$\Lambda $ yields in each kinematic region, multiplicity and momentum bin.}}{68}{table.4.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.8}{\ignorespaces Final systematic errors (in \%) for the h-h per-trigger yields in each kinematic region, multiplicity and momentum bin.}}{68}{table.4.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.9}{\ignorespaces Final multiplicity-uncorrelated systematic errors (in \%) for the per-trigger h-$\Lambda $ yields in each kinematic region, multiplicity and momentum bin, used for calculating errors associated with quantities describing trends versus multiplicity (slopes and percent changes).}}{69}{table.4.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.10}{\ignorespaces Final multiplicity-uncorrelated systematic errors (in \%) for the h-h per-trigger yields in each kinematic region, multiplicity and momentum bin, used for calculated errors associated with quantities describing trends versus multiplicity (slopes and percent changes).}}{69}{table.4.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.11}{\ignorespaces The final systematic errors from the h-$\Lambda $ $\Delta \varphi $ near-side (NS) and away-side (AS) width extraction for each multiplicity bin in the lower (top) and higher (bottom) associated \ensuremath {p_{\text {T}}}\xspace bins. The total systematic error is calculated by adding each systematic error in quadrature.}}{81}{table.4.11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.12}{\ignorespaces The final systematic errors from the h-h $\Delta \varphi $ near-side (NS) and away-side (AS) width extraction for each multiplicity bin in the lower (top) and higher (bottom) associated \ensuremath {p_{\text {T}}}\xspace bins. The total systematic error is calculated by adding each systematic error in quadrature.}}{81}{table.4.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.13}{\ignorespaces The final systematic uncertainties for the h-$\Lambda $ $\Delta \varphi $ distributions, the per-trigger jet and UE yields, and the jet widths in all multiplicity and associated momentum bins. The fraction of the systematic uncertainty which is uncorrelated with multiplicity is reported separately in parentheses when available. The low (high) momentum bin is such that $1.5 < p_{T}^{\text {assoc.}} < 2.5$ Ge\kern -.1emV/$c$\xspace ($2.5 < p_{T}^{\text {assoc.}} < 4.0$ Ge\kern -.1emV/$c$\xspace ).}}{84}{table.4.13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.14}{\ignorespaces The final systematic uncertainties for the h-h $\Delta \varphi $ distributions, the per-trigger jet and UE yields, and the jet widths in all multiplicity and associated momentum bins. The fraction of the systematic uncertainty which is uncorrelated with multiplicity is reported separately in parentheses when available. The low (high) momentum bin is such that $1.5 < p_{T}^{\text {assoc.}} < 2.5$ Ge\kern -.1emV/$c$\xspace ($2.5 < p_{T}^{\text {assoc.}} < 4.0$ Ge\kern -.1emV/$c$\xspace ).}}{84}{table.4.14}%
