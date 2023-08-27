@@ -1105,6 +1105,8 @@ For the ground-truth distributions, the trigger and associated \lmb (h) are take
 
 Both the reconstructed and ground-truth 2D correlation distributions are projected onto $\Delta\varphi$ in the range $|\Delta\eta| < 1.2$, and the results for the h-\lmb and h-h $\Delta\varphi$ distributions are shown for each associated \pt bin in Figures~\ref{fig:h_lambda_closure} (h-\lmb) and~\ref{fig:h_h_closure} (h-h), along with the corresponding (reconstructed)/(ground-truth) distribution ratios. A fit to the ratio is also shown, which is consistent with unity in all cases. This indicates that the analysis procedure is valid, and that the corrections applied to the h-\lmb and h-h distributions are not introducing any non-physical biases to the $\Delta\varphi$ distribution measurements. As all of the observables are derived directly from these distributions, it is safe to assume the reconstructed and ground-truth versions of these observables are also consistent with each other.
 
+While the MC closure tests provide a general framework for checking the validity of an experimental analysis, there are a few more specific checks that are performed to ensure the robustness of this analysis, which are described in the following sections.
+
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.49\textwidth]{figures/analysis/h_lambda_dphi_closure_lowpt.pdf}
@@ -1127,119 +1129,91 @@ Both the reconstructed and ground-truth 2D correlation distributions are project
 
 \clearpage
 
-\subsection{Dihadron comparison with $\phi$ Correlation Analysis}
-% As both this analysis and the $\phi$ correlation analysis are run over the same data set, with the same cuts being used on both the trigger and associated particles, we would expect the corresponding dihadron $\Delta\varphi$ correlations from both analyses to be the same. As theses analyses are being performed by humans with vastly different coding styles, we should do a thorough comparison of the final dihadron correlations to ensure they are indeed identical. The final per-trigger dihadron $\Delta\varphi$ distributions in each multiplicity bin for both the $\phi$ and $\Lambda$ analyses are shown in Figure \ref{dihadron_comparison}, with their corresponding ratios shown in Figure \ref{dihadron_ratio_comparison}. The dihadron distributions are identical for both analyses, as expected.
-
-% \clearpage
-
-% \begin{figure}[ht]
-% \centering
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_h_dphi_0_20_justin_ryan_comparison.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_h_dphi_20_50_justin_ryan_comparison.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_h_dphi_50_80_justin_ryan_comparison.pdf}}
-% \end{subfigure}
-% \caption{Comparison of the the dihadron $\Delta\varphi$ correlations between the $\phi$ and $\Lambda$ analyses for the 0-20\% (top), 20-50\% (center) and 50-80\% (bottom) multiplicity bins. They are functionally identical for all multiplicity bins.}
-% \label{dihadron_comparison}
-% \end{figure}
-
-% \clearpage
-
-% \begin{figure}[ht]
-% \centering
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/justin_ryan_ratio_0_20}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/justin_ryan_ratio_20_50}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/justin_ryan_ratio_50_80}}
-% \end{subfigure}
-% \caption{The dihadron ratio between the $\phi$ and $\Lambda$ analyses for the 0-20\% (top), 20-50\% (center) and 50-80\% (bottom) multiplicity bins. The ratios are consistent with unity for all multiplicity bins.}
-% \label{dihadron_ratio_comparison}
-% \end{figure}
-
-% \clearpage
-
-% \subsection{Single Trigger $h-\Lambda$, $h-h$ Correlations}
-
-% \textbf{THIS SECTION NEEDS TO BE UPDATED TO REFLECT TWO-TRACK TEMPLATE USAGE AND BR CORRECTION, but the final conclusion does NOT CHANGE}
-
-% As our technique does not directly give the yields of the associated particles, it could be possible that event-by-event fluctuations in the number of trigger particles could lead to small differences between the number of associated pairs and the number of associated particles. To be more explicit, if there are two triggers and two associated particles in a single event, the correlation measurement will give a yield of four trigger-associated pairs, while the number of associated particles is only two. 
-
-% Furthermore, if there are two triggers corresponding to two separate jets in an event, we would be misplacing the true kinematic regions of our trigger-associated pairs: if one of the trigger-associated pairs lies in the near-side jet, it's possible when that associated particle gets correlated with another trigger, it would be placed in the "underlying event". We can get a rough estimate of how often this occurs by looking at the number of triggers per event, shown in Figure \ref{trigs_per_event}.
-
-% \begin{figure}[ht]
-% \centering
-% \includegraphics[width=4in]{figures/trig_per_event.pdf}
-% \caption{A log-plot showing the number of triggers per event across our data sample. Only a small fraction of events have at least a single trigger, and of those events, only a small fraction have more than one trigger}
-% \label{trigs_per_event}
-% \end{figure}
-
-% While events with multiple triggers ($> 1$) are rare--less than 5\%-- an additional crosscheck was performed to investigate the effect of using multiple triggers within an event has on our final measurement. For this crosscheck, we perform the exact same analysis as demonstrated in this note, but we only use a single trigger hadron for each triggered event. If the event has multiple triggers, we select the trigger with the highest momentum within our $4 < p_{T} < 8$ Gev/$c$ range. The final per-trigger $\Delta\varphi$ distributions for each multiplicity bin are shown in Figures \ref{h_lambda_dphi_singletrigger} ($h-\Lambda$) and \ref{h_h_dphi_singletrigger} ($h-h$). The ratio of the single-trigger $\Delta\varphi$ distribution to the total-trigger $\Delta\varphi$ distribution for each multiplicity bin for both the $h-h$ and $h-\Lambda$ correlations is shown in Figure \ref{singletrigger_ratio}.
-
-% As the single-trigger/total-trigger ratio is flat for both the $h-h$ and $h-\Lambda$ distributions across all multiplicty bins, the effect on our final yield and ratio measurements would only be a change of scale.  As this scale factor is the same across all multiplicity bins, we conclude that using our standard per-trigger correlation method accurately captures the behaviour of the $\Lambda$/$h$ ratio in the different kinematic regions with respect to multiplicity.
-
-% \begin{figure}[ht]
-% \centering
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_lambda_dphi_subtracted_0_20_singletrigger.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_lambda_dphi_subtracted_20_50_singletrigger.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_lambda_dphi_subtracted_50_80_singletrigger.pdf}}
-% \end{subfigure}
-% \caption{The per-trigger $h-\Lambda$ $\Delta\varphi$ comparison between using a single trigger (closed points) and all triggers (open points) in a given event for the 0-20\% (top), 20-50\% (center) and 50-80\% (bottom) multiplicity bins. The only difference appears to be a scale factor.}
-% \label{h_lambda_dphi_singletrigger}
-% \end{figure}
-
-% \clearpage
-
-% \begin{figure}[ht]
-% \centering
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_h_dphi_0_20_singletrigger.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_h_dphi_20_50_singletrigger.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/h_h_dphi_50_80_singletrigger.pdf}}
-% \end{subfigure}
-% \caption{The per-trigger $h-h$ $\Delta\varphi$ comparison between using a single trigger (closed points) and all triggers (open points) in a given event for the 0-20\% (top), 20-50\% (center) and 50-80\% (bottom) multiplicity bins. The only difference appears to be a scale factor.}
-% \label{h_h_dphi_singletrigger}
-% \end{figure}
-
-% \clearpage
-
-% \begin{figure}[ht]
-% \centering
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/singletrigger_ratio_0_20.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/singletrigger_ratio_20_50.pdf}}
-% \end{subfigure}
-% \begin{subfigure}{
-% \includegraphics[width=4in]{figures/singletrigger_ratio_50_80.pdf}}
-% \end{subfigure}
-% \caption{The single-trigger/total-trigger ratio for both the $h-\Lambda$ and $h-h$ $\Delta\varphi$ distributions. The ratios are flat across $\Delta\varphi$, and the scale factor is the same for each multiplicity bin.}
-% \label{singletrigger_ratio}
-% \end{figure}
 
 
-% \subsection{Resonance Technique for $\Lambda$ Reconstruction}
-% \label{resonance_technique}
+\subsection{Correlations with a single trigger}
+\label{sec:single_trigger_correlations}
 
-% \textbf{THIS SECTION NEEDS TO BE UPDATED TO REFLECT TWO-TRACK TEMPLATE USAGE AND BR CORRECTION, but the consistency between the two techniques should NOT CHANGE}
+A central feature of this analysis relies on the assumption that the per-trigger pair-wise yields from the h-\lmb or h-h distributions are roughly equal to the per-trigger associated yields for \lmb baryons or charged hadrons in events that have a trigger hadron, so that the (h-\lmb)/(h-h) yield results can be interpreted as the \lmb/h ratio in each region. This is only true if there is only a single trigger hadron in each event, which is obviously not the case across a large event sample. To see why this is required, consider two events: the first has a single trigger with three associated particles, while the second has two triggers with three associated particles. In the first event, there are three trigger-associated pairs, which corresponds exactly to the number of associated particles in the event. In the second, there are twice as many pairs as there are associated particles, meaning that the pair-wise yield ``double counts'' the associated particles. A diagram of this effect is shown in Figure~\ref{fig:pairwise_counting}. This effect scales with the number of triggers: if there are $N$ triggers in an event, there would be $N$ times as many pairs as associated particles. This diagram also introduces another subtle effect of multiple triggers: if triggers $t_1$ and $t_2$ belong to separate jets within a single event, then the associated particles that fall into the jet-like regions when correlated with $t_1$ could be mistankingly placed in the ``underlying event'' when correlated with $t_2$, artificially inflating the UE yields.
 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/analysis/pair_counting_diagram.png}
+    \caption{A diagram showing the effect of multiple triggers on the per-trigger pair-wise yield. In the first event, there is a single trigger with three associated particles, so the pair-wise yield is equal to the number of associated particles. In the second event, there are two triggers with three associated particles, so the pair-wise yield is twice the number of associated particles.}
+    \label{fig:pairwise_counting}
+\end{figure}
+
+Luckily, less than 1\% of all events have more than a single trigger, as shown in Figure~\ref{fig:trigs_per_event}. Even still, the effect of multiple triggers on the per-trigger pair-wise yield is investigated by repeating the same analysis procedure as described in the previous chapter, with one change:
+%
+\begin{itemize}
+    \item If an event has more than one trigger, only the trigger with the highest momentum within the $4.0 <$ \pt $< 8.0$ \GeVc range is used
+\end{itemize}
+%
+This guarantees that no associated yields will be counted more than once, at the expense of a slightly modified trigger \pt spectrum\footnote{Selecting the highest \pt trigger in the 4-8 \GeVc range usually still amounts to selecting a $\approx 4$ \GeVc particle.}. The final single trigger h-\lmb and h-h $\Delta\varphi$ distributions for each multiplicity bin are compared with the original method (all trigger) distributions in Figure~\ref{fig:single_trigger_comp}. A flat deviation of around 5\% is observed for both the h-\lmb and h-h cases, which is consistent across all multiplicity bins.
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/analysis/trig_per_event.pdf}
+    \caption{A log-plot showing the number of triggers per event across the entire data sample. Only a small fraction of events have at least a single trigger, and of those events, only a small fraction have more than one trigger.}
+    \label{fig:trigs_per_event}
+\end{figure}
+
+As the (single trigger)/(all trigger) distribution ratios are mostly flat for both the h-\lmb and h-h distributions across all multiplicty bins, the effect on the final yield measurements would only be a $\approx 5\%$ change of scale along the y-axis, and the ratio measurements would remain unchanged. Furthermore, this scale factor is the same across all multiplicity bins, indicating that using the standard per-trigger correlation method accurately captures the multiplicity-dependent behaviour of the \lmb/h ratios in events with a trigger. Because the conclusions drawn from the results of this thesis only rely on the relative y-axis behavior of the measured observables, the effect of multiple triggers on the final distributions is negligible.
+
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.32\textwidth]{figures/analysis/h_lambda_dphi_subtracted_0_20_singletrigger.pdf}
+    \includegraphics[width=0.32\textwidth]{figures/analysis/h_lambda_dphi_subtracted_20_50_singletrigger.pdf}
+    \includegraphics[width=0.32\textwidth]{figures/analysis/h_lambda_dphi_subtracted_50_80_singletrigger.pdf}
+    \includegraphics[width=0.32\textwidth]{figures/analysis/h_h_dphi_0_20_singletrigger.pdf}
+    \includegraphics[width=0.32\textwidth]{figures/analysis/h_h_dphi_20_50_singletrigger.pdf}
+    \includegraphics[width=0.32\textwidth]{figures/analysis/h_h_dphi_50_80_singletrigger.pdf}
+    \includegraphics[width=0.32\textwidth]{figures/analysis/singletrigger_ratio_0_20.pdf}
+    \includegraphics[width=0.32\textwidth]{figures/analysis/singletrigger_ratio_20_50.pdf}
+    \includegraphics[width=0.32\textwidth]{figures/analysis/singletrigger_ratio_50_80.pdf}
+    \caption{The per-trigger h-$\Lambda$ (top) and h-h (middle) $\Delta\varphi$ distribution comparison between using a single trigger (closed points) and all triggers (open points) in a given event, along with the (single trigger)/(all trigger) distribution ratio (bottom), for the 0-20\% (left), 20-50\% (center) and 50-80\% (bottom) multiplicity bins in the associated momentum range $2.0 <$ \pt $< 4.0$ \GeVc. The distributions are nearly identical up to a $\approx 0.95$ scale factor, which is constant as a function of multiplicity.}
+    \label{fig:single_trigger_comp}
+\end{figure}
+
+\clearpage
+
+\subsection{Dihadron comparison with $\phi$ analysis}
+\label{sec:dihadron_comparison}
+
+As mentioned in Section~\ref{sec:fitting_procedure_systematics_width}, the differences between open and hidden strangeness are investigated by taking the \lmb/$\phi(1020)$ per-trigger yield ratios in the different kinematic regions (e.g. near-side jet, away-side jet, underlying event). This is done by taking a ratio of ratios, namely
+%
+\begin{equation}
+    \label{eq:ratio_of_ratios_2}
+    \frac{(\text{h-}\Lambda)}{(\text{h-h})_{1}}/\frac{(\text{h-}\phi)}{(\text{h-h})_{2}},
+\end{equation}
+%
+where the (h-$\phi$)/(h-h)$_2$ ratio in the denominator is taken from previously published results in \pPb collisions at \snn = 5.02 \TeV which use the same angular correlation techniques to extract the per-trigger yields in the different regions~\cite{JustinPaper}. This only reduces to the per-trigger (h-\lmb)/(h-$\phi$) $\approx$ \lmb/$\phi$ yield ratios if two conditions are met:
+%
+\begin{enumerate}
+    \item The (h-h)$_1$ and (h-h)$_2$ yields are identical
+    \item The yields are extracted using the same procedure
+\end{enumerate}
+% 
+Condition 2 has been met by design, as both analyses assume a flat UE taken as the average of the correlation distributions in the same \dphi regions, and they both use bin-wise summation to extract the per-trigger yields. Condition 1, however, needs to be checked more thoroughly. While all of the selection criteria is the same between the two, the analyses were performed by two different humans with vastly different coding styles.
+
+To this end, a direct comparison between the dihadron per-trigger \dphi distributions from this analysis and the $\phi$ analysis is shown in Figure~\ref{fig:dihadron_comp}. The distributions are nearly identical across all multiplicity bins, which is indicated by the ratios at the bottom of the figure never deviating unity. As such, the cancellation of the (h-h)$_1$ and (h-h)$_2$ yields in Equation~\ref{eq:ratio_of_ratios_2} is valid.
+
+\begin{figure}[ht]
+    \includegraphics[width=0.32\textwidth]{figures/analysis/h_h_dphi_0_20_justin_ryan_comparison.pdf}
+    \includegraphics[width=0.32\textwidth]{figures/analysis/h_h_dphi_20_50_justin_ryan_comparison.pdf}
+    \includegraphics[width=0.32\textwidth]{figures/analysis/h_h_dphi_50_80_justin_ryan_comparison.pdf}
+    \includegraphics[width=0.32\textwidth]{figures/analysis/justin_ryan_ratio_0_20}
+    \includegraphics[width=0.32\textwidth]{figures/analysis/justin_ryan_ratio_20_50}
+    \includegraphics[width=0.32\textwidth]{figures/analysis/justin_ryan_ratio_50_80}
+    \caption{Comparison of the the dihadron $\Delta\varphi$ correlations between the $\phi$ and $\Lambda$ analyses for the 0-20\% (left), 20-50\% (middle) and 50-80\% (right) multiplicity bins, taken in the $2.0 <$ \pt $< 4.0$ \GeVc associated momentum range. They are functionally identical for all multiplicity bins.}
+    \label{fig:dihadron_comp}
+\end{figure}
+
+\subsection{Resonance technique for \lmb reconstruction}
+\label{sec:resonance_technique}
+
+The \lmb baryons used in this analysis are reconstructed by exploiting their characteristic V$^0$ decay topology, as discussed in Section~\ref{sec:lambda_reconstruction}. However, this method introduces a small physical bias in the \lmb sample: only $\Lambda$s which decay far enough from the primary vertex to be reconstructed as V$^0$s (i.e. they a detector-resolvable secondary vertex) are considered. While the average decay length of the \lmb is quite large (c$\tau \approx 7.89$ cm), decay length distributions are exponentials of the form $e
 % While using the V0 finder to reconstruct $\Lambda$ baryons is the most common method, it is possible that the V0 finder algorithm introduces some topological biases in the $\Lambda$ reconstruction, even when no further topological cuts are being applied to the V0 or its corresponding daughters. Because of this, we also investigate another method for reconstructing $\Lambda$ baryons whereby all proton and pion pairs from the global AOD track list that pass the daughter cuts (Section \ref{daughtercuts}, but we require a TOF hit to reduce combinatorial background) within an event are combined to reconstruct the $\Lambda$s. This method is referred to as the \textit{resonance technique}, as it is the technique used to reconstruct short-lived particles that could otherwise not be reconstructed using the V0 finder.
 
 % \subsubsection{Combinatorial Background Estimation}
