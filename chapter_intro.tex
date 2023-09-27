@@ -70,39 +70,35 @@ Before diving into some details regarding the Standard Model, a few reminders wi
 
 \subsection{Famous equations}
 
+\subsection{The Standard Model Lagrangian}
+
+\section{Quantum Chromodynamics}
+\label{sec:qcd}
+
+This section serves as a turning point for this thesis: while the discussions above have been \textit{mostly} general, the novel research presented in this thesis is centered around the strong nuclear force. As such, the remainder of this chapter will delve into the details of this mysterious force, and how it can be studied using high-energy particle collisions. 
+
+The quantum field theory which describes the interaction between quarks and gluons--generally referred to as the strong interaction or strong nuclear force--is known as \textbf{Quantum ChromoDynamics} (QCD). In this theory, the quarks and gluons have an additional quantum number known as \textbf{color charge}, which is (somewhat) analagous to the electric charge in Quantum ElectroDynamics (QED). 
 
 
+\subsection{The QCD Lagrangian}
+\label{sec:qcd_lagrangian}
 
-During this time, the theory that describes how light and matter interact (known as Quantum ElectroDynamics, or QED) was being developed by the likes of Feynman, Schwinger, Tomaga and Dyson~\cite{QEDFeymnan, QEDSchwinger, QEDTomaga, QEDDyson}. 
+As discussed in Section~\ref{sec:lagrangian_formalism}, the main tool for investigating the dynamics of a quantum field theory is through its Lagrangian. In principle, the QCD Lagrangian has already been introduced: it is completely contained within the Standard Model Lagrangian given in Equation~\ref{eq:sm_lagrangian}. However, when the only theory of interest is that of the strong interaction, the electroweak gauge fields, leptons and scalars can be dropped to give only the QCD Lagrangian~\cite{QCDLagrangian},
+%
+\begin{align*}
+    \label{eq:qcd_lagrangian}
+    \mathcal{L}_{Q C D}= & -\frac{1}{4} F_{\mu \nu}^A F^{A \space \mu \nu}+i \bar{q} \gamma^\mu\left(\partial_\mu+i g_s \frac{1}{2} \lambda^A \mathcal{A}_\mu^A\right) q \\
+    & -\bar{q}_{\mathrm{R}} \mathcal{M} q_{\mathrm{L}}-\bar{q}_{\mathrm{L}} \mathcal{M}^{\dagger} q_{\mathrm{R}}-\theta \omega .
+\end{align*}
+%
+Perhaps the most important component in this Lagrangian are the gluon gauge fields, $\mathcal{A}_\mu^A$, with index $A$ representing one of the eight color labels for the gluon. These eight fields belong to the color group SU$_\text{c}$(3), which is the gauge group of the theory. 
 
-The notion that protons and neutrons were unbreakable was relatively short lived, as not even half a century later the deep inelastic scattering experiments performed by Kendall, Friedman and Taylor~\cite{Kendall, Friedman, Taylor} revealed that protons (and subsequently neutrons) were actually composed of even smaller particles, eventually dubbed ``partons''. \cite{Partons}.
-This discovery was one of the largest contributing factors to the creation of the so-called Standard Model of particle physics, a theory which describes all of the fundamental particles and the way in which they interact with each other. A diagram of those fundamental particles can be seen in Figure~\ref{fig:standard_model}.
-\begin{figure}
-    \centering
-    \includegraphics[scale=0.2]{figures/introduction/StandardModel.png}
-    \caption{A diagram depicting the particles we currently believe are fundamental within the so-called ``Standard Model'' of particle physics.}
-    \label{fig:standard_model}
-\end{figure}
- It should be noted that all of the particles labeled as quarks and leptons -- collectively as ``fermions'' -- have corresponding anti-particles with opposite electric charge.
-The equation that describes all of these particles and their interactions, often incorrectly\footnote[1]{It is ``incorrect'' because this is technically a Lagrangian density (i.e. Lagrangian per unit volume), but as it is usually integrated over all space the distinction is mostly irrelevant.} referred to as the ``Standard Model Lagrangian'', can be compactified into a relatively palatable form that can easily fit on a coffee cup like the one shown in Figure~\ref{fig:lagrangian_cup}.
-\begin{figure}
-    \centering
-    \includegraphics[scale=0.5]{figures/introduction/StandardModelCup.jpg}
-    \caption{A coffee cup with the Standard Model Lagrangian density printed on its side. Please ignore the ``+ h.c.'' term following the $i\Bar{\psi}\slashed{D}\psi$, it is the result of a small lapse in judgement from the mug makers.}
-    \label{fig:lagrangian_cup}
-\end{figure}
-
-While this equation may appear brief\footnote{Here ``brief'' is in the eye of the beholder, but certainly its brevity is misleading as even in the first line the $F_{\mu\nu}$ refers to three completely different gauge field tensors with their indices fully contracted...}, it can be used to completely describe three of the four fundamental forces of nature: 
+The quarks are represented by the field $q$, which can be broken up in the following way:
+%
 \begin{enumerate}
-    \item The Electromagnetic Force, which is responsible for the electrons pushing against each other to keep you from falling through your chair,
-    \item The Weak Nuclear Force,  which is responsible for the initiating the nuclear fusion reactions that fuel our sun, and 
-    \item The Strong Nuclear Force,  which is responsible for holding quarks and gluons together in bound stands known as hadrons, like the protons and neutrons that make up everyday matter.
+    \item The $q$ field has six flavor components, $q(x) = \{u(x), d(x), s(x), c(x), b(x), t(x)\}$.
+    \item Those flavor components have four relativistic spin components, with corresponding chiral components $q_{R,L} = \frac{1}{2}(1 \pm \gamma^5)q$
+    \item Those spin components have three ``color'' components.
 \end{enumerate}
-The only fundamental force missing from this list is the Gravitational Force, which is described by a completely separate set of equations\footnote{Specifically, the Einstein Field Equations, $G_{\mu\nu} + \Lambda g_{\mu\nu} = \kappa T_{\mu\nu}$, but this is the thesis of a particle physicist so gravity is taboo.}
+%
 
-Each of the three forces that are described within the Standard Model are mediated by different gauge bosons. For example, the electromagnetic force is mediated by the boson known as the photon, the weak nuclear force is mediated by the W and Z bosons, and the strong nuclear force is mediated by bosons known as gluons. 
-In this thesis we will be primarily focusing on the Strong Nuclear Force, which acts solely on particles with color charge -- an intrinsic property of quarks and gluons. 
-The ``color'' charges are red, green, and blue with antio
-
-Even though each of the electromagnetic, weak and strong forces can be described using the Standard Model Lagrangian, the way in which they appear within the equation is not easy to determine.
-For example, the electromagnetic force actually corresponds to line 1
