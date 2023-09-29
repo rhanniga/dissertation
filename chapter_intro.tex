@@ -100,7 +100,7 @@ The gluons are described by the vector gauge field $\mathcal{A}_\mu^A$, with ind
     F_{\mu \nu}^A = \partial_\mu \mathcal{A}_\nu^A - \partial_\nu \mathcal{A}_\mu^A + g_s f^{ABC} \mathcal{A}_\mu^B \mathcal{A}_\nu^C,
 \end{equation}
 %
-where $f^{ABC}$ are the structure constants~\cite{StructureConstants} of SU$_\text{c}$(3). Note that while this field strength tensor shares the same letters as the electromagnetic field strength tensor $F_{\mu \nu}$, the additional term $g_s f^{ABC} \mathcal{A}_\mu^B \mathcal{A}_\nu^C$ in Equation~\ref{eq:field_strength_tensor} separates QCD and QED in a very fundamental way: the gluons are allowed to self-interact. This self-interaction is a direct result of the non-vanishing structure constants of SU$_\text{c}$(3)\footnote{Structure constants of Abelian gauge groups like U(1) are trivially zero.}, and causes a lot of headaches for theorists. 
+where $f^{ABC}$ are the structure constants~\cite{StructureConstants} of SU$_\text{c}$(3). Note that while this field strength tensor shares the same letters as the electromagnetic field strength tensor $F_{\mu \nu}$, the additional term $g_s f^{ABC} \mathcal{A}_\mu^B \mathcal{A}_\nu^C$ in Equation~\ref{eq:field_strength_tensor} separates QCD and QED in a very fundamental way: the gluons are allowed to self-interact. This self-interaction is a direct result of the non-vanishing structure constants of SU$_\text{c}$(3)\footnote{Structure constants of Abelian gauge groups like U(1) are trivially zero.}, and causes a lot of headaches for theorists.
 
 The quarks are represented by the field $q$, which is a bit misleading as the color, flavor and spin indices have been suppressed. In reality, the quark field $q$ has:
 %
@@ -110,18 +110,23 @@ The quarks are represented by the field $q$, which is a bit misleading as the co
     \item three color indices $\{r, g, b\}$,
 \end{itemize}
 %
-where all of these indices are being implicitly summed over in $\mathcal{L}_{QCD}$. Luckily all of the matrices ($\mathcal{A}_\mu^A, \lambda^A, \mathcal{M}, \gamma^\mu$) act on separate sets of indices. For example, the $\gamma^\mu$s only operate on the spin indices, whereas both $\mathcal{A}_\mu^A$ and $\lambda^A$ operate on the color indices.
+where all of these indices are being implicitly summed over in $\mathcal{L}_{QCD}$. Luckily all of the matrices ($\mathcal{A}_\mu^A, \lambda^A, \mathcal{M}, \gamma^\mu$) act on separate sets of indices. For example, the $\gamma^\mu$s only operate on the spin indices, whereas both the gluon fields $\mathcal{A}_\mu^A$ and Gell-Mann matrices~\ref{GellMannMatrix} $\lambda^A$ operate on the color indices. These Gell-Mann matrices are the generators of SU$_\text{c}$(3) and satisfy the commutation relation
+%
+\begin{equation}
+    \label{eq:gell_mann_commutation}
+    [\lambda^A, \lambda^B] = 2if^{ABC}\lambda^C.
+\end{equation}
 
 The chiral quark fields $q_\text{L}$ and $q_\text{R}$ are defined as $\frac{1}{2}(1 - \gamma_5)q$ and $\frac{1}{2}(1 + \gamma_5)q$, respectively.  
 
 
 
-\subsubsection{Brief aside: why eight gluons?}
+\subsubsection{Brief aside: Why eight gluons?}
 \label{sec:why_eight_gluons}
 
-The gluon field $\mathcal{A}^A$ transforms under the adjoint respresentation of SU(3), which is a representation of SU(3) on the vector space of its Lie algebra $\mathfrak{su}(3)$. As $\mathfrak{su}(3)$ has eight basis elements (for instance, the Gell-Mann matrices $\lambda^A$ from above), the adjoint representation of SU(3) is eight-dimensional. Thus the gluon field has eight independent components, or there are eight gluons.
+The gluon field $\mathcal{A}^A$ transforms under the adjoint respresentation of SU(3), which is a representation of SU(3) on the vector space of its Lie algebra $\mathfrak{su}(3)$. As $\mathfrak{su}(3)$ has eight basis elements (for instance, the Gell-Mann matrices $\lambda^A$ from above), the adjoint representation of SU(3) is eight-dimensional. Thus the gluon field has eight independent components, or there are eight gluons. In principle, QCD could have been built on top of a U(3) gauge group, which would give rise to nine gluons (as the dimension of U(n) is $n^2$). However, the singlet state in U(3) must not be interacting: if it were, color neutral baryons would interact with each other via the strong interaction at a much longer range~\cite{SingletGluons}. As there is no physical difference between U(3) with a non-interacting singlet and SU(3), the simpler gauge group was chosen. 
 
-This is why representation theory is so fun: the term $g_s f^{ABC} \mathcal{A}^B \mathcal{A}^C$  can be thought of as boring $3\times3$ matrix multiplication, but it can also be thought of as an inner product between two eight-dimensional vectors. Unfortunately the fun breaks down at some point, as terms like $i \bar{q} \gamma^\mu (i g_s \frac{1}{2} \lambda^A \mathcal{A}_\mu^A) q$  can only be intepreted as $\mathcal{A}$ transforming $q$ under the fundamental representation of SU(3) (i.e. $3\times3$ matrix acting on $3\times1$ vector). Furthermore, writing $\lambda^A$ as an $8\times8$ matrix is not particulalry enlightening--though it can be done. For example, $\lambda^1$ in the adjoint represntation is given by
+A lot of fun can be had with the adjoint representation of SU(3). For example, the term $g_s f^{ABC} \mathcal{A}^B \mathcal{A}^C$  can be thought of as boring $3\times3$ matrix multiplication, but it can also be thought of as an inner product between two eight-dimensional row/column vectors. Unfortunately the fun breaks down at some point, as terms like $i \bar{q} \gamma^\mu (i g_s \frac{1}{2} \lambda^A \mathcal{A}_\mu^A) q$  can only be intepreted as $\mathcal{A}$ transforming $q$ under the fundamental representation of SU(3) (i.e. $3\times3$ matrix acting on $3\times1$ vector). Furthermore, writing $\lambda^A$ as an $8\times8$ matrix is not particulalry enlightening--though it can be done. For example, $\lambda^1$ in the adjoint represntation is given by
 %
 \begin{equation*}
 \lambda^{1, \text {adjoint }}=\left(\begin{array}{cccccccc}
@@ -137,7 +142,6 @@ This is why representation theory is so fun: the term $g_s f^{ABC} \mathcal{A}^B
 \end{equation*}
 which is found by interpreting the commutation relation $[\lambda^{1, \text {adjoint}}, \lambda^A] = 2if_{1AB}\lambda^B$ as the action of $\lambda^{1, \text {adjoint }}$ on $\lambda^A$, where each $\lambda^A$ is assigned to a trivial column vector with a $1$ and the $A^{\text {th}}$ index and zeroes everywhere else.
 
-In principle, QCD could have been built on top of a U(3) gauge group, which would give rise to nine gluons (as the dimension of U(n) is $n^2$). However, the singlet state in U(3) must not be interacting: if it were, color neutral baryons would interact with each other via the strong interaction at a much longer range~\cite{SingletGluons}. As there is no physical difference between U(3) with a non-interacting singlet and SU(3), the simpler gauge group was chosen. 
 
 %
 
