@@ -59,31 +59,77 @@ While not of particular import to this thesis\footnote{Though extremely interest
 
 
 \section{The Standard Model}
+\label{sec:standard_model}
 
-Before diving into some details regarding the Standard Model, a few reminders will be given.
+The Standard Model of particle physics is a \textbf{quantum field theory} (QFT) that describes the interactions between all\footnote{Ignoring potential gravitons~\cite{Graviton} or dark matter candidates~\cite{DarkMatter1, DarkMatter2}} of the fundamental particles. QFTs describe the dynamics of a quantum system in terms of fields, which are functions of space and time. The fields are the fundamental objects of QFT, and their excitations correspond to the particles that are observed in nature. The Standard Model fields can be broken down into three sectors, which will be discussed in the following sections.
 
-\subsection{Lagrangian formalism}
+\subsection{The gauge sector}
+\label{sec:gauge_fields}
 
-\subsection{Fields}
+The gauge sector of the Standard Model corresponds to the spin-one bosons that mediate the strong and electroweak interactions. In a general sense, this sector corresponds to the mediating particles for three of the four fundamental forces: the strong nuclear force, the weak nuclear force, and the electromagnetic force. The fourth fundamental force--gravity--is not included in the Standard Model, as it is not yet understood from a quantum perspective~\cite{QuantumGravity}.
 
-\subsection{Symmetries}
+The symmetry group of the gauge sector is given by
+%
+\begin{equation}
+    \label{eq:gauge_symmetry}
+    \text{SU(3)}_\text{c} \times \left[\text{SU(2)}_\text{L} \times \text{U(1)}_\text{Y}\right].
+\end{equation}
+%
+SU(3)$_\text{c}$ is the symmetry group of the strong interaction, which is described by the QFT known as Quantum ChromoDynamics (QCD). The subscript c stands for ``color'', indicating that the gauge fields in QCD (gluons) only couple to colored objects. As QCD is the theory that mostly describes the research presented in this thesis, it will be discussed in much greater detail in Section~\ref{sec:qcd}. The symmetry group of the electroweak interaction is SU(2)$_\text{L} \times$ U(1)$_\text{Y}$, where the subscript L stands for ``left-handed'' and the subscript Y stands for ``weak hypercharge''. Again, these subscripts indicate the types of objects to which the corresponding gauge fields couple. For example, the gauge fields of SU(2)$_\text{L}$ only couple to left-handed objects, and the gauge fields of U(1)$_\text{Y}$ only couple to weakly hypercharged objects. Initially, there are four massless gauge fields in the theory~\footnote{Three corresponding to the generators of SU(2), one corresponding to the generator of U(1).}. After the spontaneous symmetry breaking of the Higgs mechanism~\cite{HiggsMechanism}, these fields mix to give rise to three massive gauge fields and one massless gauge field. The three massive gauge fields correspond to the familiar W$^{\pm}$ and Z$^{0}$ bosons, which are the mediating bosons of the weak interaction. The massless gauge field corresponds to the photon, which mediates the electromagnetic interaction.
 
-\subsection{Famous equations}
+\subsection{The scalar sector}
+\label{sec:scalar_fields}
 
-\subsection{The Standard Model Lagrangian}
+The scalar sector of the Standard Model is quite lonely, and only corresponds to one spin-zero field: the Higgs~\cite{PeterHiggs}. As mentioned in the previous section, the Higgs mechanism that corresponds to this field is responsible for the acquisition of mass by the W$^{\pm}$ and Z$^{0}$ bosons. The Higgs field also couples to all of the fermions in the Standard Model, but the mass acquisition procedure is \textit{slightly} different\footnote{It's still spontaneous symmetry breaking, but within the Yukawa part of the electroweak Lagrangian.}. The associated Higgs boson was discovered by the A Toroidal LHC Apparatus (ATLAS) and Compact Muon Solenoid (CMS) collaborations in 2012~\cite{HiggsDiscovery1, HiggsDiscovery2}, and was the last major piece of the Standard Model to be experimentally verified.
 
-\section{Quantum Chromodynamics}
+
+\subsection{The fermionic sector}
+\label{sec:fermion_fields}
+
+The fermionic sector contains all of the spin one-half particles (quarks and leptons) in the Standard Model. It is often convenient to group these particles into three generations, where each generation is identical except for the masses of the particles. It is even \textit{more} convenient to group the fermions within each family into multiplets, where the members of the multiplet are related to each other by transformations within the gauge group of the Standard Model (Equation~\ref{eq:gauge_symmetry}). In other words, the fermions within a particular multiplet can only be transformed to fermions within the same multiplet. A table of the fermions in the Standard Model and their corresponding multiplets can be seen in Table~\ref{tab:fermions}. The indices $L$ and $R$ correspond to the chirality of the fields, and the indices $r$, $g$ and $b$ represent to the color charge of the fields. The color charges are only non-zero for the quarks, making them a key component of quantum chromodynamics.
+
+
+\begin{table}
+\label{tab:fermions}
+\caption{The fermions of the Standard Model for each generation and their corresponding multiplets. The Standard Model does not allow for fermions to leave their respective multiplets.}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{c|llllll}
+\cline { 1 - 7 } Gen. & $\begin{array}{l} \text{Left-handed} \\ \text{quarks}\end{array}$ & $\begin{array}{l}\text { Right-handed } \\
+\text { up quarks }\end{array}$ & $\begin{array}{l}\text { Right-handed } \\
+\text { down quarks }\end{array}$ & $\begin{array}{l}\text { Left- } \\
+\text { handed } \\
+\text { leptons }\end{array}$ & $\begin{array}{l}\text { Right- } \\
+\text { handed } \\
+\text { leptons }\end{array}$ \\
+
+\hline 
+
+$1^{\text{st}}$ gen. & $\left(\begin{array}{lllll}u_L^r&u_L^g&u_L^b \\
+d_L^r & d_L^g & d_L^b\end{array}\right)$ & $\left(\begin{array}{llll}u_R^r & u_R^g & u_R^b\end{array}\right)$ & $\left(\begin{array}{llll}d_R^r & d_R^g & d_R^b\end{array}\right)$ & $\left(\begin{array}{c}\nu_{e L} \\
+e_L\end{array}\right)$ & $\left(e_R\right)$ \\
+
+$2^{\text{nd}}$ gen. & $\left(\begin{array}{lllll}c_L^r & c_L^g & c_L^b \\
+s_L^r & s_L^g & s_L^b\end{array}\right)$ & $\left(\begin{array}{llll}c_R^r & c_R^g & c_R^b\end{array}\right)$ & $\left(\begin{array}{llll}s_R^r & s_R^g & s_R^b\end{array}\right)$ & $\left(\begin{array}{c}\nu_{\mu_L} \\
+\mu_L\end{array}\right)$ & $\left(\mu_R\right)$ \\
+$3^{\text{rd}}$ gen. & $\left(\begin{array}{llll}t_L^r & t_L^g & t_L^b \\
+b_L^r & b_L^g & b_L^b\end{array}\right)$ & $\left(\begin{array}{llll}t_R^r & t_R^g & t_R^b\end{array}\right)$ & $\left(\begin{array}{lll}b_R^r & b_R^g & b_R^b\end{array}\right)$ & $\left(\begin{array}{c}\nu_{\tau_L} \\
+\tau_L\end{array}\right)$ & $\left(\tau_R\right)$
+
+\end{tabular}}
+\end{table}
+
+
+\section{Quantum chromodynamics}
 \label{sec:qcd}
 
-This section serves as a turning point for this thesis: while the discussions above have been \textit{mostly} general, the novel research presented in this thesis is centered around the strong nuclear force. As such, the remainder of this chapter will delve into the details of this mysterious force, and how it can be studied using high-energy particle collisions. 
 
-The quantum field theory which describes the interaction between quarks and gluons--generally referred to as the strong interaction or strong nuclear force--is known as \textbf{Quantum ChromoDynamics} (QCD). In this theory, the quarks and gluons have an additional quantum number known as \textbf{color charge}, which is (somewhat) analagous to the electric charge in Quantum ElectroDynamics (QED). 
+This section serves as a turning point for this thesis: while the discussions above have been \textit{mostly} general, the novel research presented in this thesis is centered around the strong nuclear force. As such, the remainder of this chapter will delve into the details of this mysterious force, and how it can be studied using high-energy particle collisions. 
 
 
 \subsection{The QCD Lagrangian}
 \label{sec:qcd_lagrangian}
 
-As discussed in Section~\ref{sec:lagrangian_formalism}, the main tool for investigating the dynamics of a quantum field theory is through its Lagrangian. In principle, the QCD Lagrangian has already been introduced: it is completely contained within the Standard Model Lagrangian given in Equation~\ref{eq:sm_lagrangian}. However, when the only theory of interest is that of the strong interaction, the electroweak gauge fields, leptons and scalars can be dropped to give only the QCD Lagrangian~\cite{QCDLagrangian},
+The dynamics of these fields and how they interact are completely encoded within the Lagrangian of the theory, which can be used to calculate experimental observables like cross sections and decay rates. The Lagrangian of the Standard Model is fairly long~\cite{StandardModelLength1, StandardModelLength2}, and often not particulalry insightful when trying to study a specific aspect of the theory. As such, when studying QCD, it is often useful to throw away the electroweak gauge fields, leptons, and scalars to give only the QCD Lagrangian~\cite{QCDLagrangian},
 %
 \begin{align*}
     \label{eq:qcd_lagrangian}
@@ -93,7 +139,7 @@ As discussed in Section~\ref{sec:lagrangian_formalism}, the main tool for invest
 %
 where all repeated indices are summed over.
 
-The gluons are described by the vector gauge field $\mathcal{A}_\mu^A$, with index $A$ representing one of the eight color labels. These eight components belong to the color group SU$_\text{c}$(3), which is the gauge group of QCD. The corresponding field strength tensor $F_{\mu \nu}^A$ is given by
+The gluons are described by the vector gauge field $\mathcal{A}_\mu^A$, with index $A$ representing one of the eight color labels. These eight components belong to the color group SU$_\text{c}$(3), which is the gauge group of QCD. The corresponding coupling constant is $g_{s}$, and the field strength tensor $F_{\mu \nu}^A$ is given by
 %
 \begin{equation}
     \label{eq:field_strength_tensor}
@@ -110,23 +156,32 @@ The quarks are represented by the field $q$, which is a bit misleading as the co
     \item three color indices $\{r, g, b\}$,
 \end{itemize}
 %
-where all of these indices are being implicitly summed over in $\mathcal{L}_{QCD}$. Luckily all of the matrices ($\mathcal{A}_\mu^A, \lambda^A, \mathcal{M}, \gamma^\mu$) act on separate sets of indices. For example, the $\gamma^\mu$s only operate on the spin indices, whereas both the gluon fields $\mathcal{A}_\mu^A$ and Gell-Mann matrices~\ref{GellMannMatrix} $\lambda^A$ operate on the color indices. These Gell-Mann matrices are the generators of SU$_\text{c}$(3) and satisfy the commutation relation
+where all of these indices are being implicitly summed over in $\mathcal{L}_{QCD}$. Luckily all of the matrices ($\mathcal{A}_\mu^A, \lambda^A, \mathcal{M}, \gamma^\mu$) act on separate sets of indices\footnote{Really the components of the field corresponding to those indices.}. For example, the $\gamma^\mu$s only operate on the spin indices, whereas both the gluon fields $\mathcal{A}_\mu^A$ and Gell-Mann matrices~\cite{GellMannMatrix} $\lambda^A$ operate on the color indices. These Gell-Mann matrices are the generators of SU$_\text{c}$(3) and satisfy the commutation relation
 %
 \begin{equation}
     \label{eq:gell_mann_commutation}
     [\lambda^A, \lambda^B] = 2if^{ABC}\lambda^C.
 \end{equation}
+%
+The chiral quark fields $q_\text{L}$ and $q_\text{R}$ are defined as $\frac{1}{2}(1 - \gamma_5)q$ and $\frac{1}{2}(1 + \gamma_5)q$, respectively. The mass matrix $\mathcal{M}$ operates on the flavor indices, and its form depends on the choice of basis for the quark fields~\cite{QCDHistory}. It is often convenient to choose a basis where the mass matrix is diagonal, which can be done by independent rotations of $q_\text{L}$ and $q_\text{R}$ in SU(6). Doing so gives the more familiar term
+%
+\begin{equation}
+    -\bar{q}_{\mathrm{R}} \mathcal{M} q_{\mathrm{L}}-\bar{q}_{\mathrm{L}} \mathcal{M}^{\dagger} q_{\mathrm{R}} = -\sum_{f = 1}^{6}\bar{q}_f m_f q_f,
+    \label{eq:mass_matrix}
+\end{equation}
+where $m_f$ is the mass of the quark with flavor $f$, and $q_f$ is the flavor component of the quark field. Note that this term completely violates the SU(2)$\times$U(1) electroweak symmetry, indicating that the given $\mathcal{L}_{QCD}$ is determined \textit{after} the spontaneous symmetry breaking described in the previous section.
 
-The chiral quark fields $q_\text{L}$ and $q_\text{R}$ are defined as $\frac{1}{2}(1 - \gamma_5)q$ and $\frac{1}{2}(1 + \gamma_5)q$, respectively.  
+The final terms $\theta$ and $\omega$ correspond to the QCD vacuum angle and winding number density, respctively~\cite{VacuumAngle, WindingNumber}.
+
 
 
 
 \subsubsection{Brief aside: Why eight gluons?}
 \label{sec:why_eight_gluons}
 
-The gluon field $\mathcal{A}^A$ transforms under the adjoint respresentation of SU(3), which is a representation of SU(3) on the vector space of its Lie algebra $\mathfrak{su}(3)$. As $\mathfrak{su}(3)$ has eight basis elements (for instance, the Gell-Mann matrices $\lambda^A$ from above), the adjoint representation of SU(3) is eight-dimensional. Thus the gluon field has eight independent components, or there are eight gluons. In principle, QCD could have been built on top of a U(3) gauge group, which would give rise to nine gluons (as the dimension of U(n) is $n^2$). However, the singlet state in U(3) must not be interacting: if it were, color neutral baryons would interact with each other via the strong interaction at a much longer range~\cite{SingletGluons}. As there is no physical difference between U(3) with a non-interacting singlet and SU(3), the simpler gauge group was chosen. 
+The gluon field $\mathcal{A}^A$ transforms under the adjoint respresentation of SU(3), which is a representation of SU(3) on the vector space of its Lie algebra $\mathfrak{su}(3)$. As $\mathfrak{su}(3)$ has eight basis elements (for instance, the Gell-Mann matrices $\lambda^A$ from above), the adjoint representation of SU(3) is eight-dimensional. Thus the gluon field has eight independent components, or there are eight gluons. In principle, QCD could have been built on top of a U(3) gauge group, which would give rise to nine gluons (as the dimension of U(n) is $n^2$). However, the singlet state in U(3) must not be interacting: if it were, color neutral baryons would interact with each other via the strong interaction at a much longer range~\cite{SingletGluons}. Such interactions have not been observed~\cite{SingletGluons2}. As there is no physical difference between U(3) with a non-interacting singlet and SU(3), the simpler gauge group was chosen. 
 
-A lot of fun can be had with the adjoint representation of SU(3). For example, the term $g_s f^{ABC} \mathcal{A}^B \mathcal{A}^C$  can be thought of as boring $3\times3$ matrix multiplication, but it can also be thought of as an inner product between two eight-dimensional row/column vectors. Unfortunately the fun breaks down at some point, as terms like $i \bar{q} \gamma^\mu (i g_s \frac{1}{2} \lambda^A \mathcal{A}_\mu^A) q$  can only be intepreted as $\mathcal{A}$ transforming $q$ under the fundamental representation of SU(3) (i.e. $3\times3$ matrix acting on $3\times1$ vector). Furthermore, writing $\lambda^A$ as an $8\times8$ matrix is not particulalry enlightening--though it can be done. For example, $\lambda^1$ in the adjoint represntation is given by
+As an aside to the current aside, a lot of fun can be had with the adjoint representation of SU(3). For example, the term $g_s f^{ABC} \mathcal{A}^B \mathcal{A}^C$  can be thought of as boring $3\times3$ matrix multiplication, but it can also be thought of as an inner product between two eight-dimensional row/column vectors. Unfortunately the fun breaks down at some point, as terms like $i \bar{q} \gamma^\mu (i g_s \frac{1}{2} \lambda^A \mathcal{A}_\mu^A) q$  can only be intepreted as $\mathcal{A}$ transforming $q$ under the fundamental representation of SU(3) (i.e. $3\times3$ matrix acting on $3\times1$ vector). Furthermore, writing $\lambda^A$ as an $8\times8$ matrix is not particulalry enlightening--though it can be done. For example, $\lambda^1$ in the adjoint represntation is given by
 %
 \begin{equation*}
 \lambda^{1, \text {adjoint }}=\left(\begin{array}{cccccccc}
@@ -141,11 +196,51 @@ A lot of fun can be had with the adjoint representation of SU(3). For example, t
 \end{array}\right),
 \end{equation*}
 which is found by interpreting the commutation relation $[\lambda^{1, \text {adjoint}}, \lambda^A] = 2if_{1AB}\lambda^B$ as the action of $\lambda^{1, \text {adjoint }}$ on $\lambda^A$, where each $\lambda^A$ is assigned to a trivial column vector with a $1$ and the $A^{\text {th}}$ index and zeroes everywhere else.
-
-
 %
 
 
+\subsection{Properties of QCD}
+\label{sec:qcd_features}
+
+Quantum chromodynamics is a rich and complicated theory, which gives rise to many interesting phenomena.
+
+\subsubsection{Confinement}
+\label{sec:qcd_confinement}
+
+The first property of QCD to be discussed is \textbf{confinement}, which is simply the observation that quarks and gluons are never seen in isolation. Instead, they are \textit{confined} inside of the color neutral bound states known as hadrons. This property is mostly understood in terms of the coupling constant $g_{s}$. The renormalization~\cite{QCDRenorm} of QCD gives rise to a $g_{s}$ that varies with energy scale or distance. As the distance between two quarks increases, so too does $g_{s}$. At some point, the coupling becomes so strong that the energy required to separate the quarks is enough to create a quark-antiquark pair from the vacuum. Thus any attempts to pluck a quark from a hadron will always result in the creation of a new hadron, making it impossible to observe single quarks in isolation. 
+
+The large coupling constant makes it impossible to describe this phenomenon using perturbative techniques, so the exact mechanism of confinement is still not fully understood. However, it is often described using the phenomenological Lund string model~\cite{LundString}. In this model, the field lines of two quarks are pulled together due to the self-interaction of the gluons. This creates a string-like structure between the two quarks, with a potential given by 
+%
+\begin{equation}
+    \label{eq:lund_potential}
+    V(r) \approx -\frac{4}{3}\frac{\alpha_s}{r} + \kappa r,
+\end{equation}
+%
+where $r$ is the distance between the two quarks, $\alpha_s = \frac{g_s^2}{4\pi}$ and $\kappa$ is the string tension. This is in contrast to the potential between two electrically charged particles, where the field lines are not pulled together and become less dense as the distance between the two particles increases. A schematic of these differences can be seen in Figure~\ref{fig:field_line_differences}.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/introduction/electric_color_fields.png}
+    \caption{A schematic of the field lines between two electrically charged particles (left) and two quarks (right). The field lines between the quarks are pulled together due to the self-interaction of the gluons, whereas the electic field lines are not.}
+    \label{fig:field_line_differences}
+\end{figure}
+
+\subsubsection{Asymptotic freedom}
+\label{sec:qcd_asymptotic_freedom}
+
+Just as the coupling constant becomes large at low energies and large distances, it also becomes small at high energies and small distances. This property is known as \textbf{asymptotic freedom}: at high enough energies, the quarks and gluons can be thought of as ``free'', and their interactions can be modeled using perturbative QCD (pQCD). As discussed in Section~\ref{sec:introduction}, the discovery of asymptotic freedom in QCD was what allowed for the accurate predictions of the results of high energy particle collision experiments like SLAC~\cite{SLAC} and PETRA~\cite{PETRA}. The results of such experiments have also been used to calculate the value of the coupling constant itself at different energy scales, as shown in Figure~\ref{fig:asymptotic_freedom}. The value of $\alpha_s$ at the Z$^0$ mass is also given in the figure, which is the most accurate measurement of $\alpha_s$ to date~\cite{PDG}. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/introduction/running_coupling.png}
+    \caption{The value of the strong coupling constant $\alpha_s$ as a function of momentum transfer $Q$, which represents the energy scale of the interaction.}
+    \label{fig:asymptotic_freedom}
+\end{figure}
 
 
+\subsubsection{Jets}
+\label{sec:jets}
 
+During high energy particle collisions (between two protons, for example), the consituent partons of the protons will sometimes scatter off each other in a way that converts most of their initial longitudinal momentum (along the collision axis) into transverse momentum. Such a scattering is often referred to as a \textbf{hard scattering}. Under the Lund model, as these colored partons move away from each other, the force between them increases until there is enough energy to produce a quark-antiquark pair (as discussed in Section~\ref{sec:qcd_confinement}). This process--known as fragmentation--continues until the partons are no longer energetic enough to move away from each other, at which point they hadronize into a large number of color neutral bound states, roughly collimated in the direction of the initial hard scattering. These sprays of hadrons are known as \textbf{jets}, and 
+
+If a collision between two partons results in a high enough momentum transfer $Q^2$, 
