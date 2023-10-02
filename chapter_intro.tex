@@ -169,7 +169,7 @@ The chiral quark fields $q_\text{L}$ and $q_\text{R}$ are defined as $\frac{1}{2
     -\bar{q}_{\mathrm{R}} \mathcal{M} q_{\mathrm{L}}-\bar{q}_{\mathrm{L}} \mathcal{M}^{\dagger} q_{\mathrm{R}} = -\sum_{f = 1}^{6}\bar{q}_f m_f q_f,
     \label{eq:mass_matrix}
 \end{equation}
-where $m_f$ is the mass of the quark with flavor $f$, and $q_f$ is the flavor component of the quark field. Note that this term completely violates the SU(2)$\times$U(1) electroweak symmetry, indicating that the given $\mathcal{L}_{QCD}$ is determined \textit{after} the spontaneous symmetry breaking described in the previous section.
+where $m_f$ is the mass of the quark with flavor $f$, and $q_f$ is the flavor component of the quark field. Note that this term completely violates the SU(2)$\times$U(1) electroweak symmetry, indicating that the given $\mathcal{L}_{QCD}$ is determined \textit{after} the spontaneous symmetry breaking described in the previous section. These quark masses are also subject to renormalization~\cite{MassRenorm}, which results in the running of the quark mass with respect to the energy scale of the interaction\footnote{They also depend on the \textit{choice} of renormalization scheme, with the most commonly implemented one being minimal subtraction or MS~\cite{MSScheme}.}. More simply, the quark masses are inversely dependent on this energy scale: at large energies, the quark masses are small, and at low energies, the quark masses are large. 
 
 The final terms $\theta$ and $\omega$ correspond to the QCD vacuum angle and winding number density, respctively~\cite{VacuumAngle, WindingNumber}.
 
@@ -257,7 +257,16 @@ Jets serve as a useful experimental probe to study the strong interaction: they 
 \subsection{The Quark-Gluon Plasma}
 \label{sec:qgp}
 
-One of the most exciting consequences of the asymptotic freedom of QCD is the existence of a new state of matter at extreme temperatures and densities: the \textbf{quark-gluon plasma} (QGP) ~\cite{QGP1, QGP2}. In this plasma, the quarks and gluons are not confined inside hadrons, and instead behave as quasi-free particles. This is analagous to an electromagnetic plasma, where electrons and protons are dissociated from their atoms. Studying the QGP and its formation is interesting for a number of reasons, but those reasons often get lost in the cosmological hype: the universe is thought to have been composed of this plasma in the first few microseconds after the Big Bang~\cite{QGP3}. Thus studying the QGP \textit{can} give insight to the early universe and its expansion, which is schematically represented in Figure~\ref{fig:qgp_universe}. 
+One of the most exciting consequences of the asymptotic freedom of QCD is the existence of a new state of matter at extreme temperatures and densities: the \textbf{quark-gluon plasma} (QGP) ~\cite{QGP1, QGP2}. In this plasma, the quarks and gluons are not confined inside hadrons, and instead behave as quasi-free particles. This is analagous to an electromagnetic plasma, where electrons and protons are dissociated from their atoms. A phase diagram of this plasma can be seen in Figure~\ref{fig:qgp_phase_diagram}. This diagram has two axes: temperature and baryon density. Increasing \textit{either} of these quantities beyond a certain threshold will cause a phase transition from normal hadronic matter to the QGP. Similarities can be drawn between this phase diagram and that of a snowball: both heating \textit{and} squeezing a snowball will cause it to melt into a liquid\footnote{Be careful: if you continue to heat up the snowball enough, or squeeze hard enough, it will undergo another phase transition into the QGP.}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/introduction/qgp_phase_diagram.png}
+    \caption{A phase diagram of the QGP, taken from~\cite{QGPPhaseDiagram}. The axes are temperature and baryon density, and the orange band represents the phase transition from normal hadronic matter to the QGP.}
+    \label{fig:qgp_phase_diagram}
+\end{figure}
+
+Studying the QGP and its formation is interesting for a number of reasons, but those reasons often get lost in the cosmological hype: the universe is thought to have been composed of this plasma in the first few microseconds after the Big Bang~\cite{QGP3}. Thus studying the QGP \textit{can} give insight to the early universe and its expansion, which is schematically represented in Figure~\ref{fig:qgp_universe}. It is also postulated that QGP formation occurs in the cores of neutron stars~\cite{QGPNeutron}, giving another avenue of interest for astrophysicists.
 
 \begin{figure}
     \centering
@@ -272,3 +281,74 @@ However, the QGP is also very interesting from a purely particle physics perspec
 \section{Heavy ion collisions}
 \label{sec:heavy_ion_collisions}
 
+The QGP phase diagram in Figure~\ref{fig:qgp_phase_diagram} shows two methods for producing the QGP: increasing the system's temperature or increasing its baryon density. Luckily these two methods are not mutually exclusive: 
+\begin{itemize}
+    \item Baryon density can be increased by looking at systems with a lot of baryons packed together (like the nucleus of a lead atom)
+    \item Temperature can be increased by smashing the aforementioned systems together at higher energies (like in a particle accelerator)
+\end{itemize}
+Thus one of the best (and only) ways to study the QGP in a laboratory setting is through relativistic \textbf{heavy ion collisions}: the smashing together of two heavy nuclei at very high energies using a particle accelerator. 
+
+Unfortunately producing the QGP in this manner has a major drawback: while it is possible to heat up the system beyond the critical temperature required for QGP formation, the system expands and cools \textit{very} quickly. For example, the QGP produced by colliding lead ions with center-of-mass energy \snn = 2.76 TeV at the Large Hadron Collider (LHC) only lasts for around 3 fm/$c$~\cite{QGPFormation}, or $10^{-23}$ seconds. A diagram depicting the formation and evolution of the QGP in a heavy ion collision can be seen in Figure~\ref{fig:qgp_evolution}. This diagram can be split up into the following stages:
+%
+\begin{enumerate}
+    \item The Lorentz-contracted nuclei approach each other at very high energies, and the partons within the nuclei scatter off each other. (t = 0 fm/$c$)
+    \item As new partons are created from the initial scatterings, the energy density of the system increases. Eventually this energy density is high enough to create the QGP. (t $\approx$ 1 fm/$c$)
+    \item Once the QGP is formed, it expands and cools in a hydrodynamic manner. 
+    \item After the QGP cools below the critical temperature, the partons begin to hadronize, resulting in the formation of a hadron gas. (t $\approx$ 3 fm/$c$)
+    \item The hadron gas will continue to expand until the hadrons within the gas are no longer strongly interacting with each other. (t $\approx$ 10 fm/$c$) This is often broken up into two stages:
+        \begin{itemize}
+            \item The hadrons cease to interact \textit{inelastically}, called \textbf{chemical freeze-out}. 
+            \item The hadrons cease to interact \textit{elastically}, called \textbf{kinetic freeze-out}.
+        \end{itemize} 
+    \item If a detector is built within a few meters around the collision point, the final state hadrons can be observed. (t $\approx$ $10^{15}$ fm/$c$)
+\end{enumerate} 
+%
+The last stage of this diagram is perhaps the most frustrating: it is only possible to study the QGP by observing the final state hadrons. Luckily there are some key observables associated with those final state hadrons that can shed light on the formation and evolution of this exciting plasma. Before those observables can be discussed, however, it is necessary to introduce a key concept in heavy ion collisions: the centrality of the collision.
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/introduction/heavy_ion_phases.png}
+    \caption{A schematic of the formation and evolution of the QGP in a heavy ion collision. The QGP is formed in the overlap region of the two colliding nuclei, and then expands and cools very quickly.}
+    \label{fig:qgp_evolution}
+\end{figure}
+
+\subsection{Collision centrality}
+\label{sec:collision_centrality}
+
+The very first step of the heavy ion collision process involves the scattering of the partons within the two nuclei. However, these nuclei are not point-like objects: they have a finite size, and therefore need not collide ``head-on''. Instead, the nuclei can collide at different \textbf{impact parameters} (commonly denoted as $b$), as shown in Figure~\ref{fig:impact_parameter}. The impact parameter is defined as the distance between the centers of the two nuclei, measured in the transverse plane (the plane perpendicular to the initial directions of the nuclei). Collisions with a large impact parameter give rise to \textit{spectator} nucleons, which do not participate in the collision and continue traveling as they please.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/introduction/impact_parameter.png}
+    \caption{A schematic of a heavy ion collision with impact parameter $b$, taken from~\ref{CernCourierImpactParam}.}
+    \label{fig:impact_parameter}
+\end{figure}
+
+The impact parameter is very important when studying the QGP for a fairly straightforward reason: as the impact parameter decreases, the number of partonic scatterings increases, which in turn increases the energy density of the system. In some sense, the size of the impact parameter determines whether or not the QGP is formed in the subsequent stages of the collision. As such, characterizing heavy ion collisions by their impact parameter is quite useful.  Unfortunately, much like the QGP, the impact parameter is not directly measureable and must be inferred from the final state hadrons.
+
+Instead of classifying collisions based off their unobtainable impact parameter, they are instead classified by their \textbf{collision centrality}. The collision centrality is defined as
+%
+\begin{equation}
+    \label{eq:centrality}
+    c=\frac{\int_0^b d \sigma / d b^{\prime} d b^{\prime}}{\int_0^{\infty} d \sigma / d b^{\prime} d b^{\prime}}=\frac{1}{\sigma_{\mathrm{AA}}} \int_0^b \frac{d \sigma}{d b^{\prime}} d b^{\prime},
+\end{equation}
+%
+where $\sigma_{\mathrm{AA}}$ is the total cross section of the nucleus-nucleus (A-A) collision. As this number is strictly between 0 and 1, it is often expressed as a percentile: 0\% corresponds to the most central collisions (lowest impact parameters), and 100\% corresponds to the most peripheral collisions (highest impact parameters). If a monotonic relationship between $b$ and the number of final state particles seen in the detector is assumed, the collision centrality can be experimentally determined~\cite{MonotonicMultiplicity}. The number of final state particles from a collision is called the \textbf{multiplicity} of the collision, and is often denoted as $N_\text{ch}$. The subscript $ch$ indicates that only charged particles are counted, as neutral particles are not seen by most detectors. 
+
+In practice, the collision centrality percentiles are usually determined by looking at the distribution of events as a function of the signal (effectively $N_\text{ch}$) as measured by a particular detector. The percentile for a specific event can then be determined by integration:
+%
+\begin{equation}
+    \label{eq:centrality_distribution}
+    c \approx \frac{1}{\sigma_{A A}} \int_{N_{c h}}^{\infty} \frac{\mathrm{d} \sigma}{\mathrm{d} N_{\mathrm{ch}}^{\prime}} \mathrm{d} N_{\mathrm{ch}}^{\prime},
+\end{equation}
+%
+where $N_\text{ch}$ is the multiplicity of the event in question. An example of separating events into centrality percentiles using this method can be seen in Figure~\ref{fig:alice_centrality}. In this plot, Pb--Pb collisions are characterized by their event activity in the ALICE VZERO detector (which will be discussed in more detail in the next chapter). The red points correspond to fits obtained using Monte Carlo simulations based off of the Glauber model~\cite{GlauberModelALICE1, GlauberModelALICE2}. The Glauber model~\cite{GlauberModel} is a geometric model that treats the nuclei as a collection of nucleons, and models the collisions as a superposition of binary nucleon-nucleon collisions. This model gives a relationship between the impact parameter $b$, the number of participating nucleons $N_{part}$, and the number of binary nucleon-nucleon collisions $N_{coll}$. While not of particular import to this thesis, fitting the Glauber model to the data actually allows for the determination of the impact parameter correponding to a given multiplicity percentile. The fact that the model describes the data well also serves as a sanity check for the experimental estimation of the collision centrality. In this thesis, the terms ``multiplicity percentile'' and ``collision centrality'' will be used interchangeably.
+
+\begin{figure}[t!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/introduction/alice_centrality.png}
+    \caption{The distribution of Pb--Pb collision events as a function of event activity in the ALICE VZERO detector, taken from~\cite{ALICECentrality}.}
+    \label{fig:alice_centrality}
+\end{figure}
+
+The approximation given by Equation~\ref{eq:centrality_distribution} has an additional benefit: it allows for the determination of centrality without a clearly defined impact parameter. This is useful for proton-proton and proton-lead collisions, where the impact parameter is ill defined. 
