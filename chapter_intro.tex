@@ -353,6 +353,96 @@ where $N_\text{ch}$ is the multiplicity of the event in question. An example of 
 
 The approximation given by Equation~\ref{eq:centrality_distribution} has an additional benefit: it allows for the determination of centrality without a clearly defined impact parameter. This is useful for proton-proton and proton-lead collisions, where the impact parameter is ill defined. 
 
+\section{Experimental signatures of QGP formation}
+\label{sec:qgp_signatures}
+
+As mentioned in Section~\ref{sec:heavy_ion_collisions}, the QGP produced within a heavy ion collision is \textit{very} short lived. As such, any attempt to study the QGP and its formation must be done using the detector-accessable final state hadrons. Luckily there are a number of signatures that can be used to study the QGP in experiment, including
+%
+\begin{itemize}
+    \item \textbf{jet quenching}~\cite{JetQuenching}, where the energy of a jet is heavily reduced due to its interactions with the QGP,
+    \item \textbf{collective flow}~\cite{CollectiveFlow}, where the motion of the partons within the QGP is heavily influenced by the overall fluid-like medium, and
+    \item \textbf{strangeness enhancement}~\cite{Strangeness}, where the QGP exhibits an increase in the production of strange quarks relative to up and down quarks.
+\end{itemize}
+%
+These signatures are discussed in more detail in the following sections.
+
+\subsection{Jet quenching}
+\label{sec:jet_quenching}
+
+The high momentum partons produced in the initial hard scatterings of heavy ion collisions often traverse the QGP medium. Much like electron tomography, where the passage of electrons through an atomic medium can give insight to the structure of the atoms within, these high momentum partons can be used to probe the QGP. These colored partons interact with the colored medium, losing energy in the process. As discussed in Section~\ref{sec:jets}, these partons are never observed individually, instead hadronizing into a spray of particles known as a jet. Thus the energy lost by the parton is not observed directly, but rather as a reduction in the energy of the resulting jet. This phenomenon is known as \textbf{jet quenching}, and is one of the most well studied signatures of QGP formation.
+
+Experimentally, this quenching is observed by studying \textit{dijets}. While the term ``jet'' refers to a single spray of particles observed in the detector, the initial hard scattering responsible for the formation of the jet corresponds to the production of \textit{two} high momentum partons. Traveling in opposite directions in the transverse plane, these partons often produce two jets that are back-to-back in $\varphi$ (the azimuthal angle in the transverse plane). These two jets are collectively referred to as a dijet. In pp collisions, the energy of the two jets is roughly equal as the corresponding partons don't lose energy to a medium. In heavy ion collisions, however, the partons lose energy to the QGP due to gluon radiation and elastic scattering with the mediums' constituents~\cite{ExperimentalSignatures}. If one of the two partons has a larger path length through the QGP, it will lose more energy than the other parton, resulting in an imbalance in the energy of the two jets. A schematic of this process for pp and A--A collisions can be seen in Figure~\ref{fig:dijet_schematic}. 
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/introduction/dijet_schematic.png}
+    \caption{A schematic of the formation of dijets in pp and A--A collisions, taken from~\cite{DijetSchematic}.}
+    \label{fig:dijet_schematic}
+\end{figure}
+
+However, the path length within the QGP of the dijet-forming partons should be roughly uniform, washing out this assymetry over a large event sample. As such, jet quenching is experimentally observed by selecting high momentum ``trigger'' hadrons, which most likely originated from the parton with the smaller QGP path length. The jet corresponding to this higher momentum trigger--referred to as the ``near-side'' jet--is then compared with its partner jet, which would be $180^\circ$ away in azimuth--called the ``away-side'' jet. The first collaboration to observe this jet quenching was the STAR collaboration at the Relativistic Heavy Ion Collider (RHIC)~\cite{STARJetQuenching}. By looking at high transverse momentum hadrons produced in Au--Au collisions, they found that the away-side jet began to ``disappear'' as the centrality of the collision increased, as shown in Figure~\ref{fig:star_jet_quenching}. This disappearance is due to the away-side jet losing energy to the QGP, such that the corresponding hadrons in the away-side fall below the momentum cutoff.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/introduction/star_jet_quenching.png}
+    \caption{Hadron yields corresponding to the near-side jet (near $\Delta\varphi = 0$) and the away-side jet ($\Delta\varphi = \pm \pi$), taken from~\cite{STARJetQuenching}. In pp and minimum bias Au--Au collisions, the away-side jet is present. However, at high centrality (0-10\%), the away-side jet completely disappears.}
+    \label{fig:star_jet_quenching}
+\end{figure}
+
+
+\subsection{Collective flow}
+\label{sec:collective_flow}
+
+The QGP is a strongly interacting medium, whose constituent partons are heavily coupled to their surroundings. Just as the pebbles within a river get swept up in the flow of the water, the partons within the QGP are influenced by the flow of this medium. This flow manifests itself by the presence of collective effects in the final state hadrons, which are often quantified using \textbf{collective flow} components. These flow components are obtained by expanding the final state hadron distribution in a Fourier series with respect to the azimuthal angle $\phi$~\cite{Flow24},
+%
+\begin{equation}
+    \label{eq:flow_fourier}
+    E \frac{d^3 N}{d^3 p}=\frac{1}{2 \pi} \frac{d^2 N}{p_{\mathrm{t}} d p_{\mathrm{t}} d y}\left(1+\sum_{n=1}^{\infty} 2 v_n \cos \left[n\left(\phi-\Psi_R\right)\right]\right),
+\end{equation}
+where $E$ is the energy of the particle, $p$ is its momentum, $p_T$ is the momentum component in the plane transverse to the beam axis, $y$ is the particle's rapidity, and $\Psi_R$ is the reaction plane angle. This reaction plane angle is defined by the beam axis and the impact parameter vector. The Fourier coefficients
+\begin{equation}
+    v_n = \langle \cos[n(\phi - \Psi_R)] \rangle
+\end{equation}
+determine the ``strength'' of the corresponding flow component. The first two coefficients, $v_1$ and $v_2$, are referred to as \textbf{directed flow} and \textbf{elliptic flow}, respectively. A non-zero directed flow originates from the space-momentum correlations in particle production from a longitudinally slanted source~\cite{DirectedFlow}. Directed flow is often much smaller than elliptic flow (by over an order of magnitude)~\cite{DirectedFlow2}, and is not of particular interest to this thesis. 
+
+Elliptic flow characterizes the anisotropy of the particle production in the transverse plane. This anisotropy is believed to be caused by the initial anisotropy of the collision geometry, where the overlap region of the colliding nuclei forms an ``almond'' shape. This almond is where the initial QGP is formed, which then hydrodynamically expands and thermalizes nearly instantaneously. The initial spacial anisotropy results in unequal QGP path lengths for the consituent partons, which ultimately results in an anisotropic momentum distribution for the corresponding hadrons (i.e. partons which travel through more medium lose more energy, as discussed in Section~\ref{sec:jet_quenching}). A diagram depicting this process can be seen in Figure~\ref{fig:elliptic_flow}.
+
+\subsubsection{Avoiding $\Psi_R$}
+\label{sec:v2_twoparticle}
+Reconstructing the reaction plane angle $\Psi_R$ is difficult as it must be done on an event-by-event basis~\cite{ReactionPlane}. As such, it is often more convenient to measure the collective flow components by looking at two-particle correlations in the azimuthal angle $\phi$. In other words, the flow components can be obtained by looking at the distribution of pairs of particles as a function of $\Delta\phi = \phi_1 - \phi_2$, where $\phi_1$ and $\phi_2$ are the azimuthal angles of two (non-identical) particles. This distribution can be decomposed into a Fourier series similar to Equation~\ref{eq:flow_fourier}~\cite{FlowDphi}, 
+%
+\begin{equation}
+    \label{eq:flow_dphi}
+    \frac{d N^{\text {pair }}}{d \Delta \varphi}=a_0+2 a_1 \cos \Delta \varphi+2 a_2 \cos 2 \Delta \varphi+\ldots,
+\end{equation}
+where $v_n \equiv a_n/a_0$ are the very same flow coefficients from before. This bypasses the need to reconstruct the reaction plane angle $\Psi_R$, but it also makes clear that any analyses involving two-particle angular correlations (like the one presented in this thesis) must be mindful of the presence of these coefficients (see Chapter~\ref{ch:analysis_mnm} for more details).
+
+
+\subsection{Strangeness enhancement}
+\label{sec:strangeness_enhancement}
+
+The earliest predicted signature of QGP formation was an increase in the production of strange quarks relative to the production of up and down quarks~\cite{Strangeness}. Discovered in 1981 by Johann Rafelski and Rolf Hagedorn, this \textit{enhancement} in the production of strange quarks in the QGP is referred to as \textbf{strangeness enhancement}. As strangeness is conserved during strong interactions, the production of $s\bar{s}$ pairs can only come from four Feynman diagrams (to lowest order in pQCD), shown in Figure~\ref{fig:ssbar_production}. The key insight by Rafelski and Hagedorn was that in the QGP, the higher temperatures allow for the thermal production of $s\bar{s}$ pairs through gluon fusion ($gg \rightarrow s\bar{s}$ or diagrams (a) (b) and (c) in Figure~\ref{fig:ssbar_production}). This gluon fusion occurs much faster than the quark-based production ($q\bar{q} \rightarrow s\bar{s}$ or diagram (d) in Figure~\ref{fig:ssbar_production}), and allows for the full chemical equilibriation of strangeness in the QGP~\cite{QGPEquil}. Such an equilibriation is not possible with only a hadronic gas phase~\cite{HadronGasEquil} due to the much slower interaction rates of hadrons.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/introduction/ssbar_production.png}
+    \caption{The four leading-order Feynman diagrams responsible for the production of $s\bar{s}$ pairs in the QGP, adapted from~\cite{Strangeness}. Diagrams (a), (b) and (c) are gluon the fusion processes, while diagram (d) is the quark-based process.}
+    \label{fig:ssbar_production}
+\end{figure}
+
+Experimentally, strangeness production is measured by looking at the abundance of strange hadrons relative to non-strange hadrons, like pions. For central heavy ion collisions--both at the LHC and RHIC--these strange/non-strange particle ratios are found to be consistent with a hadron gas in both thermal \textit{and} chemical equilibrium~\cite{NATURE12, NATURE13}. As mentioned previously, this is a strong indication that the QGP is formed in these collisions. Furthermore, these particle ratios as measured in lower multiplicity pp collisions at the LHC are found to be consistent with statistical models \textit{without} chemical equilibriation~\cite{NATURE14, NATURE15}. Under the strangeness enhancement picture, this indicates that QGP formation does \textit{not} occur in these lower multiplicity pp collisions. 
+
+ However, filling in the gaps between low multiplicity pp collisions and high multiplicity Pb--Pb collisions reveals a more complicated picture, as shown in Figure~\ref{fig:strangeness_enhancement}. The particle ratios seem to be consistent with a smooth transition between the two regimes, independent of collision system. In other words, the ratios in higher multiplicity pp and p--Pb collisions match up nicely with the ratios in lower multiplicity Pb--Pb collisions. This indicates that the enhanced production of strange quarks is not exclusive to heavy ion collisions; there is an ``onset'' of strangeness enhancement occuring in lower multiplicity pp and p--Pb collisions. Furthermore, this enhancement is seen to scale with the number of strange quarks in the hadron: the $\Omega$ baryon ($sss$) exhibits the largest enhancement, while the proton ($uud$) sees virtually no increase. This provides even stronger evidence for the formation of a chemically equilibriated QGP, which no longer appears exclusive to heavy ion collisions.
+
+ \begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/introduction/strangeness_enhancement.png}
+    \caption{The particle ratios of strange hadrons to pions as a function multiplicity for different collision systems (left) and those same ratios normalized to an inclusive pp sample (right). The ratios appear to only depend on the multiplicity of the collision, and not the collision system. Taken from~\cite{NATURE}.}
+    \label{fig:strangeness_enhancement}
+\end{figure}
+ 
+While extensions to the aforementioned statistical models can describe these multiplicity-dependent particle ratios in a phenomenological manner~\cite{NATURE17}, the microscopic origins of this enhancement are not well understood. By investigating the production of strange hadrons in p--Pb collisions (where the onset is greatest), this thesis aims to shed light on the origins of this strange enhancement. However, it is necessary to first introduce some theoretical models to help interpret the results of this thesis.
+
 
 \section{Theoretical models}
 \label{sec:models}
@@ -360,33 +450,128 @@ The approximation given by Equation~\ref{eq:centrality_distribution} has an addi
 Theoretical models of heavy ion collisions are pertinent to the understanding of QCD and the QGP. Without them, there would be no framework for interpreting the results from the very expensive experiments dedicated to studying this strongly interacting plasma. Unfortunately due to the complexity of these heavy ion collision systems, there is no \textit{single} model that can describe the entire collision evolution. Instead, the choice of model to compare a particular observable to depends very heavily on the observable in question. For example, some models treat the QGP phase of the collision as a hydrodynamic system, washing out information about the initial partonic scatterings~\cite{EPOS}. This can be useful when trying to study bulk properties of the QGP (like the $v_2$ from Section~\ref{sec:qgp_signatures}), but not-so-useful when studying jets and their consituents. Other models focus more on the individual partonic scatterings and subsequent hadronization, but do not include an explicit QGP phase~\cite{Pythia, DPMJet}. Such models are powerful tools for analyzing smaller collision systems (pp and lower multiplicity p--Pb), but fail to capture many of the features observed in heavy ion collision data. In this section, the models used to help interpret the results of this thesis will be discussed. All of these models are capable of simulating pp, p--Pb and Pb--Pb events.
 
 \subsection{PHSD}
-Parton-Hadron-String-Dynamics (PHSD)~\cite{PHSD1, PHSD2} is the only model explored in this thesis that utilizes a \textbf{microscopic transport approach}: it simulates the full space-time evolution of a heavy-ion collision by modeling the interactions of individual particles. Here ``particles'' refers to different quantities (strings, partons, hadrons) which are all evolved in different ways. The  The evolution of a collision within PHSD is as follows.
+Parton-Hadron-String-Dynamics (PHSD)~\cite{PHSD1, PHSD2} is the only model explored in this thesis that utilizes a \textbf{microscopic transport approach}: it simulates the full space-time evolution of a heavy-ion collision by modeling the interactions of individual particles. Here ``particles'' refers to different quantities (strings, partons, hadrons) which are all evolved in different ways. The transport equations of the partons and hadrons are derived from the Kadanoff-Baym (KB) equations~\cite{KBEq}, which describe the non-perturbative transport of particles in a strongly interacting system. The evolution of a collision within PHSD is as follows.
 
 \subsubsection{Initial stages}
 Prior to the collision, the simulation is broken up into a 3D-grid of size 56 in each of the x, y and z directions. The total size of the grid increases with each time step such the number of particles within a given cell evolves smoothly with time. The initial momentum distribution and abundances of partons within the nuclei (prior to any collision) are given by the thermal distributions
 \begin{equation}
     f(\omega, \vec{p}) = C_i p^2 \omega \rho_i(\omega, \vec{p}) n_{F / B}(\omega / \tau),
 \end{equation}
-where $\rho_i$ are the spectral functions of the quarks and gluons ($i = q, \bar{q}, g$) and $n_{F / B}$ are the Fermi-Dirac (for quarks) and Bose-Einstein (for gluons) distributions. Once the nuclei collide, the partons interact with each other under the Lund string model to form \textit{leading hadrons} and \textit{pre-hadrons}, as shown in Figure~\ref{fig:lund_string_phsd}. The leading hadrons are immune to dissociation within the QGP, while the pre-hadrons are not. 
+where $\rho_i$ are the spectral functions of the quarks and gluons ($i = q, \bar{q}, g$) and $n_{F / B}$ are the Fermi-Dirac (for quarks) and Bose-Einstein (for gluons) distributions. Once the nuclei collide, the partons interact with each other under the Lund string model to form \textit{leading hadrons} (at large rapidity) and \textit{pre-hadrons} (at midrapidity), as shown in Figure~\ref{fig:lund_string_phsd}. The leading hadrons are immune to dissociation within the QGP, while the pre-hadrons are not. 
 
-% \begin{figure}[ht]
-%     \centering
-%     \includegraphics[width=0.5\linewidth]{figures/section_phsd/lund_string_phsd.png}
-%     \caption{The Lund string model, with pre-hadrons and leading hadrons labeled.}
-%     \label{fig:lund_string_phsd}
-% \end{figure}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\linewidth]{figures/introduction/lund_string_phsd.png}
+    \caption{The Lund string model, with pre-hadrons and leading hadrons labeled.}
+    \label{fig:lund_string_phsd}
+\end{figure}
 
 \subsubsection{QGP phase}
 If the energy density $\epsilon$ of a given cell increases beyond the critical energy density $\epsilon_c = 0.5$ GeV/fm$^3$, the pre-hadrons within that cell are dissolved into partons. The partons are then treated as interacting quasi-particles under the DQPM~\cite{DQPM} model, with Lorentzian spectral functions given by
 \begin{equation}
-.
+\rho_j(\omega)=\frac{\gamma_j}{E_j}\left(\frac{1}{\left(\omega-E_j\right)^2+\gamma_j^2}-\frac{1}{\left(\omega+E_j\right)^2+\gamma_j^2}\right)
 \end{equation}
 where $i$ is one of $(q, \bar{q}, g)$ and the width $\gamma_i$ is given by
 \begin{equation}
-.
+\gamma_g(T)=N_c \frac{g^2 T}{8 \pi} \ln \frac{2 c}{g^2}, \quad \gamma_q(T)=\frac{N_c^2-1}{2 N_c} \frac{g^2 T}{8 \pi} \ln \frac{2 c}{g^2},
 \end{equation}
-The parameters X, Y, Z are fit to lattice QCD (lQCD) results at zero baryon chemical potential ($\mu_B = 0$).
+where $T$ is the temperature (calculated from the energy density within a given cell). This is the key difference between DQPM and other transport models--the quarks and gluons have non-zero temperature-dependent widths in the medium! The coupling constant $g$ is also temperature dependent, and is of the form
+\begin{equation}
+    g^2\left(T / T_c\right)=\frac{48 \pi^2}{\left(11 N_c-2 N_f\right) \ln \left(\lambda^2\left(T / T_c-T_s / T_c\right)^2\right.}.
+\end{equation}
+The parameters $T_s$ and $\lambda$ are fit to lattice QCD (lQCD) results~\cite{DQPM_lQCD}. The spectral functions are enough to describe the propagation of the mean-fields of the partons (effectively their Greens functions) via the aforementioned KB equations. The collisional terms in these equations are determined by the modified scattering cross sections of the partons. These cross sections are calculated using the leading order Feynman diagrams, with the DQPM-modified quark and gluon propagators given by
+\begin{equation}
+    i \delta_{i j} \frac{q+M_q}{q^2-M_q^2+2 i \gamma_q q_0}
+\end{equation}
+and
+\begin{equation}
+    -i \delta_{a b} \frac{g^{\mu \nu}-q^\mu q^\nu / M_g^2}{q^2-M_g^2+2 i \gamma_g q_0},
+\end{equation}
+respectively. Due to the large masses of the gluons, $q + \bar{q} \rightarrow g + g$ and $g \rightarrow g + g$ are suppressed and thus not included in the model.
 
+\subsubsection{Hadronization}
+Whenever the energy density of a given cell falls below the aforementioned critical energy density ($\epsilon_c = 0.5$ GeV/fm$^{3}$), the partons within begin to hadronize. The dynamical hadronization of partons into hadrons is modeled by the equations
+%
+\begin{equation}
+\label{eq:meson_hadronization}
+\begin{aligned}
+& \frac{d N_m(x, p)}{d^4 x d^4 p}=\operatorname{Tr}_q \operatorname{Tr}_{\bar{q}} \delta^4\left(p-p_q-p_{\bar{q}}\right) \delta^4\left(\frac{x_q+x_{\bar{q}}}{2}-x\right) \\
+& \quad \times \omega_q \rho_q\left(p_q\right) \omega_{\bar{q}} \rho_{\bar{q}}\left(p_{\bar{q}}\right)\left|v_{q \bar{q}}\right|^2 W_m\left(x_q-x_{\bar{q}},\left(p_q-p_{\bar{q}}\right) / 2\right) \\
+& \quad \times N_q\left(x_q, p_q\right) N_{\bar{q}}\left(x_{\bar{q}}, p_{\bar{q}}\right) \delta(\text { flavor, color }) .
+\end{aligned}
+\end{equation}
+%
+for mesons and 
+%
+\begin{equation}
+\label{eq:baryon_hadronization}
+\begin{aligned}
+& \frac{d N_B(x, p)}{d^4 x d^4 p}=\operatorname{Tr}_{q_1} \operatorname{Tr}_{q_2} \operatorname{Tr}_{q_3} \delta^4\left(p-p_{\xi_3}\right) \delta^4\left(x-\xi_3\right) \delta\left(\sqrt{\left(\tau_1-\tau_2\right)^2}\right) \\
+& \quad \times \omega_{q_1} \rho_{q_1}\left(p_1\right) \omega_{q_2} \rho_{q_2}\left(p_2\right) \omega_{q_3} \rho_{q_3}\left(p_3\right) \\
+& \quad \times\left|M_{q q q}\right|^2 W_B\left(\xi_1, \xi_2, p_{\xi_1}, p_{\xi_2}\right) \\
+& \quad \times N_{q_1}\left(x_1, p_1\right) N_{q_2}\left(x_2, p_2\right) N_{q_3}\left(x_3, p_3\right) \delta \text { (flavor, color). }
+\end{aligned}
+\end{equation}
+for baryons. The terms for the meson case are described as follows:
+\begin{itemize}
+    \item $Tr_q$ is shorthand notation for $\operatorname{Tr}_q=\sum_q \int d^4 x_q \int \frac{d^4 p_q}{(2 \pi)^4}$, where $q$ is summed over all spin, color and flavor degrees of freedom.
+    \item $\delta^4(p-p_q-p_{\bar{q}})$ forces conservation of four-momentum. Note that the quarks and anti-quarks are allowed to be off-shell (due to their non-zero widths), thus this can result in off-shell mesons.
+    \item $\delta^4\left(\frac{x_q+x_{\bar{q}}}{2}-x\right)$ puts the resulting meson in-between the quark and anti-quark pair.
+    \item $\omega_q$ and $\omega_{\bar{q}}$ are the energies of the quark and anti-quark, respectively.
+    \item $\rho_q\left(p_q\right)$ and $\rho_{\bar{q}}\left(p_{\bar{q}}\right)$ are the aforementioned spectral functions of the quark and anti-quark, respectively.
+    \item $\left|v_{q \bar{q}}\right|^2$ is the DQPM-determined \textit{effective quark-anti-quark interaction}, which is shown as the green dashed line in Figure~\ref{fig:vqq}. Note that this value is very small for large quark (energy) densities, and thus this entire equation is effectively zero. However, for low quark densities this value blows up, which ``turns on'' the hadronization (and also guarantees that all partons will hadronize \textit{eventually}).
+    \item $W_m\left(x_q-x_{\bar{q}},\left(p_q-p_{\bar{q}}\right) / 2\right)$ is the phase-space distribution of the resulting (pre-)meson
+    \item $N_q\left(x_q, p_q\right)$ and $N_{\bar{q}}\left(x_{\bar{q}}, p_{\bar{q}}\right)$ are the phase-space densities of the quark and anti-quark, respectively.
+    \item $\delta(\text { flavor, color })$ is shorthand for ``make sure flavor quantum numbers are conserved and that the resulting meson is color-neutral''.
+\end{itemize}
+The terms for the baryon case are similar.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\linewidth]{figures/introduction/vqq.png}
+    \caption{The effective quark-quark (green), quark-gluon (blue) and gluon-gluon (red) interactions as a function of parton density in DQPM, taken from~\cite{PHSD1}.}
+    \label{fig:vqq}
+\end{figure}
+
+The numerical integrations of equations \ref{eq:meson_hadronization} and \ref{eq:baryon_hadronization} for a fixed test parton ultimately give the probability for a hadronization event to occur. From there, events are randomly selected using Monte Carlo techniques, which give a color neutral state with definite x, p and flavor. However, this is \textit{still} not enough to specify a hadron completely: many hadronic states of the same flavor have large widths. Thus to determine the identify of the final hadron, the weight of each possible\footnote{PHSD only includes the baryon octet/decouplet, the spin 0 and spin 1 meson nonets, and a few higher resonance states. Furthermore, if the invariant mass of the color neutral state is above 1.3 GeV (for mesons) or 1.5 GeV (for baryons), the state is treated as a Lund string with further decay handled by the JETSET algorithm~\cite{JETSET}} hadronic spectral function is computed. The hadron is then randomly assigned an identity based on these weights using Monte Carlo.
+
+\subsubsection{Hadronic phase}
+All of the hadrons produced in the previous steps are transported using Hadron-String-Dynamics~\cite{HSD} (PHSD without the P). The phase-space distributions of the hadrons in HSD are transported using the equation
+\begin{equation}
+\label{eq:hadron_transport}
+\begin{aligned}
+& \left\{\left(\Pi_\mu-\Pi_\nu \partial_\mu^p U_{\mathrm{h}}^\nu-M_{\mathrm{h}}^* \partial_\mu^p U_{\mathrm{h}}^{\mathrm{S}}\right) \partial_x^\mu+\left(\Pi_\nu \partial_\mu^x U_{\mathrm{h}}^\nu+M_{\mathrm{h}}^* \partial_\mu^x U_{\mathrm{h}}^{\mathrm{S}}\right) \partial_p^\mu\right\} f_{\mathrm{h}}(x, p) \\
+& =\sum_{\mathrm{h}_2 \mathrm{~h}_3 \mathrm{~h}_4 \ldots} \int d 2 d 3 d 4 \ldots\left[G^{\dagger} G\right]_{12 \rightarrow 34 \ldots} \delta_{\Gamma}^4\left(\Pi+\Pi_2-\Pi_3-\Pi_4 \ldots\right) \\
+& \times\left\{f_{\mathrm{h}_3}\left(x, p_3\right) f_{\mathrm{h}_4}\left(x, p_4\right) \bar{f}_{\mathrm{h}}(x, p) \bar{f}_{\mathrm{h}_2}\left(x, p_2\right)\right. \\
+& \left.-f_{\mathrm{h}}(x, p) f_{\mathrm{h}_2}\left(x, p_2\right) \bar{f}_{\mathrm{h}_3}\left(x, p_3\right) \bar{f}_{\mathrm{h}_4}\left(x, p_4\right)\right\} \ldots,
+\end{aligned}
+\end{equation}
+where $U_h^S$ and $U_h^\mu$ are the scalar and vector hadron self-energies, respectively. The effective mass of the hadron $M_h^*$ is given by
+\begin{equation}
+    M_h^* = M_h + U_h^S,
+\end{equation}
+and its effective momentum is given by
+\begin{equation}
+    \Pi^\mu = p^\mu - U_h^\mu.
+\end{equation}
+The ``collisional'' term $\left[G^\dagger G\right]_{12 \rightarrow 34 \ldots}$ is the transition rate for the process $1 + 2 \rightarrow 3 + 4 + \ldots$, which is modeled using Lund string fragmentation. The self-energies $U_h^S$ and $U_h^\mu$ are evaluated on the basis of a Nambu-Jona-Lasinio (NJL)-type model~\cite{NJL}. Once these self-energies (and $\left[G^\dagger G\right]_{12 \rightarrow 34 \ldots}$) are specified, the transport equation (Equation ~\ref{eq:hadron_transport}) can be solved.
+
+\subsubsection{A simple overview}
+While the equations that govern PHSD are quite complicated, the overall picture is relatively simple. It can be summarized as follows:
+\begin{itemize}
+    \item First, the simulation is split up into cells whose sizes evolve with time, as shown in Figure~\ref{fig:phsd_cells}.
+    \item As the initial nuclei collide, and the interacting partons form pre-hadrons and leading hadrons.
+    \item If the energy density of a cell is too high, the pre-hadrons dissolve into partons, which are handled by the DQPM model.
+    \item If a cell with partons in it cools off, the partons dynamically hadronize.
+    \item The resulting hadrons (and any hadrons present in a particular cell) are transported using HSD.
+\end{itemize}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{figures/introduction/phsd_cells.png}
+    \caption{The cells within PHSD. If the energy density of the cell is greater than the critical energy density, the pre-hadrons dissolve into partons.}
+    \label{fig:phsd_cells}
+\end{figure}
 
 \subsection{EPOS LHC}
 
@@ -404,4 +589,4 @@ The core is evolved in a hydrodynamic manner, which loses all information about 
 
 \subsection{DPMJET}
 
-Perhaps the most simple\footnote{Still \textit{extremely} complicated, but has the least moving parts.} event generator explored in this thesis is the DPMJET~\cite{DPMJET} model. DPMJET combines the Dual Parton Model (DPM)~\cite{DPM} with the Lund string model~\cite{LundString} to describe proton-proton, proton-nucleus and nucleus-nucleus collisions across a large range of energies. The DPM describes all of the soft, non-perturbative multi-particle events that occur within a heavy ion collision using various large $N_c$ and $N_f$ limits of QCD~\cite{}. This is the only model explored in this thesis that does not have an explicit QGP phase, as the collision constituents\footnote{Strings. It's always strings.} are always treated independently~\cite{} Thus DPMJET serves as a good baseline for vacuum fragmentation, and can be compared with other models (and data) to help quantify the effects of the explicit QGP phase.
+Perhaps the most simple\footnote{Still \textit{extremely} complicated from a theoretical perspective, but has the least moving parts.} event generator explored in this thesis is the DPMJET~\cite{DPMJET} model. DPMJET combines the Dual Parton Model (DPM)~\cite{DPM} with the Lund string model~\cite{LundString} to describe proton-proton, proton-nucleus and nucleus-nucleus collisions across a large range of energies. The DPM describes all of the soft, non-perturbative multi-particle events that occur within a heavy ion collision using various large $N_c$ and $N_f$ limits of QCD~\cite{}. This is the only model explored in this thesis that does not have an explicit QGP phase, as the collision constituents\footnote{Strings. It's always strings.} are always treated independently~\cite{} Thus DPMJET serves as a good baseline for vacuum fragmentation, and can be compared with other models (and data) to help quantify the effects of the explicit QGP phase.
