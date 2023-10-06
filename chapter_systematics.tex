@@ -333,7 +333,7 @@ All of the ``straight line'' UE fitting techniques are based on the flatness ass
     \frac{dN}{d\Delta\varphi} = a_{0} + \sum_{n=1}^{\infty}2a_{n}cos(n\Delta\varphi),
 \end{equation}
 %
-where $a_{n}$ are the Fourier coefficients. Surprisingly, these coefficients have been shown~\cite{Justin108, Justin109, Justin110} to be related to the collective flow coefficients $v_{n}$ via
+where $a_{n}$ are the Fourier coefficients. As mentioned in the introduction, these coefficients have been shown~\cite{Justin108, Justin109, Justin110} to be related to the collective flow coefficients $v_{n}$ via
 %
 \begin{equation}
     \label{eq:fourier_vn_relation}
@@ -1128,6 +1128,34 @@ While the MC closure tests provide a general framework for checking the validity
 \end{figure}
 
 \clearpage
+
+\subsection{Investigating radial flow effects}
+
+Any multiplicity-differential analysis involving a sample of particles within a fixed \pt momentum window will be subject to \textbf{radial flow} effects. Radial flow~\cite{RadialFlow} is characterized by the increase of the average transverse momentum \meanpt with increasing event multiplicity for a given particle species. This could result in an increased yield integrated within a fixed \pt window, and that increase may be different for different particle species. As this thesis presents many results concerning the \lmb/h($\pi$) ratio as a function of multiplicity within fixed \pt ranges, it is important to investigate the effect of radial flow may have on the final results.
+
+However, the effects of radial flow have already been thoroughly investigated for the $\phi(1020)$/$\pi$ ratio, which found that radial flow causes a larger increase in the $\pi$ yield than the $\phi$ yield within the $2 <$ \pt $< 4$ \GeVc momentum window. This would result in a \textit{decrease} in the $\phi$/$\pi$ ratio with increasing multiplicity. Thus any observation of an \textit{increase} in the $\phi$/$\pi$ ratio with increasing multiplicity can not be attributed to radial flow effects. Importantly, the \lmb baryon shares a similar mass (1.115 vs. 1.020 \GeVmass) and \pt spectrum (shown in Figure~\ref{fig:phi_lambda_pt}) to the $\phi$ meson. As such, any conclusion regarding the radial flow effects (which are determined using these two observables) on the \lmb/\pi results can be inferred from the $\phi$/$\pi$ study. A brief summary of the $\phi$/$\pi$ radial flow study is presented below.
+
+\begin{figure}
+    
+
+\subsubsection{Radial flow effects on the $\phi$/$\pi$ ratio}
+
+First, the mean \pt of both the $\phi$ and $\pi$ were taken from published p--Pb data in the 0-5\% and 60-80\% multiplicity percentiles. Then, the momentum spectra of the $\phi$ and $\pi$ were fit to the simplified Boltzman function,
+%
+\begin{equation}
+    \label{eq:boltz_eq}
+    B\left(p_{\mathrm{T}}\right)=\frac{C}{T(m+T)} p_{\mathrm{T}}e^{-\left(m_{\mathrm{T}}-m\right) / T },
+\end{equation}
+where $m$ is the particle mass, $m_{\text{T}}$ is the particle's transverse mass ($= \sqrt{p_{\mathrm{T}}^{2}+m^{2}}$), $T$ is the temperature, and $C$ is a normalization constant. The temperature $T$ was founed such that the mean \pt of the fit function matched the published mean \pt values. The resulting fits are shown for the $\phi$ and the $\pi$ in both multiplicity bins in Figure~\ref{fig:phi_pi_radial_flow}. The $2 <$ \pt $< 4$ \GeVc momentum window is also highlighted.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{figures/analysis/phi_pi_radial_flow.png}
+    \caption{The fits to the momentum spectra of the $\phi$ (left) and $\pi$ (right) in the 0-5\% (red) and 60-80\% (green) multiplicity bins, with fit function given by Equation~\ref{eq:boltz_eq}. The $2 <$ \pt $< 4$ \GeVc momentum window is highlighted in blue.}
+    \label{fig:phi_pi_radial_flow}
+\end{figure}
+
+The ratio of the yields in the higher multiplicity bin to the lower multiplicity bin within the momentum window was then calculated for both the $\phi$ and the $\phi$, which revealed that the $\phi$ yield increases by around 30\%, whereas the \pi yield increases by nearly 200\%.
 
 
 
