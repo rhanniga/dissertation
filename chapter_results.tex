@@ -108,7 +108,7 @@ Across both associated \pt ranges, the h-$\Lambda$ yields see a substantial incr
 \caption{The percent change in the per-trigger yields from the lowest to highest multiplicity class in the lower and higher associated momentum ranges. The errors reported are obtained using the systematic and statistical uncertainties summed in quadrature. The reported significance is the number of standard deviations away from zero percent change.}
 \begin{tabular}{l c c}
 \hline
-Region & Percent change for lower (higher) $p_{\text{T, assoc}}^{\text{h,}\Lambda}$ & Lower (higher) $p_{\text{T, assoc}}^{\text{h,}\Lambda}$ significance \\
+Region & \% change for lower (higher) $p_{\text{T, assoc}}^{\text{h,}\Lambda}$ & Lower (higher) $p_{\text{T, assoc}}^{\text{h,}\Lambda}$ sig. \\
 \hline
 h-$\Lambda$ near-side &  $47.9 \pm 16.8$ ($46.6 \pm 14.6$) & $ 2.9\sigma (3.2\sigma) $\\ 
 h-$\Lambda$ away-side &  $71.0 \pm 22.5$ ($46.2 \pm 17.9$) & $3.2\sigma (2.6\sigma)$ \\
@@ -186,6 +186,14 @@ For each of these comparisons, the same techniques and cuts are applied as they 
 
 The multiplicity-integrated per-trigger $h-\Lambda$ and $h-h$ 2D $\Delta\eta\Delta\varphi$ distributions in data and for each model can be seen in Figures \ref{fig:h_lambda_2d_model} (h-$\Lambda$) and \ref{fig:h_h_2d_model} (h-h). These distributions were generated in the lower associated momentum bin ($1.5 <$ \pt $< 2.5$ \GeVc) to maximize the statistics across all models. The h-h distributions for each model exhibit some unique characteristics. For DPMJET, the correlation shape in both the near- and away-side regions matches the data moderately well, though the away-side width along $\Delta\varphi$ appears more collimated. Furthermore, DPMJET exhibits no elliptic flow (seen as a sinusoidal pattern at large $\Delta\eta$), whereas the data has a visible flow component. This is not unexpected. As mentioned in Section~\ref{sec:models}, DPMJET does not have an explicit QGP phase, and therefore any collective flow effects should not be present. 
 
+EPOS-LHC, on the other hand, has a very large flow component, well beyond that of the data. Additionally, the away-side jet region in EPOS-LHC appears to be completely washed-out. This is likely due to the hydrodynamic core of EPOS-LHC, which produces this collective flow at the expense of a loss of information from the initial hard-scatterings that produce the jets. As the Lund string density is greater on the away-side than the near-side, it is more likely for the strings in the away-side to form the core. This core, once formed, loses all of its correlations from the initial partonic scatterings, and thus the away-side jet correlation is destroyed. 
+
+The yields and shape of the dihadron distribution from PHSD appears to match the data the best, with well-defined near- and away-side peaks, as well as a flow component that is similar to the data. The presence of this flow component is surprising, as PHSD is a microscopic transport model, where all of the constituent particles (partons, hadrons and strings) are treated as individual particles that interact with each other. For such a fundamental model to produce this collective behavior is a refreshing deviation from models that ``force'' this behavior through hydrodynamic means. However, the near-side peak appears to be lower in PHSD than in data, indicating that the description of jets within PHSD is not perfect.
+
+For the h-$\Lambda$ distributions, the story is a bit different. DPMJET still overestimates the jet peaks and exhibits no flow, but the overall h-\lmb yield is now substantially lower than it is in data. The distribution from EPOS-LHC now shows very little signs of a near-side jet region, indicating that the production of $\Lambda$ baryons is coming almost \textit{entirely} from the hydrodynamic core. Still, the h-\lmb yields from EPOS are the closest to data, indicating that this core does a good job of making $\Lambda$ baryons (but a bad job at telling them where to go). The PHSD distribution is the most interesting, as it appears to be dominated by statistical fluctuations. As the PHSD yields are generated across 1.2 billion events (over twice as much as data and the other event generators), the conclusion is quite simple: PHSD does not produce enough $\Lambda$ baryons in events that have a trigger. This was investigated more thoroughly, and it was found that PHSD produces a factor of 10 less events with both a trigger hadron and a $\Lambda$ baryon than in data, shown in Figure~\ref{fig:phsd_woes}. In data, around 2\% of the event sample has both a trigger hadron and a $\Lambda$ baryon, whereas in PHSD this number is around 0.2\%. In order to generate the same number of h-\lmb pairs as seen in data, over 4 billion PHSD events would need to be generated, requiring a significant amount of computing resources.
+
+
+\clearpage
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\textwidth]{figures/results/h_h_2d_modelcomp.png}
@@ -193,18 +201,13 @@ The multiplicity-integrated per-trigger $h-\Lambda$ and $h-h$ 2D $\Delta\eta\Del
 \label{fig:h_h_2d_model}
 \end{figure}
 
-EPOS-LHC, on the other hand, has a very large flow component, well beyond that of the data. Additionally, the away-side jet region in EPOS-LHC appears to be completely washed-out. This is likely due to the hydrodynamic core of EPOS-LHC, which produces this collective flow at the expense of a loss of information from the initial hard-scatterings that produce the jets. As the Lund string density is greater on the away-side than the near-side, it is more likely for the strings in the away-side to form the core. This core, once formed, loses all of its correlations from the initial partonic scatterings, and thus the away-side jet correlation is destroyed. 
-
-The yields and shape of the dihadron distribution from PHSD appears to match the data the best, with well-defined near- and away-side peaks, as well as a flow component that is similar to the data. The presence of this flow component is surprising, as PHSD is a microscopic transport model, where all of the constituent particles (partons, hadrons and strings) are treated as individual particles that interact with each other. For such a fundamental model to produce this collective behavior is a refreshing deviation from models that ``force'' this behavior through hydrodynamic means. However, the near-side peak appears to be lower in PHSD than in data, indicating that the description of jets within PHSD is not perfect.
-
 \begin{figure}[ht]
 \centering
 \includegraphics[width=\textwidth]{figures/results/h_lambda_2d_modelcomp.png}
 \caption{The multiplicity-integrated per-trigger h-\lmb 2D $\Delta\varphi\Delta\eta$ distributions in data and for each model within the $1.5 <$ \pt $< 2.5$ \GeVc associated momentum bin.}
 \label{fig:h_lambda_2d_model}
 \end{figure}
-
-For the h-$\Lambda$ distributions, the story is a bit different. DPMJET still overestimates the jet peaks and exhibits no flow, but the overall h-\lmb yield is now substantially lower than it is in data. The distribution from EPOS-LHC now shows very little signs of a near-side jet region, indicating that the production of $\Lambda$ baryons is coming almost \textit{entirely} from the hydrodynamic core. Still, the h-\lmb yields from EPOS are the closest to data, indicating that this core does a good job of making $\Lambda$ baryons (but a bad job at telling them where to go). The PHSD distribution is the most interesting, as it appears to be dominated by statistical fluctuations. As the PHSD yields are generated across 1.2 billion events (over twice as much as data and the other event generators), the conclusion is quite simple: PHSD does not produce enough $\Lambda$ baryons in events that have a trigger. This was investigated more thoroughly, and it was found that PHSD produces a factor of 10 less events with both a trigger hadron and a $\Lambda$ baryon than in data, shown in Figure~\ref{fig:phsd_woes}. In data, around 2\% of the event sample has both a trigger hadron and a $\Lambda$ baryon, whereas in PHSD this number is around 0.2\%. In order to generate the same number of h-\lmb pairs as seen in data, over 4 billion PHSD events would need to be generated, requiring a significant amount of computing resources.
+\clearpage
 
 \begin{figure}[ht]
 \centering
@@ -221,23 +224,21 @@ The $\Delta\varphi$ distributions generated by projecting the previous 2D distri
 
 For the dihadron case, the shape of the $\Delta\varphi$ distribution in PHSD looks nearly \textit{identical} to the data. Even the yields are mostly correct, though the jet-like regions are slightly underestimated. The EPOS-LHC distribution is the perfect example of why it is important to first look at the 2D distribution \textit{before} projecting: there appears to be an away-side peak of comparable size to the near-side, but the 2D distribution reveals that this is entirely due to flow. Projecting onto $\Delta\varphi$ also makes it more clear that DPMJET does not accurately predict the UE contribution, which is nearly three times less than it is in data (0.12 vs. 0.29). The same can be said about the h-\lmb distributions, with the exception of PHSD. While the near-side peak is clearly visible, and its shape is somewhat similar to that in data, the away-side jet appears to have inexplicably vanished. Unfortunately the explanation for this is not as cut-and-dry as it was for EPOS-LHC, as PHSD has no hydrodynamic core. The investigation into this effect is still ongoing, and may be addressed in a future publication.
 
-\begin{figure}[ht]
+Do to a lack of away-side jet peak in both EPOS-LHC and PHSD (and the overwhelming flow contribution to the $\Delta\varphi$ distribution in the case of EPOS-LHC), these models are excluded from the rest of the analysis. It is worth mentioning again, however, that PHSD shows promising initial results for dihadron correlation analyses. If the issues with the h-\lmb distributions can be resolved, PHSD looks like an excellent theoretical framework for these studies. The remainder of this section will focus on DPMJET, which, while clearly lacking in some areas, consistently exhibits a well-defined near- and away-side jet peak with a quantifiable UE contribution.
+
+\begin{figure}
 \centering
 \includegraphics[width=\textwidth]{figures/results/h_h_1d_modelcomp.png}
 \caption{The multiplicity-integrated per-trigger h-h $\Delta\varphi$ distributions in data and for each model within the $1.5 <$ \pt $< 2.5$ \GeVc associated momentum bin.}
 \label{fig:h_h_1d_model}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}
 \centering
 \includegraphics[width=\textwidth]{figures/results/h_lambda_1d_modelcomp.png}
 \caption{The multiplicity-integrated per-trigger h-\lmb $\Delta\varphi$ distributions in data and for each model within the $1.5 <$ \pt $< 2.5$ \GeVc associated momentum bin.}
 \label{fig:h_lambda_1d_model}
 \end{figure}
-
-Do to a lack of away-side jet peak in both EPOS-LHC and PHSD (and the overwhelming flow contribution to the $\Delta\varphi$ distribution in the case of EPOS-LHC), these models are excluded from the rest of the analysis. It is worth mentioning again, however, that PHSD shows promising initial results for dihadron correlation analyses. If the issues with the h-\lmb distributions can be resolved, PHSD looks like an excellent theoretical framework for these studies. 
-
-The remainder of this section will focus on DPMJET, which, while clearly lacking in some areas, consistently exhibits a well-defined near- and away-side jet peak with a quantifiable UE contribution.
 
 \subsubsection{Systematic uncertainties for DPMJET}
 \label{sec:dpmjet_systematics}
@@ -318,14 +319,14 @@ Unsuprisingly (given the discussions in Section~\ref{sec:model_1d_correlations})
 
 The $\phi(1020)$ meson's net strangeness $|S|$ is equal to zero. Despite this, it has been observed to exhibit a similar enhancement in production as a function of multiplicity as other hadrons with non-zero strangeness ~\cite{PhiEnhancement}. Due to their similar masses ($\Delta M < 100$ \MeVmass), the $\phi(1020)$ is an excellect candidate to compare directly with the $\Lambda$ in order to better understand the differences between open ($|S| \neq 0$) and hidden ($|S| = 0$) strange hadron production. Using previously published results on $\phi(1020)$ production in and out-of jets in \pPb collisions at $\sqrt{s_{\text{NN}}} = 5.02$ \TeV ~\cite{JustinPaper} (shown in Figure~\ref{fig:justin_plots}), the per-trigger pair-wise yield ratios $R_{i}^{\Lambda/\phi} \equiv Y_{i}^{h-\Lambda}/Y_{i}^{h-\phi}$ ($i$ = near-side, away-side, UE) can be measured as a function of multiplicity. These ratios are presented in Figure \ref{fig:lambda_phi_ratio} for both the lower and higher associated \pt ranges. Again, straight line fits to the data are shown as a dashed lines, with the slopes and corresponding errors reported in Table \ref{tab:lambda_phi_slopes}. The same ratios predicted by DPMJET are also presented, with a ratio to the data presented in the bottom panel.
 
-\begin{figure}[h!]
+\begin{figure}
 \centering
 \includegraphics[width=\textwidth]{figures/results/justin_plots.png}
 \caption{Previously published results for the per-trigger pair-wise yield ratios $R_{i}^{\phi/h} \equiv Y_{i}^{h-\phi}/Y_{i}^{h-h}$ ($i$ = near-side, away-side, UE, total) as a function of charged particle multiplicity for lower (left) and higher (right) associated \pt ranges.}
 \label{fig:justin_plots}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[ht]
 \centering
 \includegraphics[width=\textwidth]{figures/results/final_lambda_phi_ratio_plot_new_x_axis_model_ratio.pdf}
 \caption{The per-trigger pair-wise yield ratios $R_{i}^{\Lambda/\phi} \equiv Y_{i}^{h-\Lambda}$/$Y_{i}^{h-\phi}$ ($i$ = near-side, away-side, UE) as a function of multiplicity in the lower (left) and higher (right) associated momentum ranges. The statistical (systematic) uncertainties are shown as vertical lines (boxes).  The ratios predicted by DPMJET are also presented as shaded bands, with the width of the band represending the systematic uncertainty on the model. The ratio of the model to the data is presented in the bottom panel.}
