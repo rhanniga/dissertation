@@ -1,5 +1,5 @@
-\chapter{Systematic uncertainties and cross-checks}
-\label{chapter_systematics}
+\,chapter{Systematic Uncertainties and Cross-checks}
+\label{ch:systematics}
 While it would be nice to produce exact results for the measurements presented in this thesis, uncertainties are inevitable. These uncertainties are usually grouped into two categories: \textbf{statistical uncertainties} and \textbf{systematic uncertainties}. Statistical uncertainties are those which arise from things like detector imprecisions or even the inherent statisical nature of the measurement itself. Calculating these uncertainties is \textit{usually} straightforward, though it often involves well-motivated assumptions about the underlying probability distributions of the data. Determining systematic uncertainties, on the other hand, is a much more complicated process. To that end, the first section of this chapter goes into a large amount of detail about the calculation of systematic uncertainties for this analysis, starting with clearly defining what ``systematic uncertainty'' means and how it is quantified in the context of this thesis, followed by comprehensive ingestigations into each of the sources of uncertainty considered in this research, and ending with a summary of the final systematic uncertainties for each observable.
 
 The second section of this chapter is dedicated to the cross-checks performed to ensure the validity of the analysis procedure. There are a variety of such checks, ranging from a general Monte Carlo closure test to more specific checks into physical biases that may be introduced by the analysis procedure.
@@ -73,7 +73,7 @@ Each of the other sources of systematic uncertainty is described in detail in th
 \end{table}
 
 \subsubsection{Signal region selection}
-The nominal signal region for the \lmb invariant mass is fairly wide, accounting for nearly 97\% of the total \lmb signal.  However, the final result should not be heavily influenced by the choice of signal region so long as it is centered about the true \lmb mass. Furthermore, altering the signal region tests the validity of the signal scaling procedure outlined in Section~\ref{sec:corrections}. To investigate this, the signal region is varied in the ways presented in Table~\ref{tab:signal_region_variations}. The resulting $\Delta\varphi$ distributions and ratios to the nominal distribution for each signal region variation in each multiplicity and associated \pt bin are shown in Figures \ref{fig:signal_region_variations_lowpt} (lower \pt) and \ref{fig:signal_region_variations_highpt} (higher \pt). The average deviation from the nominal distribution is around 2\%, with no invividual variation exceeding 5\%. As no significant dependence on $\Delta\varphi$ is observed, the systematic uncertainty is calculated as the RMS of the percent change from each variation across the entire $\Delta\varphi$ range as opposed to calculating the RMS in each bin.
+The nominal signal region for the \lmb invariant mass is fairly wide, accounting for nearly 97\% of the total \lmb signal.  However, the final result should not be heavily influenced by the choice of signal region so long as it is centered about the true \lmb mass. Furthermore, altering the signal region tests the validity of the signal scaling procedure outlined in Section~\ref{sec:corrections}. To investigate this, the signal region is varied in the ways presented in Table~\ref{tab:signal_region_variations}. The resulting $\Delta\varphi$ distributions and ratios to the nominal distribution for each signal region variation in each multiplicity and associated \pt bin are shown in Figures \ref{fig:signal_region_variations_lowpt} (lower \pt) and \ref{fig:signal_region_variations_highpt} (higher \pt). The average deviation from the nominal distribution is around 2\%, with no individual variation exceeding 5\%. As no significant dependence on $\Delta\varphi$ is observed, the systematic uncertainty is calculated as the RMS of the percent change from each variation across the entire $\Delta\varphi$ range as opposed to calculating the RMS in each bin.
 
 \begin{table}[ht]
     \centering
@@ -99,7 +99,7 @@ The nominal signal region for the \lmb invariant mass is fairly wide, accounting
     \includegraphics[width=0.49\textwidth]{figures/analysis/signal_variations_dphi_20_50_lowpt_ratio.pdf}
     \includegraphics[width=0.49\textwidth]{figures/analysis/signal_variations_dphi_50_80_lowpt.pdf}
     \includegraphics[width=0.49\textwidth]{figures/analysis/signal_variations_dphi_50_80_lowpt_ratio.pdf}
-    \caption{The h-\lmb $\Delta\varphi$ distributions within the 0-20\% (top), 20-50\% (middle) and 50-80\% (bottom) multiplicity bins in the lower associated \pt bin for each of the signal region variations (left) with the ratios to the nominal distribution (right).}
+    \caption{The h-\lmb $\Delta\varphi$ distributions within the 0-20\% (top), 20-50\% (middle), and 50-80\% (bottom) multiplicity bins in the lower associated \pt bin for each of the signal region variations (left) with the ratios to the nominal distribution (right).}
     \label{fig:signal_region_variations_lowpt}
 \end{figure}
 
@@ -111,7 +111,7 @@ The nominal signal region for the \lmb invariant mass is fairly wide, accounting
     \includegraphics[width=0.49\textwidth]{figures/analysis/signal_variations_dphi_20_50_highpt_ratio.pdf}
     \includegraphics[width=0.49\textwidth]{figures/analysis/signal_variations_dphi_50_80_highpt.pdf}
     \includegraphics[width=0.49\textwidth]{figures/analysis/signal_variations_dphi_50_80_highpt_ratio.pdf}
-    \caption{The h-\lmb $\Delta\varphi$ distributions within the 0-20\% (top), 20-50\% (middle) and 50-80\% (bottom) multiplicity bins in the higher associated \pt bin for each of the signal region variations (left) with the ratios to the nominal distribution (right).}
+    \caption{The h-\lmb $\Delta\varphi$ distributions within the 0-20\% (top), 20-50\% (middle), and 50-80\% (bottom) multiplicity bins in the higher associated \pt bin for each of the signal region variations (left) with the ratios to the nominal distribution (right).}
     \label{fig:signal_region_variations_highpt}
 \end{figure}
 
@@ -142,7 +142,7 @@ The choice of sideband region also leaves a lot of room for reasonable variation
     \includegraphics[width=0.49\textwidth]{figures/analysis/sideband_variations_dphi_20_50_lowpt_ratio.pdf}
     \includegraphics[width=0.49\textwidth]{figures/analysis/sideband_variations_dphi_50_80_lowpt.pdf}
     \includegraphics[width=0.49\textwidth]{figures/analysis/sideband_variations_dphi_50_80_lowpt_ratio.pdf}
-    \caption{The h-\lmb $\Delta\varphi$ distributions within the 0-20\% (top), 20-50\% (middle) and 50-80\% (bottom) multiplicity bins in the lower associated \pt bin for each of the sideband region variations (left) with the ratios to the nominal distribution (right).}
+    \caption{The h-\lmb $\Delta\varphi$ distributions within the 0-20\% (top), 20-50\% (middle), and 50-80\% (bottom) multiplicity bins in the lower associated \pt bin for each of the sideband region variations (left) with the ratios to the nominal distribution (right).}
     \label{fig:sideband_region_variations_lowpt}
 \end{figure}
 
@@ -154,12 +154,12 @@ The choice of sideband region also leaves a lot of room for reasonable variation
     \includegraphics[width=0.49\textwidth]{figures/analysis/sideband_variations_dphi_20_50_highpt_ratio.pdf}
     \includegraphics[width=0.49\textwidth]{figures/analysis/sideband_variations_dphi_50_80_highpt.pdf}
     \includegraphics[width=0.49\textwidth]{figures/analysis/sideband_variations_dphi_50_80_highpt_ratio.pdf}
-    \caption{The h-\lmb $\Delta\varphi$ distributions within the 0-20\% (top), 20-50\% (middle) and 50-80\% (bottom) multiplicity bins in the higher associated \pt bin for each of the sideband region variations (left) with the ratios to the nominal distribution (right).}
+    \caption{The h-\lmb $\Delta\varphi$ distributions within the 0-20\% (top), 20-50\% (middle), and 50-80\% (bottom) multiplicity bins in the higher associated \pt bin for each of the sideband region variations (left) with the ratios to the nominal distribution (right).}
     \label{fig:sideband_region_variations_highpt}
 \end{figure}
 
 \subsubsection{\lmb daughter particle identification}
-The \lmb daughter particle identification (PID) cuts are chosen to be wide enough to ensure a high efficiency, but narrow enough to ensure a high purity. As the requirement for a higher purity should be offset by the subtraction of the combinatorial background, altering the PID cuts should only minimally effect the final $\Delta\varphi$ distributions. To study this, the PID cuts are varied in the ways presented in Table~\ref{tab:pid_cut_variations}. The final $\Delta\varphi$ distributions and ratios to the nominal distribution for each PID cut variation in each multiplicity and associated \pt bin are shown in Figures \ref{fig:pid_cut_variations_lowpt} (lower \pt) and \ref{fig:pid_cut_variations_highpt} (higher \pt). Requiring a signal in the TOF detector drastically reduces the $\Lambda$ signal as the daugher pions are often heavily deflected by the magnetic field due to their lower \pt (again, $m_{\text{p}}/m_{\pi} \approx 7$, so most of the mother momentum belongs to the proton). This causes a large amount of statistical fluctuations in the corresponding $\Delta\varphi$ distribution, which is why the ``require TOF'' variation is inevitably excluded after the Barlow check presented in Section~\ref{sec:barlow_check_dphi}. The other variations result in only around a 2\% deviation from the nominal $\Delta\varphi$ distribution, on average.
+The \lmb daughter particle identification (PID) cuts are chosen to be wide enough to ensure a high efficiency, but narrow enough to ensure a high purity. As the requirement for a higher purity should be offset by the subtraction of the combinatorial background, altering the PID cuts should only minimally affect the final $\Delta\varphi$ distributions. To study this, the PID cuts are varied in the ways presented in Table~\ref{tab:pid_cut_variations}. The final $\Delta\varphi$ distributions and ratios to the nominal distribution for each PID cut variation in each multiplicity and associated \pt bin are shown in Figures \ref{fig:pid_cut_variations_lowpt} (lower \pt) and \ref{fig:pid_cut_variations_highpt} (higher \pt). Requiring a signal in the TOF detector drastically reduces the $\Lambda$ signal as the daugher pions are often heavily deflected by the magnetic field due to their lower \pt (again, $m_{\text{p}}/m_{\pi} \approx 7$, so most of the mother momentum belongs to the proton). This causes a large amount of statistical fluctuations in the corresponding $\Delta\varphi$ distribution, which is why the ``require TOF'' variation is inevitably excluded after the Barlow check presented in Section~\ref{sec:barlow_check_dphi}. The other variations result in only around a 2\% deviation from the nominal $\Delta\varphi$ distribution, on average.
 
 \begin{table}[ht]
     \centering
@@ -184,7 +184,7 @@ The \lmb daughter particle identification (PID) cuts are chosen to be wide enoug
     \includegraphics[width=0.49\textwidth]{figures/analysis/pid_variations_dphi_20_50_lowpt_ratio.pdf}
     \includegraphics[width=0.49\textwidth]{figures/analysis/pid_variations_dphi_50_80_lowpt.pdf}
     \includegraphics[width=0.49\textwidth]{figures/analysis/pid_variations_dphi_50_80_lowpt_ratio.pdf}
-    \caption{The h-\lmb $\Delta\varphi$ distributions within the 0-20\% (top), 20-50\% (middle) and 50-80\% (bottom) multiplicity bins in the lower associated \pt bin for each of the PID cut variations (left) with the ratios to the nominal distribution (right).}
+    \caption{The h-\lmb $\Delta\varphi$ distributions within the 0-20\% (top), 20-50\% (middle), and 50-80\% (bottom) multiplicity bins in the lower associated \pt bin for each of the PID cut variations (left) with the ratios to the nominal distribution (right).}
     \label{fig:pid_cut_variations_lowpt}
 \end{figure}
 
@@ -196,7 +196,7 @@ The \lmb daughter particle identification (PID) cuts are chosen to be wide enoug
     \includegraphics[width=0.49\textwidth]{figures/analysis/pid_variations_dphi_20_50_highpt_ratio.pdf}
     \includegraphics[width=0.49\textwidth]{figures/analysis/pid_variations_dphi_50_80_highpt.pdf}
     \includegraphics[width=0.49\textwidth]{figures/analysis/pid_variations_dphi_50_80_highpt_ratio.pdf}
-    \caption{The h-\lmb $\Delta\varphi$ distributions within the 0-20\% (top), 20-50\% (middle) and 50-80\% (bottom) multiplicity bins in the higher associated \pt bin for each of the PID cut variations (left) with the ratios to the nominal distribution (right).}
+    \caption{The h-\lmb $\Delta\varphi$ distributions within the 0-20\% (top), 20-50\% (middle), and 50-80\% (bottom) multiplicity bins in the higher associated \pt bin for each of the PID cut variations (left) with the ratios to the nominal distribution (right).}
     \label{fig:pid_cut_variations_highpt}
 \end{figure}
 
@@ -214,7 +214,7 @@ Due to statistical fluctuations, it may be the case that some variations result 
 %
 where $y_{\text{var.}}$ and $\sigma_{\text{var.}}$ are the measured yield and statistical uncertainty for the variation, and $y_{\text{nom.}}$ and $\sigma_{\text{nom.}}$ are the yield and statistical uncertainty for the nominal value. 
 
-To determine whether a given variation should be excluded, the number $\Delta\varphi$ bins that have $|N\sigma_{RB}| < 1$ is counted. If this is the majority of the bins (across all multiplicity and associated \pt ranges),the variation is excluded from the systematic calculation. Example plots of $N\sigma_{RB}$ for each variation of the signal, sideband and PID cuts are shown in Figure \ref{fig:barlow_check_0_20}. The red lines represent $N\sigma_{RB} = \pm 1$.
+To determine whether a given variation should be excluded, the number of $\Delta\varphi$ bins that have $|N\sigma_{RB}| < 1$ is counted. If this is the majority of the bins (across all multiplicity and associated \pt ranges), the variation is excluded from the systematic calculation. Example plots of $N\sigma_{RB}$ for each variation of the signal, sideband and PID cuts are shown in Figure \ref{fig:barlow_check_0_20}. The red lines represent $N\sigma_{RB} = \pm 1$.
 
 \begin{figure}[ht]
     \centering
@@ -295,14 +295,14 @@ where ``i'' refers to the ith multiplicity bin, and ``MB'' refers to the min-bia
 \subsection{Yield extraction}
 \label{sec:systematics_yield_extraction}
 
-One of the largest sources of systematic uncertainty of this analysis corresponds to the different techniques that can be used to extract the yields in the near-side jet, away-side jet and underlying event from the $\Delta\varphi$ distributions. As mentioned in Section~\ref{sec:yield_extraction}, the equations for extracting these yields are
+One of the largest sources of systematic uncertainty of this analysis corresponds to the different techniques that can be used to extract the yields in the near-side jet, away-side jet, and underlying event from the $\Delta\varphi$ distributions. As mentioned in Section~\ref{sec:yield_extraction}, the equations for extracting these yields are
 %
 \begin{eqnarray}
     Y_{near} = \int_{-\pi/2}^{\pi/2} (\frac{dN}{d\Delta\varphi}- U(\Delta\varphi))d\Delta\varphi,  \  \ Y_{away} = & \int_{\pi/2}^{3\pi/2} (\frac{dN}{d\Delta\varphi}- U(\Delta\varphi))d\Delta\varphi 
-    \label{eq:jet_yields}
+    \label{eq:jet_yields_ref}
     \\ 
     Y_{UE} = \int_{-\pi/2}^{3\pi/2} U(\Delta\varphi)d\Delta\varphi,
-    \label{eq:ue_yield}
+    \label{eq:ue_yield_ref}
 \end{eqnarray}
 %
 where $\frac{dN}{d\Delta\varphi}$ is the $\Delta\varphi$ distribution and $U(\Delta\varphi)$ is the underlying event fit. As the $\Delta\varphi$ distribution is present in these equations, all of the previous variations concerning the generation of this distribution must be considered. However, these equations also naturally introduce two new categories of systematic uncertainty: those associated with the underlying event fit, and those associated with the integration of the $\Delta\varphi$ distribution. Both of these categories will be discussed in detail in the following sections.
@@ -326,14 +326,14 @@ Including a non-zero $v_{2}$ contribution is a much more involved procedure and 
 \subsubsection{Including a non-zero $v_{2}$ contribution}
 \label{sec:ue_fit_v2}
 
-All of the ``straight line'' UE fitting techniques are based on the flatness assumption of the non-jet part of the correlation in \dphi. This means that the dijet axis direction does not affect the non-jet particle distribution's overall shape within an event. However, as mentioned in Section~\ref{sec:collective_effects}, previous \PbPb, \pPb and even \pp collision studies have shown that the QGP's collective flow components ($v_{1}$, $v_{2}$, etc.) influence the phase-space distribution of particles within an event. Using Fourier decomposition, the $\Delta\varphi$ distributions on an event-by-event basis can be written as
+All of the ``straight line'' UE fitting techniques are based on the flatness assumption of the non-jet part of the correlation in \dphi. This means that the dijet axis direction does not affect the non-jet particle distribution's overall shape within an event. However, as mentioned in Section~\ref{sec:collective_flow}, previous \PbPb, \pPb, and even \pp collision studies have shown that the QGP's collective flow components ($v_{1}$, $v_{2}$, etc.) influence the phase-space distribution of particles within an event. Using Fourier decomposition, the $\Delta\varphi$ distributions on an event-by-event basis can be written as
 %
 \begin{equation}
     \label{eq:dphi_fourier_decomposition}
     \frac{dN}{d\Delta\varphi} = a_{0} + \sum_{n=1}^{\infty}2a_{n}cos(n\Delta\varphi),
 \end{equation}
 %
-where $a_{n}$ are the Fourier coefficients. As mentioned in the introduction, these coefficients have been shown~\cite{Justin108, Justin109, Justin110} to be related to the collective flow coefficients $v_{n}$ via
+where $a_{n}$ are the Fourier coefficients. As mentioned in the introduction, these coefficients have been shown~\cite{FlowDphi} to be related to the collective flow coefficients $v_{n}$ via
 %
 \begin{equation}
     \label{eq:fourier_vn_relation}
@@ -349,7 +349,7 @@ As the $v_{2}$ or ``elliptic flow'' coefficient is the most dominant of the coll
     v_{2}^{avg} = \frac{\int_{p_{T, min}}^{p_{T, max}}v_{2}(p_{T})\frac{dN}{dp_{T}}dp_{T}}{\int_{p_{T, min}}^{p_{T, max}}\frac{dN}{dp_{T}}dp_{T}},
 \end{equation}
 %
-is used, where $p_{T, min}$ and $p_{T, max}$ are the minimum and maximum values of \pt in the bins from this analysis (namely $1.5 - 2.5$ and $2.5 - 4.0$ \GeVc). The $v_{2}(\pt)$ values for charged hadrons and \lmb baryons are taken from ~\cite{ALICEv2_1}, and $dN/dp_{T}$ is taken from the published \pt spectra for charged hadrons and \lmb baryons from ~\cite{PtSpectra}, plots of which can be seen in Figures~\ref{fig:v2_plot} ($v_{2}$) and \ref{fig:pt_spectra_plot} (\pt spectra). The values of $v_{2}^{avg}$ for each \pt bin are shown in Table~\ref{tab:v2_values}. Note that the trigger $v_{2}$ remains the same, as the trigger \pt range is fixed for this analysis. The $\Lambda$ $v_{2}$ is markedly higher than the charged hadron $v_{2}$, which ultimately manifests itself as a larger deviation from the nominal UE fit when compared to the dihadron case.
+is used, where $p_{T, min}$ and $p_{T, max}$ are the minimum and maximum values of \pt in the bins from this analysis (namely $1.5 - 2.5$ and $2.5 - 4.0$ \GeVc). The $v_{2}(\pt)$ values for charged hadrons and \lmb baryons are taken from ~\cite{ALICEv2_1}, and $dN/dp_{T}$ is taken from the published \pt spectra for charged hadrons and \lmb baryons from ~\cite{ALICEpPbEnhancement}, plots of which can be seen in Figures~\ref{fig:v2_plot} ($v_{2}$) and \ref{fig:pt_spectra_plot} (\pt spectra). The values of $v_{2}^{avg}$ for each \pt bin are shown in Table~\ref{tab:v2_values}. Note that the trigger $v_{2}$ remains the same, as the trigger \pt range is fixed for this analysis. The $\Lambda$ $v_{2}$ is markedly higher than the charged hadron $v_{2}$, which ultimately manifests itself as a larger deviation from the nominal UE fit when compared to the dihadron case.
 %
 \begin{table}[t]
     \centering
@@ -415,7 +415,7 @@ The validty of this procedure can be tested by examining the $\Delta\varphi$ dis
     \label{fig:v2_fit_large_deta}
 \end{figure}
 
-The effects of including $v_{2}$ has on the extracted h-\lmb and h-h yields in each region is not at all obvious at first glance. For the most central collisions, the inclusion of $v_{2}$ results in nearly a 5\% decrease for the jet-like yields when compared to the nominal technique. This can mostly be seen in Figure~\ref{fig:v2_fit_examples}, where the peaks of the sinusoidal fit achieve their maxima within the near- and away-side components of the jet, causing the overall yields to be lower than those obtained by the flat UE assumption. However, at lower multiplicities (20-50\%, 50-80\%), the extracted h-\lmb and h-h jet-like yields actually exhibit a slight increase of around 5\% in their extracted yields when compared to those measured using the nominal UE fit. This is due to the variation of the pedestal $A$ in Equation~\ref{eq:ue_v2} during the fit, which results in a smaller pedestal value than the nominal fit in these multiplicity ranges. The extracted underlying event yield never deviates by more than 3\% from the yield obtained using the nominal procedure for all multiplicity and momentum bins for both the h-\lmb and h-h cases.
+The effects of including $v_{2}$ on the extracted h-\lmb and h-h yields in each region is not obvious at first glance. For the most central collisions, the inclusion of $v_{2}$ results in nearly a 5\% decrease for the jet-like yields when compared to the nominal technique. This can mostly be seen in Figure~\ref{fig:v2_fit_examples}, where the peaks of the sinusoidal fit achieve their maxima within the near- and away-side components of the jet, causing the overall yields to be lower than those obtained by the flat UE assumption. However, at lower multiplicities (20-50\%, 50-80\%), the extracted h-\lmb and h-h jet-like yields actually exhibit a slight increase of around 5\% in their extracted yields when compared to those measured using the nominal UE fit. This is due to the variation of the pedestal $A$ in Equation~\ref{eq:ue_v2} during the fit, which results in a smaller pedestal value than the nominal fit in these multiplicity ranges. The extracted underlying event yield never deviates by more than 3\% from the yield obtained using the nominal procedure for all multiplicity and momentum bins for both the h-\lmb and h-h cases.
 
 \subsubsection{Integration procedures}
 \label{sec:integration_procedures}
@@ -481,7 +481,7 @@ As the deviations are so small, this procedure ends up excluded from the final s
     \includegraphics[width=0.48\textwidth]{figures/analysis/h_lambda_dphi_gaus_20_50_highpt.pdf}
     \includegraphics[width=0.48\textwidth]{figures/analysis/h_lambda_dphi_gaus_50_80_lowpt.pdf}
     \includegraphics[width=0.48\textwidth]{figures/analysis/h_lambda_dphi_gaus_50_80_highpt.pdf}
-    \caption{The final per-trigger h-\lmb $\Delta\varphi$ correlation distributions with the full double Gaussian fit for the 0-20\% (top), 20-50\%(middle) and 50-80\% (bottom) multiplicity bins in the lower (left) and higher (right) associated \pt bins. The UE fit is also shown as a dashed line.}
+    \caption{The final per-trigger h-\lmb $\Delta\varphi$ correlation distributions with the full double Gaussian fit for the 0-20\% (top), 20-50\%(middle), and 50-80\% (bottom) multiplicity bins in the lower (left) and higher (right) associated \pt bins. The UE fit is also shown as a dashed line.}
     \label{fig:double_gaus_fits_lambda}
 \end{figure}
 \begin{figure}[ht]
@@ -492,7 +492,7 @@ As the deviations are so small, this procedure ends up excluded from the final s
     \includegraphics[width=0.48\textwidth]{figures/analysis/h_h_dphi_gaus_20_50_highpt.pdf}
     \includegraphics[width=0.48\textwidth]{figures/analysis/h_h_dphi_gaus_50_80_lowpt.pdf}
     \includegraphics[width=0.48\textwidth]{figures/analysis/h_h_dphi_gaus_50_80_highpt.pdf}
-    \caption{The final per-trigger h-h $\Delta\varphi$ correlation distributions with the full double Gaussian fit for the 0-20\% (top), 20-50\%(middle) and 50-80\% (bottom) multiplicity bins in the lower (left) and higher (right) associated \pt bins. The UE fit is also shown as a dashed line.}
+    \caption{The final per-trigger h-h $\Delta\varphi$ correlation distributions with the full double Gaussian fit for the 0-20\% (top), 20-50\%(middle), and 50-80\% (bottom) multiplicity bins in the lower (left) and higher (right) associated \pt bins. The UE fit is also shown as a dashed line.}
     \label{fig:double_gaus_fits_h}
 \end{figure}
 
@@ -501,7 +501,7 @@ As the deviations are so small, this procedure ends up excluded from the final s
 \subsubsection{The von Mises fit}
 \label{sec:von_mises_fit}
 
-While only briefly mentioned in Section~\ref{sec:width_extraction} in the context of extracting the near- and away-side jet widths, the von Mises distribution is another natural choice for fitting the $\Delta\varphi$ distributions due to its combined Gaussian-like behaviour while naturally exhibiting $2\pi$-periodicity (which was ``forced'' onto the double Gaussian fit via the mirror terms). As a reminder, the von Mises fit function is given by
+While only briefly mentioned in Section~\ref{sec:yield_extraction} in the context of extracting the near- and away-side jet widths, the von Mises distribution is another natural choice for fitting the $\Delta\varphi$ distributions due to its combined Gaussian-like behaviour while naturally exhibiting $2\pi$-periodicity (which was ``forced'' onto the double Gaussian fit via the mirror terms). As a reminder, the von Mises fit function is given by
 %
 \begin{equation}
     \label{eq:von_mises}
@@ -529,7 +529,7 @@ Given these fits are taken with a different choice of $U(\Delta\varphi, \Delta\e
     \includegraphics[width=0.48\textwidth]{figures/analysis/h_lambda_dphi_von_20_50_highpt.pdf}
     \includegraphics[width=0.48\textwidth]{figures/analysis/h_lambda_dphi_von_50_80_lowpt.pdf}
     \includegraphics[width=0.48\textwidth]{figures/analysis/h_lambda_dphi_von_50_80_highpt.pdf}
-    \caption{The final per-trigger h-\lmb $\Delta\varphi$ correlation distributions with the von Mises fit for the 0-20\% (top), 20-50\%(middle) and 50-80\% (bottom) multiplicity bins in the lower (left) and higher (right) associated \pt bins. The UE fit with $v_{2}$ contribution is also shown as a dashed line.}
+    \caption{The final per-trigger h-\lmb $\Delta\varphi$ correlation distributions with the von Mises fit for the 0-20\% (top), 20-50\% (middle), and 50-80\% (bottom) multiplicity bins in the lower (left) and higher (right) associated \pt bins. The UE fit with $v_{2}$ contribution is also shown as a dashed line.}
     \label{fig:von_fits_lambda}
 \end{figure}
 
@@ -541,14 +541,14 @@ Given these fits are taken with a different choice of $U(\Delta\varphi, \Delta\e
     \includegraphics[width=0.48\textwidth]{figures/analysis/h_h_dphi_von_20_50_highpt.pdf}
     \includegraphics[width=0.48\textwidth]{figures/analysis/h_h_dphi_von_50_80_lowpt.pdf}
     \includegraphics[width=0.48\textwidth]{figures/analysis/h_h_dphi_von_50_80_highpt.pdf}
-    \caption{The final per-trigger h-h $\Delta\varphi$ correlation distributions with the von Mises fit for the 0-20\% (top), 20-50\%(middle) and 50-80\% (bottom) multiplicity bins in the lower (left) and higher (right) associated \pt bins. The UE fit with $v_{2}$ contribution is also shown as a dashed line.}
+    \caption{The final per-trigger h-h $\Delta\varphi$ correlation distributions with the von Mises fit for the 0-20\% (top), 20-50\% (middle), and 50-80\% (bottom) multiplicity bins in the lower (left) and higher (right) associated \pt bins. The UE fit with $v_{2}$ contribution is also shown as a dashed line.}
     \label{fig:von_fits_h}
 \end{figure}
 
 \subsubsection{Barlow check for yield extraction}
 \label{sec:barlow_check_yield}
 
-Following the same procedure as outline in Section~\ref{sec:barlow_check_dphi}, a Barlow check is performed for the different techniques for extracting the per-trigger yields from Equations~\ref{eq:jet_yields} and~\ref{eq:ue_yield}. If the majority of the measured h-$\Lambda$ yields for a given variation have $|N\sigma_{RB}| < 1$, that variation is excluded from the systematic uncertainty calculation. This majority is calculated across all kinematic regions (near-side jet, away-side jet, underlying event), multiplicity bins and associated momentum bins. While the h-h yields were initially considered for this check, their statistical errors are so small that the denominator in Equation~\ref{eq:barlow_check} is close to zero, resulting in erratic $N\sigma_{RB}$ values. Thus any technique which gets excluded for the h-$\Lambda$ yields will also be excluded for the h-h yields. Examples of the Barlow check for the yield extraction are shown in Figure~\ref{fig:barlow_check_yield_0_20}. 
+Following the same procedure as outlined in Section~\ref{sec:barlow_check_dphi}, a Barlow check is performed for the different techniques for extracting the per-trigger yields from Equations~\ref{eq:jet_yields_ref} and~\ref{eq:ue_yield_ref}. If the majority of the measured h-$\Lambda$ yields for a given variation have $|N\sigma_{RB}| < 1$, that variation is excluded from the systematic uncertainty calculation. This majority is calculated across all kinematic regions (near-side jet, away-side jet, underlying event), multiplicity bins, and associated momentum bins. While the h-h yields were initially considered for this check, their statistical errors are so small that the denominator in Equation~\ref{eq:barlow_check} is close to zero, resulting in erratic $N\sigma_{RB}$ values. Thus any technique which gets excluded for the h-$\Lambda$ yields will also be excluded for the h-h yields. Examples of the Barlow check for the yield extraction are shown in Figure~\ref{fig:barlow_check_yield_0_20}. 
 
 As a result of the Barlow check, the following variations are excluded from the systematic uncertainty calculation:
 %
@@ -585,7 +585,7 @@ As was the case in Section~\ref{sec:dphi_systematics_summarized}, the portion of
     \includegraphics[width=0.48\textwidth]{figures/analysis/h_lambda_20_50_highpt_yield_variation.pdf}
     \includegraphics[width=0.48\textwidth]{figures/analysis/h_lambda_50_80_lowpt_yield_variation.pdf}
     \includegraphics[width=0.48\textwidth]{figures/analysis/h_lambda_50_80_highpt_yield_variation.pdf}
-    \caption{The deviation from the nominal h-\lmb per-trigger yields for each yield extraction procedure variation (post Barlow check) in each kinematic region for the 0-20\% (top), 20-50\% (middle) and 50-80\% (bottom) multiplicity bins in the lower (left) and higher (right) associated \pt bins. The systematic uncertainty for the yield extraction procedure is calculated by taking the RMS of these deviations for each kinematic region.}
+    \caption{The deviation from the nominal h-\lmb per-trigger yields for each yield extraction procedure variation (post Barlow check) in each kinematic region for the 0-20\% (top), 20-50\% (middle), and 50-80\% (bottom) multiplicity bins in the lower (left) and higher (right) associated \pt bins. The systematic uncertainty for the yield extraction procedure is calculated by taking the RMS of these deviations for each kinematic region.}
     \label{fig:h_lambda_yield_deviations}
 \end{figure}
 
@@ -597,13 +597,13 @@ As was the case in Section~\ref{sec:dphi_systematics_summarized}, the portion of
     \includegraphics[width=0.48\textwidth]{figures/analysis/h_h_20_50_highpt_yield_variation.pdf}
     \includegraphics[width=0.48\textwidth]{figures/analysis/h_h_50_80_lowpt_yield_variation.pdf}
     \includegraphics[width=0.48\textwidth]{figures/analysis/h_h_50_80_highpt_yield_variation.pdf}
-    \caption{The deviation from the nominal h-h per-trigger yields for each yield extraction procedure variation (post Barlow check) in each kinematic region for the 0-20\% (top), 20-50\% (middle) and 50-80\% (bottom) multiplicity bins in the lower (left) and higher (right) associated \pt bins. The systematic uncertainty for the yield extraction procedure is calculated by taking the RMS of these deviations for each kinematic region.}
+    \caption{The deviation from the nominal h-h per-trigger yields for each yield extraction procedure variation (post Barlow check) in each kinematic region for the 0-20\% (top), 20-50\% (middle), and 50-80\% (bottom) multiplicity bins in the lower (left) and higher (right) associated \pt bins. The systematic uncertainty for the yield extraction procedure is calculated by taking the RMS of these deviations for each kinematic region.}
     \label{fig:h_h_yield_deviations}
 \end{figure}
 
 \begin{table}[h!]
     \centering
-    \caption{Final systematic errors (in \%) for the per-trigger h-$\Lambda$ yields in each kinematic region, multiplicity and momentum bin.}
+    \caption{Final systematic errors (in \%) for the per-trigger h-$\Lambda$ yields in each kinematic region, multiplicity, and momentum bin.}
     \label{tab:h_lambda_yield_systematics}
     \begin{tabular}{ l  c  c  c }
         \hline
@@ -621,7 +621,7 @@ As was the case in Section~\ref{sec:dphi_systematics_summarized}, the portion of
 
 \begin{table}[h!]
     \centering
-    \caption{Final systematic errors (in \%) for the h-h per-trigger yields in each kinematic region, multiplicity and momentum bin.}
+    \caption{Final systematic errors (in \%) for the h-h per-trigger yields in each kinematic region, multiplicity, and momentum bin.}
     \label{tab:h_h_yield_systematics}
     \begin{tabular}{ l  c  c  c }
         \hline
@@ -639,7 +639,7 @@ As was the case in Section~\ref{sec:dphi_systematics_summarized}, the portion of
 
 \begin{table}[h!]
     \centering
-    \caption{Final multiplicity-uncorrelated systematic errors (in \%) for the per-trigger h-$\Lambda$ yields in each kinematic region, multiplicity and momentum bin, used for calculating errors associated with quantities describing trends versus multiplicity (slopes and percent changes).}
+    \caption{Final multiplicity-uncorrelated systematic errors (in \%) for the per-trigger h-$\Lambda$ yields in each kinematic region, multiplicity, and momentum bin, used for calculating errors associated with quantities describing trends versus multiplicity (slopes and percent changes).}
     \label{tab:h_lambda_mult_uncorrelated_yield_systematics}
     \begin{tabular}{ l  c  c  c }
         \hline
@@ -678,7 +678,7 @@ As was the case in Section~\ref{sec:dphi_systematics_summarized}, the portion of
 \subsection{Near- and away-side width extraction}
 \label{sec:systematics_width}
 
-The extracted widths of the near- and away-side jet components from the \dphi distributions are also subject to a fair amount of systematic uncertainty, both from the variations of the \dphi distributions themselves as well as the techniques used to extract said widths. None of the $\Delta\varphi$ distributions variations are ``new'', in that they have been discussed in some way within the previous sections. However, the effects of these variations on the extracted widths are not as straightforward as the effects on the yields, and thus deserve their own section. Furthermore, the fitting techniques used to extract the widths are different enough than the fitting techniques for yield extraction (Sections~\ref{sec:double_gaus_fit} and~\ref{sec:von_mises_fit}),that they will be discussed separately.
+The extracted widths of the near- and away-side jet components from the \dphi distributions are also subject to a fair amount of systematic uncertainty, both from the variations of the \dphi distributions themselves as well as the techniques used to extract said widths. None of the $\Delta\varphi$ distributions variations are ``new'', in that they have been discussed in some way within the previous sections. However, the effects of these variations on the extracted widths are not as straightforward as the effects on the yields, and thus deserve their own section. Furthermore, the fitting techniques used to extract the widths are different enough than the fitting techniques for yield extraction (Sections~\ref{sec:double_gaus_fit} and~\ref{sec:von_mises_fit}) that they should be discussed separately.
 
 As a brief reminder, the nominal procedure for extracting the jet widths is by fitting the \dphi distribution to the von Mises-based fit function,
 %
@@ -713,12 +713,12 @@ The reason for fixing the $U$ component during fitting is subtle, as the von Mis
     \label{fig:von_mises_vs_gaus}
 \end{figure}
 
-\subsubsection{Signal, sideband and PID cut variations}
+\subsubsection{Signal, sideband, and PID cut variations}
 \label{sec:cut_systematics_width}
 
-Each of the signal, sideband and PID cut variations that affect the $\Delta\varphi$ distributions (from Section~\ref{sec:systematics_dphi}) can also affect the corresponding extracted widths. To that end, the h-$\Lambda$ \dphi von Mises-based fits and extracted widths for each of these variations for all multiplicity and momentum bins can be seen in Figure~\ref{fig:cut_variations_widths}. Note that these widths were extracted using the nominal procedure described at the beginning of this section. Deviations from the nominal near-side widths never exceed 3.5\% in most cases, whereas the away-side width deviations are much larger, with some variations resulting in over a 10\% change from the nominal value, even after removing statistically insignificant variations via the Barlow procedure in Section~\ref{sec:barlow_check_width}. 
+Each of the signal, sideband, and PID cut variations that affect the $\Delta\varphi$ distributions (from Section~\ref{sec:systematics_dphi}) can also affect the corresponding extracted widths. To that end, the h-$\Lambda$ \dphi von Mises-based fits and extracted widths for each of these variations for all multiplicity and momentum bins can be seen in Figure~\ref{fig:cut_variations_widths}. Note that these widths were extracted using the nominal procedure described at the beginning of this section. Deviations from the nominal near-side widths never exceed 3.5\% in most cases, whereas the away-side width deviations are much larger, with some variations resulting in over a 10\% change from the nominal value, even after removing statistically insignificant variations via the Barlow procedure in Section~\ref{sec:barlow_check_width}. 
 
-Again, problematic behavior arises from the PID cut variation which requires of a TOF hit for both of the $\Lambda$ daughters, with both the near- and away-side widths being particularly sensitive to this cut. As the lower momentum daughter pions are usually deflected by the detector's magnetic field before reaching the TOF, in cases when the pion actually generates a TOF signal, its corresponding momentum is likely higher than usual. This would result in a higher-than-usual $\Lambda$ momentum, which in turn would give lower-than-usual jet widths in the corresponding h-\lmb correlations as jets become less collimated as their constituent momentum decreases. To test this, the \pt distributions of $\Lambda$ candidates with and without the TOF signal are compared in Figure~\ref{fig:tof_momentum_bias}. The mean \pt of the $\Lambda$ candidates with daughters that generate a TOF signal is around 10\% higher than those without this requirement, which indicates that the TOF signal requirement introduces a physical bias into the h-$\Lambda$ \dphi distributions, manifesting as unusually low jet widths. Luckily, this requirement also happens to reduce the overall yield of $\Lambda$ candidates by huge margin, causing a large amount of statistical fluctuations in the corresponding h-\lmb correlation distributions. Because of this, the TOF signal requirement ends up being excluded after the Barlow check. However, it is important to distinguish between excluding variations because they are statistically insignificant and excluding them because they introduce \textit{physical} biases into the data. Had the data sample been larger, the TOF signal requirement would have likely survived the Barlow check, leaving no choice but to rely on the aforementioned argument.
+Again, problematic behavior arises from the PID cut variation which requires a TOF hit for both of the $\Lambda$ daughters, with both the near- and away-side widths being particularly sensitive to this cut. As the lower momentum daughter pions are usually deflected by the detector's magnetic field before reaching the TOF, in cases when the pion actually generates a TOF signal, its corresponding momentum is likely higher than usual. This would result in a higher-than-usual $\Lambda$ momentum, which in turn would give lower-than-usual jet widths in the corresponding h-\lmb correlations as jets become less collimated as their constituent momentum decreases. To test this, the \pt distributions of $\Lambda$ candidates with and without the TOF signal are compared in Figure~\ref{fig:tof_momentum_bias}. The mean \pt of the $\Lambda$ candidates with daughters that generate a TOF signal is around 10\% higher than those without this requirement, which indicates that the TOF signal requirement introduces a physical bias into the h-$\Lambda$ \dphi distributions, manifesting as unusually low jet widths. Luckily, this requirement also happens to reduce the overall yield of $\Lambda$ candidates by a huge margin, causing a large amount of statistical fluctuations in the corresponding h-\lmb correlation distributions. Because of this, the TOF signal requirement ends up being excluded after the Barlow check. However, it is important to distinguish between excluding variations because they are statistically insignificant and excluding them because they introduce \textit{physical} biases into the data. Had the data sample been larger, the TOF signal requirement would have likely survived the Barlow check, leaving no choice but to rely on the aforementioned argument.
 
 \begin{figure}[t]
     \centering
@@ -817,10 +817,10 @@ where $U$ is the underlying event function, and $f_{\text{NS}}$ ($f_{\text{AS}}$
     \item \textbf{Varying the $f_{\text{NS}}$ and $f_{\text{AS}}$ functions:} The $f_{\text{NS}}$ and $f_{\text{AS}}$ functions are varied by replacing the nominal von Mises distributions with the Gaussian ones, as described in Section~\ref{sec:double_gaus_fit}, and the $U$ term is fixed to the average of the $\Delta\varphi$ distribution in the ranges $[-\frac{\pi}{2}, -\frac{\pi}{4}) \cup [\frac{\pi}{4}, \frac{5\pi}{8}) \cup [\frac{11\pi}{8}, \frac{3\pi}{2})$ (again, the nominal UE determination technique from the yield extraction procedure)
 \end{enumerate}
 %
-More variations were initially considered--namely using the $v_{2}$-based UE with the Gaussian functions from (2) and even trying generalized Gaussians~\cite{GeneralizedGaus} to describe the jet components--but they were discarded as many of the fits did not converge for all multiplicity and momentum ranges\footnote{This is a strict requirement, there are twelve fits in total, each with at least four free parameters, and the fitting software is not particularly robust.} despite a large amount of effort.
+More variations were initially considered--namely using the $v_{2}$-based UE with the Gaussian functions from Equation~\ref{eq:double_gaus} and trying generalized Gaussians~\cite{GeneralizedGaus} to describe the jet components--but they were discarded as many of the fits did not converge for all multiplicity and momentum ranges\footnote{This is a strict requirement, there are twelve fits in total, each with at least four free parameters, and the fitting software is not particularly robust.} despite a large amount of effort.
 
 
-The choice of making the $v_{2}$-based UE determination procedure the nominal one was not made lightly, as it breaks the symmetry with the nominal yield extraction technique. In the presence of non-zero elliptic flow (as is likely the case at higher multiplicities), the $v_{2}$-based UE determination procedure is the most physically motivated, as it is the only one that takes into account the underlying event's azimuthal anisotropy. The only reason this procedure was not chosen as the nominal technique for yield extraction is extremely specific to this analysis: at the time of writing this thesis, the only available h-$\phi(1020)$ correlation results in \pPb at \snn = 5.02 \TeV come in the form of the h-$\phi$/h-h per-trigger yield ratios, where the yields are extracted assuming a flat UE. As mentioned in Section~\ref{sec:strangeness_production}, one of the topics of this analysis involves investigating open versus hidden strangeness in the form of the h-\lmb/h-$\phi$ per-trigger yield ratios in the different kinematic regions. This is done by taking a ratio of ratios, namely
+The choice of making the $v_{2}$-based UE determination procedure the nominal one was not made lightly, as it breaks the symmetry with the nominal yield extraction technique. In the presence of non-zero elliptic flow (as is likely the case at higher multiplicities), the $v_{2}$-based UE determination procedure is the most physically motivated, as it is the only one that takes into account the underlying event's azimuthal anisotropy. The only reason this procedure was not chosen as the nominal technique for yield extraction is extremely specific to this analysis: at the time of writing this thesis, the only available h-$\phi(1020)$ correlation results in \pPb at \snn = 5.02 \TeV come in the form of the h-$\phi$/h-h per-trigger yield ratios, where the yields are extracted assuming a flat UE. As mentioned in the abstract, one of the topics of this analysis involves investigating open versus hidden strangeness in the form of the h-\lmb/h-$\phi$ per-trigger yield ratios in the different kinematic regions. This is done by taking a ratio of ratios, namely
 %
 \begin{equation}
     \label{eq:ratio_of_ratios}
@@ -830,7 +830,7 @@ The choice of making the $v_{2}$-based UE determination procedure the nominal on
 where the subscripts $1$ and $2$ are used to differentiate between this research and the $\phi$ analysis, respectively. This only reduces to the h-\lmb/h-$\phi$ ratios if two conditions are met: the first is that the h-h distributions are the same (which is investigated more thoroughly in Section ~\ref{sec:dihadron_comparison}), and the second is that the yields are extracted from these dihadron distributions using the exact same procedure. While this is not required in the case of the h-\lmb yields, the same procedure is applied for the sake of consistency. 
 
 
-The resulting fits and extracted widths for each of the variations listed above in all multiplicity and momentum ranges for both the h-$\lmb$ and h-h cases can be seen in Figure~\ref{fig:fitting_procedure_variations}. Again, only small deviations from the central values are observed in the near-side widths across all variations, with the largest percent difference being around 3\% across all multiplicity and momentum bins for both the h-\lmb and h-h distributions. Interestingly, the away-side widths appear to be much more sensitive to the inclusion of $v_{2}$, as all variations from the nominal technique--again, each variation assumes a flat UE--result in widths which are systematically lower than the central values by around 5-10\%. This is a strange result, as the $v_{2}$-based UE is completely symmetric about $\Delta\varphi = \pi/2$, and thus should affect the near-side widths in the same way as the away-side. As mentioned above, including $v_{2}$ in the UE is the more \textit{physically} motivated choice, and therefore is chosed to be nominal despite these large deviations. Note that the Gaussian and von Mises widths are more similar in the cases where the flat UE is used, indicating that the observed deviations are not due to the choice of fitting function.
+The resulting fits and extracted widths for each of the variations listed above in all multiplicity and momentum ranges for both the h-$\lmb$ and h-h cases can be seen in Figure~\ref{fig:fitting_procedure_variations}. Again, only small deviations from the central values are observed in the near-side widths across all variations, with the largest percent difference being around 3\% across all multiplicity and momentum bins for both the h-\lmb and h-h distributions. Interestingly, the away-side widths appear to be much more sensitive to the inclusion of $v_{2}$, as all variations from the nominal technique--again, each variation assumes a flat UE--result in widths which are systematically lower than the central values by around 5-10\%. This is a strange result, as the $v_{2}$-based UE is completely symmetric about $\Delta\varphi = \pi/2$, and thus should affect the near-side widths in the same way as the away-side. As mentioned above, including $v_{2}$ in the UE is the more \textit{physically} motivated choice, and therefore is chosen to be nominal despite these large deviations. Note that the Gaussian and von Mises widths are more similar in the cases where the flat UE is used, indicating that the observed deviations are not due to the choice of fitting function.
 
 \begin{figure}[ht]
     \begin{minipage}{0.03\textwidth}
@@ -888,7 +888,7 @@ The resulting fits and extracted widths for each of the variations listed above 
 \subsubsection{Barlow check for width extraction}
 \label{sec:barlow_check_width}
 
-Again, following the same techniques as outlined in Sections~\ref{sec:barlow_check_dphi} and~\ref{sec:barlow_check_yield}, a Barlow check is performed for the variations presented in this section that affect the extracted near- and away-side widths. As was before, if the majority of the extracted h-$\Lambda$ widths for a given variation have $|N\sigma_{RB}| < 1$, that variation is excluded from the systematic uncertainty calculation. This majority is calculated using both the near- and away-side jet components across all multiplicity bins and associated momentum bins. Again, the dihadron widths are not considered for this procedure\footnote{Due to extremely small statistical errors, see Section~\ref{sec:barlow_check_yield}}, and any fitting technique variation that is excluded from the uncertainty calculation as the result of this check for the h-$\Lambda$ widths will also be excluded for the h-h case. Visual depictions of the Barlow procedure can be seen in Figure~\ref{fig:barlow_check_widths}.
+Again, following the same techniques as outlined in Sections~\ref{sec:barlow_check_dphi} and~\ref{sec:barlow_check_yield}, a Barlow check is performed for the variations presented in this section that affect the extracted near- and away-side widths. As was before, if the majority of the extracted h-$\Lambda$ widths for a given variation have $|N\sigma_{RB}| < 1$, that variation is excluded from the systematic uncertainty calculation. This majority is calculated using both the near- and away-side jet components across all multiplicity bins and associated momentum bins. Again, the dihadron widths are not considered for this procedure\footnote{Due to extremely small statistical errors, see Section~\ref{sec:barlow_check_yield}}, and any fitting technique variation that is excluded from the uncertainty calculation as the result of this check for the h-$\Lambda$ widths will also be excluded for the h-h case. Visual depictions of the Barlow procedure can be seen in Figure~\ref{fig:barlow_check_width_20_50}.
 
 As a result of the check, the following variations were excluded from the systematic uncertainty calculation for the jet widths:
 %
@@ -906,7 +906,7 @@ Curiously, these are the same variations that were excluded for the $\Delta\varp
     \includegraphics[width=0.32\textwidth]{figures/analysis/width_sideband_barlow_20_50.pdf}
     \includegraphics[width=0.32\textwidth]{figures/analysis/width_pid_barlow_20_50.pdf}
     \caption{Barlow check for the width extraction procedure for the signal (left), sideband (middle), and PID (right) variations in the 20-50\% multiplicity bin. The red lines represent $N\sigma_{RB} = \pm 1$, and if the majority of the points fall within the red lines (across all \pt and multiplicity bins), they are excluded from the width systematic uncertainty calculation.}
-    \label{barlow_check_width_20_50}
+    \label{fig:barlow_check_width_20_50}
 \end{figure}
 
 \subsubsection{Width extraction systematics, summarized}
@@ -942,7 +942,7 @@ Both the topological selection and associated hadron efficiency uncertainties ar
 
     \end{tabular}
     \caption{The final systematic errors from the h-$\Lambda$ $\Delta\varphi$ near-side (NS) and away-side (AS) width extraction for each multiplicity bin in the lower (top) and higher (bottom) associated \pt bins. The total systematic error is calculated by adding each systematic error in quadrature.}
-    \label{fig:h_lambda_width_systematics}
+    \label{tab:h_lambda_width_systematics}
 \end{table}
 
 \begin{table}[ht]
@@ -967,7 +967,7 @@ Both the topological selection and associated hadron efficiency uncertainties ar
         \hline
     \end{tabular}
     \caption{The final systematic errors from the h-h $\Delta\varphi$ near-side (NS) and away-side (AS) width extraction for each multiplicity bin in the lower (top) and higher (bottom) associated \pt bins. The total systematic error is calculated by adding each systematic error in quadrature.}
-    \label{fig:h_h_width_systematics}
+    \label{tab:h_h_width_systematics}
 \end{table}
 
 
@@ -1092,13 +1092,13 @@ One of the most common procedures for verifying the validity of an experimental 
 %
 Generally the third step is done by taking a ratio of the reconstructed observable to the ground-truth observable, which should be consistent with unity if the analysis procedure is valid. Significant deviations from unity would indicate that the experimental procedure introduces a non-physical bias to the measurement, which should be addressed.  
 
-For the Monte Carlo closure tests presented in this section, the \pPb collision events are simulated using the DPMJet generator~\cite{DPMJet}, with the ALICE detector response to the simulated particles handled by the GEANT~\cite{GEANT} software package. The reconstructed h-$\Lambda$ and h-h 2D correlation distributions are generated using the same procedure as described in~\ref{chapter_analysis_details}. In particular, this means that:
+For the Monte Carlo closure tests presented in this section, the \pPb collision events are simulated using the DPMJet generator~\cite{DPMJet}, with the ALICE detector response to the simulated particles handled by the GEANT~\cite{GEANT} software package. The reconstructed h-$\Lambda$ and h-h 2D correlation distributions are generated using the same procedure as described in~\ref{ch:analysis_details}. In particular, this means that:
 %
 \begin{itemize}
     \item Both the reconstructed trigger and associated \lmb (h) pass the track cuts described in Tables~\ref{tab:trigger_track_cuts} and \ref{tab:lambda_selection} (\ref{tab:primary_track_cuts}), respectively 
-    \item To avoid issues with PID using GEANT\footnote{The $n\sigma_{\text{TPC},\text{TOF}}$ values predicted by GEANT differ from experimental data by a large margin, so using GEANT for PID is generally avoided whenever possible}, the $\Lambda$ daughter tracks are verified to be from a proton/pion by checking their corresponding generator-level particles
+    \item To avoid issues with PID using GEANT\footnote{The $n\sigma_{\text{TPC},\text{TOF}}$ values predicted by GEANT differ from experimental data by a large margin, so using GEANT for PID is generally avoided whenever possible.}, the $\Lambda$ daughter tracks are verified to be from a proton/pion by checking their corresponding generator-level particles
     \item The efficiency and acceptance corrections are applied to the h-h and h-\lmb distributions in the same was as described in Section \ref{sec:corrections}
-    \item The additional corrections (sideband subtraction, signal scaling, two-track template) are applied to the h-\lmb distributions as they are in Section \ref{sec:lambda_corrections}
+    \item The additional corrections (sideband subtraction, signal scaling, and two-track template) are applied to the h-\lmb distributions as they are in Section \ref{sec:lambda_corrections}
 \end{itemize}
 %
 For the ground-truth distributions, the trigger and associated \lmb (h) are taken directly from the generator-level particles. The same kinematic cuts are also applied, namely the trigger is required to have momentum $4.0 <$ \pt $< 8.0$ \GeVc, the associated \lmb (h) have the same momentum ranges as the reconstructed case, and all particles are required to fall within $|\eta| < 0.8$. Applying these pseudorapidity cuts on the trigger and associated particles ensures that the underlying physics\footnote{Particle production is rapidity-dependent, so choosing particles in a different rapidity range could alter the spectrum.} is the same as the reconstructed case. Unfortunately this requirement also introduces the same triangular shape along $\Delta\eta$ in the correlation distributions as seen in data, which is corrected for using the mixed-event technique described in Section~\ref{sec:corrections}.
@@ -1130,8 +1130,9 @@ While the MC closure tests provide a general framework for checking the validity
 \clearpage
 
 \subsection{Investigating radial flow effects}
+\label{sec:radial_flow}
 
-Any multiplicity-differential analysis involving a sample of particles within a fixed \pt momentum window will be subject to \textbf{radial flow} effects. Radial flow~\cite{RadialFlow} is characterized by the increase of the average transverse momentum \meanpt with increasing event multiplicity for a given particle species. This could result in an increased yield integrated within a fixed \pt window, and that increase may be different for different particle species. As this thesis presents many results concerning the \lmb/h($\pi$) ratio as a function of multiplicity within fixed \pt ranges, it is important to investigate the effect radial flow may have on the final results.
+Any multiplicity-differential analysis involving a sample of particles within a fixed \pt momentum window will be subject to \textbf{radial flow} effects. Radial (or directed) flow~\cite{DirectedFlow2} can be characterized by the increase of the average transverse momentum \meanpt with increasing event multiplicity for a given particle species. This could result in an increased yield integrated within a fixed \pt window, and that increase may be different for different particle species. As this thesis presents many results concerning the \lmb/h($\pi$) ratio as a function of multiplicity within fixed \pt ranges, it is important to investigate the effect radial flow may have on the final results.
 
 Luckily, the effects of radial flow have \textit{already} been thoroughly investigated for the $\phi(1020)$/$\pi$ ratio, where it was found that radial flow causes a larger increase in the $\pi$ yield than the $\phi$ yield within the $2 <$ \pt $< 4$ \GeVc momentum window. This would result in a \textit{decrease} in the $\phi / \pi$ ratio with increasing multiplicity. Thus any observation of an \textit{increase} in the $\phi/\pi$ ratio with increasing multiplicity can not be attributed to radial flow effects. Importantly, the \lmb baryon shares a similar mass (1.115 vs. 1.020 \GeVmass) and \pt spectrum shape (shown in Figure~\ref{fig:phi_lambda_pt}) to the $\phi$ meson. As such, any conclusion regarding the radial flow effects (which are determined using these two observables) on the \lmb/$\pi$ results can be inferred from the $\phi/\pi$ study. A brief summary of the $\phi/\pi$ radial flow study is presented below.
 
@@ -1151,7 +1152,7 @@ First, the mean \pt of both the $\phi$ and $\pi$ were taken from published p--Pb
     \label{eq:boltz_eq}
     B\left(p_{\mathrm{T}}\right)=\frac{C}{T(m+T)} p_{\mathrm{T}}e^{-\left(m_{\mathrm{T}}-m\right) / T },
 \end{equation}
-where $m$ is the particle mass, $m_{\text{T}}$ is the particle's transverse mass ($= \sqrt{p_{\mathrm{T}}^{2}+m^{2}}$), $T$ is the temperature, and $C$ is a normalization constant. The temperature $T$ was founed such that the mean \pt of the fit function matched the published mean \pt values. The resulting fits are shown for the $\phi$ and the $\pi$ in both multiplicity bins in Figure~\ref{fig:phi_pi_radial_flow}. The $2 <$ \pt $< 4$ \GeVc momentum window is also highlighted.
+where $m$ is the particle mass, $m_{\text{T}}$ is the particle's transverse mass ($= \sqrt{p_{\mathrm{T}}^{2}+m^{2}}$), $T$ is the temperature, and $C$ is a normalization constant. The temperature $T$ was found such that the mean \pt of the fit function matched the published mean \pt values. The resulting fits are shown for the $\phi$ and the $\pi$ in both multiplicity bins in Figure~\ref{fig:phi_pi_radial_flow}. The $2 <$ \pt $< 4$ \GeVc momentum window is also highlighted.
 
 \begin{figure}[ht]
     \centering
@@ -1205,7 +1206,7 @@ As the (single trigger)/(all trigger) distribution ratios are mostly flat for bo
     \includegraphics[width=0.32\textwidth]{figures/analysis/singletrigger_ratio_0_20.pdf}
     \includegraphics[width=0.32\textwidth]{figures/analysis/singletrigger_ratio_20_50.pdf}
     \includegraphics[width=0.32\textwidth]{figures/analysis/singletrigger_ratio_50_80.pdf}
-    \caption{The per-trigger h-$\Lambda$ (top) and h-h (middle) $\Delta\varphi$ distribution comparison between using a single trigger (closed points) and all triggers (open points) in a given event, along with the (single trigger)/(all trigger) distribution ratio (bottom), for the 0-20\% (left), 20-50\% (center) and 50-80\% (bottom) multiplicity bins in the associated momentum range $2.0 <$ \pt $< 4.0$ \GeVc. The distributions are nearly identical up to a $\approx 0.95$ scale factor, which is constant as a function of multiplicity.}
+    \caption{The per-trigger h-$\Lambda$ (top) and h-h (middle) $\Delta\varphi$ distribution comparison between using a single trigger (closed points) and all triggers (open points) in a given event, along with the (single trigger)/(all trigger) distribution ratio (bottom), for the 0-20\% (left), 20-50\% (center), and 50-80\% (bottom) multiplicity bins in the associated momentum range $2.0 <$ \pt $< 4.0$ \GeVc. The distributions are nearly identical up to a $\approx 0.95$ scale factor, which is constant as a function of multiplicity.}
     \label{fig:single_trigger_comp}
 \end{figure}
 
@@ -1214,7 +1215,7 @@ As the (single trigger)/(all trigger) distribution ratios are mostly flat for bo
 \subsection{Dihadron comparison with $\phi$ analysis}
 \label{sec:dihadron_comparison}
 
-As mentioned in Section~\ref{sec:fitting_procedure_systematics_width}, the differences between open and hidden strangeness are investigated by taking the \lmb/$\phi(1020)$ per-trigger yield ratios in the different kinematic regions (e.g. near-side jet, away-side jet, underlying event). This is done by taking a ratio of ratios, namely
+As mentioned in Section~\ref{sec:fitting_procedure_systematics_width}, the differences between open and hidden strangeness are investigated by taking the \lmb/$\phi(1020)$ per-trigger yield ratios in the different kinematic regions (e.g. near-side jet, away-side jet, and underlying event). This is done by taking a ratio of ratios, namely
 %
 \begin{equation}
     \label{eq:ratio_of_ratios_2}
@@ -1239,7 +1240,7 @@ To this end, a direct comparison between the dihadron per-trigger \dphi distribu
     \includegraphics[width=0.32\textwidth]{figures/analysis/justin_ryan_ratio_0_20}
     \includegraphics[width=0.32\textwidth]{figures/analysis/justin_ryan_ratio_20_50}
     \includegraphics[width=0.32\textwidth]{figures/analysis/justin_ryan_ratio_50_80}
-    \caption{Comparison of the the dihadron $\Delta\varphi$ correlations between the $\phi$ and $\Lambda$ analyses for the 0-20\% (left), 20-50\% (middle) and 50-80\% (right) multiplicity bins, taken in the $2.0 <$ \pt $< 4.0$ \GeVc associated momentum range. They are functionally identical for all multiplicity bins.}
+    \caption{Comparison of the the dihadron $\Delta\varphi$ correlations between the $\phi$ and $\Lambda$ analyses for the 0-20\% (left), 20-50\% (middle), and 50-80\% (right) multiplicity bins, taken in the $2.0 <$ \pt $< 4.0$ \GeVc associated momentum range. They are functionally identical for all multiplicity bins.}
     \label{fig:dihadron_comp}
 \end{figure}
 
@@ -1248,7 +1249,7 @@ To this end, a direct comparison between the dihadron per-trigger \dphi distribu
 
 The \lmb baryons used in this analysis are reconstructed by exploiting their characteristic V$^0$ decay topology, as discussed in Section~\ref{sec:lambda_reconstruction}. However, this method introduces a small physical bias in the \lmb sample: only $\Lambda$s which decay far enough from the primary vertex to be reconstructed as V$^0$s (i.e. they have a detector-resolvable secondary vertex) are considered. While the average decay length of the \lmb is quite large (c$\tau \approx 7.89$ cm where $\tau$ is the average lifetime), decay length distributions are exponentials of the form $e^{-t/\tau}$. This means that there is a small fraction of $\Lambda$s that decay too quickly to be resolved using their V$^0$ topology, and thus are not included in the analysis. While the the single particle \lmb efficiency is used to correct for the overall \lmb yield, it may be possible that the h-\lmb correlation shape is influenced by the exclusion of these short-lived \lmb baryons. 
 
-To investigate this possible bias, a new set of h-\lmb distributions are produced, where the associated $\Lambda$s are reconstructed using the \textbf{resonance technique}: all oppositely charged proton-pion pairs from the event are combined to form \lmb candidates. This is the only way to reconstruct extremely short-lived particles--like resonances--as they will never have a resolvable secondary vertex.  This technique gives access to all \lmb baryons that \textit{can} be reconstructed in the event, regardless of their decay length. However, the large combinatorial background associated with the resonance technique presents many difficulties, which are discussed thoroughly in Appendix~\ref{appendix_resonance_technique}. Even still, it is possible to repeat the same analysis procedure from the previous chapter with $\Lambda$s reconstructed using this technique, and the resulting h-\lmb $\Delta\varphi$ distributions are shown in Figure~\ref{fig:resonance_v0_dphi_comp}, along with the original distributions for comparison. It should be noted that neither of the distributions are corrected for the two-track inefficiency or the branching ratio, as this investigation was performed prior to those tools being developed in this analysis. However, the comparison should be mostly\footnote{The two-track inefficiency is actually very slightly less for the resonance technique as the shorter-lived $\Lambda$s usually have daughter tracks with higher quality track parameters due to more hits in the detector, making them less likely to be merged with the trigger.} unaffected by these corrections, as they are the same in both cases.
+To investigate this possible bias, a new set of h-\lmb distributions are produced, where the associated $\Lambda$s are reconstructed using the \textbf{resonance technique}: all oppositely charged proton-pion pairs from the event are combined to form \lmb candidates. This is the only way to reconstruct extremely short-lived particles--like resonances--as they will never have a resolvable secondary vertex.  This technique gives access to all \lmb baryons that \textit{can} be reconstructed in the event, regardless of their decay length. However, the large combinatorial background associated with the resonance technique presents many difficulties, which are discussed thoroughly in Appendix~\ref{ap:resonance}. Even still, it is possible to repeat the same analysis procedure from the previous chapter with $\Lambda$s reconstructed using this technique, and the resulting h-\lmb $\Delta\varphi$ distributions are shown in Figure~\ref{fig:resonance_v0_dphi_comp}, along with the original distributions for comparison. It should be noted that neither of the distributions are corrected for the two-track inefficiency or the branching ratio, as this investigation was performed prior to those tools being developed in this analysis. However, the comparison should be mostly\footnote{The two-track inefficiency is actually very slightly less for the resonance technique as the shorter-lived $\Lambda$s usually have daughter tracks with higher quality track parameters due to more hits in the detector, making them less likely to be merged with the trigger.} unaffected by these corrections, as they are the same in both cases.
 
 The distributions are very similar across all multiplicity bins, although the resonance technique distributions exhibit much larger statistical fluctuations due to the subtraction of the large combinatorial background using the sideband procedure. This provides solid evidence that the V$^0$ reconstruction technique is not introducing a significant bias in the shape of the h-\lmb $\Delta\varphi$ distributions, and that the exclusion of short-lived \lmb baryons has little effect on the final results.
 
@@ -1257,7 +1258,7 @@ The distributions are very similar across all multiplicity bins, although the re
     \includegraphics[width=0.32\textwidth]{figures/analysis/h_lambda_dphi_0_20_zeroed_rescomp.pdf}
     \includegraphics[width=0.32\textwidth]{figures/analysis/h_lambda_dphi_20_50_zeroed_rescomp.pdf}
     \includegraphics[width=0.32\textwidth]{figures/analysis/h_lambda_dphi_50_80_zeroed_rescomp.pdf}
-    \caption{The final per-trigger h-$\Lambda$ $\Delta\varphi$ correlations for $\Lambda$s reconstructed using the resonance technique (blue) and the V$^{0}$-based technique (red) in the 0-20\% (left), 20-50\% (middle) and 50-80\% (right) multiplicity bins, taken in the associated momentum range $2.0 <$ \pt $< 4.0$ \GeVc, after the subtraction of the UE. The distributions show good agreement across all multiplicity bins, indicating that the V$^{0}$-based reconstruction technique is not introducing a bias in the correlation shape.}
+    \caption{The final per-trigger h-$\Lambda$ $\Delta\varphi$ correlations for $\Lambda$s reconstructed using the resonance technique (blue) and the V$^{0}$-based technique (red) in the 0-20\% (left), 20-50\% (middle), and 50-80\% (right) multiplicity bins, taken in the associated momentum range $2.0 <$ \pt $< 4.0$ \GeVc, after the subtraction of the UE. The distributions show good agreement across all multiplicity bins, indicating that the V$^{0}$-based reconstruction technique is not introducing a bias in the correlation shape.}
     \label{fig:resonance_v0_dphi_comp}
 \end{figure}
 
