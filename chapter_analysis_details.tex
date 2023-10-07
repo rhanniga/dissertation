@@ -454,7 +454,6 @@ is performed, and the results for each multiplicity bin are then merged across a
 	\caption{2-D mixed-event h-$\Lambda$ angular correlations for the 0-20\% (top), 20-50\% (middle), and 50-80\% (bottom) multiplicity bins for $1.5 < p_{\text{T}} < 2.5$ GeV/$c$ (left) and $2.5 < p_{\text{T}} < 4.0$ GeV/$c$ (right). The $Z_{\text{vtx.}}$ bins are merged together for these plots.}
 	\label{fig:h_lambda_2d_mixed}
 \end{figure}
-
 \begin{figure}[ht]
 	\centering
 	\begin{minipage}{0.48\textwidth}
@@ -593,7 +592,7 @@ The $\epsilon_{\text{pair}}$ term in Equation~\ref{eq:lambda_corr} is the h-$\La
 The severity of this effect for the h-$\Lambda$ distributions is likely due to two factors:
 %
 \begin{itemize}
-\item The $\Lambda$ decay length is large ($c\tau \approx 10$ cm), meaning the daughter particles will have less hits in the detector than the trigger particle (which is produced at the primary vertex). As Kalman filtering (track reconstruction) favors the track with more hits, the $\Lambda$ daughter track is ``merged'' over by the trigger track.
+\item The $\Lambda$ decay length is large ($c\tau \approx 10$ cm), meaning the daughter particles will have less hits in the detector than the trigger particle (which is produced at the primary vertex). As Kalman filtering~\cite{Kalman} (track reconstruction) favors the track with more hits, the $\Lambda$ daughter track is ``merged'' over by the trigger track.
 \item The $\Lambda$ decay is asymmetric ($m_{p}/m_{\pi} \approx 7$), so the $\Lambda$ and daughter proton end up with similar momenta (and thus $\varphi$ and $\eta$). This means that whenever a proton from a $\Lambda$ decay is ``merged'' over by a trigger track, a h-$\Lambda$ pair with small $\Delta\varphi, \Delta\eta$ is lost.
 \end{itemize}
 %
@@ -659,4 +658,53 @@ where $C_{\text{reco}}^{\text{tag}}$ is the efficiency-corrected correlation dis
 	\label{fig:pair_efficiency_template}
 \end{figure}
 
-After these corrections, both the h-$\Lambda$ and h-h 2D distributions are finalized and ready for projection onto $\Delta\varphi$ to extract the yields and widths of interest from the previous chapter. However, there are still a number of systematic uncertainties to investigate and cross-checks required to ensure the validity of the final results.
+After these corrections, both the h-$\Lambda$ and h-h 2D distributions are finalized and ready for projection onto $\Delta\varphi$ to extract the yields and widths of interest from the previous chapter. These fully corrected distributions can be seen in Figures~\ref{fig:h_lambda_2d_final} (h-\lmb) and~\ref{fig:h_h_2d_final} (h-h). However, there are still a number of systematic uncertainties to investigate and cross-checks required to ensure the validity of the final results.
+
+\begin{figure}[ht]
+	\centering
+	\begin{minipage}{0.48\textwidth}
+		\includegraphics[width=\textwidth]{figures/analysis/h_lambda_2d_mixcor_fancy_label_0_20_lowpt.pdf}
+	\end{minipage}
+	\begin{minipage}{0.48\textwidth}
+		\includegraphics[width=\textwidth]{figures/analysis/h_lambda_2d_mixcor_fancy_label_0_20_highpt.pdf}
+	\end{minipage}
+	\begin{minipage}{0.48\textwidth}
+		\includegraphics[width=\textwidth]{figures/analysis/h_lambda_2d_mixcor_fancy_label_20_50_lowpt.pdf}
+	\end{minipage}
+	\begin{minipage}{0.48\textwidth}
+		\includegraphics[width=\textwidth]{figures/analysis/h_lambda_2d_mixcor_fancy_label_20_50_highpt.pdf}
+	\end{minipage}
+	\begin{minipage}{0.48\textwidth}
+		\includegraphics[width=\textwidth]{figures/analysis/h_lambda_2d_mixcor_fancy_label_50_80_lowpt.pdf}
+	\end{minipage}
+	\begin{minipage}{0.48\textwidth}
+		\includegraphics[width=\textwidth]{figures/analysis/h_lambda_2d_mixcor_fancy_label_50_80_highpt.pdf}
+	\end{minipage}
+	\caption{2-D fully-corrected h-$\Lambda$ angular correlations for the 0-20\% (top), 20-50\% (middle), and 50-80\% (bottom) multiplicity bins for $1.5 < p_{\text{T}} < 2.5$ GeV/$c$ (left) and $2.5 < p_{\text{T}} < 4.0$ GeV/$c$ (right).}
+	\label{fig:h_lambda_2d_final}
+\end{figure}
+\begin{figure}[ht]
+	\centering
+	\begin{minipage}{0.48\textwidth}
+		\includegraphics[width=\textwidth]{figures/analysis/h_h_2d_mixcor_fancy_label_0_20_lowpt.pdf}
+	\end{minipage}
+	\begin{minipage}{0.48\textwidth}
+		\includegraphics[width=\textwidth]{figures/analysis/h_h_2d_mixcor_fancy_label_0_20_highpt.pdf}
+	\end{minipage}
+	\begin{minipage}{0.48\textwidth}
+		\includegraphics[width=\textwidth]{figures/analysis/h_h_2d_mixcor_fancy_label_20_50_lowpt.pdf}
+	\end{minipage}
+	\begin{minipage}{0.48\textwidth}
+		\includegraphics[width=\textwidth]{figures/analysis/h_h_2d_mixcor_fancy_label_20_50_highpt.pdf}
+	\end{minipage}
+	\begin{minipage}{0.48\textwidth}
+		\includegraphics[width=\textwidth]{figures/analysis/h_h_2d_mixcor_fancy_label_50_80_lowpt.pdf}
+	\end{minipage}
+	\begin{minipage}{0.48\textwidth}
+		\includegraphics[width=\textwidth]{figures/analysis/h_h_2d_mixcor_fancy_label_50_80_highpt.pdf}
+	\end{minipage}
+	\caption{2-D fully-corrected h-h angular correlations for the 0-20\% (top), 20-50\% (middle), and 50-80\% (bottom) multiplicity bins for $1.5 < p_{\text{T}} < 2.5$ GeV/$c$ (left) and $2.5 < p_{\text{T}} < 4.0$ GeV/$c$ (right).}
+	\label{fig:h_h_2d_final}
+\end{figure}
+
+\clearpage

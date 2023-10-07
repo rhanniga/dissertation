@@ -1,7 +1,7 @@
 \chapter{Analysis Motivation and Methodology}
 \label{ch:analysis_mnm}
 
-This chapter will provide the underlying motivation for the main topic of this thesis, along with a high-level overview of the methodology used to perform the analysis. The core of the analysis can be summarized in a single sentence:
+This chapter will provide the underlying motivation for the main topic of this thesis, along with a high-level overview of the methodology used to perform the analysis. The core procedure of the analysis can be summarized with the phrase:
 \begin{center}
 \fbox{
     \centering
@@ -10,7 +10,8 @@ This chapter will provide the underlying motivation for the main topic of this t
     \textbf{Using two-particle h-\lmb angular correlations to investigate the production of strange quarks both in and out of jets in \pPb collisions}
 \end{minipage}}
 \end{center}
-First, the motivation for this analysis will be given in detail, emphasizing the importance of the \lmb baryon and how it can be used as a proxy for strangeness production.
+To those unfamiliar with the field of heavy-ion physics, this statement may seem like a jumble of words. The aim of this chapter is to 
+First, the motivation for this analysis will be given in detail, emphasizing the importance of the \lmb baryon and why it was chosen for this study. Next, the main technique used to perform the analysis will be introduced, along with a brief overview of the analysis procedure. Finally, the main observables of interest will be mathematically defined to avoid any ambiguity in the following chapters.
 
 \section{Motivation}
 As mentioned in Section~\ref{sec:strangeness_enhancement}, the enhancement of strange quarks relative to non-strange ($u$ and $d$) quarks in heavy ion collisions is a key indicator of the production of a QGP. Experimentally, this enhancement is seen by measuring the production of strange hadrons ($\Lambda$, $K^0$, $\phi$, $\Xi$, $\Omega$) relative to the production of pions as a function of event multiplicity. The results of such measurements from the ALICE is shown again in Figure \ref{fig:ref_enhancement} for reference. 
@@ -33,7 +34,7 @@ The p--Pb collision system is ideal for this study for two major reasons. The fi
 
 When studying strange quark production in experiment, a choice of strange hadron must be made. In this thesis, the strange hadron of choice is the \textbf{lambda baryon} (\lmb). The \lmb is a neutral hadron with mass $1.116$ \GeVmass, consisting of one up, one down, and one strange quark ($uds$). The reasons for choosing the \lmb baryon for this analysis are as follows.
 
-Firstly, it is the lightest baryon containing a strange quark, and is thus the most abundantly produced strange baryon in high energy particle collisions. This makes it an ideal candidate for differential studies like the one presented in this thesis, as the statistics are high enough to make meaningful measurements. Second, the \lmb has a very long lifetime--relative to the collision evolution--as it can only decay weakly. This has two effects:
+Firstly, it is the lightest baryon containing a strange quark, and is thus the most abundantly produced strange baryon in high energy particle collisions. This makes it an ideal candidate for differential studies like the one presented in this thesis, as correlation measurements require a \textit{lot} of statistics. Second, the \lmb has a very long lifetime--relative to the collision evolution--as it can only decay weakly. This has two effects:
 \begin{enumerate}
     \item \lmb baryons produced early on in the collision survive until the end of the collision, keeping their decay products in-tact. This is not the case for strongly decaying resonace states like the $K^*$, which often decay within the hadronic gas phase of the collision. This can result in their decay products ``rescattering'' off other hadrons within the gas~\cite{Rescatter}, making it impossible to reconstruct the original resonance.
     \item The \lmb often travels a significant distance before decaying, which allows for the reconstruction of its decay vertex in the detector. This substantially reduces the background contribution to the \lmb signal, which is discussed in more detail in Section~\ref{sec:v0_decay}
