@@ -383,52 +383,22 @@ where $\mu_i$ is the chemical potential of particle $i$. In essence, the fugacit
 %
 However, this relationship does not hold for systems that have not reached absolute chemical equilibrium, as the chemical potentials of the particle and anti-particle flavors are no longer opposite to each other. Due to the higher mass of the strange quark, the production of $s\bar{s}$ pairs usually proceeds at a much slower rate than the production of $u\bar{u}$ and $d\bar{d}$ pairs. As such, obtaining absolute chemical equilibrium for strange particles is difficult, especially in hadronic matter\footnote{As mentioned in the previous section, strangeness equilibration in a hadronic gas is over X times slower than in the QGP}. 
 
-To account for this, the SHM introduces the concept of \textit{relative} chemical equilibrium, in which the strange phase space is not fully saturated, but whatever strangeness is produced is distributed among the strange hadron channels according to the law of maximum entropy~\cite{9212210_hep-ph}. This 
-
-
-: as mentioned in the previous section, the full chemical equilibration of strangeness in a hadron gas takes around 
-
-
-
-To describe the chemical equilibration of strangeness within the system, the SHM introduces two chemical factors, namely $\lambda_s$ and $\gamma_s$. The factor $\lambda_s$ is called the \textit{strangeness fugacity}, and is defined as
+To account for this, the SHM introduces the concept of \textit{relative} chemical equilibrium, in which the strange phase space is not fully saturated, but whatever strangeness is produced is distributed among the strange hadron channels according to the law of maximum entropy~\cite{9212210_hep-ph}. The extent to which the strange phase space is saturated is parameterized by $0 < \gamma_s \leq 1$, which gives a modified particle fugacity,
 %
 \begin{equation}
-    \label{eq:strangeness_fugacity}
-    \lambda_s = e^{\mu_s/T},
+    \label{eq:modified_fugacity}
+    \lambda_i^{\text{mod}} = \gamma_s^{n(i, s)} \lambda_i,
 \end{equation}
 %
-where $\mu_s$ is the strangeness chemical potential. The strangeness fugacity ultimately describes the total abundance of strange quarks and anti-quarks 
-
-
-
-The factor $\lambda_s$ is called the \textit{strangeness suppression}, and is defined as
+where $n(i, s)$ is the number of strange quarks plus the number of strange anti-quarks in particle $i$. The factor $\gamma_s$ approaches unity whenever the strange phase space is fully saturated (i.e. when the system is in absolute chemical equilibrium). This factor can be determined by looking at strange particle ratios, which are sensitive to the value of $\gamma_s$. For example, the ratio of $\Lambda$ baryons to protons is related to $\gamma_s$ by
 %
 \begin{equation}
-    \label{eq:strangeness_suppression}
-    \lambda_s = \frac{2\langle n_{s\bar{s}} \rangle}{\langle n_{u\bar{u}} \rangle + \langle n_{d\bar{d}} \rangle},
+    \label{eq:gamma_s}
+    \gamma_s^2 = \frac{\Lambda}{\text{p}} \times \frac{\bar{\Lambda}}{\bar{\text{p}}}.
 \end{equation}
 %
-where $\langle n_{j \bar{j}} \rangle$ is the average number of quark-anti-quark pairs of flavor $j$. This factor describes the relative abundance of strange quarks and anti-quarks compared to up and down quarks and anti-quarks, and it approaches unity whenever the strange quarks are in \textit{relative} chemical equilibrium with the $u$ and $d$ quarks. 
 
-
-
-
-
-
-The statistical hadronization model (SHM) is a theoretical framework that describes the production of hadrons in high-energy nuclear collisions. It assumes that hadrons are formed at the chemical freeze-out, when the system reaches a state of thermal and chemical equilibrium. The SHM predicts that the abundance of hadrons depends only on the available phase space and the conservation laws, and does not depend on the details of the hadronization process.
-
-One of the signatures of the quark-gluon plasma (QGP), a deconfined phase of matter where quarks and gluons can move freely, is the strangeness enhancement. This refers to the increased production of strange particles, such as kaons, lambdas, and omegas, in QGP compared to normal hadronic matter. The strangeness enhancement can be explained by the fact that in QGP, strange quarks and antiquarks are produced abundantly by gluon-gluon collisions, and they hadronize into strange hadrons by recombination or evaporation. The SHM can account for the strangeness enhancement by introducing a fugacity factor $\lambda_s$ for each strange quark or antiquark, which measures the deviation from chemical equilibrium.
-
-The strangeness enhancement can be observed experimentally by comparing the yields of strange particles in different colliding systems, such as proton-proton, proton-nucleus, and nucleus-nucleus collisions. The SHM can fit the experimental data by adjusting the parameters such as temperature, baryon chemical potential, and strangeness fugacity. The SHM has been successful in describing the strangeness enhancement at various energies, from SPS to LHC, and in different collision systems.
-
-
-
-
-
-
-
-
-
+As these particle ratios can be measured by particle collision experiments, it is possible to determine the value of $\gamma_s$ for a given collision system. Measuring $\gamma_s$ in heavy-ion collisions is of particular interest, as it is believed that the QGP is formed in these collisions. However, heavy-ion collisions are very short-lived systems, lasting only around $10^{-23} - 10^{-22}$ seconds~\cite{QGPFormation}. As mentioned previously, full chemical equilibration in a hadronic gas cannot occur within this time frame. As such, measuring values of $\gamma_s$ close to unity in heavy-ion collisions would be a strong indication of QGP formation.
 
 
 \section{Using Heavy-Ion Collisions to Study the QGP}
