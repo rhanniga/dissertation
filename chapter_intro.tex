@@ -78,7 +78,7 @@ The Standard Model of particle physics is a \textbf{quantum field theory} (QFT) 
 \subsection{The gauge sector}
 \label{sec:gauge_fields}
 
-The gauge sector of the Standard Model corresponds to the spin-one bosons that mediate the strong and electroweak interactions. In a general sense, this sector corresponds to the mediating particles for three of the four fundamental forces: the strong nuclear force, the weak nuclear force, and the electromagnetic force. The fourth fundamental force--gravity--is not included in the Standard Model, as it is not yet understood from a quantum perspective~\cite{QuantumGravity}.
+The gauge sector of the Standard Model corresponds to the spin-one bosons that mediate the strong and electroweak interactions. In a general sense, this sector corresponds to the mediating particles for three of the four fundamental forces: the strong nuclear force, the weak nuclear force, and the electromagnetic force. The fourth fundamental force---gravity---is not included in the Standard Model, as it is not yet understood from a quantum perspective~\cite{QuantumGravity}.
 
 The symmetry group of the gauge sector is given by
 %
@@ -134,7 +134,7 @@ b_L^r & b_L^g & b_L^b\end{array}\right)$ & $\left(\begin{array}{llll}t_R^r & t_R
 \section{Quantum chromodynamics}
 \label{sec:qcd}
 
-While the discussions above have been \textit{mostly} general, the novel research presented in this thesis is centered around the strong nuclear force. As such, this section will delve into the details of this mysterious force and its interesting properties.
+Quantum chromodynamics (QCD) is the component of the Standard Model that describes the strong interaction between quarks and gluons, the fundamental particles that make up most of the matter in the universe. In this theory, the fermionic quarks have ``color charge'', which can either be red, green or blue for quarks, or anti-red, anti-green, or anti-blue for anti-quarks. The gluons, which are the mediating bosons of the strong interaction, also carry color charge, but in the form of a superposition of both color and anti-color. This section will delve into the details of QCD, emphasizing the properties of the strong interaction that make it so challenging to study.
 
 \subsection{The QCD Lagrangian}
 \label{sec:qcd_lagrangian}
@@ -181,7 +181,7 @@ The chiral quark fields $q_\text{L}$ and $q_\text{R}$ are defined as $\frac{1}{2
 \end{equation}
 where $m_f$ is the mass of the quark with flavor $f$, and $q_f$ is the flavor component of the quark field. Note that this term completely violates the SU(2)$\times$U(1) electroweak symmetry, indicating that the given $\mathcal{L}_{QCD}$ is determined \textit{after} the spontaneous symmetry breaking described in the previous section. 
 
-These quark masses are also subject to \textbf{renormalization}~\cite{MassRenorm}, which is a process that removes the infinities that arise from the self-interaction of the quarks and gluons. The renormalization process results in the running of the quark masses with respect to the energy scale $\mu$ of the interaction\footnote{They also depend on the \textit{choice} of renormalization scheme, with the most commonly implemented one being minimal subtraction or MS~\cite{MSScheme}.}. More simply, the quark masses are inversely dependent on this energy scale: at large $\mu$, the quark masses are small, and at lower $\mu$, the quark masses are large. At the energy scale $\mu \approx 2$ GeV (close to the mass of the proton), the masses of the up, down, and strange quarks are approximately 2.2 MeV, 4.7 MeV, and 96 MeV, respectively~\cite{PDG}. 
+These quark masses are also subject to \textbf{renormalization}~\cite{MassRenorm}, which is a process that removes the infinities that arise from the self-interaction of the quarks and gluons. The renormalization process results in the running of the quark masses with respect to the energy scale $\mu$ of the interaction\footnote{They also depend on the \textit{choice} of renormalization scheme, with the most commonly implemented one being minimal subtraction or MS~\cite{MSScheme}.}. More simply, the quark masses are inversely dependent on this energy scale: at large $\mu$, the quark masses are small, and at lower $\mu$, the quark masses are large. At the energy scale $\mu \approx 2$ GeV (close to the mass of the proton), the masses of the up, down, and strange quarks---collectively referred to as the light-flavor quarks---are approximately 2.2 MeV/$c^2$, 4.7 MeV/$c^2$, and 96 MeV/$c^2$, respectively~\cite{PDG}. The heavy-flavor charm, bottom, and top quarks have masses of approximately 1.28 \GeVmass, 4.18 \GeVmass, and 173 \GeVmass, respectively\footnote{At the energy scale governed by their respective masses (i.e. $\mu = m_{Q}$).~\cite{PDG}}. 
 
 The final term, known as the $\theta$-term~\cite{ThetaTerm}, is something of a mystery. It is a scalar term that violates CP symmetry~\cite{CPSymmetry}, and is often set to zero as there is no experimental evidence for its existence. However, it is not clear why this term is zero, as there is no symmetry that explicitly forbids it. This is known as the \textbf{strong CP problem}, and is one of the biggest open questions in particle physics~\cite{StrongCPProblem}. 
 
@@ -198,7 +198,7 @@ The gluon field $\mathcal{A}^A$ transforms under the adjoint respresentation of 
 \subsubsection{Confinement}
 \label{sec:qcd_confinement}
 
-One of the unique properties of QCD is the phenomenon of \textbf{confinement}, which is the observation that quarks and gluons are never seen in isolation. Instead, they are \textit{confined} inside of the color neutral bound states known as hadrons. This property is mostly understood in terms of the coupling constant $g_{s}$. The renormalization~\cite{QCDRenorm} of QCD gives rise to a $g_{s}$ that varies with energy scale or distance. As the distance between two quarks increases, so too does $g_{s}$. At some point, the coupling becomes so strong that the energy required to separate the quarks is enough to create a quark-antiquark pair from the vacuum. Thus any attempts to separate a quark from a hadron will always result in the creation of a new hadron, making it impossible to observe single quarks in isolation. 
+One of the unique properties of QCD is the phenomenon of \textbf{confinement}, which is the observation that quarks and gluons are never seen in isolation. Instead, they are \textit{confined} inside of the color neutral bound states known as hadrons. This property is mostly understood in terms of the coupling constant $g_{s}$. The renormalization~\cite{QCDRenorm} of QCD gives rise to a $g_{s}$ that varies with energy scale or distance. As the distance between two quarks increases, so too does $g_{s}$. At some point, the coupling becomes so strong that the energy required to separate the quarks is enough to create a quark-anti-quark pair from the vacuum. Thus any attempts to separate a quark from a hadron will always result in the creation of a new hadron, making it impossible to observe single quarks in isolation. 
 
 The large coupling constant in this low energy regime makes it impossible to describe this phenomenon using perturbative techniques, so the exact mechanism of confinement is still not fully understood. However, it is often described using the phenomenological Lund string model~\cite{LundString}. In this model, the field lines of two quarks are pulled together due to the self-interaction of the gluons. This creates a string-like structure between the two quarks, with a potential given by 
 %
@@ -228,13 +228,30 @@ Just as the coupling constant becomes large at low energies and large distances,
     \label{fig:asymptotic_freedom}
 \end{figure}
 
+\subsubsection{Chiral symmetry breaking}
+\label{sec:chiral_symmetry_breaking}
+
+The mass term in the QCD Lagrangian,
+\begin{equation}
+    -\bar{q}_{\mathrm{R}} \mathcal{M} q_{\mathrm{L}}-\bar{q}_{\mathrm{L}} \mathcal{M}^{\dagger} q_{\mathrm{R}},
+\end{equation}
+explicitly breaks \textbf{chiral symmetry}: swapping the left-handed and right-handed components of the quark fields does not leave the Lagrangian invariant. The breaking of chiral symmetry due to the non-zero quark masses is referred to as \textbf{explicit} chiral symmetry breaking.
+
+However, even in the limit of massless quarks, chiral symmetry is broken by the QCD vacuum. This is known as \textbf{spontaneous} chiral symmetry breaking, and due to the non-zero vacuum expectation value of the quark condensate~\cite{QuarkCondensate}
+%
+\begin{equation}
+    \label{eq:quark_condensate}
+    \langle \bar{q}q \rangle = \langle \bar{q}_\text{L}q_\text{R} + \bar{q}_\text{R}q_\text{L} \rangle \neq 0.
+\end{equation}
+%
+This non-zero value is a direct result of the confinement of QCD~\cite{TongGaugeTheory} (Section~\ref{sec:qcd_confinement}), and implies that the ground state of the theory is filled with quark-anti-quark pairs. The spontaneous breaking of chiral symmetry in QCD gives rise to eight massless Nambu-Goldstone bosons~\cite{NambuGoldstone}, which are the pseudoscalar mesons $\pi^{\pm, 0}$, $K^{\pm, 0}$, $\eta$, and $\eta'$. These mesons then acquire a small mass due to the aforementioned explicit chiral symmetry breaking from the quark masses. 
 
 \subsubsection{Jets}
 \label{sec:jets}
 
 During high energy particle collisions (between two protons, for example), the constituent partons of the protons will sometimes scatter off each other in a way that converts most of their initial longitudinal momentum (along the collision axis) into transverse momentum (in the plane perpendicular to the collision axis). Such a scattering is often referred to as a \textbf{hard scattering}. Because the momentum transfer is large, the cross-section of the parton-parton scattering is calculable using pQCD. Furthermore, branching processes of the high momentum partons---like gluon radiation---can also be calculated perturbatively. Eventually, however, the partons will lose enough energy such that their behavior can no longer be described using perturbative techniques.
 
-Luckily, the aforementioned Lund model is well-equipped to deal with lower energy partons. Under the Lund model, as these colored partons move away from each other, the force between them increases until there is enough energy to produce a quark-antiquark pair (as discussed in Section~\ref{sec:qcd_confinement}). This process---known as string fragmentation---continues until the partons are no longer energetic enough to move away from each other, at which point they hadronize into a large number of color neutral bound states. These particles are roughly collimated in the direction(s) of the initial hard scattering, forming sprays of hadrons known as \textbf{jets}. A diagram depicting the formation of a jet from an initial hard scattering of partons can be seen in Figure~\ref{fig:jet_diagram}. 
+Luckily, the aforementioned Lund model is well-equipped to deal with lower energy partons. Under the Lund model, as these colored partons move away from each other, the force between them increases until there is enough energy to produce a quark-anti-quark pair (as discussed in Section~\ref{sec:qcd_confinement}). This process---known as string fragmentation---continues until the partons are no longer energetic enough to move away from each other, at which point they hadronize into a large number of color neutral bound states. These particles are roughly collimated in the direction(s) of the initial hard scattering, forming sprays of hadrons known as \textbf{jets}. A diagram depicting the formation of a jet from an initial hard scattering of partons can be seen in Figure~\ref{fig:jet_diagram}. 
 
 \begin{figure}[ht]
     \centering
@@ -261,25 +278,6 @@ where $n_s$ is the number of strange quarks and $n_{\bar{s}}$ is the number of s
 
 One of the consequences of the asymptotic freedom of QCD is the prediction of a new state of matter at extreme temperatures and densities: the \textbf{quark-gluon plasma} (QGP) ~\cite{QGP1, QGP2}. In this plasma, the quarks and gluons are not confined inside hadrons, and instead behave as quasi-free particles. This is analogous to an electromagnetic plasma, where electrons and protons are dissociated from their atoms. A phase diagram of this plasma can be seen in Figure~\ref{fig:qgp_phase_diagram}. This diagram has two axes: temperature and baryon density. Increasing \textit{either} of these quantities beyond a certain threshold will cause a phase transition from normal hadronic matter to the QGP. Similarities can be drawn between this phase diagram and that of a snowball: heating \textit{{or}} squeezing a snowball will cause it to melt into a liquid\footnote{Be careful: if you continue to heat up the snowball enough, or squeeze hard enough, it will undergo another phase transition into the QGP.}.  
 
-
-Numerical simulations of QCD on a lattice~\cite{LatticeQCD} (known as lattice QCD or lQCD) have shown that the phase transition from ordinary hadronic matter to the QGP requires a temperature of around 160 MeV whenever the net baryon density is zero~\cite{LatticeQCD_CriticalTemp}, as highlighted on the left side of Figure~\ref{fig:qgp_phase_diagram}. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 \begin{figure}
     \centering
     \includegraphics[width=0.9\textwidth]{figures/introduction/qgp_phase_diagram.png}
@@ -287,7 +285,9 @@ Numerical simulations of QCD on a lattice~\cite{LatticeQCD} (known as lattice QC
     \label{fig:qgp_phase_diagram}
 \end{figure}
 
-Studying the QGP and its formation is interesting for a number of reasons, but those reasons often get lost in the cosmological hype: the universe is thought to have been composed of this plasma in the first few microseconds after the Big Bang~\cite{QGP3}. Thus studying the QGP \textit{can} give insight to the early universe and its expansion, which is schematically represented in Figure~\ref{fig:qgp_universe}. It is also postulated that QGP formation occurs in the cores of neutron stars~\cite{QGPNeutron}, giving another avenue of interest for astrophysicists.
+Numerical simulations of QCD on a lattice~\cite{LatticeQCD1, LatticeQCD2} (known as lattice QCD or lQCD) have shown that at zero baryon density, the transition from hadronic matter to the QGP occurs as a smooth crossover~\cite{LatticeQCD_Crossover} with a critical temperature $T_C \approx 160$ MeV or $10^{12}$ K, 10,000 times hotter than the center of the sun. LQCD has also been used to predict the existence of a critical endpoint in the QGP phase diagram at a non-zero baryon density~\cite{LatticeQCD_CriticalPoint}, beyond which the transition from hadronic matter to the QGP is no longer a smooth crossover, but a first-order phase transition. However, due to the complex action problem~\cite{ComplexActionProblem}, lQCD simulations at non-zero baryon density are not yet possible\footnote{Though there are plenty of techniques to extend the lQCD results~\cite{TaylorSeries, ComplexDensity}, they are only applicable at small baryon densities.}. Thus the exact location of this critical endpoint is still unknown, and is the subject of much experimental and theoretical research~\cite{QGP3}.
+
+As the temperatures at the early stages of the universe were well beyond the critical temperature predicted by lQCD, it is thought that the universe was filled with a QGP in the first few microseconds after the Big Bang~\cite{QGP3}. Thus studying the QGP is of interest to cosmologists, as it can give insight to the early universe and its expansion, which is schematically represented in Figure~\ref{fig:qgp_universe}. It is also postulated that QGP formation occurs in the cores of neutron stars~\cite{QGPNeutron}, giving another avenue of interest for astrophysicists. Furthermore, studying the QGP and its properties can help illuminate the dark, confounding corners of QCD that are not yet understood---like confinement---making it an exciting subject of study for particle physicists. The remainder of this section will discuss the theoretical characteristics of this interesting plasma.
 
 \begin{figure}
     \centering
@@ -296,7 +296,139 @@ Studying the QGP and its formation is interesting for a number of reasons, but t
     \label{fig:qgp_universe}
 \end{figure}
 
-However, the QGP is also very interesting from a purely particle physics perspective; it is a highly non-perturbative QCD system that can be generated in a laboratory setting. Studying this plasma and its properties can help illuminate the dark, confounding corners of QCD that are not yet understood--like confinement. Unfortunately producing this plasma in a laboratory setting is not a trivial task, and requires\footnote{There are hints of QGP formation in proton-proton collisions, which will be discussed in Section~\ref{sec:qgp_signatures}} colliding heavy ions at very high energies.
+\subsection{Properties of the QGP}
+\label{sec:qgp_properties}
+
+\subsubsection{Deconfinement}
+
+The most defining characteristic of the QGP is that the quarks and gluons within the plasma are not confined inside hadrons, and instead interact as quasi-free particles. As mentioned in Section~\ref{sec:qcd_asymptotic_freedom}, the coupling constant $g_s$ becomes smaller with increasing energies. At high enough energies, the coupling constant becomes small enough that the quarks and gluons become deconfined. In lQCD, the order parameter for deconfinement is the Polyakov loop expectation value~\cite{PolyakovLoop} $\langle L \rangle$, which is zero in the confined phase and greater than zero in the deconfined phase. This transition, from $\langle L \rangle = 0$ to $\langle L \rangle > 0$, is used\footnote{Technically the more common order parameter is the quark condensate discussed in the next section, but the critical temperatures predicted by lQCD using these different order parameters are usually very similar~\cite{QCDOrderParameterSimilarity}.} to define the transition from hadronic matter to the QGP. 
+
+
+\subsubsection{Chiral symmetry restoration}
+
+As mentioned in Section~\ref{sec:chiral_symmetry_breaking}, the QCD vacuum has a non-zero quark condensate $\langle q\bar{q} \rangle$ which spontaneously breaks chiral symmetry. However, this non-zero condensate is the direct result of the confinement of QCD~\cite{TongGauge}. Thus, in the QGP---where the quarks and gluons are no longer confined---the quark condensate should vanish. As such, another defining characteristic of the QGP is the restoration of the spontaneously broken chiral symmetry of QCD, often referred to as \textbf{chiral symmetry restoration}. This transition, from $\langle q\bar{q} \rangle > 0$ to $\langle q\bar{q} \rangle = 0$, is also used to define the QGP phase transition. 
+
+An lQCD diagram of the deconfinement order parameter $\langle L \rangle$ and chiral symmetry order parameter $\langle q\bar{q} \rangle$ (along with their corresponding susceptibilities) as a function of the coupling $\beta = 6/g_s^2$ can be seen in Figure~\ref{fig:order_parameters}. Note that the susceptibilities are maximal at the same coupling value (corresponding to a critical temperature of around 170 MeV), indicating that both deconfinement and chiral symmetry restoration correspond to the same phase transition, namely the transition from hadronic matter to the QGP.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/introduction/phase_transition.png}
+    \caption{The deconfinement order parameter $\langle L \rangle$ and chiral symmetry order parameter $\langle q\bar{q} \rangle$ (along with their corresponding susceptibilities) as a function of the coupling $\beta = 6/g_s^2$ using 2-flavor lQCD, taken from~\cite{FrithofLattice}. The critical temperatures (indicated by the maxima of the susceptibilities) occur at roughly $\beta = 5.28$, corresponding to a temperature of around 170 MeV.}
+    \label{fig:order_parameters}
+\end{figure}
+
+\subsubsection{Hydrodynamic behavior}
+
+The QGP is a strongly interacting plasma. As such, it is expected to exhibit fluid-like behavior at a macroscopic level. Unfortunately, the calculation of QGP transport coefficients from first principles using QCD is very difficult~\cite{FlowViscPaper}. Using perturbative techniques to calculate the shear and bulk viscosities of the QGP results in values that are an order of magnitude larger than those extracted from experimental data~\cite{Visc1, Visc2}. The extraction of these transport coefficients using lQCD is also challenging, as the aforementioned complex action problem makes it nearly impossible to simulate the QGP at non-zero baryon density. The most promising approach to calculating these transport coefficients is through the use of the AdS/CFT correspondence~\cite{AdSCFT}, which is a duality between a strongly coupled gauge theory (like QCD) and a weakly interacting gravitational theory (like string theory~\cite{StringTheory}). This approach has been used to approximate the lower bound of the shear viscosity of a strongly-coupled medium~\cite{QGPViscADS}, 
+\begin{equation}
+\eta/s \approx 1/4\pi,
+\end{equation}
+which is often described as the shear viscosity of a ``perfect fluid''~\cite{PerfectFluid}. Experimental evidence suggests that the QGP has a shear viscosity that is very close to this lower bound~\cite{QGPViscExp}, indicating that it is a nearly perfect fluid.
+
+
+\subsubsection{Radiative energy loss}
+
+Partons traveling through the QGP lose energy through both collisional and radiative processes, as shown in Figure~\ref{fig:energy_loss_qgp}. The collisional energy loss is due to elastic scattering between the partons and the constituents of the QGP. For a parton with energy $E$ much greater than its mass and the temperature of the QGP, the collisional energy loss is given by~\cite{GluonRadiation}
+%
+\begin{equation}
+    \label{eq:collisional_energy_loss}
+    \Delta E_\text{coll} \sim \alpha_s^2 T^2 L,
+\end{equation}
+%
+where $T$ is the temperature of the QGP and $L$ is the length of travel through the medium (which is assumed to be larger than the critical length $L_{cr} \sim \frac{1}{\alpha_s T}\sqrt{\frac{E}{T}}$). The radiative energy loss is due to gluon radiation induced by the presence of the medium\footnote{Similar to bremsstrahlung, where electrically charged particles radiate photons in the presence of other charged particles.}. Again, for a parton with $E >> M, T$, the radiative energy loss is given by~\cite{GluonRadiation}
+%
+\begin{equation}
+    \label{eq:radiative_energy_loss}
+    \Delta E_\text{rad} \sim \alpha_s^2 \sqrt{E T^3} L,
+\end{equation}
+%
+where $E$ is the energy of the parton. As the radiative energy loss is proportional to $\sqrt{E}$, it is the dominant energy loss mechanism for light, energetic partons (i.e. $u$, $d$, and $s$ quarks as well as gluons). However, gluons lose more energy than the light quarks due to their larger color charge. The heavier quarks are expected to lose less energy through radiative processes due to the \textit{dead cone effect}, whereby the gluon radiation is suppressed in the forward direction due to the larger masses of the heavy quarks~\cite{DeadCone}. Even still, the radiative energy loss of heavy quarks is larger than their collisional energy loss~\cite{DeadCone}, making radiative energy loss the dominant energy loss mechanism for all energetic partons in the QGP.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/introduction/energy_loss.png}
+    \caption{A diagram depicting the collisional (left) and radiative energy loss (right) processes of a parton traveling through the QGP. Radiative energy loss is the dominant energy loss mechanism for all energetic partons in the QGP.}
+    \label{fig:energy_loss_qgp}
+\end{figure}
+
+
+\subsection{Enhanced $s$-quark production}
+
+In the context of the research presented in this thesis, the most important characteristic of the QGP is the increase in the production of strange quarks relative to the production of up and down quarks~\cite{Strangeness}. Discovered in 1981 by physicists Johann Rafelski and Rolf Hagedorn, this \textit{enhancement} in the production of strange quarks in the QGP is often referred to as \textbf{strangeness enhancement}. As mentioned in Section~\ref{sec:flavor_conservation}, strangeness is conserved during strong interactions. As such, the production of $s\bar{s}$ pairs can only come from four Feynman diagrams (to lowest order in pQCD), shown in Figure~\ref{fig:ssbar_production}. A key insight made by Rafelski and Hagedorn is that in the QGP, the higher temperatures allow for the thermal production of $s\bar{s}$ pairs through gluon fusion ($gg \rightarrow s\bar{s}$ or diagrams (a) (b) and (c) in Figure~\ref{fig:ssbar_production}). This gluon fusion occurs much faster than the quark-based production ($q\bar{q} \rightarrow s\bar{s}$ or diagram (d) in Figure~\ref{fig:ssbar_production}), and allows for the full chemical equilibration of strangeness in the QGP in less than $10^{-24}$ seconds. Strangeness equilibration in a hadronic gas, on the other hand, takes much longer: on the order of $10^{-10}$ seconds~\cite{Strangeness}.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/introduction/ssbar_production.png}
+    \caption{The four leading-order Feynman diagrams responsible for the production of $s\bar{s}$ pairs in the QGP, adapted from~\cite{Strangeness}. Diagrams (a), (b) and (c) are the gluon fusion processes, while diagram (d) is the quark-based process.}
+    \label{fig:ssbar_production}
+\end{figure}
+
+
+\subsubsection{Statistical hadronization}
+
+The production of strangeness in the QGP and within a hadron gas is often described in terms of the \textbf{statistical hadronization model} (SHM). The SHM is based off of the Fermi model of hadron formation, where it is assumed that the strong interactions saturate the quantum particle production matrix elements~\cite{RafelskiStatisticalH}. This assumption allows for the calculation of the particle yields using only conservation laws and the available phase space, while ignoring the unknown microscopic details of the hadronization process. In the fundamental micro-canonical approach for the SHM, the available phase space is determined by the energy density of localized ``clusters'' within the system. However, a grand canonical framework for the SHM is often used for highly energetic systems, where the phase space is determined by a global temperature-like parameter $T$. 
+
+The most important quantity for describing particle yields within the grand canonical SHM is the particle fugacity $\lambda_i$, which is defined as
+%
+\begin{equation}
+    \label{eq:particle_fugacity}
+    \lambda_i = e^{\mu_i/T},
+\end{equation}
+%
+where $\mu_i$ is the chemical potential of particle $i$. In essence, the fugacity ``counts'' the number of particles of type $i$ in the system~\cite{Strangeness}. For systems in absolute chemical equilibrium, the chemical potentials for particle and anti-particle flavors are opposite to each other. Consequently, the relationship between the particle and anti-particle fugacities is given by
+%
+\begin{equation}
+    \lambda_{\bar{i}} = \lambda_i^{-1}.
+\end{equation}
+%
+However, this relationship does not hold for systems that have not reached absolute chemical equilibrium, as the chemical potentials of the particle and anti-particle flavors are no longer opposite to each other. Due to the higher mass of the strange quark, the production of $s\bar{s}$ pairs usually proceeds at a much slower rate than the production of $u\bar{u}$ and $d\bar{d}$ pairs. As such, obtaining absolute chemical equilibrium for strange particles is difficult, especially in hadronic matter\footnote{As mentioned in the previous section, strangeness equilibration in a hadronic gas is over X times slower than in the QGP}. 
+
+To account for this, the SHM introduces the concept of \textit{relative} chemical equilibrium, in which the strange phase space is not fully saturated, but whatever strangeness is produced is distributed among the strange hadron channels according to the law of maximum entropy~\cite{9212210_hep-ph}. This 
+
+
+: as mentioned in the previous section, the full chemical equilibration of strangeness in a hadron gas takes around 
+
+
+
+To describe the chemical equilibration of strangeness within the system, the SHM introduces two chemical factors, namely $\lambda_s$ and $\gamma_s$. The factor $\lambda_s$ is called the \textit{strangeness fugacity}, and is defined as
+%
+\begin{equation}
+    \label{eq:strangeness_fugacity}
+    \lambda_s = e^{\mu_s/T},
+\end{equation}
+%
+where $\mu_s$ is the strangeness chemical potential. The strangeness fugacity ultimately describes the total abundance of strange quarks and anti-quarks 
+
+
+
+The factor $\lambda_s$ is called the \textit{strangeness suppression}, and is defined as
+%
+\begin{equation}
+    \label{eq:strangeness_suppression}
+    \lambda_s = \frac{2\langle n_{s\bar{s}} \rangle}{\langle n_{u\bar{u}} \rangle + \langle n_{d\bar{d}} \rangle},
+\end{equation}
+%
+where $\langle n_{j \bar{j}} \rangle$ is the average number of quark-anti-quark pairs of flavor $j$. This factor describes the relative abundance of strange quarks and anti-quarks compared to up and down quarks and anti-quarks, and it approaches unity whenever the strange quarks are in \textit{relative} chemical equilibrium with the $u$ and $d$ quarks. 
+
+
+
+
+
+
+The statistical hadronization model (SHM) is a theoretical framework that describes the production of hadrons in high-energy nuclear collisions. It assumes that hadrons are formed at the chemical freeze-out, when the system reaches a state of thermal and chemical equilibrium. The SHM predicts that the abundance of hadrons depends only on the available phase space and the conservation laws, and does not depend on the details of the hadronization process.
+
+One of the signatures of the quark-gluon plasma (QGP), a deconfined phase of matter where quarks and gluons can move freely, is the strangeness enhancement. This refers to the increased production of strange particles, such as kaons, lambdas, and omegas, in QGP compared to normal hadronic matter. The strangeness enhancement can be explained by the fact that in QGP, strange quarks and antiquarks are produced abundantly by gluon-gluon collisions, and they hadronize into strange hadrons by recombination or evaporation. The SHM can account for the strangeness enhancement by introducing a fugacity factor $\lambda_s$ for each strange quark or antiquark, which measures the deviation from chemical equilibrium.
+
+The strangeness enhancement can be observed experimentally by comparing the yields of strange particles in different colliding systems, such as proton-proton, proton-nucleus, and nucleus-nucleus collisions. The SHM can fit the experimental data by adjusting the parameters such as temperature, baryon chemical potential, and strangeness fugacity. The SHM has been successful in describing the strangeness enhancement at various energies, from SPS to LHC, and in different collision systems.
+
+
+
+
+
+
+
+
+
 
 
 \section{Using Heavy-Ion Collisions to Study the QGP}
@@ -450,14 +582,7 @@ where $v_n \equiv a_n/a_0$ are the very same flow coefficients from before. This
 \subsection{Strangeness enhancement}
 \label{sec:strangeness_enhancement}
 
-The earliest predicted signature of QGP formation was an increase in the production of strange quarks relative to the production of up and down quarks~\cite{Strangeness}. Discovered in 1981 by Johann Rafelski and Rolf Hagedorn, this \textit{enhancement} in the production of strange quarks in the QGP is referred to as \textbf{strangeness enhancement}. As strangeness is conserved during strong interactions, the production of $s\bar{s}$ pairs can only come from four Feynman diagrams (to lowest order in pQCD), shown in Figure~\ref{fig:ssbar_production}. The key insight by Rafelski and Hagedorn was that in the QGP, the higher temperatures allow for the thermal production of $s\bar{s}$ pairs through gluon fusion ($gg \rightarrow s\bar{s}$ or diagrams (a) (b) and (c) in Figure~\ref{fig:ssbar_production}). This gluon fusion occurs much faster than the quark-based production ($q\bar{q} \rightarrow s\bar{s}$ or diagram (d) in Figure~\ref{fig:ssbar_production}), and allows for the full chemical equilibration of strangeness in the QGP~\cite{QGPEquil}. Such an equilibration is not possible with only a hadronic gas phase~\cite{HadronGasEquil} due to the much slower interaction rates of hadrons.
 
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.9\textwidth]{figures/introduction/ssbar_production.png}
-    \caption{The four leading-order Feynman diagrams responsible for the production of $s\bar{s}$ pairs in the QGP, adapted from~\cite{Strangeness}. Diagrams (a), (b) and (c) are the gluon fusion processes, while diagram (d) is the quark-based process.}
-    \label{fig:ssbar_production}
-\end{figure}
 
 Experimentally, strangeness production is measured by looking at the abundance of strange hadrons relative to non-strange hadrons, like pions. For central heavy ion collisions--both at the LHC and RHIC--these strange/non-strange particle ratios are found to be consistent with a hadron gas in both thermal \textit{and} chemical equilibrium~\cite{NATURE12, NATURE13}. As mentioned previously, this is a strong indication that the QGP is formed in these collisions. Furthermore, these particle ratios as measured in lower multiplicity pp collisions at the LHC are found to be consistent with statistical models \textit{without} chemical equilibriation~\cite{NATURE14, NATURE15}. Under the strangeness enhancement picture, this indicates that QGP formation does \textit{not} occur in these lower multiplicity pp collisions. 
 
