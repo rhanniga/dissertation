@@ -5,7 +5,7 @@ The initial section of this chapter will mostly serve as a historical overview o
 
 The third section of this chapter will delve into the details of Quantum ChromoDynamics (QCD), which is the component of the Standard Model that describes the interactions between \textbf{quarks} and \textbf{gluons}, the constituent particles of the more familiar protons and neutrons. As many theoretical calculations are difficult to perform in QCD, the use of computationally-intensive numerical techniques is often required to make precise predictions. One such prediction is a phase transition from nuclear matter at everyday energies---in which the quarks and gluons are confined within protons and neutrons---into a novel state of matter at extreme temperatures or densities, known as the \textbf{Quark-Gluon Plasma} (QGP). Section~\ref{sec:qgp_theory} will detail the QGP and many of its interesting properties predicted by QCD, with an emphasis on the production of strange quarks within the plasma.
 
-The final two sections of this chapter will discuss how high-energy particle collisions can be used to study the QGP, using both expensive particle accelerators (Section~\ref{sec:qgp_experiment}) and simulation techniques (Section~\ref{sec:models}). 
+The final two sections of this chapter will discuss how high-energy particle collisions can be used to study the QGP, using both expensive particle accelerators (Section~\ref{sec:heavy_ion_collisions}) and simulation techniques (Section~\ref{sec:models}). 
 
 \clearpage
 
@@ -193,7 +193,7 @@ The gluon field $\mathcal{A}^A$ transforms under the adjoint respresentation of 
 
 
 \subsection{Properties of QCD}
-\label{sec:qcd_features}
+\label{sec:qcd_properties}
 
 \subsubsection{Confinement}
 \label{sec:qcd_confinement}
@@ -327,6 +327,7 @@ which is often described as the shear viscosity of a ``perfect fluid''~\cite{Per
 
 
 \subsubsection{Radiative energy loss}
+\label{sec:qgp_energy_loss}
 
 Partons traveling through the QGP lose energy through both collisional and radiative processes, as shown in Figure~\ref{fig:energy_loss_qgp}. The collisional energy loss is due to elastic scattering between the partons and the constituents of the QGP. For a parton with energy $E$ much greater than its mass and the temperature of the QGP, the collisional energy loss is given by~\cite{GluonRadiation}
 %
@@ -353,6 +354,7 @@ where $E$ is the energy of the parton. As the radiative energy loss is proportio
 
 
 \subsection{Enhanced $s$-quark production}
+\label{sec:qgp_strangeness}
 
 In the context of the research presented in this thesis, the most important characteristic of the QGP is the increase in the production of strange quarks relative to the production of up and down quarks~\cite{Strangeness}. Discovered in 1981 by physicists Johann Rafelski and Rolf Hagedorn, this \textit{enhancement} in the production of strange quarks in the QGP is often referred to as \textbf{strangeness enhancement}. As mentioned in Section~\ref{sec:flavor_conservation}, strangeness is conserved during strong interactions. As such, the production of $s\bar{s}$ pairs can only come from four Feynman diagrams (to lowest order in pQCD), shown in Figure~\ref{fig:ssbar_production}. A key insight made by Rafelski and Hagedorn is that in the QGP, the higher temperatures allow for the thermal production of $s\bar{s}$ pairs through gluon fusion ($gg \rightarrow s\bar{s}$ or diagrams (a) (b) and (c) in Figure~\ref{fig:ssbar_production}). This gluon fusion occurs much faster than the quark-based production ($q\bar{q} \rightarrow s\bar{s}$ or diagram (d) in Figure~\ref{fig:ssbar_production}), and allows for the full chemical equilibration of strangeness in the QGP in less than $10^{-24}$ seconds. Strangeness equilibration in a hadronic gas, on the other hand, takes much longer: on the order of $10^{-10}$ seconds~\cite{Strangeness}.
 
@@ -365,6 +367,7 @@ In the context of the research presented in this thesis, the most important char
 
 
 \subsubsection{Statistical hadronization}
+\label{sec:shm}
 
 The production of strangeness in the QGP and within a hadron gas is often described in terms of the \textbf{statistical hadronization model} (SHM). The SHM is based off of the Fermi model of hadron formation, where it is assumed that the strong interactions saturate the quantum particle production matrix elements~\cite{RafelskiStatisticalH}. This assumption allows for the calculation of the particle yields using only conservation laws and the available phase space, while ignoring the unknown microscopic details of the hadronization process. In the fundamental micro-canonical approach for the SHM, the available phase space is determined by the energy density of localized ``clusters'' within the system. However, a grand canonical framework for the SHM is often used for highly energetic systems, where the phase space is determined by a global temperature-like parameter $T$. 
 
@@ -383,7 +386,7 @@ where $\mu_i$ is the chemical potential of particle $i$. In essence, the fugacit
 %
 However, this relationship does not hold for systems that have not reached absolute chemical equilibrium, as the chemical potentials of the particle and anti-particle flavors are no longer opposite to each other. Due to the higher mass of the strange quark, the production of $s\bar{s}$ pairs usually proceeds at a much slower rate than the production of $u\bar{u}$ and $d\bar{d}$ pairs. As such, obtaining absolute chemical equilibrium for strange particles is difficult, especially in hadronic matter\footnote{As mentioned in the previous section, strangeness equilibration in a hadronic gas is over X times slower than in the QGP}. 
 
-To account for this, the SHM introduces the concept of \textit{relative} chemical equilibrium, in which the strange phase space is not fully saturated, but whatever strangeness is produced is distributed among the strange hadron channels according to the law of maximum entropy~\cite{9212210_hep-ph}. The extent to which the strange phase space is saturated is parameterized by $0 < \gamma_s \leq 1$, which gives a modified particle fugacity,
+To account for this, the SHM introduces the concept of \textit{relative} chemical equilibrium, in which the strange phase space is not fully saturated, but whatever strangeness is produced is distributed among the strange hadron channels according to the law of maximum entropy~\cite{9212210hepph}. The extent to which the strange phase space is saturated is parameterized by $0 < \gamma_s \leq 1$, which gives a modified particle fugacity,
 %
 \begin{equation}
     \label{eq:modified_fugacity}
@@ -400,11 +403,10 @@ where $n(i, s)$ is the number of strange quarks plus the number of strange anti-
 
 As these particle ratios can be measured by particle collision experiments, it is possible to determine the value of $\gamma_s$ for a given collision system. Measuring $\gamma_s$ in heavy-ion collisions is of particular interest, as it is believed that the QGP is formed in these collisions. However, heavy-ion collisions are very short-lived systems, lasting only around $10^{-23} - 10^{-22}$ seconds~\cite{QGPFormation}. As mentioned previously, full chemical equilibration in a hadronic gas cannot occur within this time frame. As such, measuring values of $\gamma_s$ close to unity in heavy-ion collisions would be a strong indication of QGP formation.
 
-
 \section{Using Heavy-Ion Collisions to Study the QGP}
 \label{sec:heavy_ion_collisions}
 
-The QGP phase diagram in Figure~\ref{fig:qgp_phase_diagram} shows two methods for producing the QGP: increasing the system's temperature or increasing its baryon density. Luckily these two methods are not mutually exclusive: 
+The QGP phase diagram in Figure~\ref{fig:qgp_phase_diagram} shows two methods for producing the QGP: increasing the system's temperature or increasing its baryon density. Noteably, these two methods are not mutually exclusive: 
 \begin{itemize}
     \item Baryon density can be increased by looking at systems with a lot of baryons packed together (like the nucleus of a lead atom)
     \item Temperature can be increased by smashing the aforementioned systems together at higher energies (like in a particle accelerator)
@@ -476,8 +478,8 @@ where $N_\text{ch}$ is the multiplicity of the event in question. An example of 
 
 The approximation given by Equation~\ref{eq:centrality_distribution} has an additional benefit: it allows for the determination of centrality without a clearly defined impact parameter. This is useful for proton-proton and proton-lead collisions, where the impact parameter is ill-defined. 
 
-\section{Experimental signatures of QGP formation}
-\label{sec:qgp_signatures}
+\subsection{Experimental evidence for QGP formation}
+\label{sec:qgp_evidence}
 
 As mentioned in Section~\ref{sec:heavy_ion_collisions}, the QGP produced within a heavy ion collision is \textit{very} short lived. As such, any attempt to study the QGP and its formation must be done using the detector-accessable final state hadrons. Luckily there are a number of signatures that can be used to study the QGP in experiment, including
 %
@@ -551,8 +553,6 @@ where $v_n \equiv a_n/a_0$ are the very same flow coefficients from before. This
 
 \subsection{Strangeness enhancement}
 \label{sec:strangeness_enhancement}
-
-
 
 Experimentally, strangeness production is measured by looking at the abundance of strange hadrons relative to non-strange hadrons, like pions. For central heavy ion collisions--both at the LHC and RHIC--these strange/non-strange particle ratios are found to be consistent with a hadron gas in both thermal \textit{and} chemical equilibrium~\cite{NATURE12, NATURE13}. As mentioned previously, this is a strong indication that the QGP is formed in these collisions. Furthermore, these particle ratios as measured in lower multiplicity pp collisions at the LHC are found to be consistent with statistical models \textit{without} chemical equilibriation~\cite{NATURE14, NATURE15}. Under the strangeness enhancement picture, this indicates that QGP formation does \textit{not} occur in these lower multiplicity pp collisions. 
 
