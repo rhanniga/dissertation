@@ -1,14 +1,14 @@
 \chapter{Analysis Details}
 \label{ch:analysis_details}
 
-This chapter builds upon the analysis overview presented in the previous chapter by providing a much more detailed description of each component of the analysis. These components can be summarized as follows. First, a high-quality data sample of \pPb collisions is selected, with events further differentiated by their multiplicity. Then, quality tracks are selected for the trigger and associated charged hadrons, and the $\Lambda$ baryons are reconstructed from lower quality tracks using their characteristic decay topology. These $\Lambda$ daughter tracks are identified as protons or pions using information from the TPC and TOF detectors. Within a given event, the trigger hadrons are then combined with either the associated charged hadrons or the $\Lambda$ candidates to form pairs, where a distribution of their relative azimuthal angle ($\Delta\varphi \equiv \varphi_{trig.} - \varphi_{assoc.}$) and pseudorapidity ($\Delta\eta \equiv \eta_{trig.} - \eta_{assoc.}$) is filled for each pair. These h-\lmb and h-h angular distributions are then corrected for a laundry list of detector effects using both data- and MonteCaro-driven methods. Further corrections are applied to the h-\lmb distributions to account for effects like the combinatorial background associated with the \lmb reconstruction and the two-track merging effect, whereby one of the daughter tracks gets merged with the trigger hadron track, causing a h-\lmb pair deficit at small angles. Once all corrections are applied, the h-\lmb and h-h distributions are finalized and ready for the extracting of the many observables discussed at the end of the previous chapter.
+This chapter builds upon the analysis overview presented in the previous chapter by providing a much more detailed description of each component of the analysis. These components can be summarized as follows. First, a high-quality data sample of \pPb collisions is selected, with events further differentiated by their multiplicity. Then, quality tracks are selected for the trigger and associated charged hadrons, and the $\Lambda$ baryons are reconstructed from a larger pool lower quality tracks using their characteristic decay topology. These $\Lambda$ daughter tracks are identified as protons or pions using information from the TPC and TOF detectors. Within a given event, the trigger hadrons are then combined with either the associated charged hadrons or the $\Lambda$ candidates to form pairs, where a distribution of their relative azimuthal angle ($\Delta\varphi \equiv \varphi_{trig.} - \varphi_{assoc.}$) and pseudorapidity ($\Delta\eta \equiv \eta_{trig.} - \eta_{assoc.}$) is filled for each pair. These h-\lmb and h-h angular distributions are then corrected for a laundry list of detector effects using both data- and MonteCaro-driven methods. Further corrections are applied to the h-\lmb distributions to account for effects like the combinatorial background associated with the \lmb reconstruction and the two-track merging effect, whereby one of the daughter tracks gets merged with the trigger hadron track, causing a h-\lmb pair deficit at small angles. Once all corrections are applied, the h-\lmb and h-h distributions are finalized and ready for the extracting of the many observables discussed at the end of the previous chapter.
 
 \section{Dataset and event selection}
 \label{sec:event_selection}
 
 \subsection{Dataset}
 
-Every event in this analysis was a \pPb collision at \snn = 5.02 \TeV with data collected by the ALICE detector during the 2016 LHC run. This analysis uses the data from these runs with the ``FAST'' reconstruction, meaning the data was taken without the ITS's SDD subdetector due to issues with readout during this period. The total number of events (prior to any selection) is roughly 400 million. For the efficiency studies, the analysis was performed using a standard purpose MC-generated production anchored to the dataset using the DPMJET~\cite{DPMJET} event generator. This production consists of around 400 million minimum bias events, which is roughly equivalent to data.
+The events in this analysis are \pPb collisions at \snn = 5.02 \TeV collected by the ALICE detector during the 2016 LHC run. This analysis uses the data from these runs with the ``FAST'' reconstruction, meaning the data was taken without the ITS's SDD subdetector due to issues with readout during this period. The total number of events (prior to any selection) is roughly 400 million. For the efficiency studies, the analysis was performed using a standard purpose MC-generated production anchored to the dataset using the DPMJET~\cite{DPMJET} event generator. This production consists of around 400 million minimum bias events, which is roughly equivalent to data.
 
 \subsection{Event Selection}
 
@@ -72,7 +72,7 @@ For any two-particle correlation analysis, the selection criteria of the trigger
 
 \subsection{Associated hadron track cuts}
 
-To keep the results of this analysis more comparable to previous measurements of the $\Lambda/\pi \approx \Lambda/$h ratio, the selection criteria for the associated hadrons are more strict than those for the trigger hadrons as the associated hadrons are meant to be ``primary'', meaning they did not originate from a weak decay. All associated hadrons are required to meet the ALICE standard track quality cuts for primary charged hadrons described in Table~\ref{tab:primary_track_cuts}. Furthermore, the associated hadrons are selected only at midrapidity ($|eta| < 0.8$) in the momentum region ${1.0 < p_{\text{T}} < 4.0 \text{GeV}/c}$. The \pt, $\varphi$ and $\eta$ distributions for the associated hadrons that pass these cuts in the 0-20\% multiplicity bin can be seen in Figure~\ref{fig:assoc_plots}.
+To keep the results of this analysis more comparable to previous measurements of the $\Lambda/\pi \approx \Lambda/$h ratio, the selection criteria for the associated hadrons are more strict than those for the trigger hadrons as the associated hadrons are meant to be ``primary'', meaning they did not originate from a weak decay. All associated hadrons are required to meet the ALICE standard track quality cuts for primary charged hadrons described in Table~\ref{tab:primary_track_cuts}. Furthermore, the associated hadrons are selected only at midrapidity ($|\eta| < 0.8$) in the momentum region ${1.0 < p_{\text{T}} < 4.0 \text{GeV}/c}$. The \pt, $\varphi$ and $\eta$ distributions for the associated hadrons that pass these cuts in the 0-20\% multiplicity bin can be seen in Figure~\ref{fig:assoc_plots}.
 
 \begin{figure}[t!]
 	\centering
@@ -125,14 +125,14 @@ The $\Lambda$ candidates in this analysis are reconstructed using their characte
 	\label{fig:v0_decay}
 \end{figure}
 
-The first and most important of these variables is the distance of closest approach (DCA) between the two tracks. This DCA needs to be small enough (relative to the tracking resolution) to ensure that the tracks originated from a common vertex. Another important variable is the transverse decay length of the V$^0$, which is the distance between the PV and the SV measured in the $xy$-plane. The importance of this variable is twofold: if the decay length is too small, then it may not even be possible to resolve the SV from the PV, plus it allows for the distinction between V$^0$s of differing decay lengths. The final relevant variable is the cosine of the pointing angle, which is the angle between the momentum vector of the V$^0$ and the vector pointing from the PV to the SV. As V$^0$ candidates are generally required to be sufficiently collimated to ensure that the V$^0$ originated from the PV, the cosine of the pointing angle is usually close to unity.
+The first and most important of these variables is the distance of closest approach (DCA) between the two tracks.\footnote{Note that the term DCA in this section refers to the distance of closest approach between the potential \lmb decay particles, whereas in Tables~\ref{tab:trigger_track_cuts} and~\ref{tab:primary_track_cuts}, DCA refers to the minimum distance between a given track and the PV.} This DCA needs to be small enough (relative to the tracking resolution) to ensure that the tracks originated from a common vertex. Another important variable is the transverse decay length of the V$^0$, which is the distance between the PV and the SV measured in the $xy$-plane. The importance of this variable is twofold: if the decay length is too small, then it may not even be possible to resolve the SV from the PV; and in addition, it allows for the distinction between V$^0$s of differing decay lengths. The final relevant variable is the cosine of the pointing angle, which is the angle between the momentum vector of the V$^0$ and the vector pointing from the PV to the SV. As V$^0$ candidates are generally required to be sufficiently collimated to ensure that the V$^0$ originated from the PV, the cosine of the pointing angle is usually close to unity.
 
-Using these variables, a list of likely V$^0$ candidates is generated for each event, from which further cuts are applied to maximize the likelihood of the candidate being a true $\Lambda$ baryon. These cuts are summarized in the following section. There is also another technique for $\Lambda$ reconstruction whereby all oppositely charged proton-pion pairs are combined to form $\Lambda$ candidates, which is explored in more detail in Chapter~\ref{ch:systematics}. However, due to the large combinatorial background associated with this technique, the V$^0$ method described above is nominal for this analysis.
+Using these variables, a list of likely V$^0$ candidates is generated for each event, from which further cuts are applied to maximize the likelihood of the candidate being a true $\Lambda$ baryon. These cuts are summarized in the following section. There is also another technique for $\Lambda$ reconstruction whereby all oppositely charged proton-pion pairs are combined to form $\Lambda$ candidates, which is explored in more detail in Chapter~\ref{ch:systematics}. However, due to the large combinatorial background associated with this technique, the V$^0$ method described above is chosen as the \lmb reconstruction method for this analysis.
 
 
 \subsection{$\Lambda$ daughter proton and pion track cuts}
 
-Because of the longer decay length of the $\Lambda$ ($c\tau \approx 10$ cm), the corresponding daughter proton and pion tracks generally have fewer hits in both the ITS and TPC, resulting in ``lower quality'' track parameters. Because of this, the cuts applied to the daughter tracks used to reconstruct $\Lambda$ candidates are the least strict of all the track quality cuts in this analysis and are summarized in Table~\ref{tab:lambda_daughter_track_cuts}. The daughter proton and pion are also required to be at midrapidity ($|\eta| < 0.8$) and have a minimum $p_{\text{T}}$ of $p_{\text{T}} >$ 0.15 GeV/$c$. 
+Because of the longer decay length of the $\Lambda$ ($c\tau \approx 10$ cm), the corresponding daughter proton and pion tracks generally have fewer hits in both the ITS and TPC, resulting in ``lower quality'' track parameters. Because of this, the cuts applied to the daughter tracks used to reconstruct $\Lambda$ candidates are the least strict of all the track quality cuts in this analysis and are summarized in Table~\ref{tab:lambda_daughter_track_cuts}. The daughter proton and pion are also required to be at midrapidity ($|\eta| < 0.8$) and have a minimum $p_{\text{T}} >$ 0.15 GeV/$c$. 
 
 \begin{table}[h]
 	\centering
@@ -158,7 +158,7 @@ Following the particle identification procedure outlined in Sections \ref{sec:tp
 	\item $|n\sigma_{\text{TOF}, \pi}| < 3$ (if signal exists)
 \end{itemize}
 
-The values of these cuts were chosen to maximize the $\Lambda$ signal while avoiding contamination from other particle species. The parenthetical ``if signal exists'' means that the TOF PID cut is only applied if the track has a TOF signal. Due to the large distance between the TOF detector and the PV, many lower momentum tracks are deflected by the magnetic field before reaching the TOF detector, resulting in no signal. Excluding such tracks results in a more pure sample of protons and pions, at the cost of a much lower number of $\Lambda$ candidates. While such a cost is not acceptable for the nominal analysis, the effect of excluding these tracks is investigated in Chapter~\ref{ch:systematics}. The $n\sigma$ distributions for both the TPC and TOF detectors of the daughter proton and pion tracks that pass the aforementioned quality cuts are shown in Figure~\ref{fig:nsigma_tpc} and Figure~\ref{fig:nsigma_tof}, respectively. To check for contamination from other particle species, the TOF and TPC information is combined to form a $n\sigma_{\text{TOF}}$ vs $n\sigma_{\text{TPC}}$ plot, which is shown for both the protons and pions in Figure~\ref{fig:nsigma_tof_v_tpc}. No contamination is observed for either the proton or pion tracks.
+The values of these cuts were chosen to maximize the $\Lambda$ signal while avoiding contamination from other particle species. The parenthetical ``if signal exists'' means that the TOF PID cut is only applied if the track has a TOF signal. Due to the large distance between the TOF detector and the PV, many lower momentum tracks are deflected by the magnetic field before reaching the TOF detector, resulting in no signal. Excluding such tracks results in a more pure sample of protons and pions, at the cost of a much lower number of $\Lambda$ candidates. While such a cost is not acceptable for this analysis, the effect of excluding these tracks is investigated in Chapter~\ref{ch:systematics}. The $n\sigma$ distributions for both the TPC and TOF detectors of the daughter proton and pion tracks that pass the aforementioned quality cuts are shown in Figure~\ref{fig:nsigma_tpc} and Figure~\ref{fig:nsigma_tof}, respectively. To check for contamination from other particle species, the TOF and TPC information is combined to form a $n\sigma_{\text{TOF}}$ vs $n\sigma_{\text{TPC}}$ plot, which is shown for both the protons and pions in Figure~\ref{fig:nsigma_tof_v_tpc}. No contamination is observed for either the proton or pion tracks.
 
 \begin{figure}[h]
 	\centering
@@ -259,7 +259,7 @@ where $E_{x} = \sqrt{m_{x}^2 + p_{x}^2}$ is the energy of the particle of specie
 \section{Reconstruction efficiency}
 \label{sec:reconstruction_efficiency}
 
-In an ideal world, the number of reconstructed particles of interest would be equal to the number of particles produced in the collision. Unfortunately this is not the case, as there are a number of detector effects which can cause particles to be ``lost'' during reconstruction. To correct for these effects, the reconstruction efficiency
+In an ideal world, the number of reconstructed particles of interest would be equal to the number of particles produced in the collision. Unfortunately, this is not the case in real data, as there are a number of detector effects which can cause particles to be ``lost'' during reconstruction. To correct for these effects, the reconstruction efficiency
 %
 \begin{equation}
 	\epsilon(x_1, x_2, ..., x_n) \equiv P(f(x_1, x_2, ..., x_n) | g(x_1, x_2, ..., x_n)),
@@ -273,11 +273,11 @@ is used. Here $x_i$ are the kinematic variables of the particle of interest (e.g
 	\label{eq:efficiency_exp}
 \end{equation}
 %
-where $N_{\text{reco.}}$ and $N_{\text{gen.}}$ are the reconstructed and generated particle distributions, respectively, usually taken across a large number of simulated events. In this analysis, these distributions are calculated as a function of \pt and $\eta$ for each multiplicity class using 30 million events generated by the Monte Carlo event generator DPMJET~\cite{DPMJET} with particle propagation through the ALICE detector performed by the GEANT3~\cite{GEANT} detector simulation software. These efficiency distributions are then used to correct the h-$\Lambda$ and h-h correlation distributions using the procedure described in Section~\ref{sec:corrections}.
+where $N_{\text{reco.}}$ and $N_{\text{gen.}}$ are the reconstructed and generated particle distributions, respectively, usually taken across a large number of simulated events. In this analysis, these distributions are calculated as a function of \pt and $\eta$ for each multiplicity class using 30 million events generated by the Monte Carlo event generator DPMJET~\cite{DPMJET} with particle propagation through the ALICE detector simulated by the GEANT3~\cite{GEANT} detector simulation software. These efficiency distributions are then used to correct the h-$\Lambda$ and h-h correlation distributions using the procedure described in Section~\ref{sec:corrections}.
 
 \subsection{Charged hadron reconstruction efficiency}
 
-The trigger and associated hadron track reconstruction efficiencies are calculated using Equation~\ref{eq:efficiency_exp}, where the trigger and associated hadrons from $N_{\text{reco.}}$ are subject to the following:
+The trigger and associated hadron track reconstruction efficiencies are calculated using Equation~\ref{eq:efficiency_exp}, where the trigger and associated hadrons from $N_{\text{reco.}}$ are subject to the following constraints:
 %
 \begin{itemize}
 	\item The track passes the quality cuts outlined in Tables~\ref{tab:trigger_track_cuts} (trigger) or \ref{tab:primary_track_cuts} (associated)
@@ -304,13 +304,13 @@ The trigger and associated track reconstruction efficiencies are shown for each 
 	\begin{minipage}{0.48\textwidth}
 		\includegraphics[width=\textwidth]{figures/analysis/associated_efficiency.pdf}
 	\end{minipage}
-	\caption{Efficiency vs. $p_T$ for trigger (left) and associated (right) hadrons. While they may look identical, the associated hadron efficiency is slightly lower due to the stricter selection criteria.}
+	\caption{Efficiency vs. $p_T$ for trigger (left) and associated (right) hadrons. While the values are similar, the associated hadron efficiency is slightly lower due to the stricter selection criteria.}
 	\label{fig:trigassoc_eff_pt}
 \end{figure}
 
 \subsection{$\Lambda$ reconstruction efficiency}
 
- The $\Lambda$ reconstruction efficiency is calculated as a function of \pt and $\eta$ using Equation~\ref{eq:efficiency_exp}, where the $\Lambda$s from $N_{\text{reco.}}$ are subject to the following:
+ The $\Lambda$ reconstruction efficiency is calculated as a function of \pt and $\eta$ using Equation~\ref{eq:efficiency_exp}, where the $\Lambda$s from $N_{\text{reco.}}$ are subject to the following conditions:
 %
 \begin{itemize}
 	\item They pass the topological selection criteria from Table~\ref{tab:lambda_selection}
@@ -327,7 +327,7 @@ and the $\Lambda$s from $N_{\text{gen.}}$ are subject to:
 	\item The $\Lambda$ decays to p$\pi$.
 \end{itemize}
 %
-The requirement that the generated $\Lambda$s decay into p$\pi$ means the branching ratio is not included in the efficiency calculation as it is corrected for separately (see Section \ref{sec:corrections}). The $\Lambda$ reconstruction efficiency can be seen for each multiplicity class as a function of \pt and $\eta$ in Figure~\ref{fig:lambda_eff}. Note that the efficiency is no longer flat as a function of $\eta$ due to the $|\eta| < 0.8$ requirement for the daughter tracks, which kinematically restricts the $\Lambda$ reconstruction to a smaller $\eta$ range.
+The requirement that the generated $\Lambda$s decay into p$\pi$ means the branching ratio is not included in the efficiency calculation and therefore is corrected for separately (see Section \ref{sec:corrections}). The $\Lambda$ reconstruction efficiency can be seen for each multiplicity class as a function of \pt and $\eta$ in Figure~\ref{fig:lambda_eff}. Note that the efficiency is no longer flat as a function of $\eta$ due to the $|\eta| < 0.8$ requirement for the daughter tracks, which kinematically restricts the reconstructed $\Lambda$ to a smaller $\eta$ range.
 
 \begin{figure}[h]
 	\centering
@@ -371,7 +371,7 @@ The trigger efficiency weight $1/\epsilon_{trig}$ is also applied to the single-
 \subsection{Mixed-event acceptance correction}
 \label{sec:acceptance_corr}
 
-As mentioned in Section~\ref{sec:raw_corr}, the $B(0, 0)/B(\Delta\varphi, \Delta\eta)$ term in Equation \ref{eq:corr_detector} corrects for the finite acceptance along $\eta$ as both our trigger and associated particles are required to be within $|\eta| < 0.8$. The mixed-event distribution $B(\Delta\varphi, \Delta\eta)$ shown in Figure \ref{fig:twod_cor} has a characteristic triangular shape along $\Delta\eta$, which is purely due to detector geometry as no physical correlations are present. When scaled by 1/$B(0, 0)$, the mixed event distribution becomes the probability that a particle pair is found given that the trigger particle is within $|\eta| < 0.8$, which is unity at $\Delta\varphi, \Delta\eta$ = $0, 0$. Thus correcting the same-event distribution $S(\Delta\varphi, \Delta\eta)$ by $B(0, 0)/B(\Delta\varphi, \Delta\eta)$ removes this acceptance effect and allows for a more accurate determination of the pair-wise yields. 
+As mentioned in Section~\ref{sec:raw_corr}, the $B(0, 0)/B(\Delta\varphi, \Delta\eta)$ term in Equation \ref{eq:corr_detector} corrects for the finite acceptance along $\eta$ as both our trigger and associated particles are required to be within $|\eta| < 0.8$. The mixed-event distribution $B(\Delta\varphi, \Delta\eta)$ shown in Figure \ref{fig:twod_cor} has a characteristic triangular shape along $\Delta\eta$, which is purely due to detector geometry, as no physical correlations are present by construction. When scaled by 1/$B(0, 0)$, the mixed event distribution becomes the probability that a particle pair is found given that the trigger particle is within $|\eta| < 0.8$, which is unity at $\Delta\varphi, \Delta\eta$ = $0, 0$. Thus correcting the same-event distribution $S(\Delta\varphi, \Delta\eta)$ by $B(0, 0)/B(\Delta\varphi, \Delta\eta)$ removes this acceptance effect and allows for a more accurate determination of the pair-wise yields. 
 
 While the generation of the mixed event distribution $B(\Delta\varphi, \Delta\eta)$ was discussed briefly in Section~\ref{sec:raw_corr}, the specific details are as follows. First, in order to ensure that the mixed-event pairs are coming from similar events, the events in the mixing pool are separated by both multiplicity percentile and $Z_{\text{vtx.}}$ position. The categorizing of events based off of $Z_{\text{vtx.}}$ position is an integral part of the acceptance correction: events with a $Z_{\text{vtx.}}$ at one edge of the detector have a completely different (and nearly inverted) $\eta$ acceptance than those on the opposite edge. The multiplicity bins are the same as they are for the same-event distributions (namely 0-20\%, 20-50\% and 50-80\%), and the ten $Z_{\text{vtx.}}$ bins are split evenly from -10 cm to 10 cm.  For each multiplicity and $Z_{\text{vtx.}}$ bin, the acceptance correction
 %
@@ -379,7 +379,7 @@ While the generation of the mixed event distribution $B(\Delta\varphi, \Delta\et
 	S_{\text{corr.}}(\Delta\varphi, \Delta\eta) = \frac{S(\Delta\varphi, \Delta\eta)}{B(\Delta\varphi, \Delta\eta)/B(0, 0)}
 \end{equation}
 %
-is performed, and the results for each multiplicity bin are then merged across all $Z_{\text{vtx.}}$ bins. The same-event distributions are also split into \zvtx bins during this correction procedure. The uncorrected distributions $S(\Delta\varphi, \Delta\eta)$ and the mixed-event distributions $B(\Delta\varphi, \Delta\eta)$ are shown for both the h-$\Lambda$ and h-h cases for all multiplicity and associated momentum bins in Figures~\ref{fig:h_lambda_2d_nomixcor} through~\ref{fig:h_h_2d_mixed}.
+is performed, and the results for each multiplicity bin are then merged across all $Z_{\text{vtx.}}$ bins. The uncorrected distributions $S(\Delta\varphi, \Delta\eta)$ and the mixed-event distributions $B(\Delta\varphi, \Delta\eta)$ are shown for both the h-$\Lambda$ and h-h cases for all multiplicity and associated momentum bins in Figures~\ref{fig:h_lambda_2d_nomixcor} through~\ref{fig:h_h_2d_mixed}.
 
 
 \begin{figure}[ht]
@@ -402,7 +402,7 @@ is performed, and the results for each multiplicity bin are then merged across a
 	\begin{minipage}{0.48\textwidth}
 		\includegraphics[width=\textwidth]{figures/analysis/h_lambda_2d_nomixcor_fancy_label_50_80_highpt.pdf}
 	\end{minipage}
-	\caption{2-D non-acceptance corrected h-$\Lambda$ angular correlations for the 0-20\% (top), 20-50\% (middle), and 50-80\% (bottom) multiplicity bins for $1.5 < p_{\text{T}} < 2.5$ GeV/$c$ (left) and $2.5 < p_{\text{T}} < 4.0$ GeV/$c$ (right).}
+	\caption{2-D non-acceptance corrected h-$\Lambda$ angular correlations for the 0-20\% (top), 20-50\% (middle), and 50-80\% (bottom) multiplicity bins for $1.5 < p_{\text{T}} < 2.5$ GeV/$c$ (left) and $2.5 < p_{\text{T}} < 4.0$ GeV/$c$ (right). The $Z_{\text{vtx.}}$ bins are merged together for these plots.}
 	\label{fig:h_lambda_2d_nomixcor}
 \end{figure}
 
@@ -426,7 +426,7 @@ is performed, and the results for each multiplicity bin are then merged across a
 	\begin{minipage}{0.48\textwidth}
 		\includegraphics[width=\textwidth]{figures/analysis/h_h_2d_nomixcor_fancy_label_50_80_highpt.pdf}
 	\end{minipage}
-	\caption{2-D non-acceptance corrected h-h angular correlations for the 0-20\% (top), 20-50\% (middle), and 50-80\% (bottom) multiplicity bins for $1.5 < p_{\text{T}} < 2.5$ GeV/$c$ (left) and $2.5 < p_{\text{T}} < 4.0$ GeV/$c$ (right).}
+	\caption{2-D non-acceptance corrected h-h angular correlations for the 0-20\% (top), 20-50\% (middle), and 50-80\% (bottom) multiplicity bins for $1.5 < p_{\text{T}} < 2.5$ GeV/$c$ (left) and $2.5 < p_{\text{T}} < 4.0$ GeV/$c$ (right). The $Z_{\text{vtx.}}$ bins are merged together for these plots.}
 	\label{fig:h_h_2d_nomixcor}
 \end{figure}
 

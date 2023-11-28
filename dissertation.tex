@@ -37,8 +37,8 @@
 \usepackage[hidelinks]{hyperref} % Handy for links, can comment for plain PDF
 
 % Uncomment to use the lineno package to number lines
-\usepackage{lineno}
-\linenumbers
+% \usepackage{lineno}
+% \linenumbers
 
 \UTyear=2023
 
@@ -65,14 +65,14 @@
 \UTaddcommittee{Chandrajit Bajaj}
 \end{UTcommittee}
 
-\UTtitlepage{Ph.D.}{May}
+\UTtitlepage{Ph.D.}{November}
 
 \setcounter{page}{4}
 
 
 \UTdedication{To Jaynee.}
 
-% \include{acknowledgements}
+\include{acknowledgements}
 %\include{preface}
 
 \begin{UTabstract}*[]{Christina Markert}
@@ -83,28 +83,26 @@
 % add . to include section numbers (non-standard)
 
 % \tableofcontents
-% \tableofcontents.
+\tableofcontents.
 
-% \listoffigures
-% \listoftables
+\listoffigures
+\listoftables
 
 %\listoflistings (with listings package)
 
 \mainmatter
 
 \include{chapter_intro}
+\include{chapter_experiment}
+\include{chapter_analysis_mnm}
+\include{chapter_analysis_details}
+\include{chapter_systematics}
+\include{chapter_results}
+\include{chapter_summary}
 
-% \include{chapter_experiment}
-% \include{chapter_analysis_mnm}
-% \include{chapter_analysis_details}
-% \include{chapter_systematics}
-% \include{chapter_results}
-
-% \include{chapter_summary}
-
-% \begin{appendix}
-% \include{appendix_resonance}
-% \end{appendix}
+\begin{appendix}
+\include{appendix_resonance}
+\end{appendix}
 
 \backmatter
 
@@ -114,6 +112,5 @@
 \phantomsection
 
 \printbibliography
-
 
 \end{document}

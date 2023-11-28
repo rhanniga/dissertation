@@ -4,7 +4,7 @@
 This chapter will provide the underlying motivation for the main topic of this thesis, along with a high-level overview of the methodology used to perform the analysis. First, the motivation for this analysis will be given in detail, emphasizing the importance of the \lmb baryon and why it was chosen for this study. Next, the main technique used to perform the analysis will be introduced, along with a brief overview of the analysis procedure. Finally, the main observables of interest will be mathematically defined to avoid any ambiguity in the following chapters.
 
 \section{Motivation}
-As mentioned in Section~\ref{sec:strangeness_enhancement}, the enhancement of strange quarks relative to non-strange ($u$ and $d$) quarks in heavy ion collisions is a key indicator of the production of a QGP. Experimentally, this enhancement is seen by measuring the production of strange hadrons ($\Lambda$, $K^0$, $\phi$, $\Xi$, $\Omega$) relative to the production of pions as a function of event multiplicity. The results of such measurements from the ALICE is shown again in Figure \ref{fig:ref_enhancement} for reference. 
+As mentioned in Section~\ref{sec:strangeness_enhancement}, the enhancement of strange quarks relative to non-strange ($u$ and $d$) quarks in heavy-ion collisions is a key indicator of the production of a QGP. Experimentally, this enhancement is seen by measuring the production of strange hadrons ($\Lambda$, $K^0$, $\phi$, $\Xi$, $\Omega$) relative to the production of pions as a function of event multiplicity. The results of such measurements from the ALICE collaboration is shown again in Figure \ref{fig:ref_enhancement} for reference. 
 
 \begin{figure}
 \centering
@@ -13,18 +13,18 @@ As mentioned in Section~\ref{sec:strangeness_enhancement}, the enhancement of st
 \label{fig:ref_enhancement}
 \end{figure}
 
-This figure shows a clear indication of an \textit{onset} of strangeness enhancement, which transitions smoothly from low multiplicity pp to high multiplicity Pb--Pb in a way that is independent of collision system. While statistical models are able to well-describe these particle ratios in low multiplicity pp (in the form of a canonical ensemble without chemical equilibriation~\cite{NATURE14, NATURE15}) and high multiplicity Pb--Pb (in the form of a grand canonical ensemble~\cite{NATURE12, NATURE13}), such models cannot describe the transition region. Phenomenological extensions to these models are able to produce a smooth transition between the two regimes~\cite{NATURE16, NATURE17}, but the microscopic origins of this observed enhancement are still unknown. 
+This figure shows a clear indication of an \textit{onset} of strangeness enhancement, which transitions smoothly from low multiplicity pp to high multiplicity Pb--Pb in a way that is independent of collision system. While statistical models are able to well-describe these particle ratios in low multiplicity pp (in the form of the canonical SHM from Section~\ref{sec:shm} without chemical equilibriation~\cite{NATURE14, NATURE15}) and high multiplicity Pb--Pb (with the grand canonical SHM and full chemical equilibriation~\cite{NATURE12, NATURE13}), such models cannot describe the transition region. Phenomenological extensions to these models are able to produce a smooth transition between the two regimes~\cite{NATURE16, NATURE17}, but the microscopic origins of this observed enhancement are still unknown. 
 
-This thesis aims to shed light on these origins by investigating this enhancement in different kinematic regimes. In particular, the production of strangeness within the near-side and away-side components of dijets\footnote{For more details see Section~\ref{sec:jet_quenching} in the introduction.} will be studied and compared with the strangeness production outside of the dijet system. The production in the near-side component of the dijet corresponds to unmodified strange quark production in a jet, whereas the away-side production corresponds to strangeness production in a jet whose initial partons traversed through the QGP medium. The production outside of the dijet system is meant to represent the production of strangeness in the QGP medium itself, and serves as a baseline for ``soft'' quark production. Measuring the strangeness production in these regions can be used to determine their relative contributions to the overall observed enhancement, in turn illuminating some of its origins at a fundamental level.
+This thesis aims to shed light on these origins by investigating this enhancement in different kinematic regimes. In particular, the production of strangeness within the near-side and away-side components of dijets\footnote{For more details see Section~\ref{sec:jet_quenching} in the introduction.} will be studied and compared with the strangeness production outside of the dijet system. The production in the near-side component of the dijet corresponds to mostly unmodified strange quark production in a jet, whereas the away-side production corresponds to strangeness production in a jet whose initial partons traversed through the QGP medium. The production outside of the dijet system is meant to represent the production of strangeness in the QGP medium itself, and serves as a baseline for ``soft'' quark production. Measuring the strangeness production in these regions can be used to determine their relative contributions to the overall observed enhancement, in turn illuminating some of its origins at a fundamental level.
 
-The p--Pb collision system is ideal for this study for two major reasons. The first is that the p--Pb system captures the \textit{entirety} of the observed onset of strangeness enhancement, as seen in Figure~\ref{fig:ref_enhancement}. Thus when trying to \textit{study} this onset, \pPb collisions are the most natural choice. The second reason is that pp collisions give rise to a large amount of jet-like production, with very little medium-like production. Pb--Pb collisions, on the other hand, are dominated by medium-like production with very little jet-like contributions. The p--Pb system produces a healthy blend of both jet- and medium-like production, making it the ideal candidate for analyzing the production of strangeness in these two regimes.
+The p--Pb collision system is ideal for this study for two major reasons. The first is that the p--Pb system captures the \textit{entirety} of the observed onset of strangeness enhancement, as seen in Figure~\ref{fig:ref_enhancement}. Thus, when trying to study this onset, \pPb collisions are the most natural choice. The second reason is that pp collisions give rise to a large amount of jet-like production, with very little medium-like production. Pb--Pb collisions, on the other hand, are dominated by medium-like production with very little jet-like contributions. The p--Pb system produces a significant amount of both jet- and medium-like production, making it the ideal candidate for analyzing the production of strangeness in these two regimes.
 
 \subsection{The \lmb baryon}
 \label{sec:lambda_baryon}
 
 When studying strange quark production in experiment, a choice of strange hadron must be made. In this thesis, the strange hadron of choice is the \textbf{lambda baryon} (\lmb). The \lmb is a neutral hadron with mass $1.116$ \GeVmass, consisting of one up, one down, and one strange quark ($uds$). The reasons for choosing the \lmb baryon for this analysis are as follows.
 
-Firstly, it is the lightest baryon containing a strange quark, and is thus the most abundantly produced strange baryon in high energy particle collisions. This makes it an ideal candidate for differential studies--like the one presented in this thesis--as correlation measurements require a \textit{lot} of statistics. Second, the \lmb has a very long lifetime--relative to the collision evolution--as it can only decay weakly. This has two effects:
+Firstly, it is the lightest baryon containing a strange quark, and is thus the most abundantly produced strange baryon in high energy particle collisions. This makes it an ideal candidate for differential studies--like the one presented in this thesis--as correlation measurements require a significant sample size to extract statistically meaningful trends. Second, the \lmb has a very long lifetime--relative to the collision evolution--as it can only decay weakly. This has two effects:
 \begin{enumerate}
     \item \lmb baryons produced early on in the collision survive until the end of the collision, keeping their decay products in-tact. This is not the case for strongly decaying resonace states like the $K^*$, which often decay within the hadronic gas phase of the collision. This can result in their decay products ``rescattering'' off other hadrons within the gas~\cite{Rescatter}, making it impossible to reconstruct the original resonance.
     \item The \lmb often travels a significant distance before decaying, which allows for the reconstruction of its decay vertex in the detector. This substantially reduces the background contribution to the \lmb signal, which is discussed in more detail in Section~\ref{sec:v0_decay}
@@ -33,9 +33,9 @@ Furthermore, the integrated production of \lmb baryons relative to pions has bee
 
 \begin{figure}
 \centering
-\label{fig:lambda_enhancement}
 \includegraphics[width=\textwidth]{figures/mnm/lambda_enhancement.png}
 \caption{The \pt-integrated \lmb/pion ratio as a function of event multiplicity in pp, p--Pb, and Pb--Pb collisions at ALICE.}
+\label{fig:lambda_enhancement}
 \end{figure}
 
 Finally, the \lmb baryon, with a net strangeness of one, shares a similar mass with the $\phi(1020)$ resonance ($s\bar{s}$), which has a net strangeness of zero. Thus the differences between ``open'' strangeness ($|S| > 0$) and ``hidden'' strangeness ($|S| = 0$) can be studied by comparing the production of \lmb baryons with the production of $\phi$ resonances. Due to their similar masses, any changes in the production of these two hadrons due to differing masses would be negligible.
@@ -48,7 +48,7 @@ To separate the production of \lmb baryons into the jet and non-jet regions, \te
 \begin{itemize}
 \item the \textbf{near-side region} shown in red, corresponding to near-side jet production with no medium interactions, 
 \item the \textbf{away-side region} shown in blue, corresponding to away-side jet production with possible medium interaction, and
-\item the \textbf{underlying event (UE) region} shown in green, corresponding to the uncorrelated production within the medium.
+\item the \textbf{underlying event (UE) region} shown in green, corresponding to the production within the medium that is not correlated with a jet.
 \end{itemize}
 %
 \begin{figure}
@@ -58,7 +58,7 @@ To separate the production of \lmb baryons into the jet and non-jet regions, \te
 \label{fig:dphi_cartoon}
 \end{figure}
 
-The clear separation between these regions in the $\Delta\varphi$ distribution can be understood from the following argument. If the trigger momentum is high enough ( $>$ 4 GeV/$c$), it must be closely aligned with the near-side jet axis~\cite{JetAxisArgument}. As such, the associated particles that are produced in the near-side of the jet will have a small relative angle to the trigger, near $\Delta\varphi = 0$. The associated particle production in the away-side jet would then be 180$^\circ$ away from the trigger, near $\Delta\varphi = \pi$. Finally, the uncorrelated\footnote{Elliptic flow ($v_2$) gives rise to a small correlation across $\Delta\varphi$, see Section~\ref{sec:collective_flow}.} associated particle production within the medium would be randomly distributed across $\Delta\varphi$, manifesting as a (mostly) flat background for which the near- and away-side peaks sit on top of. 
+The clear separation between these regions in the $\Delta\varphi$ distribution can be understood from the following argument. If the trigger momentum is high enough ( $>$ 4 GeV/$c$), it must be closely aligned with the near-side jet axis~\cite{JetAxisArgument}. As such, the associated particles that are produced in the near-side of the jet will have a small relative angle to the trigger, near $\Delta\varphi = 0$. The associated particle production in the away-side jet would then be 180$^\circ$ away from the trigger, near $\Delta\varphi = \pi$. Finally, the uncorrelated\footnote{Elliptic flow ($v_2$) gives rise to a small correlation across $\Delta\varphi$, see Section~\ref{sec:collective_flow}.} associated particle production within the medium would be randomly distributed across $\Delta\varphi$, manifesting as a (mostly) flat background that the near- and away-side peaks sit on top of. 
 
 \subsection{The end goal}
 
@@ -78,7 +78,7 @@ Note that this is a 2D distribution, which has information about the angular sep
 
 \subsubsection{Raw distribution corrections}
 \label{sec:raw_corr}
-Unfortunately, the correlation function given by Equation~\ref{eq:corr} cannot be obtained without a series of corrections to the raw distribution for various detector effects. The \textbf{raw distribution} is defined as the distribution obtained by counting the number of observed trigger-associated pairs within a given event, summed up over the entire event sample. The corrected distribution is then given by
+The correlation function given by Equation~\ref{eq:corr} cannot be directly obtained in data. Instead, a series of corrections to the raw distribution must be applied to correct for various detector inefficiencies and acceptance effects. The \textbf{raw distribution} is defined as the distribution obtained by counting the number of observed trigger-associated pairs within a given event, summed up over the entire event sample. The corrected distribution is then given by
 %
 \begin{equation}
     C_{\text{yield}}(\Delta\varphi, \Delta\eta) = \frac{1}{N_{\text{trig}}^{\text{corr}}}\frac{1}{\epsilon_{\text{trig}}\times\epsilon_{\text{assoc}}}B(0,0)\frac{S(\Delta\varphi, \Delta\eta)}{B(\Delta\varphi, \Delta\eta)}\frac{1}{\epsilon_{\text{pair}}(\Delta\varphi, \Delta\eta)},
@@ -106,6 +106,8 @@ Examples of $S(\Delta\varphi, \Delta\eta)$, $B(\Delta\varphi, \Delta\eta)$ and $
 \caption{Examples of the h-\lmb same-event distribution $S(\Delta\varphi, \Delta\eta)$ (left), mixed-event distribution $B(\Delta\varphi, \Delta\eta)$ (middle), and fully corrected correlation function $C_{\text{yield}}(\Delta\varphi, \Delta\eta)$ (right).}
 \label{fig:twod_cor}
 \end{figure}
+
+\clearpage
 
 \subsubsection{Underlying event fit}
 \label{sec:uefit}
@@ -139,7 +141,7 @@ In order to quantify the widths of the near- and away-side peak regions, the $\D
 \label{eq:fullfit}
 \end{equation}
 %
-which is composed of two von Mises functions describing the near- and away-side peaks. Von Mises functions~\cite{VonMises1, HFWidthPaper} are the circular analogs of Gaussian distributions and provide the best fit to the $2\pi$-periodic $\Delta\varphi$ distributions. The $\kappa_{\text{near}}$ and $\kappa_{\text{away}}$ terms are the measure of the collimation of the near- and away-side peaks, respectively, and $I_{0}$ is the zeroth-order modified Bessel function. The underlying event fit $U(\Delta\varphi)$ is fixed to the function obtained from the previous section during fitting. Due to symmetry considerations, the means $\mu_{\text{near}}$ and  $\mu_{\text{away}}$ are also fixed to $0$ and  $\pi$, respectively. The width of the peaks is then quantified via~\cite{VonMises1}
+which is composed of two von Mises functions describing the near- and away-side peaks. Von Mises functions~\cite{VonMises1, HFWidthPaper} are the circular analogs of Gaussian distributions and provide the best fit to the $2\pi$-periodic $\Delta\varphi$ distributions. The $\kappa_{\text{near}}$ and $\kappa_{\text{away}}$ terms are the measure of the collimation of the near- and away-side peaks, respectively, and $I_{0}$ is the zeroth-order modified Bessel function. The parameters of the underlying event term $U(\Delta\varphi)$ are fixed to those obtained following the procedure in the previous section while fitting the full correlation function. Due to symmetry considerations, the means $\mu_{\text{near}}$ and  $\mu_{\text{away}}$ are also fixed to $0$ and  $\pi$, respectively. The width of the peaks is then quantified via~\cite{VonMises1}
 %
 \begin{equation}
     \sigma_{\text{near,away}} = \sqrt{-2\log\frac{I_1(\kappa_{\text{near,away}})}{I_0(\kappa_{\text{near,away}})}},
